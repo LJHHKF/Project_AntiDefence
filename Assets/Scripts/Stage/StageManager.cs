@@ -7,13 +7,17 @@ using UnityEngine.UI;
 
 public class StageManager : MonoBehaviour
 {
+
+
     [Header ("Enemy Spawn Preset")]
     public Transform p_enemySpawnPoints;
     public GameObject b_spawnPoints;
     private Transform[] c_enemySpawnPoints;
     public GameObject spawn_Effects;
     public GameObject[] enemies;
+    private GameObject ui_Canvas;
     private GameObject remainPanel;
+    
 
     [Header ("Enemy Spawn Setting")]
     public float startDelay = 3.0f;
@@ -25,11 +29,20 @@ public class StageManager : MonoBehaviour
     public int chpter_num = 0;
     public int stage_num = 1;  // 추후 리스타트용. 당장 유니티 인스펙터뷰에서 체크용이기도 함.
 
+    [Header("Wall&Tile Setting")]
+    public int closeTileIndex = 0;
+    public int farTileIndex = 0;
+    public int closeWallIndex = 0;
+    public int farWallIndex = 0;
+
     [Header ("Fever Setting")]
     public bool fever_had = false;
     public int fever_limit = 20;
     public float fever_time = 3.0f;
     private int fever_cnt = 1;
+
+    [Header("Other Setting")]
+    public GameObject startEffect;
 
     // private Image s_bar;
     private Text t_cur;
@@ -43,8 +56,7 @@ public class StageManager : MonoBehaviour
 
     private TA_Manager ta_M;
 
-    private GameObject ui_Canvas;
-    private GameObject startPanel;
+
 
     // Start is called before the first frame update
     void Start()
@@ -54,10 +66,7 @@ public class StageManager : MonoBehaviour
 
         ui_Canvas = GameObject.FindGameObjectWithTag("UI_Canvas");
         remainPanel = ui_Canvas.transform.Find("RemainPanel").gameObject;
-        startPanel = ui_Canvas.transform.Find("StartPanel").gameObject;
 
-        startPanel.SetActive(true);
-        Destroy(startPanel, 1.0f);
 
         //s_bar = remainPanel.transform.Find("StageRBar").GetComponent<Image>();
         t_cur = remainPanel.transform.Find("T_Current").GetComponent<Text>();
@@ -76,6 +85,9 @@ public class StageManager : MonoBehaviour
         {
             b_spawnPoints.SetActive(true);
         }
+
+        GameObject effect = Instantiate(startEffect, gameObject.transform);
+        Destroy(effect, 1.0f);
 
         PlayBGM(chpter_num ,stage_num);
     }
@@ -139,6 +151,26 @@ public class StageManager : MonoBehaviour
     {
         cnt_EnemyDie += 1;
         itemM.Get_Money(dropM);
+    }
+
+    public int Get_CloseTile()
+    {
+        return closeTileIndex;
+    }
+
+    public int Get_FarTile()
+    {
+        return farTileIndex;
+    }
+
+    public int Get_CloseWall()
+    {
+        return closeWallIndex;
+    }
+
+    public int Get_FarWall()
+    {
+        return farWallIndex;
     }
 
     private void StageEnd()
