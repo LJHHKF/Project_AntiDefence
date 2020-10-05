@@ -29,12 +29,6 @@ public class StageManager : MonoBehaviour
     public int chpter_num = 0;
     public int stage_num = 1;  // 추후 리스타트용. 당장 유니티 인스펙터뷰에서 체크용이기도 함.
 
-    [Header("Wall&Tile Setting")]
-    public int closeTileIndex = 0;
-    public int farTileIndex = 0;
-    public int closeWallIndex = 0;
-    public int farWallIndex = 0;
-
     [Header ("Fever Setting")]
     public bool fever_had = false;
     public int fever_limit = 20;
