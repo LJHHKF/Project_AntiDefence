@@ -29,6 +29,8 @@ public class PlayerManager : MonoBehaviour
     private GameObject stage;
     private StageManager stageManager;
 
+    private GameObject barrierEffects;
+
     //private Transform m_parent;
     public SpriteRenderer img_character;
    
@@ -49,6 +51,9 @@ public class PlayerManager : MonoBehaviour
 
         stage = GameObject.FindGameObjectWithTag("StageMObject");
         stageManager = stage.GetComponent<StageManager>();
+
+        barrierEffects = GameObject.FindGameObjectWithTag("Player").transform.Find("Barrier_Effects").gameObject;
+        barrierEffects.SetActive(false);
      
 
         if(selectedItemManager.i_recovery)
@@ -59,6 +64,11 @@ public class PlayerManager : MonoBehaviour
         else if (bonus_hearts.IsActive())
         {
             bonus_hearts.gameObject.SetActive(false);
+        }
+
+        if (selectedItemManager.i_aiBarrier)
+        {
+            barrierEffects.SetActive(true);
         }
     }
 
@@ -79,6 +89,7 @@ public class PlayerManager : MonoBehaviour
         if (selectedItemManager.i_aiBarrier)
         {
             selectedItemManager.BarrierBreak();
+            barrierEffects.SetActive(false);
         }
         else if (state != State.DIE)
         {
