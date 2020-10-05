@@ -29,11 +29,6 @@ public class StageManager : MonoBehaviour
     public int chpter_num = 0;
     public int stage_num = 1;  // 추후 리스타트용. 당장 유니티 인스펙터뷰에서 체크용이기도 함.
 
-    [Header("Wall&Tile Setting")]
-    public int closeTileIndex = 0;
-    public int farTileIndex = 0;
-    public int closeWallIndex = 0;
-    public int farWallIndex = 0;
 
     [Header ("Fever Setting")]
     public bool fever_had = false;
@@ -43,6 +38,17 @@ public class StageManager : MonoBehaviour
 
     [Header("Other Setting")]
     public GameObject startEffect;
+
+    [Header("Wall&Tile Image Setting")]
+    public Material[] tile_far_material;
+    public Sprite[] tile_close_sprite;
+    public Sprite[] wall_far_sprite;
+    public Sprite[] wall_close_sprite;
+    [Header("Wall&Tile Index Setting")]
+    public int closeTileIndex = 0;
+    public int farTileIndex = 0;
+    public int closeWallIndex = 0;
+    public int farWallIndex = 0;
 
     // private Image s_bar;
     private Text t_cur;
@@ -153,24 +159,24 @@ public class StageManager : MonoBehaviour
         itemM.Get_Money(dropM);
     }
 
-    public int Get_CloseTile()
+    public Sprite Get_CloseTile()
     {
-        return closeTileIndex;
+        return tile_close_sprite[closeTileIndex];
     }
 
-    public int Get_FarTile()
+    public Material Get_FarTile()
     {
-        return farTileIndex;
+        return tile_far_material[farTileIndex];
     }
 
-    public int Get_CloseWall()
+    public Sprite Get_CloseWall()
     {
-        return closeWallIndex;
+        return wall_close_sprite[closeWallIndex];
     }
 
-    public int Get_FarWall()
+    public Sprite Get_FarWall()
     {
-        return farWallIndex;
+        return wall_far_sprite[farTileIndex];
     }
 
     private void StageEnd()
