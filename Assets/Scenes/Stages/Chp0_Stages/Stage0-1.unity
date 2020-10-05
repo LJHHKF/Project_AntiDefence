@@ -372,7 +372,8 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: c15e93586b6223e44b38e39211d73519, type: 3}
 --- !u!4 &101335713 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 4673123698536273194, guid: c15e93586b6223e44b38e39211d73519,
+    type: 3}
   m_PrefabInstance: {fileID: 101335712}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &130704258
@@ -1382,7 +1383,8 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 1781deae96b399140ae9bfa2ca5fd556, type: 3}
 --- !u!4 &550664241 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 2319550015631897274, guid: 1781deae96b399140ae9bfa2ca5fd556,
+    type: 3}
   m_PrefabInstance: {fileID: 550664240}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &554480059 stripped
@@ -1619,7 +1621,8 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 1781deae96b399140ae9bfa2ca5fd556, type: 3}
 --- !u!4 &568008417 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 2319550015631897274, guid: 1781deae96b399140ae9bfa2ca5fd556,
+    type: 3}
   m_PrefabInstance: {fileID: 568008416}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &571814467 stripped
@@ -2458,7 +2461,7 @@ MonoBehaviour:
   stage_num: 1
   closeTileIndex: 0
   farTileIndex: 0
-  closeWallIndex: 1
+  closeWallIndex: 0
   farWallIndex: 0
   fever_had: 0
   fever_limit: 20
@@ -4633,10 +4636,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1625665862}
   - {fileID: 101335713}
   - {fileID: 550664241}
   - {fileID: 568008417}
-  - {fileID: 1625665862}
   m_Father: {fileID: 1339987707}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4792,7 +4795,8 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: c15e93586b6223e44b38e39211d73519, type: 3}
 --- !u!4 &1625665862 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 4673123698536273194, guid: c15e93586b6223e44b38e39211d73519,
+    type: 3}
   m_PrefabInstance: {fileID: 1625665861}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1644537255 stripped
