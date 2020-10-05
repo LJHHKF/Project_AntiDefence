@@ -2459,15 +2459,22 @@ MonoBehaviour:
   spawnEnemyIndex: 0000000001000000000000000100000000000000
   chpter_num: 0
   stage_num: 1
-  closeTileIndex: 0
-  farTileIndex: 0
-  closeWallIndex: 0
-  farWallIndex: 0
   fever_had: 0
   fever_limit: 20
   fever_time: 3
   startEffect: {fileID: 1495361858992520205, guid: 6b24b6cc3da9e8f4fae8ba37282dfcb2,
     type: 3}
+  tile_far_material:
+  - {fileID: 2100000, guid: 0b781e32af77ed14db4c06348d91501d, type: 2}
+  tile_close_sprite: []
+  wall_far_sprite:
+  - {fileID: 21300000, guid: 889179b0bdc6e844cae6f92e861056d3, type: 3}
+  wall_close_sprite:
+  - {fileID: 21300000, guid: 5dec73c749ddf224f98af4b688e47279, type: 3}
+  closeTileIndex: 0
+  farTileIndex: 0
+  closeWallIndex: 0
+  farWallIndex: 0
 --- !u!4 &759630362
 Transform:
   m_ObjectHideFlags: 0
