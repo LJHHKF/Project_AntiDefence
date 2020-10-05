@@ -2468,7 +2468,16 @@ MonoBehaviour:
   fever_time: 3
   startEffect: {fileID: 1495361858992520205, guid: 6b24b6cc3da9e8f4fae8ba37282dfcb2,
     type: 3}
---- !u!4 &759630362
+
+  tile_far_material: []
+  tile_close_sprite: []
+  wall_far_sprite: []
+  wall_close_sprite: []
+  closeTileIndex: 0
+  farTileIndex: 0
+  closeWallIndex: 0
+  farWallIndex: 0
+
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
