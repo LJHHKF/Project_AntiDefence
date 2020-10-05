@@ -1,0 +1,332 @@
+fileFormatVersion: 2
+guid: 1f9cd8bfc244f3f41be5a0cedf58b95e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -9129919059498636005
+    second: Daco_4201833_0
+  - first:
+      213: -6224427555170517855
+    second: Daco_4201833_1
+  - first:
+      213: 6406465227874539449
+    second: Daco_4201833_2
+  - first:
+      213: 1820518165221168028
+    second: Daco_4201833_3
+  - first:
+      213: 8702863548623179909
+    second: Daco_4201833_4
+  - first:
+      213: -7526256451752072550
+    second: Daco_4201833_5
+  - first:
+      213: 443894469675888057
+    second: Daco_4201833_6
+  - first:
+      213: 3352792273667339663
+    second: Daco_4201833_7
+  - first:
+      213: -1663301819528367108
+    second: Daco_4201833_8
+  - first:
+      213: -6958963808019037712
+    second: Daco_4201833_9
+  - first:
+      213: 8809599364394008758
+    second: Daco_4201833_10
+  - first:
+      213: -8511222275619367332
+    second: Daco_4201833_11
+  - first:
+      213: 6905578940727128968
+    second: Daco_4201833_12
+  - first:
+      213: -8843944756577527441
+    second: Daco_4201833_13
+  - first:
+      213: 1755360832189317113
+    second: Daco_4201833_14
+  - first:
+      213: 7570277005551736613
+    second: Daco_4201833_15
+  - first:
+      213: -6372629430884021110
+    second: Daco_4201833_16
+  - first:
+      213: -2054402660870270843
+    second: Daco_4201833_17
+  - first:
+      213: -1295125622900274191
+    second: Daco_4201833_18
+  - first:
+      213: 838031361611852857
+    second: Daco_4201833_19
+  - first:
+      213: -2380988147890139356
+    second: Daco_4201833_20
+  - first:
+      213: 20714276384360807
+    second: Daco_4201833_21
+  - first:
+      213: -7770996257294081462
+    second: Daco_4201833_22
+  - first:
+      213: -5372076985981000194
+    second: Daco_4201833_23
+  - first:
+      213: 6932649554003916730
+    second: Daco_4201833_24
+  - first:
+      213: 3168895290338564662
+    second: Daco_4201833_25
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Daco_4201833_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0
+        width: 170
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1de38edcf20c4180800000000000000
+      internalID: -9129919059498636005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Daco_4201833_1
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ac78e3fd146e99a0800000000000000
+      internalID: -6224427555170517855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Daco_4201833_2
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 0
+        width: 80
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b79a5d8e2658e850800000000000000
+      internalID: 6406465227874539449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Daco_4201833_3
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 0
+        width: 40
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c93572130a7c34910800000000000000
+      internalID: 1820518165221168028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Daco_4201833_4
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 0
+        width: 80
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5805168a948c6c870800000000000000
+      internalID: 8702863548623179909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Daco_4201833_5
+      rect:
+        serializedVersion: 2
+        x: 1021
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9a63d802ad5d8790800000000000000
+      internalID: -7526256451752072550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 09e46f59a4f15984b8f7d1fbee5f24d9
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
