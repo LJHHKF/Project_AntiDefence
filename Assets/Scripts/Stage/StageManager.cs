@@ -7,13 +7,17 @@ using UnityEngine.UI;
 
 public class StageManager : MonoBehaviour
 {
+
+
     [Header ("Enemy Spawn Preset")]
     public Transform p_enemySpawnPoints;
     public GameObject b_spawnPoints;
     private Transform[] c_enemySpawnPoints;
     public GameObject spawn_Effects;
     public GameObject[] enemies;
+    private GameObject ui_Canvas;
     private GameObject remainPanel;
+    
 
     [Header ("Enemy Spawn Setting")]
     public float startDelay = 3.0f;
@@ -31,6 +35,9 @@ public class StageManager : MonoBehaviour
     public float fever_time = 3.0f;
     private int fever_cnt = 1;
 
+    [Header("Other Setting")]
+    public GameObject startEffect;
+
     // private Image s_bar;
     private Text t_cur;
     private Text t_full;
@@ -43,8 +50,7 @@ public class StageManager : MonoBehaviour
 
     private TA_Manager ta_M;
 
-    private GameObject ui_Canvas;
-    private GameObject startPanel;
+
 
     // Start is called before the first frame update
     void Start()
@@ -54,10 +60,7 @@ public class StageManager : MonoBehaviour
 
         ui_Canvas = GameObject.FindGameObjectWithTag("UI_Canvas");
         remainPanel = ui_Canvas.transform.Find("RemainPanel").gameObject;
-        startPanel = ui_Canvas.transform.Find("StartPanel").gameObject;
 
-        startPanel.SetActive(true);
-        Destroy(startPanel, 1.0f);
 
         //s_bar = remainPanel.transform.Find("StageRBar").GetComponent<Image>();
         t_cur = remainPanel.transform.Find("T_Current").GetComponent<Text>();
@@ -76,6 +79,9 @@ public class StageManager : MonoBehaviour
         {
             b_spawnPoints.SetActive(true);
         }
+
+        GameObject effect = Instantiate(startEffect, gameObject.transform);
+        Destroy(effect, 1.0f);
 
         PlayBGM(chpter_num ,stage_num);
     }
