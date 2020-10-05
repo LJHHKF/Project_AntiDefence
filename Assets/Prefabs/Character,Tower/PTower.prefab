@@ -57,8 +57,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2aeed424cc7c2e34ca96ce392ce7ff5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  a_Effect: {fileID: 5070236735142358847, guid: 5ba4dcebafb1b85459cfd201d924e2f0,
-    type: 3}
+  a_Effect: {fileID: 1000011128802252, guid: 96730f8640590934eacb6f860058e7f9, type: 3}
   firePos: {fileID: 8206387068372692335}
   fireRange: {fileID: 5779988178289449186}
   p_turret: {fileID: 1683786291261028664}
