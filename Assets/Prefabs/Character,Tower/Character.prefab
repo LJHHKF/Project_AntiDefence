@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7134292926414235342}
   - component: {fileID: 7134292926414235343}
+  - component: {fileID: 2125505138287733973}
   m_Layer: 0
   m_Name: Img_Character
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 7134292926414235337}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.100000024}
-  m_LocalScale: {x: 0.1, y: 0.09999999, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 7134292927827659817}
   m_RootOrder: 0
@@ -70,7 +71,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6b9ebfe26cff12a4da978d3b253e60e8, type: 3}
+  m_Sprite: {fileID: -6163832950999124181, guid: 0c2e231e695c24242afc2fca1189b88f,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -81,6 +83,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &2125505138287733973
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7134292926414235337}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0041cced55253514a927457985459cfe, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7134292926899655740
 GameObject:
   m_ObjectHideFlags: 0
@@ -294,7 +315,7 @@ PrefabInstance:
         type: 3}
       propertyPath: img_character
       value: 
-      objectReference: {fileID: 7134292926414235343}
+      objectReference: {fileID: 7134292926414235337}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b83ce83f864faae45a609b8ef774545c, type: 3}
 --- !u!4 &4816644877737596268 stripped

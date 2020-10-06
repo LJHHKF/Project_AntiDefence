@@ -6087,36 +6087,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2318233827007692456, guid: 5ca6edb9adf346549bfa49f42211b422,
+    - target: {fileID: 2125505138287733973, guid: 5ca6edb9adf346549bfa49f42211b422,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2318233827007692456, guid: 5ca6edb9adf346549bfa49f42211b422,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2318233827007692456, guid: 5ca6edb9adf346549bfa49f42211b422,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5082589682380825006, guid: 5ca6edb9adf346549bfa49f42211b422,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5082589682380825006, guid: 5ca6edb9adf346549bfa49f42211b422,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5082589682380825006, guid: 5ca6edb9adf346549bfa49f42211b422,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 09ff0b2ebaf9fb84dab85d4491e68ef8, type: 2}
     - target: {fileID: 6739636892726834554, guid: 5ca6edb9adf346549bfa49f42211b422,
         type: 3}
       propertyPath: bonus_hearts
