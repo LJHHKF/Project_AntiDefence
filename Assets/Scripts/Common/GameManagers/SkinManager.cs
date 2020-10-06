@@ -6,7 +6,7 @@ using UnityEngine;
 public class SkinManager : MonoBehaviour
 {
     public Sprite[] skins;
-    public AnimatorController[] anims;
+    public RuntimeAnimatorController[] anims;
 
     private int skin_index;
 

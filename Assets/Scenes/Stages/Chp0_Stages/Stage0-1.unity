@@ -6091,7 +6091,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 09ff0b2ebaf9fb84dab85d4491e68ef8, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 6739636892726834554, guid: 5ca6edb9adf346549bfa49f42211b422,
         type: 3}
       propertyPath: bonus_hearts

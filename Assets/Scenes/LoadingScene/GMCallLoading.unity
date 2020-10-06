@@ -790,6 +790,9 @@ MonoBehaviour:
   - {fileID: -8761483511772326392, guid: 44d5ac4742de0ca46ac17e9750de7686, type: 3}
   anims:
   - {fileID: 9100000, guid: 09ff0b2ebaf9fb84dab85d4491e68ef8, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &1559065142
 MonoBehaviour:
   m_ObjectHideFlags: 0
