@@ -35,8 +35,8 @@ TagManager:
   - CharacterLayer
   - TowerLayer
   - SubUI
-  - 
-  - 
+  - FarBG
+  - CloseBG
   - 
   - 
   - 
@@ -57,6 +57,12 @@ TagManager:
   m_SortingLayers:
   - name: AttackRange
     uniqueID: 3628144289
+    locked: 0
+  - name: FarBG
+    uniqueID: 2505707007
+    locked: 0
+  - name: CloseBG
+    uniqueID: 275121947
     locked: 0
   - name: Default
     uniqueID: 0
