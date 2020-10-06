@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2171607955874791071}
   - component: {fileID: 6098268206042557389}
   - component: {fileID: 5263745923497018338}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Wall_close
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,8 +69,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 275121947
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 5dec73c749ddf224f98af4b688e47279, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -108,6 +108,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27437b890e0b1d245855ca1ebd5e020e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallSprite:
-  - {fileID: 21300000, guid: 5dec73c749ddf224f98af4b688e47279, type: 3}
-  - {fileID: 8832167503239892954, guid: 44d5ac4742de0ca46ac17e9750de7686, type: 3}
