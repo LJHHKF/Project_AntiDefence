@@ -37,6 +37,7 @@ public class StageManager : MonoBehaviour
 
     [Header("Other Setting")]
     public GameObject startEffect;
+    public GameObject startEffect2;
 
 
     [Header("Wall&Tile Image Setting")]
@@ -94,6 +95,7 @@ public class StageManager : MonoBehaviour
         }
 
         GameObject effect = Instantiate(startEffect, gameObject.transform);
+        GameObject effect2 = Instantiate(startEffect2, gameObject.transform);
         Destroy(effect, 1.0f);
 
         PlayBGM(chpter_num ,stage_num);
