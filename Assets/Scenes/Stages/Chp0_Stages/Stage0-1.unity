@@ -5978,6 +5978,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2318233827007692456, guid: 5ca6edb9adf346549bfa49f42211b422,
         type: 3}
+      propertyPath: m_Controller
+      value: 
+<<<<<<< HEAD
+
       propertyPath: m_LocalScale.x
       value: 1
       objectReference: {fileID: 0}
@@ -6005,7 +6009,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+
       objectReference: {fileID: 0}
+=======
+      objectReference: {fileID: 9100000, guid: 09ff0b2ebaf9fb84dab85d4491e68ef8, type: 2}
+>>>>>>> parent of 61564a4... 스킨, 애니메이션 시스템 완성
     - target: {fileID: 6739636892726834554, guid: 5ca6edb9adf346549bfa49f42211b422,
         type: 3}
       propertyPath: bonus_hearts
