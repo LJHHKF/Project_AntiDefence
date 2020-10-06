@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Animations;
 using UnityEngine;
 
 public class SkinManager : MonoBehaviour
 {
     public Sprite[] skins;
+
     public RuntimeAnimatorController[] anims;
+
 
     private int skin_index;
 

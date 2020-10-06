@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -31,6 +30,7 @@ public class PlayerManager : MonoBehaviour
     private StageManager stageManager;
 
     //private Transform m_parent;
+
     public GameObject img_character;
     private SpriteRenderer m_spriteRenderer;
     private Animator m_animator;
@@ -47,8 +47,6 @@ public class PlayerManager : MonoBehaviour
         skinM = gm.GetComponent<SkinManager>();
 
         //m_parent = gameObject.GetComponentInParent<Transform>();
-        //img_character = m_parent.Find("Clear_Panel").Find("Img_Character").GetComponent<SpriteRenderer>(); 
-
         m_spriteRenderer = img_character.GetComponent<SpriteRenderer>();
         m_spriteRenderer.sprite = skinM.skins[skinM.GetSkinIndex()];
         m_animator = img_character.GetComponent<Animator>();
@@ -104,18 +102,5 @@ public class PlayerManager : MonoBehaviour
                 state = State.DIE;
             }
         }
-    }
-
-    public void OnAttackAnim()
-    {
-        StartCoroutine(OnAttackMotion());
-    }
-
-    IEnumerator OnAttackMotion()
-    {
-        m_animator.SetBool("IsAttack", true);
-        yield return new WaitForSeconds(1.0f);
-        m_animator.SetBool("IsAttack", false);
-        yield break;
     }
 }
