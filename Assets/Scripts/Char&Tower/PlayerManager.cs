@@ -30,11 +30,7 @@ public class PlayerManager : MonoBehaviour
     private StageManager stageManager;
 
     //private Transform m_parent;
-
-    public GameObject img_character;
-    private SpriteRenderer m_spriteRenderer;
-    private Animator m_animator;
-    private AnimatorController m_animatorcontrollor;
+    public SpriteRenderer img_character;
    
 
     // Start is called before the first frame update
@@ -48,12 +44,8 @@ public class PlayerManager : MonoBehaviour
         skinM = gm.GetComponent<SkinManager>();
 
         //m_parent = gameObject.GetComponentInParent<Transform>();
-        m_spriteRenderer = img_character.GetComponent<SpriteRenderer>();
-        m_spriteRenderer.sprite = skinM.skins[skinM.GetSkinIndex()];
-        m_animator = img_character.GetComponent<Animator>();
-        m_animatorcontrollor = img_character.GetComponent<AnimatorController>();
-        m_animatorcontrollor = skinM.anims[skinM.GetSkinIndex()];
-
+        //img_character = m_parent.Find("Clear_Panel").Find("Img_Character").GetComponent<SpriteRenderer>();
+        img_character.sprite = skinM.skins[skinM.GetSkinIndex()];
 
         stage = GameObject.FindGameObjectWithTag("StageMObject");
         stageManager = stage.GetComponent<StageManager>();
