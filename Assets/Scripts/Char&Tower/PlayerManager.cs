@@ -29,10 +29,12 @@ public class PlayerManager : MonoBehaviour
     private GameObject stage;
     private StageManager stageManager;
 
-    private GameObject barrierEffects;
-
     //private Transform m_parent;
-    public SpriteRenderer img_character;
+
+    public GameObject img_character;
+    private SpriteRenderer m_spriteRenderer;
+    private Animator m_animator;
+    private AnimatorController m_animatorcontrollor;
    
 
     // Start is called before the first frame update
@@ -46,14 +48,15 @@ public class PlayerManager : MonoBehaviour
         skinM = gm.GetComponent<SkinManager>();
 
         //m_parent = gameObject.GetComponentInParent<Transform>();
-        //img_character = m_parent.Find("Clear_Panel").Find("Img_Character").GetComponent<SpriteRenderer>();
-        img_character.sprite = skinM.skins[skinM.GetSkinIndex()];
+        m_spriteRenderer = img_character.GetComponent<SpriteRenderer>();
+        m_spriteRenderer.sprite = skinM.skins[skinM.GetSkinIndex()];
+        m_animator = img_character.GetComponent<Animator>();
+        m_animatorcontrollor = img_character.GetComponent<AnimatorController>();
+        m_animatorcontrollor = skinM.anims[skinM.GetSkinIndex()];
+
 
         stage = GameObject.FindGameObjectWithTag("StageMObject");
         stageManager = stage.GetComponent<StageManager>();
-
-        barrierEffects = GameObject.FindGameObjectWithTag("Player").transform.Find("Barrier_Effects").gameObject;
-        barrierEffects.SetActive(false);
      
 
         if(selectedItemManager.i_recovery)
@@ -64,11 +67,6 @@ public class PlayerManager : MonoBehaviour
         else if (bonus_hearts.IsActive())
         {
             bonus_hearts.gameObject.SetActive(false);
-        }
-
-        if (selectedItemManager.i_aiBarrier)
-        {
-            barrierEffects.SetActive(true);
         }
     }
 
@@ -89,7 +87,6 @@ public class PlayerManager : MonoBehaviour
         if (selectedItemManager.i_aiBarrier)
         {
             selectedItemManager.BarrierBreak();
-            barrierEffects.SetActive(false);
         }
         else if (state != State.DIE)
         {
