@@ -246,12 +246,13 @@ public class SkinSceneManager : MonoBehaviour
             if (anim_skin.GetBool("IsAttack"))
             {
                 anim_skin.SetBool("IsAttack", false);
-                yield return new WaitForSeconds(3.0f);
+                yield return new WaitForSeconds(1.5f);
             }
             else
             {
                 anim_skin.SetBool("IsAttack", true);
-                yield return new WaitForSeconds(1.0f);
+                anim_skin.SetTrigger("IsAttack_Trigger");
+                yield return new WaitForSeconds(1.5f);
             }
         }
     }
