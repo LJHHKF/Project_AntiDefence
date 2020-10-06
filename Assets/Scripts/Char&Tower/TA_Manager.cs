@@ -21,6 +21,8 @@ public class TA_Manager : MonoBehaviour
     private GameObject gm;
     private SelectedItemManager si_manager;
 
+    private PlayerManager playerM;
+
     private GameObject ui_Canvas;
     private GameObject feverPanel;
     private GameObject feverEffectPanel;
@@ -43,6 +45,8 @@ public class TA_Manager : MonoBehaviour
         ui_Canvas = GameObject.FindGameObjectWithTag("UI_Canvas");
         feverPanel = ui_Canvas.transform.Find("FeverPanel").gameObject;
         feverEffectPanel = ui_Canvas.transform.Find("Buttons").Find("FeverEffectPanel").gameObject;
+
+        playerM = gameObject.GetComponent<PlayerManager>();
 
         gm = GameObject.FindGameObjectWithTag("GameManager");
         si_manager = gm.GetComponent<SelectedItemManager>();
@@ -73,18 +77,24 @@ public class TA_Manager : MonoBehaviour
     {
         cTimeImg[0].fillAmount = 0.0f;
         //StartCoroutine(CoolTime(0));
+
+        playerM.OnAttackAnim();
     }
 
     public void SNTActived()
     {
         cTimeImg[1].fillAmount = 0.0f;
         //StartCoroutine(CoolTime(1));
+
+        playerM.OnAttackAnim();
     }
 
     public void PTActived()
     {
         cTimeImg[2].fillAmount = 0.0f;
         //StartCoroutine(CoolTime(2));
+
+        playerM.OnAttackAnim();
     }
 
     public void FeverActivate(float act_time)
