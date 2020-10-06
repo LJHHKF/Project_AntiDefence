@@ -7,13 +7,17 @@ using UnityEngine.UI;
 
 public class StageManager : MonoBehaviour
 {
+
+
     [Header ("Enemy Spawn Preset")]
     public Transform p_enemySpawnPoints;
     public GameObject b_spawnPoints;
     private Transform[] c_enemySpawnPoints;
     public GameObject spawn_Effects;
     public GameObject[] enemies;
+    private GameObject ui_Canvas;
     private GameObject remainPanel;
+    
 
     [Header ("Enemy Spawn Setting")]
     public float startDelay = 3.0f;
@@ -31,6 +35,23 @@ public class StageManager : MonoBehaviour
     public float fever_time = 3.0f;
     private int fever_cnt = 1;
 
+    [Header("Other Setting")]
+    public GameObject startEffect;
+    public GameObject startEffect2;
+
+
+    [Header("Wall&Tile Image Setting")]
+    public Material[] tile_far_material;
+    public Sprite[] tile_close_sprite;
+    public Sprite[] wall_far_sprite;
+    public Sprite[] wall_close_sprite;
+    [Header("Wall&Tile Index Setting")]
+    public int closeTileIndex = 0;
+    public int farTileIndex = 0;
+    public int closeWallIndex = 0;
+    public int farWallIndex = 0;
+
+
     // private Image s_bar;
     private Text t_cur;
     private Text t_full;
@@ -43,8 +64,7 @@ public class StageManager : MonoBehaviour
 
     private TA_Manager ta_M;
 
-    private GameObject ui_Canvas;
-    private GameObject startPanel;
+
 
     // Start is called before the first frame update
     void Start()
@@ -54,10 +74,7 @@ public class StageManager : MonoBehaviour
 
         ui_Canvas = GameObject.FindGameObjectWithTag("UI_Canvas");
         remainPanel = ui_Canvas.transform.Find("RemainPanel").gameObject;
-        startPanel = ui_Canvas.transform.Find("StartPanel").gameObject;
 
-        startPanel.SetActive(true);
-        Destroy(startPanel, 1.0f);
 
         //s_bar = remainPanel.transform.Find("StageRBar").GetComponent<Image>();
         t_cur = remainPanel.transform.Find("T_Current").GetComponent<Text>();
@@ -76,6 +93,10 @@ public class StageManager : MonoBehaviour
         {
             b_spawnPoints.SetActive(true);
         }
+
+        GameObject effect = Instantiate(startEffect, gameObject.transform);
+        GameObject effect2 = Instantiate(startEffect2, gameObject.transform);
+        Destroy(effect, 1.0f);
 
         PlayBGM(chpter_num ,stage_num);
     }
@@ -139,6 +160,27 @@ public class StageManager : MonoBehaviour
     {
         cnt_EnemyDie += 1;
         itemM.Get_Money(dropM);
+    }
+
+
+    public Sprite Get_CloseTile()
+    {
+        return tile_close_sprite[closeTileIndex];
+    }
+
+    public Material Get_FarTile()
+    {
+        return tile_far_material[farTileIndex];
+    }
+
+    public Sprite Get_CloseWall()
+    {
+        return wall_close_sprite[closeWallIndex];
+    }
+
+    public Sprite Get_FarWall()
+    {
+        return wall_far_sprite[farTileIndex];
     }
 
     private void StageEnd()

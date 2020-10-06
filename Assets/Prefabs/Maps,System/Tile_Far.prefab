@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 5304559810471656119}
   - component: {fileID: 2605030565364620345}
   - component: {fileID: 6955568025443255969}
+  - component: {fileID: 9153505949509765477}
   m_Layer: 0
-  m_Name: Tile 1
+  m_Name: Tile_Far
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -94,3 +95,17 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &9153505949509765477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3376881020086799277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f743db1a444aa345afbc90c46ffdd40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileMaterial:
+  - {fileID: 2100000, guid: 0b781e32af77ed14db4c06348d91501d, type: 2}
