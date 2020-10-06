@@ -35,7 +35,4 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
-    path: Assets/Scenes/Stages/Chp0_Stages/Stage0-2.unity
-    guid: d31884e752ebb4345b1163653dfb4a89
   m_configObjects: {}

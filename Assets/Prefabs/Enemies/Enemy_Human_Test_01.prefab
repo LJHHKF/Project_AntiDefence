@@ -167,9 +167,9 @@ MonoBehaviour:
     type: 3}
   attackDist: 2
   attackDamage: 1
-  moveSpeed: 0.5
+  moveSpeed: 1.5
   rotSpeed: 1
-  enemyHP: 1
+  enemyHP: 3
   attack_delay: 1
   isSuiBomber: 0
   dropMoneyValue: 10
