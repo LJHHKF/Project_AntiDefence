@@ -784,10 +784,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skins:
-  - {fileID: 21300000, guid: 6b9ebfe26cff12a4da978d3b253e60e8, type: 3}
+  - {fileID: -6163832950999124181, guid: 0c2e231e695c24242afc2fca1189b88f, type: 3}
   - {fileID: 8832167503239892954, guid: 44d5ac4742de0ca46ac17e9750de7686, type: 3}
   - {fileID: -4853055123583119345, guid: 44d5ac4742de0ca46ac17e9750de7686, type: 3}
   - {fileID: -8761483511772326392, guid: 44d5ac4742de0ca46ac17e9750de7686, type: 3}
+  anims:
+  - {fileID: 9100000, guid: 09ff0b2ebaf9fb84dab85d4491e68ef8, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &1559065142
 MonoBehaviour:
   m_ObjectHideFlags: 0
