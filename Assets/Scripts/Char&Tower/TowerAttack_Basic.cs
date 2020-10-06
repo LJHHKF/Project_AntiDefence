@@ -85,7 +85,7 @@ public class TowerAttack_Basic : MonoBehaviour
 
     IEnumerator FR_Stay()
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.05f);
         fireRange.SetActive(false);
         StopCoroutine(FR_Stay());
     }

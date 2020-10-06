@@ -14,7 +14,6 @@ public class TileSelect_close : MonoBehaviour
         m_sprender = gameObject.GetComponent<SpriteRenderer>();
 
         m_sprender.sprite = sm.Get_CloseTile();
-
-
+        m_sprender.color = new Color(m_sprender.color.r, m_sprender.color.g, m_sprender.color.b, sm.Get_CloseTileAlpha()/255f);
     }
 }
