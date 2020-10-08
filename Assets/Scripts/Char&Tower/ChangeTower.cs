@@ -41,7 +41,7 @@ public class ChangeTower : MonoBehaviour
     {
 
 
-        StartCoroutine(Rotate());
+        Rotate();
 
     }
 
@@ -84,7 +84,7 @@ public class ChangeTower : MonoBehaviour
         }
     }
 
-    IEnumerator Rotate()
+    private void Rotate()
     {
         if (gameObject.transform.localEulerAngles.y >= 0 && gameObject.transform.localEulerAngles.y <= 180)
         {
@@ -96,21 +96,39 @@ public class ChangeTower : MonoBehaviour
             aim_rot[0] = (120.0f - ((gameObject.transform.localEulerAngles.y - 180) / 3));
             aim_rot[1] = (60.0f + ((gameObject.transform.localEulerAngles.y - 180) / 3));
         }
-
         for (int i = 0; i < 2; i++)
-        {
-            //if (aim_rot[i] > 120)
-            //    aim_rot[i] = 120;
-            //else if (aim_rot[i] < 60)
-            //    aim_rot[i] = 60;
-
-            //t_img_panel[i].transform.rotation = Quaternion.Euler(rot_value * Time.deltaTime, 0, 0);
-            //t_img_panel[i].transform.Rotate(rot_value * rot_speed, 0, 0, Space.Self);
-            //t_img_panel[i].transform.rotation = Quaternion.Slerp(t_img_panel[i].transform.rotation, aim_Quaternion[i], Time.deltaTime * 5.0f);
-
+        { 
             t_img_panel[i].transform.localEulerAngles = new Vector3(aim_rot[i], 0, 0);
         }
-        yield return new WaitForFixedUpdate();
-        StopCoroutine(Rotate());
     }
+
+    //IEnumerator Rotate()
+    //{
+    //    if (gameObject.transform.localEulerAngles.y >= 0 && gameObject.transform.localEulerAngles.y <= 180)
+    //    {
+    //        aim_rot[0] = (60.0f + (gameObject.transform.localEulerAngles.y / 3));
+    //        aim_rot[1] = (120.0f - (gameObject.transform.localEulerAngles.y / 3));
+    //    }
+    //    else if (gameObject.transform.localEulerAngles.y >= 180 && gameObject.transform.localEulerAngles.y <= 360)
+    //    {
+    //        aim_rot[0] = (120.0f - ((gameObject.transform.localEulerAngles.y - 180) / 3));
+    //        aim_rot[1] = (60.0f + ((gameObject.transform.localEulerAngles.y - 180) / 3));
+    //    }
+
+    //    for (int i = 0; i < 2; i++)
+    //    {
+    //        //if (aim_rot[i] > 120)
+    //        //    aim_rot[i] = 120;
+    //        //else if (aim_rot[i] < 60)
+    //        //    aim_rot[i] = 60;
+
+    //        //t_img_panel[i].transform.rotation = Quaternion.Euler(rot_value * Time.deltaTime, 0, 0);
+    //        //t_img_panel[i].transform.Rotate(rot_value * rot_speed, 0, 0, Space.Self);
+    //        //t_img_panel[i].transform.rotation = Quaternion.Slerp(t_img_panel[i].transform.rotation, aim_Quaternion[i], Time.deltaTime * 5.0f);
+
+    //        t_img_panel[i].transform.localEulerAngles = new Vector3(aim_rot[i], 0, 0);
+    //    }
+    //    yield return new WaitForFixedUpdate();
+    //    StopCoroutine(Rotate());
+    //}
 }
