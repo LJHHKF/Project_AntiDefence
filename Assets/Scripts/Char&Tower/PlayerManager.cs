@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -30,7 +31,11 @@ public class PlayerManager : MonoBehaviour
     private StageManager stageManager;
 
     //private Transform m_parent;
-    public SpriteRenderer img_character;
+    public GameObject img_character;
+    private SpriteRenderer m_spriteRenderer;
+    private Animator m_animator;
+
+    public GameObject effect_AI_Barrier;
    
 
     // Start is called before the first frame update
@@ -43,9 +48,10 @@ public class PlayerManager : MonoBehaviour
         selectedItemManager = gm.GetComponent<SelectedItemManager>();
         skinM = gm.GetComponent<SkinManager>();
 
-        //m_parent = gameObject.GetComponentInParent<Transform>();
-        //img_character = m_parent.Find("Clear_Panel").Find("Img_Character").GetComponent<SpriteRenderer>();
-        img_character.sprite = skinM.skins[skinM.GetSkinIndex()];
+        m_spriteRenderer = img_character.GetComponent<SpriteRenderer>();
+        m_spriteRenderer.sprite = skinM.skins[skinM.GetSkinIndex()];
+        m_animator = img_character.GetComponent<Animator>();
+        m_animator.runtimeAnimatorController = skinM.anims[skinM.GetSkinIndex()];
 
         stage = GameObject.FindGameObjectWithTag("StageMObject");
         stageManager = stage.GetComponent<StageManager>();
@@ -59,6 +65,15 @@ public class PlayerManager : MonoBehaviour
         else if (bonus_hearts.IsActive())
         {
             bonus_hearts.gameObject.SetActive(false);
+        }
+
+        if (selectedItemManager.i_aiBarrier)
+        {
+            effect_AI_Barrier.SetActive(true);
+        }
+        else
+        {
+            effect_AI_Barrier.SetActive(false);
         }
     }
 
@@ -79,6 +94,7 @@ public class PlayerManager : MonoBehaviour
         if (selectedItemManager.i_aiBarrier)
         {
             selectedItemManager.BarrierBreak();
+            effect_AI_Barrier.SetActive(false);
         }
         else if (state != State.DIE)
         {
@@ -98,4 +114,19 @@ public class PlayerManager : MonoBehaviour
             }
         }
     }
+
+    public void OnAttackAnim()
+    {
+        //StartCoroutine(OnAttackMotion());
+        m_animator.SetTrigger("IsAttack_Trigger");
+    }
+
+    //IEnumerator OnAttackMotion()
+    //{
+    //    //m_animator.SetBool("IsAttack", true);
+    //    m_animator.SetTrigger("IsAttack_Trigger");
+    //    //yield return new WaitForSeconds(1.0f);
+    //    //m_animator.SetBool("IsAttack", false);
+    //    yield break;
+    //}
 }

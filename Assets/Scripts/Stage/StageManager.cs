@@ -43,8 +43,10 @@ public class StageManager : MonoBehaviour
     [Header("Wall&Tile Image Setting")]
     public Material[] tile_far_material;
     public Sprite[] tile_close_sprite;
+    public float closeTileAlpha = 80f;
     public Sprite[] wall_far_sprite;
     public Sprite[] wall_close_sprite;
+ 
     [Header("Wall&Tile Index Setting")]
     public int closeTileIndex = 0;
     public int farTileIndex = 0;
@@ -92,6 +94,10 @@ public class StageManager : MonoBehaviour
         if(itemM.i_protectWall)
         {
             b_spawnPoints.SetActive(true);
+        }
+        else
+        {
+            b_spawnPoints.SetActive(false);
         }
 
         GameObject effect = Instantiate(startEffect, gameObject.transform);
@@ -166,6 +172,11 @@ public class StageManager : MonoBehaviour
     public Sprite Get_CloseTile()
     {
         return tile_close_sprite[closeTileIndex];
+    }
+
+    public float Get_CloseTileAlpha()
+    {
+        return closeTileAlpha;
     }
 
     public Material Get_FarTile()

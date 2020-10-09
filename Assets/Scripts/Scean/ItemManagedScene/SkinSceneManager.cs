@@ -16,6 +16,7 @@ public class SkinSceneManager : MonoBehaviour
 
     private Text txt_priceTag;
     private Image img_skin;
+    private Animator anim_skin;
     private Text txt_activeBTN;
     private Image img_BtnNext;
     private Image img_BtnPrev;
@@ -48,6 +49,7 @@ public class SkinSceneManager : MonoBehaviour
         txt_priceTag = gameObject.transform.Find("Panel_PriceTag").Find("Text").GetComponent<Text>();
         txt_activeBTN = gameObject.transform.Find("Button_Active").Find("Text").GetComponent<Text>();
         img_skin = gameObject.transform.Find("Image_Skin").GetComponent<Image>();
+        anim_skin = gameObject.transform.Find("Image_Skin").GetComponent<Animator>();
         img_BtnNext = gameObject.transform.Find("Button_Next").GetComponent<Image>();
         img_BtnPrev = gameObject.transform.Find("Button_Prev").GetComponent<Image>();
         sub_panel_warning = gameObject.transform.Find("Panel_Warning").gameObject;
@@ -61,6 +63,16 @@ public class SkinSceneManager : MonoBehaviour
     {
         sub_panel_warning.SetActive(false);
         img_skin.sprite = skinM.skins[cnt_skin];
+        if (skinM.anims[cnt_skin] != null)
+        {
+            anim_skin.runtimeAnimatorController = skinM.anims[cnt_skin];
+            StartCoroutine(Anim_Ctrl(cnt_skin));
+        }
+        else
+        {
+            anim_skin.runtimeAnimatorController = null;
+        }
+
         if (skins[cnt_skin].is_had == 0)
         {
             txt_priceTag.text = "가격:" + skins[cnt_skin].price.ToString();
@@ -161,6 +173,7 @@ public class SkinSceneManager : MonoBehaviour
     {
         if (cnt_skin < max_skin-1)
         {
+            StopCoroutine(Anim_Ctrl(cnt_skin));
             cnt_skin += 1;
             UpdateScene();
         }
@@ -175,6 +188,7 @@ public class SkinSceneManager : MonoBehaviour
     {
         if (cnt_skin > 0)
         {
+            StopCoroutine(Anim_Ctrl(cnt_skin));
             cnt_skin -= 1;
             UpdateScene();
         }
@@ -225,6 +239,23 @@ public class SkinSceneManager : MonoBehaviour
         skins[3].is_had = PlayerPrefs.GetInt("HadSkin3", 0);
     }
 
+    IEnumerator Anim_Ctrl(int index)
+    {
+        while (true)
+        {
+            if (anim_skin.GetBool("IsAttack"))
+            {
+                anim_skin.SetBool("IsAttack", false);
+                yield return new WaitForSeconds(1.5f);
+            }
+            else
+            {
+                anim_skin.SetBool("IsAttack", true);
+                anim_skin.SetTrigger("IsAttack_Trigger");
+                yield return new WaitForSeconds(1.5f);
+            }
+        }
+    }
 
 
 }

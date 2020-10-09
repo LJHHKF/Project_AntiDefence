@@ -14,11 +14,13 @@ public class EnemyCtrl : MonoBehaviour
         DIE
     }
 
-    private State state = State.MOVE;
 
-    private EnemyTargetCtrl targetCtrl;
+    private State state = State.MOVE;
     private GameObject target;
+
     private Barricade barricade;
+    private Transform t_imgPanel;
+    private float slope;
 
     [Header("HpBar Setting")]
     public GameObject hpBarPrefab;
@@ -65,12 +67,12 @@ public class EnemyCtrl : MonoBehaviour
         ta_manager = towerboard.GetComponent<TA_Manager>();
         pl_manager = towerboard.GetComponent<PlayerManager>();
 
-        targetCtrl = gameObject.GetComponentInChildren<EnemyTargetCtrl>();
-
         ws = new WaitForSeconds(0.3f);
 
         o_stgM = GameObject.FindGameObjectWithTag("StageMObject");
         stgManager = o_stgM.GetComponent<StageManager>();
+
+        t_imgPanel = gameObject.transform.Find("Clear_Panel").GetComponent<Transform>();
 
         SetHPBar();
         initHP = enemyHP;
@@ -85,13 +87,14 @@ public class EnemyCtrl : MonoBehaviour
         //move_Vector = direction * moveSpeed;
         //this.gameObject.transform.Translate(move_Vector);
 
+        ImageSlopeRotate();
+
         if (state == State.DIE)
         {
             SetDropMoneyBar();
             stgManager.EnemyDied(dropMoneyValue);
 
-            Quaternion qut = new Quaternion();
-            qut = Quaternion.identity;
+            Quaternion qut = Quaternion.identity;
             GameObject effect = Instantiate(dieEffectPrefab,
                    new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z),
                    qut);
@@ -102,9 +105,14 @@ public class EnemyCtrl : MonoBehaviour
         }
         else if (state == State.MOVE)
         {
-            direction = target.transform.position - transform.position;
-            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(direction), rotSpeed * Time.deltaTime);
             transform.position = Vector3.MoveTowards(transform.position, target.transform.position, moveSpeed * Time.deltaTime);
+
+            direction = target.transform.position - transform.position;
+            transform.rotation = Quaternion.Slerp(transform.rotation, target.transform.rotation, rotSpeed * Time.deltaTime);
+
+            //Vector3 move_vector = new Vector3(target.transform.position.x - transform.position.x, 0, target.transform.position.z - transform.position.z).normalized * moveSpeed * Time.deltaTime;
+            //m_rigidbody.MovePosition(transform.position + move_vector);
+
         }
         else if (state == State.PUSHED)
         {
@@ -140,7 +148,6 @@ public class EnemyCtrl : MonoBehaviour
         }
     }
 
-
     void SetHPBar()
     {
         uiCanvas = GameObject.FindGameObjectWithTag("UI_Canvas").GetComponent<Canvas>();
@@ -169,6 +176,19 @@ public class EnemyCtrl : MonoBehaviour
         {
             barricade = t.GetComponentInParent<Barricade>();
         }
+    }
+
+    private void ImageSlopeRotate()
+    {
+        if (gameObject.transform.localEulerAngles.y >= 0 && gameObject.transform.localEulerAngles.y <= 180)
+        {
+            slope = (60.0f + (gameObject.transform.localEulerAngles.y / 3));
+        }
+        else if (gameObject.transform.localEulerAngles.y >= 180 && gameObject.transform.localEulerAngles.y <= 360)
+        {
+            slope = (120.0f - ((gameObject.transform.localEulerAngles.y - 180) / 3));
+        }
+        t_imgPanel.localEulerAngles = new Vector3(slope, 0, 0);
     }
 
     IEnumerator CheckState()
