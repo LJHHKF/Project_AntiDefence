@@ -1900,6 +1900,8 @@ MonoBehaviour:
   b_spawnPoints: {fileID: 629551869}
   spawn_Effects: {fileID: 1000011128802252, guid: 96730f8640590934eacb6f860058e7f9,
     type: 3}
+  e_direction_Effects: {fileID: 8232089510043794692, guid: 7b780b9fdb20e2f45bd741558ba1a23c,
+    type: 3}
   enemies:
   - {fileID: 6594383046016651844, guid: 0a9f429330c94a443a5332d50890d231, type: 3}
   - {fileID: 4004246026254903031, guid: 28fda2406e93597498f795d673bb426f, type: 3}
@@ -1955,6 +1957,8 @@ MonoBehaviour:
   startEffect: {fileID: 1495361858992520205, guid: 6b24b6cc3da9e8f4fae8ba37282dfcb2,
     type: 3}
   startEffect2: {fileID: 7717023698762640779, guid: 43489713a0ddff744b3a36edbaa148a0,
+    type: 3}
+  sfx_manager: {fileID: 7819750356166635375, guid: 961f6e2ecf4669e4c8b84a29e2c362d6,
     type: 3}
   tile_far_material:
   - {fileID: 2100000, guid: 0b781e32af77ed14db4c06348d91501d, type: 2}

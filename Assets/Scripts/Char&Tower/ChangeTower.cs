@@ -18,8 +18,8 @@ public class ChangeTower : MonoBehaviour
 
     private float[] aim_rot = new float[2];
 
-
-
+    private GameObject sfx_manager;
+    private AudioSource sfx_BTN_Click;
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +35,7 @@ public class ChangeTower : MonoBehaviour
             curTowers[i] = Instantiate(curTower, t_Pos[i]);
             t_img_panel[i] = curTowers[i].transform.GetChild(0).gameObject;
         }
+        StartCoroutine(Get_SFX_Manager());
     }
 
     private void Update()
@@ -47,6 +48,7 @@ public class ChangeTower : MonoBehaviour
 
     public void InstSNT()
     {
+        StartCoroutine(Sound_BTN_Click());
         curTower = sniperTower;
         for (int i = 0; i < curTowers.Length; i++)
         {
@@ -60,6 +62,7 @@ public class ChangeTower : MonoBehaviour
 
     public void InstBasic()
     {
+        StartCoroutine(Sound_BTN_Click());
         curTower = basicTower;
         for (int i = 0; i < curTowers.Length; i++)
         {
@@ -73,6 +76,7 @@ public class ChangeTower : MonoBehaviour
 
     public void InstPT()
     {
+        StartCoroutine(Sound_BTN_Click());
         curTower = pushTower;
         for (int i = 0; i < curTowers.Length; i++)
         {
@@ -102,33 +106,19 @@ public class ChangeTower : MonoBehaviour
         }
     }
 
-    //IEnumerator Rotate()
-    //{
-    //    if (gameObject.transform.localEulerAngles.y >= 0 && gameObject.transform.localEulerAngles.y <= 180)
-    //    {
-    //        aim_rot[0] = (60.0f + (gameObject.transform.localEulerAngles.y / 3));
-    //        aim_rot[1] = (120.0f - (gameObject.transform.localEulerAngles.y / 3));
-    //    }
-    //    else if (gameObject.transform.localEulerAngles.y >= 180 && gameObject.transform.localEulerAngles.y <= 360)
-    //    {
-    //        aim_rot[0] = (120.0f - ((gameObject.transform.localEulerAngles.y - 180) / 3));
-    //        aim_rot[1] = (60.0f + ((gameObject.transform.localEulerAngles.y - 180) / 3));
-    //    }
+    private IEnumerator Sound_BTN_Click()
+    {
+        sfx_BTN_Click.Play();
+        yield return new WaitForSeconds(1.0f);
+        sfx_BTN_Click.Stop();
+        yield break;
+    }
 
-    //    for (int i = 0; i < 2; i++)
-    //    {
-    //        //if (aim_rot[i] > 120)
-    //        //    aim_rot[i] = 120;
-    //        //else if (aim_rot[i] < 60)
-    //        //    aim_rot[i] = 60;
-
-    //        //t_img_panel[i].transform.rotation = Quaternion.Euler(rot_value * Time.deltaTime, 0, 0);
-    //        //t_img_panel[i].transform.Rotate(rot_value * rot_speed, 0, 0, Space.Self);
-    //        //t_img_panel[i].transform.rotation = Quaternion.Slerp(t_img_panel[i].transform.rotation, aim_Quaternion[i], Time.deltaTime * 5.0f);
-
-    //        t_img_panel[i].transform.localEulerAngles = new Vector3(aim_rot[i], 0, 0);
-    //    }
-    //    yield return new WaitForFixedUpdate();
-    //    StopCoroutine(Rotate());
-    //}
+    private IEnumerator Get_SFX_Manager()
+    {
+        yield return new WaitForSeconds(1.0f);
+        sfx_manager = GameObject.FindGameObjectWithTag("MainCamera").transform.Find("SFX_Manager(Clone)").gameObject;
+        sfx_BTN_Click = sfx_manager.transform.Find("S_BTN_Click").gameObject.GetComponent<AudioSource>();
+        yield break;
+    }
 }
