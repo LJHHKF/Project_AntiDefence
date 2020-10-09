@@ -2306,6 +2306,8 @@ MonoBehaviour:
     type: 3}
   startEffect2: {fileID: 7717023698762640779, guid: 43489713a0ddff744b3a36edbaa148a0,
     type: 3}
+  sfx_manager: {fileID: 7819750356166635375, guid: 961f6e2ecf4669e4c8b84a29e2c362d6,
+    type: 3}
   tile_far_material:
   - {fileID: 2100000, guid: 0b781e32af77ed14db4c06348d91501d, type: 2}
   tile_close_sprite:

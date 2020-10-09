@@ -39,7 +39,7 @@ public class StageManager : MonoBehaviour
     [Header("Other Setting")]
     public GameObject startEffect;
     public GameObject startEffect2;
-   
+    public GameObject sfx_manager;
 
     [Header("Wall&Tile Image Setting")]
     public Material[] tile_far_material;
@@ -69,6 +69,10 @@ public class StageManager : MonoBehaviour
     private TA_Manager ta_M;
 
 
+    private void Awake()
+    {
+        Instantiate(sfx_manager,GameObject.FindGameObjectWithTag("MainCamera").transform);
+    }
 
     // Start is called before the first frame update
     void Start()
