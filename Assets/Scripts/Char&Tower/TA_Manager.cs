@@ -28,6 +28,9 @@ public class TA_Manager : MonoBehaviour
     private GameObject feverEffectPanel;
     private bool on_fever;
 
+    private GameObject sfx_manager;
+    private AudioSource sfx_SNT_Attack;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -63,6 +66,7 @@ public class TA_Manager : MonoBehaviour
         {
             p_AtDmg *= 1.5f;
         }
+        StartCoroutine(Get_SFX_Manager());
     }
 
     private void Update()
@@ -87,6 +91,7 @@ public class TA_Manager : MonoBehaviour
         //StartCoroutine(CoolTime(1));
 
         playerM.OnAttackAnim();
+        StartCoroutine(Sound_SNT_Attack());
     }
 
     public void PTActived()
@@ -125,6 +130,23 @@ public class TA_Manager : MonoBehaviour
         feverEffectPanel.SetActive(false);
 
         yield break;
+    }
+
+
+    private IEnumerator Sound_SNT_Attack()
+    {
+        sfx_SNT_Attack.Play();
+        yield return new WaitForSeconds(1.0f);
+        sfx_SNT_Attack.Stop();
+        yield break;
+    }
+
+    private IEnumerator Get_SFX_Manager()
+    {
+        yield return new WaitForSeconds(1.0f);
+        sfx_manager = GameObject.FindGameObjectWithTag("MainCamera").transform.Find("SFX_Manager(Clone)").gameObject;
+        sfx_SNT_Attack = sfx_manager.transform.Find("S_SNT_Attack").gameObject.GetComponent<AudioSource>();
+        StopCoroutine(Get_SFX_Manager());
     }
 
     //IEnumerator CoolTime(int type) //코루틴 방식은 왠지 가속도가 붙음. 1초마다, 가 아니라 1초, 2초, 3초씩 누적이 되는듯함.

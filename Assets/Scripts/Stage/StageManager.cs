@@ -14,6 +14,7 @@ public class StageManager : MonoBehaviour
     public GameObject b_spawnPoints;
     private Transform[] c_enemySpawnPoints;
     public GameObject spawn_Effects;
+    public GameObject e_direction_Effects;
     public GameObject[] enemies;
     private GameObject ui_Canvas;
     private GameObject remainPanel;
@@ -38,7 +39,7 @@ public class StageManager : MonoBehaviour
     [Header("Other Setting")]
     public GameObject startEffect;
     public GameObject startEffect2;
-
+    public GameObject sfx_manager;
 
     [Header("Wall&Tile Image Setting")]
     public Material[] tile_far_material;
@@ -58,6 +59,7 @@ public class StageManager : MonoBehaviour
     private Text t_cur;
     private Text t_full;
     private int cnt_EnemyDie = 0;
+    private Transform p_transform;
 
     private GameObject gm;
     private LoadingManager loadingM;
@@ -67,6 +69,10 @@ public class StageManager : MonoBehaviour
     private TA_Manager ta_M;
 
 
+    private void Awake()
+    {
+        Instantiate(sfx_manager,GameObject.FindGameObjectWithTag("MainCamera").transform);
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -88,6 +94,8 @@ public class StageManager : MonoBehaviour
         loadingM = gm.GetComponent<LoadingManager>();
         itemM = gm.GetComponent<SelectedItemManager>();
         bgmM = gm.GetComponent<BGM_Manager>();
+
+        
 
         ta_M = GameObject.FindGameObjectWithTag("TowerBoard").GetComponent<TA_Manager>();
 
@@ -128,14 +136,15 @@ public class StageManager : MonoBehaviour
         {
             StageClear();
         }
-        //s_bar.fillAmount = (float) cnt_EnemyDie / spawnPointIndex.Length;
     }
 
     private void SpawnEnemy(int sp_index, int m_index)
     {
-        Instantiate<GameObject>(enemies[m_index], c_enemySpawnPoints[sp_index].position, c_enemySpawnPoints[sp_index].rotation);
+        Instantiate(enemies[m_index], c_enemySpawnPoints[sp_index].position, c_enemySpawnPoints[sp_index].rotation);
         GameObject effect = Instantiate(spawn_Effects, c_enemySpawnPoints[sp_index]);
         Destroy(effect, 2.0f);
+        GameObject d_effect = Instantiate(e_direction_Effects, c_enemySpawnPoints[sp_index]);
+        Destroy(d_effect, 1.0f);
     }
 
     IEnumerator CountTimeForSpawn()
