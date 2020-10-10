@@ -1,7 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using TMPro;
-using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -111,6 +109,7 @@ public class StageManager : MonoBehaviour
         GameObject effect = Instantiate(startEffect, gameObject.transform);
         GameObject effect2 = Instantiate(startEffect2, gameObject.transform);
         Destroy(effect, 1.0f);
+        Destroy(effect2, 5.0f);
 
         PlayBGM(chpter_num ,stage_num);
     }
