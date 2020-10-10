@@ -81,8 +81,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   b_AtCT: 2
-  sn_AtCT: 5
-  p_AtCT: 10
+  sn_AtCT: 4
+  p_AtCT: 8
   b_AtDmg: 1
   sn_AtDmg: 5
   p_AtDmg: 2
@@ -104,6 +104,8 @@ MonoBehaviour:
   - {fileID: 8832167503239892954, guid: 44d5ac4742de0ca46ac17e9750de7686, type: 3}
   - {fileID: -4853055123583119345, guid: 44d5ac4742de0ca46ac17e9750de7686, type: 3}
   - {fileID: -8761483511772326392, guid: 44d5ac4742de0ca46ac17e9750de7686, type: 3}
+  img_character: {fileID: 0}
+  effect_AI_Barrier: {fileID: 0}
 --- !u!1 &2053384445506755176
 GameObject:
   m_ObjectHideFlags: 0
