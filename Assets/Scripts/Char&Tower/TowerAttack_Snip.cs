@@ -41,14 +41,10 @@ public class TowerAttack_Snip : MonoBehaviour
         si_manager = gm.GetComponent<SelectedItemManager>();
         if (si_manager.i_extend_sn)
         {
-            Vector3 upScale = Vector3.Scale(gameObject.transform.localScale, new Vector3(1f, 1f, 1.5f));
+            Vector3 upScale = Vector3.Scale(gameObject.transform.localScale, new Vector3(1.5f, 1f, 1f));
             gameObject.transform.localScale = upScale;
-            Vector3 upPosition = Vector3.Scale(gameObject.transform.localPosition, new Vector3(1f, 1f, 1.5f));
-            gameObject.transform.localPosition = upPosition;
-            upScale = Vector3.Scale(fireRange.transform.localScale, new Vector3(1f, 1f, 1.5f));
+            upScale = Vector3.Scale(fireRange.transform.localScale, new Vector3(1.5f, 1f, 1f));
             fireRange.transform.localScale = upScale;
-            upPosition = Vector3.Scale(fireRange.transform.localPosition, new Vector3(1f, 1f, 1.5f));
-            fireRange.transform.localPosition = upPosition;
         }
     }
 
