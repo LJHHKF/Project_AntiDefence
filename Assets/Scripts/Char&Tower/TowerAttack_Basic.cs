@@ -23,7 +23,7 @@ public class TowerAttack_Basic : MonoBehaviour
     private GameObject gm;
     private SelectedItemManager si_manager;
 
-    private void Start()
+    private void Awake()
     {
         imageObject = GameObject.FindGameObjectWithTag("BT_Cool");
         cTimeImg = imageObject.GetComponent<Image>();
@@ -39,7 +39,7 @@ public class TowerAttack_Basic : MonoBehaviour
 
         gm = GameObject.FindGameObjectWithTag("GameManager");
         si_manager = gm.GetComponent<SelectedItemManager>();
-        if(si_manager.i_extend_b)
+        if (si_manager.i_extend_b)
         {
             Vector3 upScale = Vector3.Scale(gameObject.transform.localScale, new Vector3(1f, 1f, 1.5f));
             gameObject.transform.localScale = upScale;
@@ -82,6 +82,12 @@ public class TowerAttack_Basic : MonoBehaviour
             
         }
     }
+
+    public void OnOtherAttack()
+    {
+        StartCoroutine(On_Clear());
+    }
+
 
     IEnumerator FR_Stay()
     {

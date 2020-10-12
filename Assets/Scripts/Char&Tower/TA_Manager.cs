@@ -32,6 +32,9 @@ public class TA_Manager : MonoBehaviour
     private AudioSource sfx_SNT_Attack;
     private AudioSource sfx_BT_Attack;
 
+    private ChangeTower changeT;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -51,6 +54,7 @@ public class TA_Manager : MonoBehaviour
         feverEffectPanel = ui_Canvas.transform.Find("Buttons").Find("FeverEffectPanel").gameObject;
 
         playerM = gameObject.GetComponent<PlayerManager>();
+        changeT = gameObject.GetComponent<ChangeTower>();
 
         gm = GameObject.FindGameObjectWithTag("GameManager");
         si_manager = gm.GetComponent<SelectedItemManager>();
@@ -85,6 +89,8 @@ public class TA_Manager : MonoBehaviour
 
         playerM.OnAttackAnim();
         StartCoroutine(Sound_BT_Attack());
+        changeT.AttackActivated(0);
+
     }
 
     public void SNTActived()
@@ -94,6 +100,8 @@ public class TA_Manager : MonoBehaviour
 
         playerM.OnAttackAnim();
         StartCoroutine(Sound_SNT_Attack());
+        changeT.AttackActivated(1);
+
     }
 
     public void PTActived()
@@ -102,6 +110,8 @@ public class TA_Manager : MonoBehaviour
         //StartCoroutine(CoolTime(2));
 
         playerM.OnAttackAnim();
+        changeT.AttackActivated(2);
+
     }
 
     public void FeverActivate(float act_time)
@@ -111,6 +121,7 @@ public class TA_Manager : MonoBehaviour
             StartCoroutine(Fever(act_time));
         }
     }
+
 
     IEnumerator Fever(float act_time)
     {

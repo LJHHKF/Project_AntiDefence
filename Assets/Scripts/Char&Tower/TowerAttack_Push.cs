@@ -61,6 +61,11 @@ public class TowerAttack_Push : MonoBehaviour
         }
     }
 
+    public void OnOtherAttack()
+    {
+        StartCoroutine(On_Clear());
+    }
+
     IEnumerator FR_Stay()
     {
         yield return new WaitForSeconds(0.05f);
