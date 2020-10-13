@@ -42,6 +42,7 @@ public class SettingScene : MonoBehaviour
 
     public void Click_BTN_Return()
     {
+        audioM.SFX_BTN_Click();
         loadingM.LoadPrevScene();
     }
 }

@@ -77,6 +77,7 @@ public class ItemSelectManager : MonoBehaviour
     private SelectedItemManager selectIManager;
     private LoadingManager loadingM;
     private BGM_Manager bgmM;
+    private AudioManager audioM;
 
     public Sprite img_nonPart;
 
@@ -88,6 +89,7 @@ public class ItemSelectManager : MonoBehaviour
         selectIManager.End_Stage();
         loadingM = gm.GetComponent<LoadingManager>();
         bgmM = gm.GetComponent<BGM_Manager>();
+        audioM = gm.GetComponent<AudioManager>();
 
         bgmM.Play_LobbyAndShop();
 
@@ -147,6 +149,7 @@ public class ItemSelectManager : MonoBehaviour
 
     public void Click_B_P1()
     {
+        audioM.SFX_BTN_Click();
         if (p1_on == false && p2_on == false)
         {
             p1_on = true;
@@ -198,6 +201,7 @@ public class ItemSelectManager : MonoBehaviour
 
     public void Click_B_P2()
     {
+        audioM.SFX_BTN_Click();
         if (p1_on == false && p2_on == false)
         {
             p2_on = true;
@@ -232,8 +236,9 @@ public class ItemSelectManager : MonoBehaviour
         }
     }
 
-    public void Click_B_Muls_B()
+    private void Item_Clicked(int i_num)
     {
+        audioM.SFX_BTN_Click();
         if (n_pSelected > 0)
         {
             if (selectIManager.own_MulS_B > 0)
@@ -243,240 +248,99 @@ public class ItemSelectManager : MonoBehaviour
                     selectIManager.Item_Get(index_imgs);
                     UpdateText(index_imgs);
                 }
-                index_imgs = 0;
-                selectIManager.Item_PreUse(0);
-                UpdateText(0);
+                index_imgs = i_num;
+                selectIManager.Item_PreUse(i_num);
+                UpdateText(i_num);
                 img_selected = true;
             }
             else
             {
-                Debug.Log("연발장치(일반) 소진");
+                switch (i_num)
+                {
+                    case 0:
+                        On_Warning("연발장치(일반) 소진");
+                        break;
+                    case 1:
+                        On_Warning("연발장치(저격) 소진");
+                        break;
+                    case 2:
+                        On_Warning("연발장치(충격) 소진");
+                        break;
+                    case 3:
+                        On_Warning("AI 배리어 소진");
+                        break;
+                    case 4:
+                        On_Warning("방호벽 소진");
+                        break;
+                    case 5:
+                        On_Warning("확장장치(일반) 소진");
+                        break;
+                    case 6:
+                        On_Warning("확장장치(저격) 소진");
+                        break;
+                    case 7:
+                        On_Warning("확장장치(충격) 소진");
+                        break;
+                    case 8:
+                        On_Warning("수복장치 소진");
+                        break;
+                }
             }
         }
         else
         {
-            On_Purchase(0);
+            On_Purchase(i_num);
         }
+    }
+
+    public void Click_B_Muls_B()
+    {
+        Item_Clicked(0);
     }
 
     public void Click_B_Muls_SN()
     {
-        if (n_pSelected > 0)
-        {
-            if (selectIManager.own_MulS_B > 0)
-            {
-                if (img_selected)
-                {
-                    selectIManager.Item_Get(index_imgs);
-                    UpdateText(index_imgs);
-                }
-                index_imgs = 1;
-                selectIManager.Item_PreUse(1);
-                UpdateText(1);
-                img_selected = true;
-            }
-            else
-            {
-                Debug.Log("연발장치(저격) 소진");
-            }
-        }
-        else
-        {
-            On_Purchase(1);
-        }
+        Item_Clicked(1);
     }
 
     public void Click_B_Muls_P()
     {
-        if (n_pSelected > 0)
-        {
-            if (selectIManager.own_MulS_B > 0)
-            {
-                if (img_selected)
-                {
-                    selectIManager.Item_Get(index_imgs);
-                    UpdateText(index_imgs);
-                }
-                index_imgs = 2;
-                selectIManager.Item_PreUse(2);
-                UpdateText(2);
-                img_selected = true;
-            }
-            else
-            {
-                Debug.Log("연발장치(충격) 소진");
-            }
-        }
-        else
-        {
-            On_Purchase(2);
-        }
+        Item_Clicked(2);
     }
 
     public void Click_B_AiBarrer()
     {
-        if (n_pSelected > 0)
-        {
-            if (selectIManager.own_MulS_B > 0)
-            {
-                if (img_selected)
-                {
-                    selectIManager.Item_Get(index_imgs);
-                    UpdateText(index_imgs);
-                }
-                index_imgs = 3;
-                selectIManager.Item_PreUse(3);
-                UpdateText(3);
-                img_selected = true;
-            }
-            else
-            {
-                Debug.Log("AI 배리어 소진");
-            }
-        }
-        else
-        {
-            On_Purchase(3);
-        }
+        Item_Clicked(3);
     }
 
     public void Click_B_ProtectWall()
     {
-        if (n_pSelected > 0)
-        {
-            if (selectIManager.own_MulS_B > 0)
-            {
-                if (img_selected)
-                {
-                    selectIManager.Item_Get(index_imgs);
-                    UpdateText(index_imgs);
-                }
-                index_imgs = 4;
-                selectIManager.Item_PreUse(4);
-                UpdateText(4);
-                img_selected = true;
-            }
-            else
-            {
-                Debug.Log("방호벽 소진");
-            }
-        }
-        else
-        {
-            On_Purchase(4);
-        }
+        Item_Clicked(4);
     }
 
     public void Click_B_Extend_B()
     {
-        if (n_pSelected > 0)
-        {
-            if (selectIManager.own_MulS_B > 0)
-            {
-                if (img_selected)
-                {
-                    selectIManager.Item_Get(index_imgs);
-                    UpdateText(index_imgs);
-                }
-                index_imgs = 5;
-                selectIManager.Item_PreUse(5);
-                UpdateText(5);
-                img_selected = true;
-            }
-            else
-            {
-                Debug.Log("확장장치(일반) 소진");
-            }
-        }
-        else
-        {
-            On_Purchase(5);
-        }
+        Item_Clicked(5);
     }
 
     public void Click_B_Extend_SN()
     {
-        if (n_pSelected > 0)
-        {
-            if (selectIManager.own_MulS_B > 0)
-            {
-                if (img_selected)
-                {
-                    selectIManager.Item_Get(index_imgs);
-                    UpdateText(index_imgs);
-                }
-                index_imgs = 6;
-                selectIManager.Item_PreUse(6);
-                UpdateText(6);
-                img_selected = true;
-            }
-            else
-            {
-                Debug.Log("확장장치(저격) 소진");
-            }
-        }
-        else
-        {
-            On_Purchase(6);
-        }
+        Item_Clicked(6);
     }
 
     public void Click_B_Extend_P()
     {
-        if (n_pSelected > 0)
-        {
-            if (selectIManager.own_MulS_B > 0)
-            {
-                if (img_selected)
-                {
-                    selectIManager.Item_Get(index_imgs);
-                    UpdateText(index_imgs);
-                }
-                index_imgs = 7;
-                selectIManager.Item_PreUse(7);
-                UpdateText(7);
-                img_selected = true;
-            }
-            else
-            {
-                Debug.Log("확장장치(충격) 소진");
-            }
-        }
-        else
-        {
-            On_Purchase(7);
-        }
+        Item_Clicked(7);
     }
 
     public void Click_B_Recovery()
     {
-        if (n_pSelected > 0)
-        {
-            if (selectIManager.own_MulS_B > 0)
-            {
-                if (img_selected)
-                {
-                    selectIManager.Item_Get(index_imgs);
-                    UpdateText(index_imgs);
-                }
-                index_imgs = 8;
-                selectIManager.Item_PreUse(8);
-                UpdateText(8);
-                img_selected = true;
-            }
-            else
-            {
-                Debug.Log("수복장치 소진");
-            }
-        }
-        else
-        {
-            On_Purchase(8);
-        }
+        Item_Clicked(8);
     }
 
     public void Click_Start()
     {
+        audioM.SFX_BTN_Click();
         if (p1_select >= 0)
         {
             selectIManager.Item_Use_Confirm(p1_select);
@@ -507,6 +371,7 @@ public class ItemSelectManager : MonoBehaviour
 
     public void Click_Cancle()
     {
+        audioM.SFX_BTN_Click();
         if (loadingM.GetHadPrev())
         {
             loadingM.LoadPrevScene();
@@ -520,6 +385,7 @@ public class ItemSelectManager : MonoBehaviour
 
     public void Cheat_B()
     {
+        audioM.SFX_BTN_Click();
         //for (int i = 0; i < 9; i++)
         //{
         //    selectIManager.Item_Get(i);
@@ -584,6 +450,7 @@ public class ItemSelectManager : MonoBehaviour
 
     public void Click_sub_yes()
     {
+        audioM.SFX_BTN_Click();
         if (selectIManager.own_money >= i_prices[n_purchase])
         {
             selectIManager.Use_Money(i_prices[n_purchase]);
@@ -596,20 +463,27 @@ public class ItemSelectManager : MonoBehaviour
         }
         else
         {
-            sub_txt_warning.text = "소지금이 부족합니다.";
-            sub_panel_warning.SetActive(true);
+            On_Warning("소지금이 부족합니다.");
             sub_panel_purchase.SetActive(false);
             n_purchase = -1;
         }
     }
 
+    private void On_Warning(string phrase)
+    {
+        sub_txt_warning.text = phrase;
+        sub_panel_warning.SetActive(true);
+    }
+
     public void Click_sub_no()
     {
+        audioM.SFX_BTN_Click();
         sub_panel_purchase.SetActive(false);
     }
 
     public void Click_sub_w_return()
     {
+        audioM.SFX_BTN_Click();
         sub_panel_warning.SetActive(false);
     }
 

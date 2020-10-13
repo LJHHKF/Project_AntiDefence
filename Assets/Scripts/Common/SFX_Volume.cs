@@ -16,7 +16,7 @@ public class SFX_Volume : MonoBehaviour
 
         for (int i = 0; i < m_sfxs.Length; i++)
         {
-            m_sfxs[i].volume = m_sfxs[i].volume * sfx_volume;
+            m_sfxs[i].volume = sfx_volume;
         }
     }
 

@@ -13,6 +13,7 @@ public class SkinSceneManager : MonoBehaviour
     private SelectedItemManager itemM;
     private SkinManager skinM;
     private BGM_Manager bgmM;
+    private AudioManager audioM;
 
     private Text txt_priceTag;
     private Image img_skin;
@@ -43,6 +44,7 @@ public class SkinSceneManager : MonoBehaviour
         itemM = gm.GetComponent<SelectedItemManager>();
         skinM = gm.GetComponent<SkinManager>();
         bgmM = gm.GetComponent<BGM_Manager>();
+        audioM = gm.GetComponent<AudioManager>();
 
         bgmM.Play_LobbyAndShop();
 
@@ -127,6 +129,7 @@ public class SkinSceneManager : MonoBehaviour
 
     public void BTN_Activate()
     {
+        audioM.SFX_BTN_Click();
         if (skins[cnt_skin].is_had == 0)
         {
             if(itemM.own_money >= skins[cnt_skin].price)
@@ -171,6 +174,7 @@ public class SkinSceneManager : MonoBehaviour
 
     public void BTN_Next()
     {
+        audioM.SFX_BTN_Click();
         if (cnt_skin < max_skin-1)
         {
             StopCoroutine(Anim_Ctrl(cnt_skin));
@@ -186,6 +190,7 @@ public class SkinSceneManager : MonoBehaviour
 
     public void BTN_Prev()
     {
+        audioM.SFX_BTN_Click();
         if (cnt_skin > 0)
         {
             StopCoroutine(Anim_Ctrl(cnt_skin));
@@ -202,16 +207,19 @@ public class SkinSceneManager : MonoBehaviour
 
     public void Sub_BTN_Return()
     {
+        audioM.SFX_BTN_Click();
         sub_panel_warning.SetActive(false);
     }
 
     public void BTN_Return()
     {
+        audioM.SFX_BTN_Click();
         loadingM.LoadScene("Lobby");
     }
 
     public void BTN_Reset()
     {
+        audioM.SFX_BTN_Click();
         string key;
 
         for (int i = 1; i < max_skin-1; i++)

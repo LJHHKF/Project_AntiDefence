@@ -30,6 +30,10 @@ public class TA_Manager : MonoBehaviour
 
     private GameObject sfx_manager;
     private AudioSource sfx_SNT_Attack;
+    private AudioSource sfx_BT_Attack;
+
+    private ChangeTower changeT;
+
 
     // Start is called before the first frame update
     void Start()
@@ -50,6 +54,7 @@ public class TA_Manager : MonoBehaviour
         feverEffectPanel = ui_Canvas.transform.Find("Buttons").Find("FeverEffectPanel").gameObject;
 
         playerM = gameObject.GetComponent<PlayerManager>();
+        changeT = gameObject.GetComponent<ChangeTower>();
 
         gm = GameObject.FindGameObjectWithTag("GameManager");
         si_manager = gm.GetComponent<SelectedItemManager>();
@@ -83,6 +88,9 @@ public class TA_Manager : MonoBehaviour
         //StartCoroutine(CoolTime(0));
 
         playerM.OnAttackAnim();
+        StartCoroutine(Sound_BT_Attack());
+        changeT.AttackActivated(0);
+
     }
 
     public void SNTActived()
@@ -92,6 +100,8 @@ public class TA_Manager : MonoBehaviour
 
         playerM.OnAttackAnim();
         StartCoroutine(Sound_SNT_Attack());
+        changeT.AttackActivated(1);
+
     }
 
     public void PTActived()
@@ -100,6 +110,8 @@ public class TA_Manager : MonoBehaviour
         //StartCoroutine(CoolTime(2));
 
         playerM.OnAttackAnim();
+        changeT.AttackActivated(2);
+
     }
 
     public void FeverActivate(float act_time)
@@ -109,6 +121,7 @@ public class TA_Manager : MonoBehaviour
             StartCoroutine(Fever(act_time));
         }
     }
+
 
     IEnumerator Fever(float act_time)
     {
@@ -133,6 +146,15 @@ public class TA_Manager : MonoBehaviour
     }
 
 
+    private IEnumerator Get_SFX_Manager()
+    {
+        yield return new WaitForSeconds(1.0f);
+        sfx_manager = GameObject.FindGameObjectWithTag("MainCamera").transform.Find("SFX_Manager(Clone)").gameObject;
+        sfx_SNT_Attack = sfx_manager.transform.Find("S_SNT_Attack").gameObject.GetComponent<AudioSource>();
+        sfx_BT_Attack = sfx_manager.transform.Find("S_BT_Attack").gameObject.GetComponent<AudioSource>();
+        StopCoroutine(Get_SFX_Manager());
+    }
+
     private IEnumerator Sound_SNT_Attack()
     {
         sfx_SNT_Attack.Play();
@@ -141,12 +163,12 @@ public class TA_Manager : MonoBehaviour
         yield break;
     }
 
-    private IEnumerator Get_SFX_Manager()
+    private IEnumerator Sound_BT_Attack()
     {
+        sfx_BT_Attack.Play();
         yield return new WaitForSeconds(1.0f);
-        sfx_manager = GameObject.FindGameObjectWithTag("MainCamera").transform.Find("SFX_Manager(Clone)").gameObject;
-        sfx_SNT_Attack = sfx_manager.transform.Find("S_SNT_Attack").gameObject.GetComponent<AudioSource>();
-        StopCoroutine(Get_SFX_Manager());
+        sfx_BT_Attack.Stop();
+        yield break;
     }
 
     //IEnumerator CoolTime(int type) //코루틴 방식은 왠지 가속도가 붙음. 1초마다, 가 아니라 1초, 2초, 3초씩 누적이 되는듯함.
