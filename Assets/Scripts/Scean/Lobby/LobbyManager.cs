@@ -66,7 +66,7 @@ public class LobbyManager : MonoBehaviour
     public void BTN_Shop()
     {
         audioM.SFX_BTN_Click();
-        loadingM.LoadScene("ItemEquip", "Lobby");
+        loadingM.LoadScene("ItemShop", "Lobby");
     }
 
     public void BTN_Stage()

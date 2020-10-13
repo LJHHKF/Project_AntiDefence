@@ -15,6 +15,7 @@ public class SkinSceneManager : MonoBehaviour
     private BGM_Manager bgmM;
     private AudioManager audioM;
 
+    private Transform t_skinSpace;
     private Text txt_priceTag;
     private Image img_skin;
     private Animator anim_skin;
@@ -23,6 +24,15 @@ public class SkinSceneManager : MonoBehaviour
     private Image img_BtnPrev;
     private GameObject sub_panel_warning;
     private Text sub_txt_warning;
+
+    public Sprite shopOwnerImg;
+    private Transform t_panel_shopOwner;
+    private Image img_ShopOwner;
+
+    private Text txt_money;
+    private Text txt_level;
+
+    
 
     struct SkinInfo
     {
@@ -48,15 +58,24 @@ public class SkinSceneManager : MonoBehaviour
 
         bgmM.Play_LobbyAndShop();
 
-        txt_priceTag = gameObject.transform.Find("Panel_PriceTag").Find("Text").GetComponent<Text>();
-        txt_activeBTN = gameObject.transform.Find("Button_Active").Find("Text").GetComponent<Text>();
-        img_skin = gameObject.transform.Find("Image_Skin").GetComponent<Image>();
-        anim_skin = gameObject.transform.Find("Image_Skin").GetComponent<Animator>();
-        img_BtnNext = gameObject.transform.Find("Button_Next").GetComponent<Image>();
-        img_BtnPrev = gameObject.transform.Find("Button_Prev").GetComponent<Image>();
+        t_skinSpace = gameObject.transform.Find("SkinSpace");
+        txt_priceTag = t_skinSpace.Find("Panel_PriceTag").Find("Text").GetComponent<Text>();
+        txt_activeBTN = t_skinSpace.Find("Button_Active").Find("Text").GetComponent<Text>();
+        img_skin = t_skinSpace.Find("Image_Skin").GetComponent<Image>();
+        anim_skin = t_skinSpace.Find("Image_Skin").GetComponent<Animator>();
+        img_BtnNext = t_skinSpace.Find("Button_Next").GetComponent<Image>();
+        img_BtnPrev = t_skinSpace.Find("Button_Prev").GetComponent<Image>();
         sub_panel_warning = gameObject.transform.Find("Panel_Warning").gameObject;
         sub_txt_warning = sub_panel_warning.transform.Find("Panel_Text").Find("Text").GetComponent<Text>();
 
+        t_panel_shopOwner = gameObject.transform.Find("Panel_ShopOwner");
+        img_ShopOwner = t_panel_shopOwner.Find("Image_ShopOwner").GetComponent<Image>();
+        img_ShopOwner.sprite = shopOwnerImg;
+
+        txt_money = gameObject.transform.Find("Panel_SubInfo").Find("Panel_Money").Find("Text").GetComponent<Text>();
+        txt_level = gameObject.transform.Find("Panel_SubInfo").Find("Panel_Level").Find("Text").GetComponent<Text>();
+        txt_money.text = itemM.own_money.ToString();
+        txt_level.text = "아직 미구현";
         UpdateScene();
 
     }

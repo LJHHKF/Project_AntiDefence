@@ -900,6 +900,24 @@ MonoBehaviour:
   own_Recovery: 10
   own_money: 0
   get_money: 0
+  spr_Muls_B: {fileID: 9159056963308284723, guid: 1e2d909a0162bdd46b8784d7d0130ca0,
+    type: 3}
+  spr_Muls_SN: {fileID: -1911585316022390235, guid: 1e2d909a0162bdd46b8784d7d0130ca0,
+    type: 3}
+  spr_Muls_P: {fileID: 1830495852126394682, guid: 1e2d909a0162bdd46b8784d7d0130ca0,
+    type: 3}
+  spr_AiBarrier: {fileID: -6575688573548333198, guid: 1e2d909a0162bdd46b8784d7d0130ca0,
+    type: 3}
+  spr_ProtectWall: {fileID: 614188932817504308, guid: 1e2d909a0162bdd46b8784d7d0130ca0,
+    type: 3}
+  spr_Extend_B: {fileID: -3310778108191350556, guid: 1e2d909a0162bdd46b8784d7d0130ca0,
+    type: 3}
+  spr_Extend_SN: {fileID: -871393150956627057, guid: 1e2d909a0162bdd46b8784d7d0130ca0,
+    type: 3}
+  spr_Extend_P: {fileID: -7586176554538100212, guid: 1e2d909a0162bdd46b8784d7d0130ca0,
+    type: 3}
+  spr_Recovery: {fileID: -8102150787510191927, guid: 1e2d909a0162bdd46b8784d7d0130ca0,
+    type: 3}
 --- !u!4 &1559065139
 Transform:
   m_ObjectHideFlags: 0

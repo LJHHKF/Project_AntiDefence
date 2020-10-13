@@ -49,6 +49,16 @@ public class SelectedItemManager : MonoBehaviour
     [HideInInspector]
     public bool get_money = false;
 
+    public Sprite spr_Muls_B;
+    public Sprite spr_Muls_SN;
+    public Sprite spr_Muls_P;
+    public Sprite spr_AiBarrier;
+    public Sprite spr_ProtectWall;
+    public Sprite spr_Extend_B;
+    public Sprite spr_Extend_SN;
+    public Sprite spr_Extend_P;
+    public Sprite spr_Recovery;
+
     private void Awake()
     {
         if (PlayerPrefs.GetInt("MulS_B") <= 0)
