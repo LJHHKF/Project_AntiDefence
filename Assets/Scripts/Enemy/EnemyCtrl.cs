@@ -34,6 +34,10 @@ public class EnemyCtrl : MonoBehaviour
 
     [Header("EnemyDieEffect Setting")]
     public GameObject dieEffectPrefab;
+    private bool isDie;
+
+    [Header("EnemyAnimator")]
+    public Animator m_anim;
 
     private GameObject towerboard;
     private TA_Manager ta_manager;
@@ -91,17 +95,23 @@ public class EnemyCtrl : MonoBehaviour
 
         if (state == State.DIE)
         {
-            SetDropMoneyBar();
-            stgManager.EnemyDied(dropMoneyValue);
+            if (isDie == false)
+            {
+                SetDropMoneyBar();
+                stgManager.EnemyDied(dropMoneyValue);
 
-            Quaternion qut = Quaternion.identity;
-            GameObject effect = Instantiate(dieEffectPrefab,
-                   new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z),
-                   qut);
+                Quaternion qut = Quaternion.identity;
+                GameObject effect = Instantiate(dieEffectPrefab,
+                       new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z),
+                       qut);
 
-            Destroy(effect, 1.0f);
-            Destroy(hpBar);
-            Destroy(gameObject);
+                Destroy(effect, 1.0f);
+                Destroy(hpBar);
+                m_anim.SetTrigger("IsDie");
+                Destroy(gameObject, 1.0f);
+
+                isDie = true;
+            }
         }
         else if (state == State.MOVE)
         {

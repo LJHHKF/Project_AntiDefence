@@ -657,7 +657,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 76d1cb11529ded14bb6f59bd237d8bf4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 41c04794d7d181b47ab5d03da89dd867, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1502,8 +1502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a917f1de9aa2d844fb3db34d8024ef8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shopOwnerImg: {fileID: -1911585316022390235, guid: 1e2d909a0162bdd46b8784d7d0130ca0,
-    type: 3}
+  shopOwnerImg: {fileID: 21300000, guid: 77ece71a7b03ba34bb9ee4aa2e584a52, type: 3}
 --- !u!114 &1204549764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1799,8 +1798,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 9159056963308284723, guid: 1e2d909a0162bdd46b8784d7d0130ca0,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: 77ece71a7b03ba34bb9ee4aa2e584a52, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

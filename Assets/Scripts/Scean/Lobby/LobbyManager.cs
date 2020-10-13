@@ -54,7 +54,8 @@ public class LobbyManager : MonoBehaviour
 
     public void BTN_Inventory()
     {
-
+        audioM.SFX_BTN_Click();
+        loadingM.LoadScene("Inventory", "Lobby");
     }
 
     public void BTN_Skin()
