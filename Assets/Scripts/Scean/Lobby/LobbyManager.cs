@@ -50,11 +50,14 @@ public class LobbyManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Time.timeScale = 0.0f;
-            panel_exit.SetActive(true);
-        }
+        //if (Application.platform == RuntimePlatform.Android)
+       // {
+            if (Input.GetKey(KeyCode.Escape))
+            {
+                Time.timeScale = 0.0f;
+                panel_exit.SetActive(true);
+            }
+        //}
     }
 
     public void BTN_Setting()
