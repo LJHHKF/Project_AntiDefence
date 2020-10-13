@@ -23,7 +23,7 @@ public class TowerAttack_Basic : MonoBehaviour
     private GameObject gm;
     private SelectedItemManager si_manager;
 
-    private void Start()
+    private void Awake()
     {
         imageObject = GameObject.FindGameObjectWithTag("BT_Cool");
         cTimeImg = imageObject.GetComponent<Image>();
