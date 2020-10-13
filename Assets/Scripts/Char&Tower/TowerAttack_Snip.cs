@@ -71,6 +71,11 @@ public class TowerAttack_Snip : MonoBehaviour
             StartCoroutine(On_Clear());
             StartCoroutine(Off_Anim());
             GameObject effect = Instantiate(a_Effect, firePos.position, firePos.rotation);
+            //if (si_manager.i_extend_sn)
+            //{
+            //    Vector3 upScale = Vector3.Scale(a_Effect.transform.localScale, new Vector3(1.5f, 1.0f, 1.0f));
+            //    effect.transform.localScale = upScale;
+            //}
             Destroy(effect, 1.0f);
 
             ta_manager.SNTActived();

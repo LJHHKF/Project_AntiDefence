@@ -6,48 +6,74 @@ public class SelectedItemManager : MonoBehaviour
 {
     [HideInInspector]
     public bool i_muls_b = false;
-    [HideInInspector]
     public bool i_muls_sn = false;
-    [HideInInspector]
     public bool i_muls_p = false;
-    [HideInInspector]
     public bool i_aiBarrier = false;
-    [HideInInspector]
     public bool i_protectWall = false;
-    [HideInInspector]
     public bool i_extend_b = false;
-    [HideInInspector]
     public bool i_extend_sn = false;
-    [HideInInspector]
     public bool i_extend_p = false;
-    [HideInInspector]
     public bool i_recovery = false;
 
     [HideInInspector]
     public int own_MulS_B;
-    [HideInInspector]
     public int own_MulS_SN;
-    [HideInInspector]
     public int own_MulS_P;
-    [HideInInspector]
     public int own_AiBarrier;
-    [HideInInspector]
     public int own_ProtectWall;
-    [HideInInspector]
     public int own_Extend_B;
-    [HideInInspector]
     public int own_Extend_SN;
-    [HideInInspector]
     public int own_Extend_P;
-    [HideInInspector]
     public int own_Recovery;
 
     private bool use_confirm = false;
 
     [HideInInspector]
     public int own_money;
-    [HideInInspector]
     public bool get_money = false;
+
+    [HideInInspector]
+    public string name_Muls_B;
+    public string name_Muls_SN;
+    public string name_Muls_P;
+    public string name_AiBarrire;
+    public string name_ProtectWall;
+    public string name_Extend_B;
+    public string name_Extend_SN;
+    public string name_Extend_P;
+    public string name_Recovery;
+
+    [HideInInspector]
+    public string txt_Muls_B;
+    public string txt_Muls_SN;
+    public string txt_Muls_P;
+    public string txt_AiBarrier;
+    public string txt_ProtectWall;
+    public string txt_Extend_B;
+    public string txt_Extend_SN;
+    public string txt_Extend_P;
+    public string txt_Recovery;
+
+    [HideInInspector]
+    public int price_Muls_B;
+    public int price_Muls_SN;
+    public int price_Muls_P;
+    public int price_AiBarrier;
+    public int price_ProtectWall;
+    public int price_Extend_B;
+    public int price_Extend_SN;
+    public int price_Extend_P;
+    public int price_Recovery;
+
+    public Sprite spr_Muls_B;
+    public Sprite spr_Muls_SN;
+    public Sprite spr_Muls_P;
+    public Sprite spr_AiBarrier;
+    public Sprite spr_ProtectWall;
+    public Sprite spr_Extend_B;
+    public Sprite spr_Extend_SN;
+    public Sprite spr_Extend_P;
+    public Sprite spr_Recovery;
 
     private void Awake()
     {
@@ -92,6 +118,8 @@ public class SelectedItemManager : MonoBehaviour
             own_money = 0;
         else
             own_money = PlayerPrefs.GetInt("Money");
+
+        SetItemInfo();
     }
 
     private void OnApplicationQuit()
@@ -113,6 +141,45 @@ public class SelectedItemManager : MonoBehaviour
         {
             PlayerPrefs.SetInt("Money", own_money);
         }
+    }
+
+    private void SetItemInfo()
+    {
+        name_Muls_B = "연발장치(일반)";
+        txt_Muls_B = "일반 타워의 공격력을 1.5배 증가시켜줍니다.";
+        price_Muls_B = 300;
+
+        name_Muls_SN = "연발장치(저격)";
+        txt_Muls_SN = "저격 타워의 공격력을 1.5배 증가시켜줍니다.";
+        price_Muls_SN = 500;
+
+        name_Muls_P = "연발장치(충격)";
+        txt_Muls_P = "충격 타워의 공격력을 1.5배 증가시켜줍니다.";
+        price_Muls_P = 750;
+
+        name_AiBarrire = "A.I배리어";
+        txt_AiBarrier = "적의 공격을 1회 막아줍니다. 장착 후 맞지 않으면 소모되지 않고 장착 상태를 유지합니다.";
+        price_AiBarrier = 200;
+
+        name_ProtectWall = "방호벽";
+        txt_ProtectWall = "캐릭터 주변에 4개의 방호벽을 세웁니다. 방호벽의 체력은 5입니다.";
+        price_ProtectWall = 500;
+
+        name_Extend_B = "확장장치(일반)";
+        txt_Extend_B = "일반 타워의 공격 범위를 1.5배 길게 만듭니다.";
+        price_Extend_B = 450;
+
+        name_Extend_SN = "확장장치(저격)";
+        txt_Extend_SN = "저격 타워의 공격 범위를 1.5배 길게 만듭니다.";
+        price_Extend_SN = 650;
+
+        name_Extend_P = "확장장치(충격)";
+        txt_Extend_P = "충격 타워의 공격 범위를 1.5배 길게 만듭니다.";
+        price_Extend_P = 900;
+
+        name_Recovery = "수복자재";
+        txt_Recovery = "플레이어의 최대 체력을 1 증가시킵니다.";
+        price_Recovery = 1000;
     }
 
     public void End_Stage()

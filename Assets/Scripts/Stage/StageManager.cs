@@ -139,7 +139,7 @@ public class StageManager : MonoBehaviour
 
     private void SpawnEnemy(int sp_index, int m_index)
     {
-        Instantiate(enemies[m_index], c_enemySpawnPoints[sp_index].position, c_enemySpawnPoints[sp_index].rotation);
+        Instantiate(enemies[m_index], c_enemySpawnPoints[sp_index].position, Quaternion.identity) ;
         GameObject effect = Instantiate(spawn_Effects, c_enemySpawnPoints[sp_index]);
         Destroy(effect, 2.0f);
         GameObject d_effect = Instantiate(e_direction_Effects, c_enemySpawnPoints[sp_index]);
