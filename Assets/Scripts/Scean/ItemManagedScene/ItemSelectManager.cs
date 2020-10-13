@@ -35,7 +35,6 @@ public class ItemSelectManager : MonoBehaviour
     private GameObject sub_panel_warning;
     private Text sub_txt_warning;
 
-    [HideInInspector]
     struct Item
     {
         public GameObject buttonObject;

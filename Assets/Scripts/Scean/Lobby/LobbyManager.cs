@@ -52,7 +52,7 @@ public class LobbyManager : MonoBehaviour
     {
         //if (Application.platform == RuntimePlatform.Android)
        // {
-            if (Input.GetKey(KeyCode.Escape))
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
                 Time.timeScale = 0.0f;
                 panel_exit.SetActive(true);

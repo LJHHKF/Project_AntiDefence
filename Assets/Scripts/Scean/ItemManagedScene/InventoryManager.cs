@@ -18,7 +18,6 @@ public class InventoryManager : MonoBehaviour
     private Text sub_txt_infoHeader;
     private Text sub_txt_itemInfo;
 
-    [HideInInspector]
     struct Item
     {
         public GameObject buttonObject;

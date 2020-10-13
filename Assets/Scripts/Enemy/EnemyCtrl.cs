@@ -107,7 +107,10 @@ public class EnemyCtrl : MonoBehaviour
 
                 Destroy(effect, 1.0f);
                 Destroy(hpBar);
-                m_anim.SetTrigger("IsDie");
+                if (m_anim != null)
+                {
+                    m_anim.SetTrigger("IsDie");
+                }
                 Destroy(gameObject, 1.0f);
 
                 isDie = true;
