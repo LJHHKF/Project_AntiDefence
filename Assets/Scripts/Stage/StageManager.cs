@@ -57,7 +57,10 @@ public class StageManager : MonoBehaviour
     private Text t_cur;
     private Text t_full;
     private int cnt_EnemyDie = 0;
-    private Transform p_transform;
+    private bool dlg_isDone = false;
+    private bool event_isDone = true;
+    private bool now_Spawn = false;
+
 
     private GameObject gm;
     private LoadingManager loadingM;
@@ -76,7 +79,6 @@ public class StageManager : MonoBehaviour
     void Start()
     {
         c_enemySpawnPoints = p_enemySpawnPoints.GetComponentsInChildren<Transform>();
-        StartCoroutine(CountTimeForSpawn());
 
         ui_Canvas = GameObject.FindGameObjectWithTag("UI_Canvas");
         remainPanel = ui_Canvas.transform.Find("RemainPanel").gameObject;
@@ -123,6 +125,14 @@ public class StageManager : MonoBehaviour
             {
                 ta_M.FeverActivate(fever_time);
                 fever_cnt++;
+            }
+        }
+        if (now_Spawn == false)
+        {
+            if(event_isDone)
+            {
+                StartCoroutine(CountTimeForSpawn());
+                now_Spawn = true;
             }
         }
     }
@@ -211,6 +221,26 @@ public class StageManager : MonoBehaviour
     {
         //패배처리 추가 필요
         StageEnd();
+    }
+
+    public void DlgDone()
+    {
+        dlg_isDone = true;
+    }
+
+    public bool GetDlgIsDone()
+    {
+        return dlg_isDone;
+    }
+
+    public void HadEvent()
+    {
+        event_isDone = false;
+    }
+
+    public void EventEnd()
+    {
+        event_isDone = true;
     }
 
     private void StageClear()
