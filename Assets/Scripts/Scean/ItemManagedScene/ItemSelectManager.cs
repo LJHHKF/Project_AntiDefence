@@ -6,8 +6,6 @@ using UnityEngine.UI;
 public class ItemSelectManager : MonoBehaviour
 {
     private Transform t_panel_ps;
-    //private Transform t_itemScroll;
-    //private Transform t_viewPort;
     private Transform t_content;
     private Transform t_ItemSet0;
     private Transform t_ItemSet1;
@@ -37,7 +35,6 @@ public class ItemSelectManager : MonoBehaviour
     private GameObject sub_panel_warning;
     private Text sub_txt_warning;
 
-    [HideInInspector]
     struct Item
     {
         public GameObject buttonObject;
@@ -67,6 +64,7 @@ public class ItemSelectManager : MonoBehaviour
     private string[] i_infoTexts;
     private int[] i_prices;
     private int n_purchase = -1;
+    private bool i_had = false;
 
     private bool p1_on = false;
     private int p1_select = -1;
@@ -103,6 +101,13 @@ public class ItemSelectManager : MonoBehaviour
 
         t_money = gameObject.transform.Find("Panel_OwnMoney").Find("Moeny").GetComponent<Text>();
         t_money.text = selectIManager.own_money.ToString();
+
+        button_p1 = t_panel_ps.Find("B_P1").gameObject;
+        button_p2 = t_panel_ps.Find("B_P2").gameObject;
+        img_p1 = button_p1.transform.Find("Icon").GetComponent<Image>();
+        img_p2 = button_p2.transform.Find("Icon").GetComponent<Image>();
+        togl_p1 = button_p1.transform.Find("Toggle").GetComponent<Toggle>();
+        togl_p2 = button_p2.transform.Find("Toggle").GetComponent<Toggle>();
 
         SetItemInfo();
 
@@ -241,7 +246,46 @@ public class ItemSelectManager : MonoBehaviour
         audioM.SFX_BTN_Click();
         if (n_pSelected > 0)
         {
-            if (selectIManager.own_MulS_B > 0)
+            switch (i_num)
+            {
+                case 0:
+                    if (selectIManager.own_MulS_B > 0)
+                        i_had = true;
+                    break;
+                case 1:
+                    if (selectIManager.own_MulS_SN > 0)
+                        i_had = true;
+                    break;
+                case 2:
+                    if (selectIManager.own_MulS_P > 0)
+                        i_had = true;
+                    break;
+                case 3:
+                    if (selectIManager.own_AiBarrier > 0)
+                        i_had = true;
+                    break;
+                case 4:
+                    if (selectIManager.own_ProtectWall > 0)
+                        i_had = true;
+                    break;
+                case 5:
+                    if (selectIManager.own_Extend_B > 0)
+                        i_had = true;
+                    break;
+                case 6:
+                    if (selectIManager.own_Extend_SN > 0)
+                        i_had = true;
+                    break;
+                case 7:
+                    if (selectIManager.own_Extend_P > 0)
+                        i_had = true;
+                    break;
+                case 8:
+                    if (selectIManager.own_Recovery > 0)
+                        i_had = true;
+                    break;
+            }
+            if (i_had)
             {
                 if (img_selected)
                 {
@@ -252,37 +296,38 @@ public class ItemSelectManager : MonoBehaviour
                 selectIManager.Item_PreUse(i_num);
                 UpdateText(i_num);
                 img_selected = true;
+                i_had = false;
             }
             else
             {
                 switch (i_num)
                 {
                     case 0:
-                        On_Warning("연발장치(일반) 소진");
+                        On_Warning(mulS_B.name + " 소진");
                         break;
                     case 1:
-                        On_Warning("연발장치(저격) 소진");
+                        On_Warning(mulS_SN.name +" 소진");
                         break;
                     case 2:
-                        On_Warning("연발장치(충격) 소진");
+                        On_Warning(mulS_P.name + " 소진");
                         break;
                     case 3:
-                        On_Warning("AI 배리어 소진");
+                        On_Warning(aIBarrier.name + " 소진");
                         break;
                     case 4:
-                        On_Warning("방호벽 소진");
+                        On_Warning(protectWall.name + " 소진");
                         break;
                     case 5:
-                        On_Warning("확장장치(일반) 소진");
+                        On_Warning(extend_B.name + " 소진");
                         break;
                     case 6:
-                        On_Warning("확장장치(저격) 소진");
+                        On_Warning(extend_SN.name + " 소진");
                         break;
                     case 7:
-                        On_Warning("확장장치(충격) 소진");
+                        On_Warning(extend_P.name +" 소진");
                         break;
                     case 8:
-                        On_Warning("수복장치 소진");
+                        On_Warning(recovery.name + " 소진");
                         break;
                 }
             }
@@ -360,7 +405,7 @@ public class ItemSelectManager : MonoBehaviour
 
         if (loadingM.GetHadPrev())
         {
-            sub_txt_warning.text = "스테이지가 준비되지 않았습니다. 정식 루트로 부탁드립니다.";
+            sub_txt_warning.text = "스테이지가 준비되지 않았습니다. 정식 루트로 부탁드립니다."; // 이제 필요없는 부분이지만, 오류 방지 코드로서 남겨둠.
             sub_panel_warning.SetActive(true);
         }
         else
@@ -489,83 +534,85 @@ public class ItemSelectManager : MonoBehaviour
 
     private void SetItemInfo()
     {
-        button_p1 = t_panel_ps.Find("B_P1").gameObject;
-        button_p2 = t_panel_ps.Find("B_P2").gameObject;
-        img_p1 = button_p1.transform.Find("Icon").GetComponent<Image>();
-        img_p2 = button_p2.transform.Find("Icon").GetComponent<Image>();
-        togl_p1 = button_p1.transform.Find("Toggle").GetComponent<Toggle>();
-        togl_p2 = button_p2.transform.Find("Toggle").GetComponent<Toggle>();
-
         mulS_B.buttonObject = t_ItemSet0.Find("B_MultiShotB").gameObject;
         mulS_B.iconImage = mulS_B.buttonObject.transform.Find("Icon").GetComponent<Image>();
         mulS_B.numTxt = mulS_B.buttonObject.transform.Find("Num").GetComponent<Text>();
+        mulS_B.iconImage.sprite = selectIManager.spr_Muls_B;
         mulS_B.numTxt.text = selectIManager.own_MulS_B.ToString();
-        mulS_B.name = "연발장치(일반)";
-        mulS_B.infoText = "일반 타워의 공격력을 1.5배 증가시켜줍니다.";
-        mulS_B.price = 300;
+        mulS_B.name = selectIManager.name_Muls_B;
+        mulS_B.infoText = selectIManager.txt_Muls_B;
+        mulS_B.price = selectIManager.price_Muls_B;
 
         mulS_SN.buttonObject = t_ItemSet0.Find("B_MultiShotSN").gameObject;
         mulS_SN.iconImage = mulS_SN.buttonObject.transform.Find("Icon").GetComponent<Image>();
         mulS_SN.numTxt = mulS_SN.buttonObject.transform.Find("Num").GetComponent<Text>();
+        mulS_SN.iconImage.sprite = selectIManager.spr_Muls_SN;
         mulS_SN.numTxt.text = selectIManager.own_MulS_SN.ToString();
-        mulS_SN.name = "연발장치(저격)";
-        mulS_SN.infoText = "저격 타워의 공격력을 1.5배 증가시켜줍니다.";
-        mulS_SN.price = 500;
+        mulS_SN.name = selectIManager.name_Muls_SN;
+        mulS_SN.infoText = selectIManager.txt_Muls_SN;
+        mulS_SN.price = selectIManager.price_Muls_SN;
 
         mulS_P.buttonObject = t_ItemSet1.Find("B_MultiShotP").gameObject;
         mulS_P.iconImage = mulS_P.buttonObject.transform.Find("Icon").GetComponent<Image>();
         mulS_P.numTxt = mulS_P.buttonObject.transform.Find("Num").GetComponent<Text>();
+        mulS_P.iconImage.sprite = selectIManager.spr_Muls_P;
         mulS_P.numTxt.text = selectIManager.own_MulS_P.ToString();
-        mulS_P.name = "연발장치(충격)";
-        mulS_P.infoText = "충격 타워의 공격력을 1.5배 증가시켜줍니다.";
-        mulS_P.price = 750;
+        mulS_P.name = selectIManager.name_Muls_P;
+        mulS_P.infoText = selectIManager.txt_Muls_P;
+        mulS_P.price = selectIManager.price_Muls_P;
 
         aIBarrier.buttonObject = t_ItemSet1.Find("B_AIBarrier").gameObject;
         aIBarrier.iconImage = aIBarrier.buttonObject.transform.Find("Icon").GetComponent<Image>();
         aIBarrier.numTxt = aIBarrier.buttonObject.transform.Find("Num").GetComponent<Text>();
+        aIBarrier.iconImage.sprite = selectIManager.spr_AiBarrier;
         aIBarrier.numTxt.text = selectIManager.own_AiBarrier.ToString();
-        aIBarrier.name = "A.I배리어";
-        aIBarrier.infoText = "적의 공격을 1회 막아줍니다. 장착 후 맞지 않으면 소모되지 않고 장착 상태를 유지합니다.";
-        aIBarrier.price = 200;
+        aIBarrier.name = selectIManager.name_AiBarrire;
+        aIBarrier.infoText = selectIManager.txt_AiBarrier;
+        aIBarrier.price = selectIManager.price_AiBarrier;
 
         protectWall.buttonObject = t_ItemSet2.Find("B_ProtectWall").gameObject;
         protectWall.iconImage = protectWall.buttonObject.transform.Find("Icon").GetComponent<Image>();
         protectWall.numTxt = protectWall.buttonObject.transform.Find("Num").GetComponent<Text>();
+        protectWall.iconImage.sprite = selectIManager.spr_ProtectWall;
         protectWall.numTxt.text = selectIManager.own_ProtectWall.ToString();
-        protectWall.name = "방호벽";
-        protectWall.infoText = "캐릭터 주변에 4개의 방호벽을 세웁니다. 방호벽의 체력은 5입니다.";
-        protectWall.price = 500;
+        protectWall.name = selectIManager.name_ProtectWall;
+        protectWall.infoText = selectIManager.txt_ProtectWall;
+        protectWall.price = selectIManager.price_ProtectWall;
 
         extend_B.buttonObject = t_ItemSet2.Find("B_ExtendB").gameObject;
         extend_B.iconImage = extend_B.buttonObject.transform.Find("Icon").GetComponent<Image>();
         extend_B.numTxt = extend_B.buttonObject.transform.Find("Num").GetComponent<Text>();
+        extend_B.iconImage.sprite = selectIManager.spr_Extend_B;
         extend_B.numTxt.text = selectIManager.own_Extend_B.ToString();
-        extend_B.name = "확장장치(일반)";
-        extend_B.infoText = "일반 타워의 공격 범위를 1.5배 길게 만듭니다.";
-        extend_B.price = 450;
+        extend_B.name = selectIManager.name_Extend_B;
+        extend_B.infoText = selectIManager.txt_Extend_B;
+        extend_B.price = selectIManager.price_Extend_B;
 
         extend_SN.buttonObject = t_ItemSet3.Find("B_ExtendSN").gameObject;
         extend_SN.iconImage = extend_SN.buttonObject.transform.Find("Icon").GetComponent<Image>();
         extend_SN.numTxt = extend_SN.buttonObject.transform.Find("Num").GetComponent<Text>();
+        extend_SN.iconImage.sprite = selectIManager.spr_Extend_SN;
         extend_SN.numTxt.text = selectIManager.own_Extend_SN.ToString();
-        extend_SN.name = "확장장치(저격)";
-        extend_SN.infoText = "저격 타워의 공격 범위를 1.5배 길게 만듭니다.";
-        extend_SN.price = 650;
+        extend_SN.name = selectIManager.name_Extend_SN;
+        extend_SN.infoText = selectIManager.txt_Extend_SN;
+        extend_SN.price = selectIManager.price_Extend_SN;
 
         extend_P.buttonObject = t_ItemSet3.Find("B_ExtendP").gameObject;
         extend_P.iconImage = extend_P.buttonObject.transform.Find("Icon").GetComponent<Image>();
         extend_P.numTxt = extend_P.buttonObject.transform.Find("Num").GetComponent<Text>();
+        extend_P.iconImage.sprite = selectIManager.spr_Extend_P;
         extend_P.numTxt.text = selectIManager.own_Extend_P.ToString();
-        extend_P.name = "확장장치(충격)";
-        extend_P.infoText = "충격 타워의 공격 범위를 1.5배 길게 만듭니다.";
-        extend_P.price = 900;
+        extend_P.name = selectIManager.name_Extend_P;
+        extend_P.infoText = selectIManager.txt_Extend_P;
+        extend_P.price = selectIManager.price_Extend_P;
 
         recovery.buttonObject = t_ItemSet4.Find("B_Recovery").gameObject;
         recovery.iconImage = recovery.buttonObject.transform.Find("Icon").GetComponent<Image>();
         recovery.numTxt = recovery.buttonObject.transform.Find("Num").GetComponent<Text>();
+        recovery.iconImage.sprite = selectIManager.spr_Recovery;
         recovery.numTxt.text = selectIManager.own_Recovery.ToString();
-        recovery.name = "수복자재";
-        recovery.infoText = "플레이어의 최대 체력을 1 증가시킵니다.";
-        recovery.price = 1000;
+        recovery.name = selectIManager.name_Recovery;
+        recovery.infoText = selectIManager.txt_Recovery;
+        recovery.price = selectIManager.price_Recovery;
     }
 }

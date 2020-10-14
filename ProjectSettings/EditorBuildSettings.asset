@@ -24,6 +24,12 @@ EditorBuildSettings:
     path: Assets/Scenes/OtherScene/ItemEquip.unity
     guid: 07e283d265f05d042a6e72c10b6d18f7
   - enabled: 1
+    path: Assets/Scenes/OtherScene/ItemShop.unity
+    guid: d21338772129bc84a9777e1d0e44d9dd
+  - enabled: 1
+    path: Assets/Scenes/OtherScene/Inventory.unity
+    guid: 579f97d25a6c04d4ea36970576944be6
+  - enabled: 1
     path: Assets/Scenes/Pre_Stage/ChapterSelect.unity
     guid: 663416e823e812046bad0b4a7cd62650
   - enabled: 1

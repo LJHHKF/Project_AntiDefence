@@ -56,6 +56,11 @@ public class TowerAttack_Push : MonoBehaviour
             StartCoroutine(On_Clear());
             StartCoroutine(Off_Anim());
             GameObject effect = Instantiate(a_Effect, firePos);
+            //if (si_manager.i_extend_p)
+            //{
+            //    Vector3 upScale = Vector3.Scale(a_Effect.transform.localScale, new Vector3(1.0f, 1.0f, 1.5f));
+            //    effect.transform.localScale = upScale;
+            //}
             Destroy(effect, 1.0f);
             ta_manager.PTActived();
         }

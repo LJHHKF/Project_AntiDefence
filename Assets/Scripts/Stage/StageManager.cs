@@ -57,7 +57,10 @@ public class StageManager : MonoBehaviour
     private Text t_cur;
     private Text t_full;
     private int cnt_EnemyDie = 0;
-    private Transform p_transform;
+    private bool dlg_isDone = false;
+    private bool event_isDone = true;
+    private bool now_Spawn = false;
+
 
     private GameObject gm;
     private LoadingManager loadingM;
@@ -76,7 +79,6 @@ public class StageManager : MonoBehaviour
     void Start()
     {
         c_enemySpawnPoints = p_enemySpawnPoints.GetComponentsInChildren<Transform>();
-        StartCoroutine(CountTimeForSpawn());
 
         ui_Canvas = GameObject.FindGameObjectWithTag("UI_Canvas");
         remainPanel = ui_Canvas.transform.Find("RemainPanel").gameObject;
@@ -125,6 +127,14 @@ public class StageManager : MonoBehaviour
                 fever_cnt++;
             }
         }
+        if (now_Spawn == false)
+        {
+            if(event_isDone)
+            {
+                StartCoroutine(CountTimeForSpawn());
+                now_Spawn = true;
+            }
+        }
     }
 
     private void LateUpdate()
@@ -139,7 +149,7 @@ public class StageManager : MonoBehaviour
 
     private void SpawnEnemy(int sp_index, int m_index)
     {
-        Instantiate(enemies[m_index], c_enemySpawnPoints[sp_index].position, c_enemySpawnPoints[sp_index].rotation);
+        Instantiate(enemies[m_index], c_enemySpawnPoints[sp_index].position, Quaternion.identity) ;
         GameObject effect = Instantiate(spawn_Effects, c_enemySpawnPoints[sp_index]);
         Destroy(effect, 2.0f);
         GameObject d_effect = Instantiate(e_direction_Effects, c_enemySpawnPoints[sp_index]);
@@ -211,6 +221,26 @@ public class StageManager : MonoBehaviour
     {
         //패배처리 추가 필요
         StageEnd();
+    }
+
+    public void DlgDone()
+    {
+        dlg_isDone = true;
+    }
+
+    public bool GetDlgIsDone()
+    {
+        return dlg_isDone;
+    }
+
+    public void HadEvent()
+    {
+        event_isDone = false;
+    }
+
+    public void EventEnd()
+    {
+        event_isDone = true;
     }
 
     private void StageClear()

@@ -900,6 +900,51 @@ MonoBehaviour:
   own_Recovery: 10
   own_money: 0
   get_money: 0
+  name_Muls_B: 
+  name_Muls_SN: 
+  name_Muls_P: 
+  name_AiBarrire: 
+  name_ProtectWall: 
+  name_Extend_B: 
+  name_Extend_SN: 
+  name_Extend_P: 
+  name_Recovery: 
+  txt_Muls_B: 
+  txt_Muls_SN: 
+  txt_Muls_P: 
+  txt_AiBarrier: 
+  txt_ProtectWall: 
+  txt_Extend_B: 
+  txt_Extend_SN: 
+  txt_Extend_P: 
+  txt_Recovery: 
+  price_Muls_B: 0
+  price_Muls_SN: 0
+  price_Muls_P: 0
+  price_AiBarrier: 0
+  price_ProtectWall: 0
+  price_Extend_B: 0
+  price_Extend_SN: 0
+  price_Extend_P: 0
+  price_Recovery: 0
+  spr_Muls_B: {fileID: 9159056963308284723, guid: 1e2d909a0162bdd46b8784d7d0130ca0,
+    type: 3}
+  spr_Muls_SN: {fileID: -1911585316022390235, guid: 1e2d909a0162bdd46b8784d7d0130ca0,
+    type: 3}
+  spr_Muls_P: {fileID: 1830495852126394682, guid: 1e2d909a0162bdd46b8784d7d0130ca0,
+    type: 3}
+  spr_AiBarrier: {fileID: -6575688573548333198, guid: 1e2d909a0162bdd46b8784d7d0130ca0,
+    type: 3}
+  spr_ProtectWall: {fileID: 614188932817504308, guid: 1e2d909a0162bdd46b8784d7d0130ca0,
+    type: 3}
+  spr_Extend_B: {fileID: -3310778108191350556, guid: 1e2d909a0162bdd46b8784d7d0130ca0,
+    type: 3}
+  spr_Extend_SN: {fileID: -871393150956627057, guid: 1e2d909a0162bdd46b8784d7d0130ca0,
+    type: 3}
+  spr_Extend_P: {fileID: -7586176554538100212, guid: 1e2d909a0162bdd46b8784d7d0130ca0,
+    type: 3}
+  spr_Recovery: {fileID: -8102150787510191927, guid: 1e2d909a0162bdd46b8784d7d0130ca0,
+    type: 3}
 --- !u!4 &1559065139
 Transform:
   m_ObjectHideFlags: 0

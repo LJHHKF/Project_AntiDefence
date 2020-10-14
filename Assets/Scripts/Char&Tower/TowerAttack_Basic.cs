@@ -76,6 +76,11 @@ public class TowerAttack_Basic : MonoBehaviour
             StartCoroutine(On_Clear());
             StartCoroutine(Off_Anim());
             GameObject effect = Instantiate(a_Effect, firePos);
+            //if (si_manager.i_extend_b)
+            //{
+            //    Vector3 upScale = Vector3.Scale(a_Effect.transform.localScale, new Vector3(1.0f, 1.0f, 1.5f));
+            //    effect.transform.localScale = upScale;
+            //}
             Destroy(effect, 1.0f);
 
             ta_manager.BTActived();
