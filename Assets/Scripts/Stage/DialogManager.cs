@@ -116,7 +116,6 @@ public class DialogManager : MonoBehaviour
             for (int i = 0; i < imgs_Buttons.Length; i++)
             {
                 ori_alpha_buttons[i] = imgs_Buttons[i].color.a;
-                Debug.Log(ori_alpha_buttons[i]);
                 imgs_Buttons[i].color = new Color(imgs_Buttons[i].color.r, imgs_Buttons[i].color.g, imgs_Buttons[i].color.b, 0);
             }
             for (int i = 0; i < imgs_LifePanel.Length; i++)
@@ -215,7 +214,7 @@ public class DialogManager : MonoBehaviour
             for (int i = 0; i < txts_Buttons.Length; i++)
                 txts_Buttons[i].color = new Color(txts_Buttons[i].color.r, txts_Buttons[i].color.g, txts_Buttons[i].color.b, ori_alpha_txt_buttons[i]);
             for (int i = 0; i < txts_Remain.Length; i++)
-                txts_Remain[i].color = new Color(txts_Buttons[i].color.r, txts_Buttons[i].color.g, txts_Buttons[i].color.b, ori_alpha_txt_remain[i]);
+                txts_Remain[i].color = new Color(txts_Remain[i].color.r, txts_Remain[i].color.g, txts_Remain[i].color.b, ori_alpha_txt_remain[i]);
 
 
             Destroy(this);
