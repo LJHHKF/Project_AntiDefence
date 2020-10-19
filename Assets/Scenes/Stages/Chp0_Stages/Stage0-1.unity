@@ -1035,6 +1035,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ca6edb9adf346549bfa49f42211b422, type: 3}
+--- !u!114 &318266962 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1917932431117694747, guid: 5ca6edb9adf346549bfa49f42211b422,
+    type: 3}
+  m_PrefabInstance: {fileID: 318266961}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b74393af8e4aab45ac2181a7ac8e759, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &347440559 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1718522775955426743, guid: 61474885afce8284aa038d8c17edaa20,
@@ -1209,7 +1221,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 318266962}
         m_MethodName: InstSNT
         m_Mode: 1
         m_Arguments:
@@ -5866,7 +5878,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 318266962}
         m_MethodName: InstPT
         m_Mode: 1
         m_Arguments:
@@ -6980,7 +6992,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 318266962}
         m_MethodName: InstBasic
         m_Mode: 1
         m_Arguments:

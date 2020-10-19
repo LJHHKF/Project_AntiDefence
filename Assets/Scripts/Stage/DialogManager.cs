@@ -36,6 +36,7 @@ public class DialogManager : MonoBehaviour
 
     private Transform t_UI_Canvas;
     private GameObject ui_Buttons;
+    private Button[] btn_Buttons;
     private Image[] imgs_Buttons;
     private float[] ori_alpha_buttons;
     private Text[] txts_Buttons;
@@ -67,6 +68,7 @@ public class DialogManager : MonoBehaviour
         panel_Dialog = t_UI_Canvas.Find("Panel_Dialog").gameObject;
 
         ui_Buttons = t_UI_Canvas.Find("Buttons").gameObject;
+        btn_Buttons = ui_Buttons.GetComponentsInChildren<Button>();
         imgs_Buttons = ui_Buttons.GetComponentsInChildren<Image>();
         txts_Buttons = ui_Buttons.GetComponentsInChildren<Text>();
 
@@ -105,6 +107,9 @@ public class DialogManager : MonoBehaviour
         {
             Time.timeScale = 0.0f;
             panel_Dialog.SetActive(true);
+
+            for (int i = 0; i < btn_Buttons.Length; i++)
+                btn_Buttons[i].interactable = false;
 
             ori_alpha_buttons = new float[imgs_Buttons.Length];
             ori_alpha_life = new float[imgs_LifePanel.Length];
@@ -203,6 +208,9 @@ public class DialogManager : MonoBehaviour
             Time.timeScale = 1.0f;
             panel_Dialog.SetActive(false);
             stageM.DlgDone();
+
+            for (int i = 0; i < btn_Buttons.Length; i++)
+                btn_Buttons[i].interactable = true;
 
             for (int i = 0; i < imgs_Buttons.Length; i++)
                 imgs_Buttons[i].color = new Color(imgs_Buttons[i].color.r, imgs_Buttons[i].color.g, imgs_Buttons[i].color.b, ori_alpha_buttons[i]);
