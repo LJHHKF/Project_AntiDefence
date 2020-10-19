@@ -113,7 +113,7 @@ public class StageManager : MonoBehaviour
         Destroy(effect, 1.0f);
         Destroy(effect2, 5.0f);
 
-        PlayBGM(chpter_num ,stage_num);
+        PlayBGM();
     }
 
     private void Update()
@@ -249,7 +249,7 @@ public class StageManager : MonoBehaviour
         StageEnd();
     }
 
-    private void PlayBGM(int c_num, int s_num)
+    private void PlayBGM()
     {
         if (chpter_num == 0)
         {

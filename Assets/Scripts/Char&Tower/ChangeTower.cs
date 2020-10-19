@@ -25,8 +25,6 @@ public class ChangeTower : MonoBehaviour
     private TowerAttack_Basic[] taM_B = new TowerAttack_Basic[2];
     private TowerAttack_Snip[] taM_S = new TowerAttack_Snip[2];
     private TowerAttack_Push[] taM_P = new TowerAttack_Push[2];
-    private MeshRenderer[] cur_meshR = new MeshRenderer[2];
-    private Color[] cur_Color = new Color[2];
 
 
     // Start is called before the first frame update
@@ -156,14 +154,6 @@ public class ChangeTower : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
         sfx_manager = GameObject.FindGameObjectWithTag("MainCamera").transform.Find("SFX_Manager(Clone)").gameObject;
         sfx_BTN_Click = sfx_manager.transform.Find("S_BTN_Click").gameObject.GetComponent<AudioSource>();
-        yield break;
-    }
-
-    IEnumerator On_Clear(int index)
-    {
-        cur_meshR[index].material.color = new Color(cur_Color[index].r, cur_Color[index].g, cur_Color[index].b, 0.0f);
-        yield return new WaitForSeconds(1.0f);
-        cur_meshR[index].material.color = new Color(cur_Color[index].r, cur_Color[index].g, cur_Color[index].b, cur_Color[index].a);
         yield break;
     }
 }
