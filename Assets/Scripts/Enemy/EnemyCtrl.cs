@@ -20,6 +20,7 @@ public class EnemyCtrl : MonoBehaviour
 
     private Barricade barricade;
     private Transform t_imgPanel;
+    private Transform t_img;
     private float slope;
 
     [Header("HpBar Setting")]
@@ -57,9 +58,8 @@ public class EnemyCtrl : MonoBehaviour
 
     private WaitForSeconds ws;
     private bool attack_now;
-    
+
     private Vector3 direction;
-    //private Vector3 move_Vector;
     private GameObject o_stgM;
     private StageManager stgManager;
 
@@ -77,6 +77,7 @@ public class EnemyCtrl : MonoBehaviour
         stgManager = o_stgM.GetComponent<StageManager>();
 
         t_imgPanel = gameObject.transform.Find("Clear_Panel").GetComponent<Transform>();
+        t_img = t_imgPanel.Find("Image").GetComponent<Transform>();
 
         SetHPBar();
         initHP = enemyHP;
@@ -125,6 +126,11 @@ public class EnemyCtrl : MonoBehaviour
 
             //Vector3 move_vector = new Vector3(target.transform.position.x - transform.position.x, 0, target.transform.position.z - transform.position.z).normalized * moveSpeed * Time.deltaTime;
             //m_rigidbody.MovePosition(transform.position + move_vector);
+
+            if (direction.x > 0)
+            {
+                t_img.localEulerAngles = new Vector3(0, 180, 0);
+            }
 
         }
         else if (state == State.PUSHED)
