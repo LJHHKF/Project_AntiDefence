@@ -403,6 +403,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Effect_AIbarrier
       objectReference: {fileID: 0}
+    - target: {fileID: 7598195644097781054, guid: 8393734c55c098544a0b178ecad582bf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8393734c55c098544a0b178ecad582bf, type: 3}
 --- !u!1 &2157843628840456933 stripped
