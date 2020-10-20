@@ -52,6 +52,11 @@ public class StageManager : MonoBehaviour
     public int closeWallIndex = 0;
     public int farWallIndex = 0;
 
+    [Header("Wall move Setting")]
+    public float wallMoveSpeed = 0.001f;
+    public float wallMinY = 4.95f;
+    public float wallMaxY = 5.5f;
+
 
     // private Image s_bar;
     private Text t_cur;
@@ -241,6 +246,21 @@ public class StageManager : MonoBehaviour
     public void EventEnd()
     {
         event_isDone = true;
+    }
+
+    public float GetWallMoveSpeed()
+    {
+        return wallMoveSpeed;
+    }
+
+    public float GetWallMoveMin()
+    {
+        return wallMinY;
+    }
+
+    public float GetWallMoveMax()
+    {
+        return wallMaxY;
     }
 
     private void StageClear()
