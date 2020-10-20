@@ -25,7 +25,7 @@ public class ItemSelectManager : MonoBehaviour
     private static int n_p2 = 2;
     private int w_pn;
 
-    private GameObject sub_panel_purchase;
+    private GameObject sub_panel_item;
     private GameObject sub_panel_itemInfo;
     private Image sub_img_infoIcon;
     private Text sub_txt_price;
@@ -139,13 +139,13 @@ public class ItemSelectManager : MonoBehaviour
             }
         }
 
-        sub_panel_purchase = gameObject.transform.Find("Panel_Purchase").gameObject;
-        sub_panel_itemInfo = sub_panel_purchase.transform.Find("Panel_ItemInfo").gameObject;
+        sub_panel_item = gameObject.transform.Find("Sub_Panel_Item").gameObject;
+        sub_panel_itemInfo = sub_panel_item.transform.Find("Panel_ItemInfo").gameObject;
         sub_img_infoIcon = sub_panel_itemInfo.transform.Find("Icon").GetComponent<Image>();
         sub_txt_price = sub_panel_itemInfo.transform.Find("Panel_Price").Find("Price").GetComponent<Text>();
         sub_txt_itemInfo = sub_panel_itemInfo.transform.Find("Panel_InfoText").Find("Text").GetComponent<Text>();
         sub_txt_infoHeader = sub_panel_itemInfo.transform.Find("Panel_InfoTextHeader").Find("Text").GetComponent<Text>();
-        sub_panel_purchase.SetActive(false);
+        sub_panel_item.SetActive(false);
 
         sub_panel_warning = gameObject.transform.Find("Panel_Warning").gameObject;
         sub_txt_warning = sub_panel_warning.transform.Find("Panel_Text").Find("Text").GetComponent<Text>();
@@ -334,7 +334,7 @@ public class ItemSelectManager : MonoBehaviour
         }
         else
         {
-            On_Purchase(i_num);
+            On_ItemInfo(i_num);
         }
     }
 
@@ -428,18 +428,6 @@ public class ItemSelectManager : MonoBehaviour
         
     }
 
-    public void Cheat_B()
-    {
-        audioM.SFX_BTN_Click();
-        //for (int i = 0; i < 9; i++)
-        //{
-        //    selectIManager.Item_Get(i);
-        //    UpdateText(i);
-        //}
-        selectIManager.Get_Money(1000);
-        UpdateText_Money();
-    }
-
     private void UpdateText(int i_num)
     {
         switch(i_num)
@@ -479,7 +467,7 @@ public class ItemSelectManager : MonoBehaviour
         t_money.text = selectIManager.own_money.ToString();
     }
 
-    private void On_Purchase(int i_num)
+    private void On_ItemInfo(int i_num)
     {
         n_purchase = i_num;
 
@@ -489,30 +477,32 @@ public class ItemSelectManager : MonoBehaviour
             sub_txt_infoHeader.text = i_names[i_num];
             sub_txt_itemInfo.text = i_infoTexts[i_num];
             sub_txt_price.text = i_prices[i_num].ToString();
-            sub_panel_purchase.SetActive(true);
+            sub_panel_item.SetActive(true);
         }
     }
 
-    public void Click_sub_yes()
-    {
-        audioM.SFX_BTN_Click();
-        if (selectIManager.own_money >= i_prices[n_purchase])
-        {
-            selectIManager.Use_Money(i_prices[n_purchase]);
-            selectIManager.Item_Get(n_purchase);
-            selectIManager.Item_Get_Confirm(n_purchase);
-            sub_panel_purchase.SetActive(false);
-            UpdateText_Money();
-            UpdateText(n_purchase);
-            n_purchase = -1;
-        }
-        else
-        {
-            On_Warning("소지금이 부족합니다.");
-            sub_panel_purchase.SetActive(false);
-            n_purchase = -1;
-        }
-    }
+    //구매 기능 삭제로 인해 불필요해진 코드. 만일을 대비해서 주석으로 남겨둠.
+
+    //public void Click_sub_yes()
+    //{
+    //    audioM.SFX_BTN_Click();
+    //    if (selectIManager.own_money >= i_prices[n_purchase])
+    //    {
+    //        selectIManager.Use_Money(i_prices[n_purchase]);
+    //        selectIManager.Item_Get(n_purchase);
+    //        selectIManager.Item_Get_Confirm(n_purchase);
+    //        sub_panel_item.SetActive(false);
+    //        UpdateText_Money();
+    //        UpdateText(n_purchase);
+    //        n_purchase = -1;
+    //    }
+    //    else
+    //    {
+    //        On_Warning("소지금이 부족합니다.");
+    //        sub_panel_purchase.SetActive(false);
+    //        n_purchase = -1;
+    //    }
+    //}
 
     private void On_Warning(string phrase)
     {
@@ -523,7 +513,7 @@ public class ItemSelectManager : MonoBehaviour
     public void Click_sub_no()
     {
         audioM.SFX_BTN_Click();
-        sub_panel_purchase.SetActive(false);
+        sub_panel_item.SetActive(false);
     }
 
     public void Click_sub_w_return()

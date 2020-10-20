@@ -349,4 +349,10 @@ public class ItemShopSceanManager : MonoBehaviour
     {
         Item_Clicked(8);
     }
+
+    public void Click_Cheat()
+    {
+        selectIManager.Get_Money(1000);
+        UpdateText_Money();
+    }
 }

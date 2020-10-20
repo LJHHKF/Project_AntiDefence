@@ -59,7 +59,11 @@ public class TA_Manager : MonoBehaviour
         gm = GameObject.FindGameObjectWithTag("GameManager");
         si_manager = gm.GetComponent<SelectedItemManager>();
 
-        if(si_manager.i_muls_b)
+        sfx_manager = GameObject.FindGameObjectWithTag("SFX_Manager").gameObject;
+        sfx_SNT_Attack = sfx_manager.transform.Find("S_SNT_Attack").gameObject.GetComponent<AudioSource>();
+        sfx_BT_Attack = sfx_manager.transform.Find("S_BT_Attack").gameObject.GetComponent<AudioSource>();
+
+        if (si_manager.i_muls_b)
         {
             b_AtDmg *= 1.5f;
         }
@@ -71,7 +75,6 @@ public class TA_Manager : MonoBehaviour
         {
             p_AtDmg *= 1.5f;
         }
-        StartCoroutine(Get_SFX_Manager());
     }
 
     private void Update()
@@ -143,16 +146,6 @@ public class TA_Manager : MonoBehaviour
         feverEffectPanel.SetActive(false);
 
         yield break;
-    }
-
-
-    private IEnumerator Get_SFX_Manager()
-    {
-        yield return new WaitForSeconds(1.0f);
-        sfx_manager = GameObject.FindGameObjectWithTag("MainCamera").transform.Find("SFX_Manager(Clone)").gameObject;
-        sfx_SNT_Attack = sfx_manager.transform.Find("S_SNT_Attack").gameObject.GetComponent<AudioSource>();
-        sfx_BT_Attack = sfx_manager.transform.Find("S_BT_Attack").gameObject.GetComponent<AudioSource>();
-        StopCoroutine(Get_SFX_Manager());
     }
 
     private IEnumerator Sound_SNT_Attack()

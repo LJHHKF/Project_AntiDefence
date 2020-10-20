@@ -28,11 +28,14 @@ public class DialogManager : MonoBehaviour
         public Image img_Ruru;
         public GameObject g_Text_1;
         public GameObject g_Text_2;
-        public GameObject g_speech;
-        public Image img_SpeechBuble;
+        public GameObject g_speech1;
+        public GameObject g_speech2;
+        public Image img_SpeechBubble1;
+        public Image img_SpeechBubble2;
         public Text txt_1;
         public Text txt_2;
     }
+    private GameObject btn_skip;
 
     private Transform t_UI_Canvas;
     private GameObject ui_Buttons;
@@ -66,6 +69,7 @@ public class DialogManager : MonoBehaviour
         t_UI_Canvas = GameObject.FindGameObjectWithTag("UI_Canvas").transform;
 
         panel_Dialog = t_UI_Canvas.Find("Panel_Dialog").gameObject;
+        btn_skip = panel_Dialog.transform.Find("BTN_Skip").gameObject;
 
         ui_Buttons = t_UI_Canvas.Find("Buttons").gameObject;
         btn_Buttons = ui_Buttons.GetComponentsInChildren<Button>();
@@ -87,10 +91,12 @@ public class DialogManager : MonoBehaviour
             Dialogues[i].g_dlg = panel_Dialog.transform.Find("Dialog_" + i.ToString()).gameObject;
             Dialogues[i].g_img = Dialogues[i].g_dlg.transform.Find("Image").gameObject;
             Dialogues[i].img_Ruru = Dialogues[i].g_img.GetComponent<Image>();
-            Dialogues[i].g_speech = Dialogues[i].g_dlg.transform.Find("Speech").gameObject;
-            Dialogues[i].g_Text_1 = Dialogues[i].g_speech.transform.Find("Text_1").gameObject;
-            Dialogues[i].g_Text_2 = Dialogues[i].g_speech.transform.Find("Text_2").gameObject;
-            Dialogues[i].img_SpeechBuble = Dialogues[i].g_speech.GetComponent<Image>();
+            Dialogues[i].g_speech1 = Dialogues[i].g_dlg.transform.Find("Speech1").gameObject;
+            Dialogues[i].g_speech2 = Dialogues[i].g_dlg.transform.Find("Speech2").gameObject;
+            Dialogues[i].g_Text_1 = Dialogues[i].g_speech1.transform.Find("Text_1").gameObject;
+            Dialogues[i].g_Text_2 = Dialogues[i].g_speech2.transform.Find("Text_2").gameObject;
+            Dialogues[i].img_SpeechBubble1 = Dialogues[i].g_speech1.GetComponent<Image>();
+            Dialogues[i].img_SpeechBubble2 = Dialogues[i].g_speech2.GetComponent<Image>();
             Dialogues[i].txt_1 = Dialogues[i].g_Text_1.GetComponent<Text>();
             Dialogues[i].txt_2 = Dialogues[i].g_Text_2.GetComponent<Text>();
 
@@ -98,15 +104,18 @@ public class DialogManager : MonoBehaviour
 
             Dialogues[i].g_dlg.SetActive(false);
             Dialogues[i].g_img.SetActive(false);
-            Dialogues[i].g_speech.SetActive(false);
+            Dialogues[i].g_speech1.SetActive(false);
+            Dialogues[i].g_speech2.SetActive(false);
             Dialogues[i].g_Text_1.SetActive(false);
             Dialogues[i].g_Text_2.SetActive(false);
         }
+        
 
         if (txt_dialogue.Length > 0)
         {
             Time.timeScale = 0.0f;
             panel_Dialog.SetActive(true);
+            btn_skip.SetActive(true);
 
             for (int i = 0; i < btn_Buttons.Length; i++)
                 btn_Buttons[i].interactable = false;
@@ -126,7 +135,6 @@ public class DialogManager : MonoBehaviour
             for (int i = 0; i < imgs_LifePanel.Length; i++)
             {
                 ori_alpha_life[i] = imgs_LifePanel[i].color.a;
-                
                 imgs_LifePanel[i].color = new Color(imgs_LifePanel[i].color.r, imgs_LifePanel[i].color.g, imgs_LifePanel[i].color.b, 0);
             }
             for (int i = 0; i < imgs_RemainPanel.Length; i++)
@@ -175,7 +183,8 @@ public class DialogManager : MonoBehaviour
                 {
                     Dialogues[i].g_dlg.SetActive(false);
                     Dialogues[i].g_img.SetActive(false);
-                    Dialogues[i].g_speech.SetActive(false);
+                    Dialogues[i].g_speech1.SetActive(false);
+                    Dialogues[i].g_speech2.SetActive(false);
                     Dialogues[i].g_Text_1.SetActive(false);
                     Dialogues[i].g_Text_2.SetActive(false);
                 }
@@ -184,19 +193,21 @@ public class DialogManager : MonoBehaviour
             Dialogues[index].g_dlg.SetActive(true);
             if (is_Ruru_Talk[cnt_dlg])
             {
-                Dialogues[index].g_speech.SetActive(true);
+                Dialogues[index].g_speech1.SetActive(true);
                 Dialogues[index].g_img.SetActive(true);
                 Dialogues[index].g_Text_1.SetActive(true);
 
-                Dialogues[index].img_SpeechBuble.sprite = spr_Dialogue_Left;
+                Dialogues[index].img_SpeechBubble1.sprite = spr_Dialogue_Left;
                 Dialogues[index].txt_1.text = txt_dialogue[cnt_dlg];
+
+                
             }
             else
             {
-                Dialogues[index].g_speech.SetActive(true);
+                Dialogues[index].g_speech2.SetActive(true);
                 Dialogues[index].g_Text_2.SetActive(true);
 
-                Dialogues[index].img_SpeechBuble.sprite = spr_Dialogue_Right;
+                Dialogues[index].img_SpeechBubble2.sprite = spr_Dialogue_Right;
                 Dialogues[index].txt_2.text = txt_dialogue[cnt_dlg];
             }
 
@@ -205,27 +216,38 @@ public class DialogManager : MonoBehaviour
         }
         else
         {
-            Time.timeScale = 1.0f;
-            panel_Dialog.SetActive(false);
-            stageM.DlgDone();
-
-            for (int i = 0; i < btn_Buttons.Length; i++)
-                btn_Buttons[i].interactable = true;
-
-            for (int i = 0; i < imgs_Buttons.Length; i++)
-                imgs_Buttons[i].color = new Color(imgs_Buttons[i].color.r, imgs_Buttons[i].color.g, imgs_Buttons[i].color.b, ori_alpha_buttons[i]);
-            for (int i = 0; i < imgs_LifePanel.Length; i++)           
-                imgs_LifePanel[i].color = new Color(imgs_LifePanel[i].color.r, imgs_LifePanel[i].color.g, imgs_LifePanel[i].color.b, ori_alpha_life[i]);
-            for (int i = 0; i < imgs_RemainPanel.Length; i++)
-                imgs_LifePanel[i].color = new Color(imgs_RemainPanel[i].color.r, imgs_RemainPanel[i].color.g, imgs_RemainPanel[i].color.b, ori_alpha_remain[i]);
-
-            for (int i = 0; i < txts_Buttons.Length; i++)
-                txts_Buttons[i].color = new Color(txts_Buttons[i].color.r, txts_Buttons[i].color.g, txts_Buttons[i].color.b, ori_alpha_txt_buttons[i]);
-            for (int i = 0; i < txts_Remain.Length; i++)
-                txts_Remain[i].color = new Color(txts_Remain[i].color.r, txts_Remain[i].color.g, txts_Remain[i].color.b, ori_alpha_txt_remain[i]);
-
-
-            Destroy(this);
+            Dlg_End();
         }
+    }
+
+    private void Dlg_End()
+    {
+        Time.timeScale = 1.0f;
+        panel_Dialog.SetActive(false);
+        stageM.DlgDone();
+
+        for (int i = 0; i < btn_Buttons.Length; i++)
+            btn_Buttons[i].interactable = true;
+
+        for (int i = 0; i < imgs_Buttons.Length; i++)
+            imgs_Buttons[i].color = new Color(imgs_Buttons[i].color.r, imgs_Buttons[i].color.g, imgs_Buttons[i].color.b, ori_alpha_buttons[i]);
+        for (int i = 0; i < imgs_LifePanel.Length; i++)
+            imgs_LifePanel[i].color = new Color(imgs_LifePanel[i].color.r, imgs_LifePanel[i].color.g, imgs_LifePanel[i].color.b, ori_alpha_life[i]);
+        for (int i = 0; i < imgs_RemainPanel.Length; i++)
+            imgs_LifePanel[i].color = new Color(imgs_RemainPanel[i].color.r, imgs_RemainPanel[i].color.g, imgs_RemainPanel[i].color.b, ori_alpha_remain[i]);
+
+        for (int i = 0; i < txts_Buttons.Length; i++)
+            txts_Buttons[i].color = new Color(txts_Buttons[i].color.r, txts_Buttons[i].color.g, txts_Buttons[i].color.b, ori_alpha_txt_buttons[i]);
+        for (int i = 0; i < txts_Remain.Length; i++)
+            txts_Remain[i].color = new Color(txts_Remain[i].color.r, txts_Remain[i].color.g, txts_Remain[i].color.b, ori_alpha_txt_remain[i]);
+
+
+        Destroy(this);
+
+    }
+
+    public void BTN_Skip()
+    {
+        Dlg_End();
     }
 }
