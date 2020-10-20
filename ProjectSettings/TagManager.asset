@@ -21,6 +21,7 @@ TagManager:
   - Barricade
   - SearchRange
   - ClearPanel
+  - SFX_Manager
   layers:
   - Default
   - TransparentFX

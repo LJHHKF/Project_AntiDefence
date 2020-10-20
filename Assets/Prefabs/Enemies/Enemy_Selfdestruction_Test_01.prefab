@@ -138,7 +138,7 @@ MonoBehaviour:
   hpBarOffset: {x: 0, y: 2.2, z: 0}
   dropMoneySetPrefab: {fileID: 314604016676123830, guid: d79bfa13606450247bbce072aaeee598,
     type: 3}
-  dieEffectPrefab: {fileID: 1000011128802252, guid: 96730f8640590934eacb6f860058e7f9,
+  dieEffectPrefab: {fileID: 1222048909045955687, guid: 94af62a6c199fd1469b7ff6560617c81,
     type: 3}
   m_anim: {fileID: 0}
   attackDist: 2

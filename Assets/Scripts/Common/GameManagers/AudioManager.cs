@@ -34,7 +34,7 @@ public class AudioManager : MonoBehaviour
     private IEnumerator Sound_BTN_Click()
     {
         sfx_BTN_Click.Play();
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.5f);
         sfx_BTN_Click.Stop();
         yield break;
     }
