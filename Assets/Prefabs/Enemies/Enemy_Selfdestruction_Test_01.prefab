@@ -140,6 +140,7 @@ MonoBehaviour:
     type: 3}
   dieEffectPrefab: {fileID: 1000011128802252, guid: 96730f8640590934eacb6f860058e7f9,
     type: 3}
+  m_anim: {fileID: 0}
   attackDist: 2
   attackDamage: 1
   moveSpeed: 1
@@ -160,7 +161,7 @@ GameObject:
   - component: {fileID: 1313042334271469571}
   - component: {fileID: 3490871104940559690}
   m_Layer: 0
-  m_Name: Font Pixels 02_1
+  m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
