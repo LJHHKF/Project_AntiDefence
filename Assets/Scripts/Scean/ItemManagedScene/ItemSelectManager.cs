@@ -91,15 +91,15 @@ public class ItemSelectManager : MonoBehaviour
 
         bgmM.Play_LobbyAndShop();
 
-        t_panel_ps = gameObject.transform.Find("Panel_Ps");
-        t_content = gameObject.transform.Find("ItemScroll").Find("Viewport").Find("Content");
+        t_panel_ps = gameObject.transform.Find("Panel_ItemBG").Find("Panel_Ps");
+        t_content = gameObject.transform.Find("Panel_ItemBG").Find("ItemScroll").Find("Viewport").Find("Content");
         t_ItemSet0 = t_content.Find("Item_Set0");
         t_ItemSet1 = t_content.Find("Item_Set1");
         t_ItemSet2 = t_content.Find("Item_Set2");
         t_ItemSet3 = t_content.Find("Item_Set3");
         t_ItemSet4 = t_content.Find("Item_Set4");
 
-        t_money = gameObject.transform.Find("Panel_OwnMoney").Find("Moeny").GetComponent<Text>();
+        t_money = gameObject.transform.Find("Panel_ItemBG").Find("Panel_OwnMoney").Find("Moeny").GetComponent<Text>();
         t_money.text = selectIManager.own_money.ToString();
 
         button_p1 = t_panel_ps.Find("B_P1").gameObject;

@@ -23,6 +23,8 @@ public class TowerAttack_Snip : MonoBehaviour
     private GameObject gm;
     private SelectedItemManager si_manager;
 
+    private float touch_Time = 0f;
+
     private void Start()
     {
         imageObject = GameObject.FindGameObjectWithTag("SNT_Cool");
@@ -56,7 +58,15 @@ public class TowerAttack_Snip : MonoBehaviour
         }
         else if (Input.GetMouseButtonUp(0))
         {
+            touch_Time = 0f;
             m_Coll.enabled = true;
+        }
+
+        touch_Time += Time.deltaTime;
+
+        if (touch_Time >= 0.5f)
+        {
+            m_Coll.enabled = false;
         }
     }
 

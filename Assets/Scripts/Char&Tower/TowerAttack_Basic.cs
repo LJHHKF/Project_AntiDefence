@@ -23,6 +23,8 @@ public class TowerAttack_Basic : MonoBehaviour
     private GameObject gm;
     private SelectedItemManager si_manager;
 
+    private float touch_Time;
+
     private void Awake()
     {
         imageObject = GameObject.FindGameObjectWithTag("BT_Cool");
@@ -60,7 +62,15 @@ public class TowerAttack_Basic : MonoBehaviour
         }
         else if (Input.GetMouseButtonUp(0))
         {
+            touch_Time = 0f;
             m_Coll.enabled = true;
+        }
+
+        touch_Time += Time.deltaTime;
+
+        if (touch_Time >= 0.5f)
+        {
+            m_Coll.enabled = false;
         }
     }
 

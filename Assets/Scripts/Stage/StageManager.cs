@@ -37,7 +37,6 @@ public class StageManager : MonoBehaviour
     [Header("Other Setting")]
     public GameObject startEffect;
     public GameObject startEffect2;
-    //public GameObject sfx_manager;
 
     [Header("Wall&Tile Image Setting")]
     public Material[] tile_far_material;
@@ -58,7 +57,6 @@ public class StageManager : MonoBehaviour
     public float wallMaxY = 5.5f;
 
 
-    // private Image s_bar;
     private Text t_cur;
     private Text t_full;
     private int cnt_EnemyDie = 0;
@@ -76,11 +74,11 @@ public class StageManager : MonoBehaviour
     private TA_Manager ta_M;
     private PlayerManager playerM;
 
+    private GameObject sfx_manager;
+    private int alive_Barricade = 0;
+    private AudioSource sfx_Barricade_Idle;
+    private AudioSource sfx_Barricade_Destruction;
 
-    private void Awake()
-    {
-        //Instantiate(sfx_manager,GameObject.FindGameObjectWithTag("MainCamera").transform);
-    }
 
     // Start is called before the first frame update
     void Start()
@@ -105,9 +103,14 @@ public class StageManager : MonoBehaviour
         ta_M = towerBoard.GetComponent<TA_Manager>();
         playerM = towerBoard.GetComponent<PlayerManager>();
 
+        sfx_manager = GameObject.FindGameObjectWithTag("SFX_Manager");
+        sfx_Barricade_Idle = sfx_manager.transform.Find("S_Barricade_Idle").GetComponent<AudioSource>();
+        sfx_Barricade_Destruction = sfx_manager.transform.Find("S_Barricade_Destruction").GetComponent<AudioSource>();
+
         if(itemM.i_protectWall)
         {
             b_spawnPoints.SetActive(true);
+            alive_Barricade = 4;
         }
         else
         {
@@ -138,7 +141,17 @@ public class StageManager : MonoBehaviour
             {
                 StartCoroutine(CountTimeForSpawn());
                 now_Spawn = true;
+
+                if(itemM.i_protectWall)
+                {
+                    sfx_Barricade_Idle.Play();
+                }
             }
+        }
+
+        if(alive_Barricade == 0)
+        {
+            sfx_Barricade_Idle.Stop();
         }
     }
 
@@ -278,5 +291,19 @@ public class StageManager : MonoBehaviour
                 bgmM.Play_Stage0_1();
             }
         }
+    }
+
+    public void BarricadeBreak()
+    {
+        alive_Barricade -= 1;
+        StartCoroutine(PlaySfxBarricadeDestruction());
+    }
+
+    IEnumerator PlaySfxBarricadeDestruction()
+    {
+        sfx_Barricade_Destruction.Play();
+        yield return new WaitForSeconds(0.3f);
+        sfx_Barricade_Destruction.Stop();
+        yield break;
     }
 }

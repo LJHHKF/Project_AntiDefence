@@ -61,7 +61,7 @@ public class InventoryManager : MonoBehaviour
 
         bgmM.Play_LobbyAndShop();
 
-        t_content = gameObject.transform.Find("ScrollView").Find("Viewport").Find("Content");
+        t_content = gameObject.transform.Find("Inventory_BG").Find("ScrollView").Find("Viewport").Find("Content");
         t_ItemSet0 = t_content.Find("ItemSet0");
         t_ItemSet1 = t_content.Find("ItemSet1");
         t_ItemSet2 = t_content.Find("ItemSet2");
