@@ -35,39 +35,6 @@ TextureImporter:
   - first:
       213: 1288541736103374413
     second: Enemy_Human_Dead_10
-  - first:
-      213: 7726567927192544030
-    second: Enemy_Human_Dead_0
-  - first:
-      213: -2440530035869194061
-    second: Enemy_Human_Dead_1
-  - first:
-      213: 3599741136563137024
-    second: Enemy_Human_Dead_2
-  - first:
-      213: -7623744994212859528
-    second: Enemy_Human_Dead_3
-  - first:
-      213: -1510390399115865974
-    second: Enemy_Human_Dead_4
-  - first:
-      213: -1551257043017945698
-    second: Enemy_Human_Dead_5
-  - first:
-      213: 8089398771234668282
-    second: Enemy_Human_Dead_6
-  - first:
-      213: -4165906282781505601
-    second: Enemy_Human_Dead_7
-  - first:
-      213: -7791424979176017124
-    second: Enemy_Human_Dead_8
-  - first:
-      213: 3024627721801698849
-    second: Enemy_Human_Dead_9
-  - first:
-      213: -2988407493367524667
-    second: Enemy_Human_Dead_10
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -168,10 +135,10 @@ TextureImporter:
       name: Enemy_Human_Dead_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 450
-        width: 300
-        height: 450
+        x: 115
+        y: 456
+        width: 124
+        height: 373
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,8 +146,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e13ec39b7984a3b60800000000000000
-      internalID: 7726567927192544030
+      spriteID: 191372bcf30a34950800000000000000
+      internalID: 6432160888666927505
       vertices: []
       indices: 
       edges: []
@@ -189,10 +156,10 @@ TextureImporter:
       name: Enemy_Human_Dead_1
       rect:
         serializedVersion: 2
-        x: 300
-        y: 450
-        width: 300
-        height: 450
+        x: 389
+        y: 454
+        width: 130
+        height: 361
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,8 +167,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b86854ecde712ed0800000000000000
-      internalID: -2440530035869194061
+      spriteID: f97a7e0bf3fcf46b0800000000000000
+      internalID: -5309797563188664417
       vertices: []
       indices: 
       edges: []
@@ -210,10 +177,10 @@ TextureImporter:
       name: Enemy_Human_Dead_2
       rect:
         serializedVersion: 2
-        x: 600
-        y: 450
-        width: 300
-        height: 450
+        x: 689
+        y: 454
+        width: 130
+        height: 361
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,8 +188,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00ae430dd79d4f130800000000000000
-      internalID: 3599741136563137024
+      spriteID: a70f419f732870890800000000000000
+      internalID: -7491876278193819526
       vertices: []
       indices: 
       edges: []
@@ -231,10 +198,10 @@ TextureImporter:
       name: Enemy_Human_Dead_3
       rect:
         serializedVersion: 2
-        x: 900
-        y: 450
-        width: 300
-        height: 450
+        x: 1005
+        y: 454
+        width: 125
+        height: 344
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,8 +209,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 871b7c1f154033690800000000000000
-      internalID: -7623744994212859528
+      spriteID: 644021a09cc02a580800000000000000
+      internalID: -8817471062841097146
       vertices: []
       indices: 
       edges: []
@@ -252,10 +219,10 @@ TextureImporter:
       name: Enemy_Human_Dead_4
       rect:
         serializedVersion: 2
-        x: 1200
-        y: 450
-        width: 300
-        height: 450
+        x: 1305
+        y: 454
+        width: 125
+        height: 344
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -263,8 +230,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a80d9843fe30a0be0800000000000000
-      internalID: -1510390399115865974
+      spriteID: 49b342e8b257ad7b0800000000000000
+      internalID: -5198713989917033580
       vertices: []
       indices: 
       edges: []
@@ -273,10 +240,10 @@ TextureImporter:
       name: Enemy_Human_Dead_5
       rect:
         serializedVersion: 2
-        x: 1500
-        y: 450
-        width: 300
-        height: 450
+        x: 1597
+        y: 454
+        width: 141
+        height: 329
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,8 +251,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9da79330f3d87ae0800000000000000
-      internalID: -1551257043017945698
+      spriteID: 39ecd8374f87d5340800000000000000
+      internalID: 4854168964681289363
       vertices: []
       indices: 
       edges: []
@@ -294,10 +261,10 @@ TextureImporter:
       name: Enemy_Human_Dead_6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 300
-        height: 450
+        x: 62
+        y: 3
+        width: 178
+        height: 328
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -305,8 +272,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: afe7ceda251534070800000000000000
-      internalID: 8089398771234668282
+      spriteID: be4a7e1b4a43c6cd0800000000000000
+      internalID: -2563616205916625685
       vertices: []
       indices: 
       edges: []
@@ -315,10 +282,10 @@ TextureImporter:
       name: Enemy_Human_Dead_7
       rect:
         serializedVersion: 2
-        x: 300
-        y: 0
-        width: 300
-        height: 450
+        x: 362
+        y: 3
+        width: 178
+        height: 328
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -326,8 +293,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb78d37ce4abf26c0800000000000000
-      internalID: -4165906282781505601
+      spriteID: 7812264d316d58a70800000000000000
+      internalID: 8828698025185649031
       vertices: []
       indices: 
       edges: []
@@ -336,10 +303,10 @@ TextureImporter:
       name: Enemy_Human_Dead_8
       rect:
         serializedVersion: 2
-        x: 600
-        y: 0
-        width: 300
-        height: 450
+        x: 678
+        y: 3
+        width: 162
+        height: 327
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -347,8 +314,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c13bb1e134c4fd390800000000000000
-      internalID: -7791424979176017124
+      spriteID: fa20f0ffc9e4f6b90800000000000000
+      internalID: -7246486839214800209
       vertices: []
       indices: 
       edges: []
@@ -357,10 +324,10 @@ TextureImporter:
       name: Enemy_Human_Dead_9
       rect:
         serializedVersion: 2
-        x: 900
-        y: 0
-        width: 300
-        height: 450
+        x: 978
+        y: 3
+        width: 162
+        height: 327
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -368,8 +335,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 12e0ac743e2a9f920800000000000000
-      internalID: 3024627721801698849
+      spriteID: 1a7e40a33f9efdb40800000000000000
+      internalID: 5467345703510796193
       vertices: []
       indices: 
       edges: []
@@ -378,10 +345,10 @@ TextureImporter:
       name: Enemy_Human_Dead_10
       rect:
         serializedVersion: 2
-        x: 1200
-        y: 0
-        width: 300
-        height: 450
+        x: 1264
+        y: 6
+        width: 176
+        height: 311
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -389,8 +356,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c296b1d73b0786d0800000000000000
-      internalID: -2988407493367524667
+      spriteID: d4ee4bac1e1d1e110800000000000000
+      internalID: 1288541736103374413
       vertices: []
       indices: 
       edges: []

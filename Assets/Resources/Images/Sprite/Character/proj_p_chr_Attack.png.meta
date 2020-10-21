@@ -44,912 +44,6 @@ TextureImporter:
   - first:
       213: 3048945025312052584
     second: proj_p_chr_Attack_13
-  - first:
-      213: -6901522232689405907
-    second: proj_p_chr_Attack_0
-  - first:
-      213: 5490930225475342198
-    second: proj_p_chr_Attack_1
-  - first:
-      213: 1065066540987176864
-    second: proj_p_chr_Attack_2
-  - first:
-      213: -7707809086366390406
-    second: proj_p_chr_Attack_3
-  - first:
-      213: -2707163194765008974
-    second: proj_p_chr_Attack_4
-  - first:
-      213: 211180976041058175
-    second: proj_p_chr_Attack_5
-  - first:
-      213: 5458878920784769996
-    second: proj_p_chr_Attack_6
-  - first:
-      213: -2577763645704294010
-    second: proj_p_chr_Attack_7
-  - first:
-      213: 8601027555088862558
-    second: proj_p_chr_Attack_8
-  - first:
-      213: -39712328296006785
-    second: proj_p_chr_Attack_9
-  - first:
-      213: 628022533165990135
-    second: proj_p_chr_Attack_10
-  - first:
-      213: -8669505584663718873
-    second: proj_p_chr_Attack_11
-  - first:
-      213: -1296929939292619319
-    second: proj_p_chr_Attack_12
-  - first:
-      213: 956565250759017801
-    second: proj_p_chr_Attack_13
-  - first:
-      213: 1013979011415799797
-    second: proj_p_chr_Attack_14
-  - first:
-      213: -5644333217574852143
-    second: proj_p_chr_Attack_15
-  - first:
-      213: 2471526609491847943
-    second: proj_p_chr_Attack_16
-  - first:
-      213: -5807735303660683132
-    second: proj_p_chr_Attack_17
-  - first:
-      213: -8875907917212225279
-    second: proj_p_chr_Attack_18
-  - first:
-      213: -5490051185861023542
-    second: proj_p_chr_Attack_19
-  - first:
-      213: 823092380870071709
-    second: proj_p_chr_Attack_20
-  - first:
-      213: -7327801002618875082
-    second: proj_p_chr_Attack_21
-  - first:
-      213: -7402224024405081343
-    second: proj_p_chr_Attack_22
-  - first:
-      213: -1145511200882344558
-    second: proj_p_chr_Attack_23
-  - first:
-      213: 5143622444868314561
-    second: proj_p_chr_Attack_24
-  - first:
-      213: -6136400450070378338
-    second: proj_p_chr_Attack_25
-  - first:
-      213: 768284085207705499
-    second: proj_p_chr_Attack_26
-  - first:
-      213: -8247910825745500341
-    second: proj_p_chr_Attack_27
-  - first:
-      213: -9106910027326801048
-    second: proj_p_chr_Attack_28
-  - first:
-      213: 4036858149236921795
-    second: proj_p_chr_Attack_29
-  - first:
-      213: 6519371233073786226
-    second: proj_p_chr_Attack_30
-  - first:
-      213: 4897445705507604629
-    second: proj_p_chr_Attack_31
-  - first:
-      213: 6218746513411633641
-    second: proj_p_chr_Attack_32
-  - first:
-      213: -1790285260767139128
-    second: proj_p_chr_Attack_33
-  - first:
-      213: -8184513703303821814
-    second: proj_p_chr_Attack_34
-  - first:
-      213: -72088838753679781
-    second: proj_p_chr_Attack_35
-  - first:
-      213: 3761944029479921134
-    second: proj_p_chr_Attack_36
-  - first:
-      213: 7900041766997778906
-    second: proj_p_chr_Attack_37
-  - first:
-      213: -3991011166565415637
-    second: proj_p_chr_Attack_38
-  - first:
-      213: 4783788679603433430
-    second: proj_p_chr_Attack_39
-  - first:
-      213: 3113887319142116118
-    second: proj_p_chr_Attack_40
-  - first:
-      213: 1618476048476596629
-    second: proj_p_chr_Attack_41
-  - first:
-      213: 7191086648481563378
-    second: proj_p_chr_Attack_42
-  - first:
-      213: 1224301281194617133
-    second: proj_p_chr_Attack_43
-  - first:
-      213: -6229705388212887204
-    second: proj_p_chr_Attack_44
-  - first:
-      213: -5344750658248066201
-    second: proj_p_chr_Attack_45
-  - first:
-      213: -9080459593098138503
-    second: proj_p_chr_Attack_46
-  - first:
-      213: -2632307305635342551
-    second: proj_p_chr_Attack_47
-  - first:
-      213: -6200210709293570587
-    second: proj_p_chr_Attack_48
-  - first:
-      213: 669762344271869720
-    second: proj_p_chr_Attack_49
-  - first:
-      213: -4610174758584346012
-    second: proj_p_chr_Attack_50
-  - first:
-      213: 4985297403118398491
-    second: proj_p_chr_Attack_51
-  - first:
-      213: 7323238387285060318
-    second: proj_p_chr_Attack_52
-  - first:
-      213: 1557462448805687348
-    second: proj_p_chr_Attack_53
-  - first:
-      213: 3234073173411301234
-    second: proj_p_chr_Attack_54
-  - first:
-      213: -19866301268016718
-    second: proj_p_chr_Attack_55
-  - first:
-      213: -9137855745027099326
-    second: proj_p_chr_Attack_56
-  - first:
-      213: 1636473977237709745
-    second: proj_p_chr_Attack_57
-  - first:
-      213: 7860760648787520353
-    second: proj_p_chr_Attack_58
-  - first:
-      213: 1869675731008436899
-    second: proj_p_chr_Attack_59
-  - first:
-      213: -3193707665811924331
-    second: proj_p_chr_Attack_60
-  - first:
-      213: 3090940001499463397
-    second: proj_p_chr_Attack_61
-  - first:
-      213: -2302409404381458932
-    second: proj_p_chr_Attack_62
-  - first:
-      213: -8925737410760394182
-    second: proj_p_chr_Attack_63
-  - first:
-      213: 9206367388112462912
-    second: proj_p_chr_Attack_64
-  - first:
-      213: -3134334081146825504
-    second: proj_p_chr_Attack_65
-  - first:
-      213: -4695330728077625787
-    second: proj_p_chr_Attack_66
-  - first:
-      213: 3284125170520360108
-    second: proj_p_chr_Attack_67
-  - first:
-      213: 7746189369568496519
-    second: proj_p_chr_Attack_68
-  - first:
-      213: -6761248043240873788
-    second: proj_p_chr_Attack_69
-  - first:
-      213: -5192701809485708170
-    second: proj_p_chr_Attack_70
-  - first:
-      213: 4658869810880923747
-    second: proj_p_chr_Attack_71
-  - first:
-      213: 1117584707288791880
-    second: proj_p_chr_Attack_72
-  - first:
-      213: 6487038152655181987
-    second: proj_p_chr_Attack_73
-  - first:
-      213: -7841388916791368850
-    second: proj_p_chr_Attack_74
-  - first:
-      213: 496091919856477327
-    second: proj_p_chr_Attack_75
-  - first:
-      213: 1519369153723674006
-    second: proj_p_chr_Attack_76
-  - first:
-      213: 770686055200578094
-    second: proj_p_chr_Attack_77
-  - first:
-      213: -4819581136164616373
-    second: proj_p_chr_Attack_78
-  - first:
-      213: 8585680209859446533
-    second: proj_p_chr_Attack_79
-  - first:
-      213: -4007819021806578332
-    second: proj_p_chr_Attack_80
-  - first:
-      213: -8943817291483374363
-    second: proj_p_chr_Attack_81
-  - first:
-      213: -4093116478534723272
-    second: proj_p_chr_Attack_82
-  - first:
-      213: -8670706289212749674
-    second: proj_p_chr_Attack_83
-  - first:
-      213: -877486172536778804
-    second: proj_p_chr_Attack_84
-  - first:
-      213: 7654624952991697684
-    second: proj_p_chr_Attack_85
-  - first:
-      213: -7452699327081102635
-    second: proj_p_chr_Attack_86
-  - first:
-      213: 2698123757965707986
-    second: proj_p_chr_Attack_87
-  - first:
-      213: -2345314330689609107
-    second: proj_p_chr_Attack_88
-  - first:
-      213: -5917388820963342130
-    second: proj_p_chr_Attack_89
-  - first:
-      213: 212523515520229178
-    second: proj_p_chr_Attack_90
-  - first:
-      213: 3721379611613219448
-    second: proj_p_chr_Attack_91
-  - first:
-      213: 7168239889540288565
-    second: proj_p_chr_Attack_92
-  - first:
-      213: -2104752845911507888
-    second: proj_p_chr_Attack_93
-  - first:
-      213: 6081936747597352927
-    second: proj_p_chr_Attack_94
-  - first:
-      213: 8894179130040516482
-    second: proj_p_chr_Attack_95
-  - first:
-      213: -7314508126046116738
-    second: proj_p_chr_Attack_96
-  - first:
-      213: -1392592988966427643
-    second: proj_p_chr_Attack_97
-  - first:
-      213: -5264146015100758410
-    second: proj_p_chr_Attack_98
-  - first:
-      213: -951578388506294527
-    second: proj_p_chr_Attack_99
-  - first:
-      213: -8828860484966167606
-    second: proj_p_chr_Attack_100
-  - first:
-      213: -6596582168064673980
-    second: proj_p_chr_Attack_101
-  - first:
-      213: 7870131552600376282
-    second: proj_p_chr_Attack_102
-  - first:
-      213: 7025067363031222102
-    second: proj_p_chr_Attack_103
-  - first:
-      213: 897079999332357646
-    second: proj_p_chr_Attack_104
-  - first:
-      213: 3939847324872027668
-    second: proj_p_chr_Attack_105
-  - first:
-      213: 8753457946985225036
-    second: proj_p_chr_Attack_106
-  - first:
-      213: -812342179661094901
-    second: proj_p_chr_Attack_107
-  - first:
-      213: 1073937002257496664
-    second: proj_p_chr_Attack_108
-  - first:
-      213: -2427337594474737559
-    second: proj_p_chr_Attack_109
-  - first:
-      213: 4265371320988368137
-    second: proj_p_chr_Attack_110
-  - first:
-      213: 3579697206362631511
-    second: proj_p_chr_Attack_111
-  - first:
-      213: -5057294939168279456
-    second: proj_p_chr_Attack_112
-  - first:
-      213: 1981368318373259050
-    second: proj_p_chr_Attack_113
-  - first:
-      213: 608852208604284418
-    second: proj_p_chr_Attack_114
-  - first:
-      213: 6119470123668702494
-    second: proj_p_chr_Attack_115
-  - first:
-      213: 5780102433269505651
-    second: proj_p_chr_Attack_116
-  - first:
-      213: 4049811745091199675
-    second: proj_p_chr_Attack_117
-  - first:
-      213: 4029859846349185039
-    second: proj_p_chr_Attack_118
-  - first:
-      213: -8298475613582250586
-    second: proj_p_chr_Attack_119
-  - first:
-      213: 7265834304358867889
-    second: proj_p_chr_Attack_120
-  - first:
-      213: 4874135998601652892
-    second: proj_p_chr_Attack_121
-  - first:
-      213: 7386000427762245129
-    second: proj_p_chr_Attack_122
-  - first:
-      213: 2894713892555682913
-    second: proj_p_chr_Attack_123
-  - first:
-      213: -3812812978551679528
-    second: proj_p_chr_Attack_124
-  - first:
-      213: 6113506292247812831
-    second: proj_p_chr_Attack_125
-  - first:
-      213: 7346310025058849904
-    second: proj_p_chr_Attack_126
-  - first:
-      213: 2248963824033174759
-    second: proj_p_chr_Attack_127
-  - first:
-      213: -6788845375005424274
-    second: proj_p_chr_Attack_128
-  - first:
-      213: 6096028422123151405
-    second: proj_p_chr_Attack_129
-  - first:
-      213: 7048119329146495383
-    second: proj_p_chr_Attack_130
-  - first:
-      213: 6558074709716449313
-    second: proj_p_chr_Attack_131
-  - first:
-      213: -391396594625006828
-    second: proj_p_chr_Attack_132
-  - first:
-      213: -2793649105774671559
-    second: proj_p_chr_Attack_133
-  - first:
-      213: 429523295502327547
-    second: proj_p_chr_Attack_134
-  - first:
-      213: 7034651024062822963
-    second: proj_p_chr_Attack_135
-  - first:
-      213: -3319818990156824294
-    second: proj_p_chr_Attack_136
-  - first:
-      213: -8030132767999795362
-    second: proj_p_chr_Attack_137
-  - first:
-      213: -7937058138558109842
-    second: proj_p_chr_Attack_138
-  - first:
-      213: -8013697932152881609
-    second: proj_p_chr_Attack_139
-  - first:
-      213: 6258752696205618676
-    second: proj_p_chr_Attack_140
-  - first:
-      213: -8891885654644863684
-    second: proj_p_chr_Attack_141
-  - first:
-      213: 1020841256265650116
-    second: proj_p_chr_Attack_142
-  - first:
-      213: 3513510160429651370
-    second: proj_p_chr_Attack_143
-  - first:
-      213: -2737644180371700774
-    second: proj_p_chr_Attack_144
-  - first:
-      213: 8459937837666477075
-    second: proj_p_chr_Attack_145
-  - first:
-      213: 4493913112410108528
-    second: proj_p_chr_Attack_146
-  - first:
-      213: -8403106226831568461
-    second: proj_p_chr_Attack_147
-  - first:
-      213: -4541164070110731655
-    second: proj_p_chr_Attack_148
-  - first:
-      213: -9024217781502465661
-    second: proj_p_chr_Attack_149
-  - first:
-      213: -2860914902764260001
-    second: proj_p_chr_Attack_150
-  - first:
-      213: 428370805585630441
-    second: proj_p_chr_Attack_151
-  - first:
-      213: 4789993678619891064
-    second: proj_p_chr_Attack_152
-  - first:
-      213: 4359190020758145259
-    second: proj_p_chr_Attack_153
-  - first:
-      213: 6697543159385963957
-    second: proj_p_chr_Attack_154
-  - first:
-      213: -2772592339816415814
-    second: proj_p_chr_Attack_155
-  - first:
-      213: 8722574530299686064
-    second: proj_p_chr_Attack_156
-  - first:
-      213: -1693391761532680363
-    second: proj_p_chr_Attack_157
-  - first:
-      213: 2765218364649545889
-    second: proj_p_chr_Attack_158
-  - first:
-      213: -7741503382790187865
-    second: proj_p_chr_Attack_159
-  - first:
-      213: 8718209393295339794
-    second: proj_p_chr_Attack_160
-  - first:
-      213: -4224546955949065227
-    second: proj_p_chr_Attack_161
-  - first:
-      213: 1082334764691555263
-    second: proj_p_chr_Attack_162
-  - first:
-      213: 3622363782627000901
-    second: proj_p_chr_Attack_163
-  - first:
-      213: -4103414730071278056
-    second: proj_p_chr_Attack_164
-  - first:
-      213: 2354725317200528008
-    second: proj_p_chr_Attack_165
-  - first:
-      213: -2211431833067570858
-    second: proj_p_chr_Attack_166
-  - first:
-      213: -6376599363293640360
-    second: proj_p_chr_Attack_167
-  - first:
-      213: -9178310455702741193
-    second: proj_p_chr_Attack_168
-  - first:
-      213: -3452585762407316732
-    second: proj_p_chr_Attack_169
-  - first:
-      213: -527054036043990802
-    second: proj_p_chr_Attack_170
-  - first:
-      213: 2191915552164122271
-    second: proj_p_chr_Attack_171
-  - first:
-      213: 3752011236771465147
-    second: proj_p_chr_Attack_172
-  - first:
-      213: 969919476302899423
-    second: proj_p_chr_Attack_173
-  - first:
-      213: -5854923700646445130
-    second: proj_p_chr_Attack_174
-  - first:
-      213: -2695708977360128601
-    second: proj_p_chr_Attack_175
-  - first:
-      213: 7178923779685462713
-    second: proj_p_chr_Attack_176
-  - first:
-      213: 6115212625336799114
-    second: proj_p_chr_Attack_177
-  - first:
-      213: 481754940479482886
-    second: proj_p_chr_Attack_178
-  - first:
-      213: 4378726337661736476
-    second: proj_p_chr_Attack_179
-  - first:
-      213: -4420544020263452160
-    second: proj_p_chr_Attack_180
-  - first:
-      213: -5836141810309510306
-    second: proj_p_chr_Attack_181
-  - first:
-      213: 8120479035302509509
-    second: proj_p_chr_Attack_182
-  - first:
-      213: -116762319038341758
-    second: proj_p_chr_Attack_183
-  - first:
-      213: -8936803879813206756
-    second: proj_p_chr_Attack_184
-  - first:
-      213: -333841157747404962
-    second: proj_p_chr_Attack_185
-  - first:
-      213: -8109964832410453300
-    second: proj_p_chr_Attack_186
-  - first:
-      213: 5930021678735485259
-    second: proj_p_chr_Attack_187
-  - first:
-      213: -7354064563501198791
-    second: proj_p_chr_Attack_188
-  - first:
-      213: 6875238303549647470
-    second: proj_p_chr_Attack_189
-  - first:
-      213: -9128529503019755955
-    second: proj_p_chr_Attack_190
-  - first:
-      213: 2722975376635027069
-    second: proj_p_chr_Attack_191
-  - first:
-      213: -6476818614271110860
-    second: proj_p_chr_Attack_192
-  - first:
-      213: 917639088799684659
-    second: proj_p_chr_Attack_193
-  - first:
-      213: 2753245369868103611
-    second: proj_p_chr_Attack_194
-  - first:
-      213: 4182386896186213131
-    second: proj_p_chr_Attack_195
-  - first:
-      213: 5004019896950646194
-    second: proj_p_chr_Attack_196
-  - first:
-      213: 7493361563782093492
-    second: proj_p_chr_Attack_197
-  - first:
-      213: 5021326082544776228
-    second: proj_p_chr_Attack_198
-  - first:
-      213: 5067863536669854455
-    second: proj_p_chr_Attack_199
-  - first:
-      213: 6478647269861129085
-    second: proj_p_chr_Attack_200
-  - first:
-      213: 2900816094519372702
-    second: proj_p_chr_Attack_201
-  - first:
-      213: 5030424265187071897
-    second: proj_p_chr_Attack_202
-  - first:
-      213: 6775035695198834414
-    second: proj_p_chr_Attack_203
-  - first:
-      213: -7550501528338534581
-    second: proj_p_chr_Attack_204
-  - first:
-      213: 2743932905717533646
-    second: proj_p_chr_Attack_205
-  - first:
-      213: 433917118433541927
-    second: proj_p_chr_Attack_206
-  - first:
-      213: 1426368305387873518
-    second: proj_p_chr_Attack_207
-  - first:
-      213: 5719178701620977684
-    second: proj_p_chr_Attack_208
-  - first:
-      213: -3402565447449665028
-    second: proj_p_chr_Attack_209
-  - first:
-      213: 7675770090467514586
-    second: proj_p_chr_Attack_210
-  - first:
-      213: -7618012856527604474
-    second: proj_p_chr_Attack_211
-  - first:
-      213: -1880003324643782907
-    second: proj_p_chr_Attack_212
-  - first:
-      213: -8441257906416587663
-    second: proj_p_chr_Attack_213
-  - first:
-      213: 5129985093785092621
-    second: proj_p_chr_Attack_214
-  - first:
-      213: 5659900168788502979
-    second: proj_p_chr_Attack_215
-  - first:
-      213: 4000544015649673127
-    second: proj_p_chr_Attack_216
-  - first:
-      213: 3856957361256924661
-    second: proj_p_chr_Attack_217
-  - first:
-      213: -4594102226409282672
-    second: proj_p_chr_Attack_218
-  - first:
-      213: -2638152922257311490
-    second: proj_p_chr_Attack_219
-  - first:
-      213: -1098377803153241497
-    second: proj_p_chr_Attack_220
-  - first:
-      213: 5966226044160960719
-    second: proj_p_chr_Attack_221
-  - first:
-      213: -8790259317870831941
-    second: proj_p_chr_Attack_222
-  - first:
-      213: 1907448522634829965
-    second: proj_p_chr_Attack_223
-  - first:
-      213: 6574456824095938039
-    second: proj_p_chr_Attack_224
-  - first:
-      213: 1072046364585401578
-    second: proj_p_chr_Attack_225
-  - first:
-      213: -7818329092087944455
-    second: proj_p_chr_Attack_226
-  - first:
-      213: 4850136163568646612
-    second: proj_p_chr_Attack_227
-  - first:
-      213: -8274365173010765439
-    second: proj_p_chr_Attack_228
-  - first:
-      213: -3942176678393889142
-    second: proj_p_chr_Attack_229
-  - first:
-      213: -7168577750832154129
-    second: proj_p_chr_Attack_230
-  - first:
-      213: 5234728784024038014
-    second: proj_p_chr_Attack_231
-  - first:
-      213: -5365430206162687878
-    second: proj_p_chr_Attack_232
-  - first:
-      213: 9217591996330901294
-    second: proj_p_chr_Attack_233
-  - first:
-      213: 3161023585114930538
-    second: proj_p_chr_Attack_234
-  - first:
-      213: 8772504478904099617
-    second: proj_p_chr_Attack_235
-  - first:
-      213: -2484674713515999103
-    second: proj_p_chr_Attack_236
-  - first:
-      213: 6092260492023062416
-    second: proj_p_chr_Attack_237
-  - first:
-      213: -4020742172083722893
-    second: proj_p_chr_Attack_238
-  - first:
-      213: 5997060013379309631
-    second: proj_p_chr_Attack_239
-  - first:
-      213: 9162029359614054907
-    second: proj_p_chr_Attack_240
-  - first:
-      213: 3856700543813015900
-    second: proj_p_chr_Attack_241
-  - first:
-      213: -909331489609213608
-    second: proj_p_chr_Attack_242
-  - first:
-      213: -3669975467578526833
-    second: proj_p_chr_Attack_243
-  - first:
-      213: -3619735080595107684
-    second: proj_p_chr_Attack_244
-  - first:
-      213: 2975390572588323004
-    second: proj_p_chr_Attack_245
-  - first:
-      213: 5390715744008526242
-    second: proj_p_chr_Attack_246
-  - first:
-      213: -1481203638040867465
-    second: proj_p_chr_Attack_247
-  - first:
-      213: -6013525204474130643
-    second: proj_p_chr_Attack_248
-  - first:
-      213: 784016351163026449
-    second: proj_p_chr_Attack_249
-  - first:
-      213: 3210365309051347979
-    second: proj_p_chr_Attack_250
-  - first:
-      213: 4704666043044417280
-    second: proj_p_chr_Attack_251
-  - first:
-      213: -5351990589054751620
-    second: proj_p_chr_Attack_252
-  - first:
-      213: -3562791425718744185
-    second: proj_p_chr_Attack_253
-  - first:
-      213: -5066874872197351668
-    second: proj_p_chr_Attack_254
-  - first:
-      213: -123021602199039649
-    second: proj_p_chr_Attack_255
-  - first:
-      213: -6728245365348952430
-    second: proj_p_chr_Attack_256
-  - first:
-      213: 6728020326121265774
-    second: proj_p_chr_Attack_257
-  - first:
-      213: -3838999687035558669
-    second: proj_p_chr_Attack_258
-  - first:
-      213: -6374145434427227226
-    second: proj_p_chr_Attack_259
-  - first:
-      213: 3739697756008104068
-    second: proj_p_chr_Attack_260
-  - first:
-      213: 2967403974680702186
-    second: proj_p_chr_Attack_261
-  - first:
-      213: 5309194225035316586
-    second: proj_p_chr_Attack_262
-  - first:
-      213: 1683532877041886067
-    second: proj_p_chr_Attack_263
-  - first:
-      213: 4524064653124858708
-    second: proj_p_chr_Attack_264
-  - first:
-      213: 5001157898968136074
-    second: proj_p_chr_Attack_265
-  - first:
-      213: -2284175653309772031
-    second: proj_p_chr_Attack_266
-  - first:
-      213: 7461353595707454357
-    second: proj_p_chr_Attack_267
-  - first:
-      213: -1427888277395359448
-    second: proj_p_chr_Attack_268
-  - first:
-      213: -5597690383014243680
-    second: proj_p_chr_Attack_269
-  - first:
-      213: -412267657716903598
-    second: proj_p_chr_Attack_270
-  - first:
-      213: 9015853893986538341
-    second: proj_p_chr_Attack_271
-  - first:
-      213: 5965683558744433869
-    second: proj_p_chr_Attack_272
-  - first:
-      213: -1363351371118705206
-    second: proj_p_chr_Attack_273
-  - first:
-      213: 6040400800901040404
-    second: proj_p_chr_Attack_274
-  - first:
-      213: 3073260643889930281
-    second: proj_p_chr_Attack_275
-  - first:
-      213: -2932595925121727326
-    second: proj_p_chr_Attack_276
-  - first:
-      213: -6494873350840348071
-    second: proj_p_chr_Attack_277
-  - first:
-      213: -7049340836523795678
-    second: proj_p_chr_Attack_278
-  - first:
-      213: 6362005935683059796
-    second: proj_p_chr_Attack_279
-  - first:
-      213: -2343072033309577675
-    second: proj_p_chr_Attack_280
-  - first:
-      213: 5791767273415478491
-    second: proj_p_chr_Attack_281
-  - first:
-      213: 7658273849839405828
-    second: proj_p_chr_Attack_282
-  - first:
-      213: 5922228500575323492
-    second: proj_p_chr_Attack_283
-  - first:
-      213: 7760923952086969539
-    second: proj_p_chr_Attack_284
-  - first:
-      213: -5217464867807209178
-    second: proj_p_chr_Attack_285
-  - first:
-      213: -6101649509316432312
-    second: proj_p_chr_Attack_286
-  - first:
-      213: 1357929566094069465
-    second: proj_p_chr_Attack_287
-  - first:
-      213: -6647464352532028883
-    second: proj_p_chr_Attack_288
-  - first:
-      213: -6961689462931432586
-    second: proj_p_chr_Attack_289
-  - first:
-      213: 2011134407498562784
-    second: proj_p_chr_Attack_290
-  - first:
-      213: 5408348875748363901
-    second: proj_p_chr_Attack_291
-  - first:
-      213: -323677230592335957
-    second: proj_p_chr_Attack_292
-  - first:
-      213: -7132221530917620890
-    second: proj_p_chr_Attack_293
-  - first:
-      213: -2033562440111146964
-    second: proj_p_chr_Attack_294
-  - first:
-      213: 8394682382393859925
-    second: proj_p_chr_Attack_295
-  - first:
-      213: 4583256469171894499
-    second: proj_p_chr_Attack_296
-  - first:
-      213: -296115208885319430
-    second: proj_p_chr_Attack_297
-  - first:
-      213: -3438576280821621835
-    second: proj_p_chr_Attack_298
-  - first:
-      213: 7099502692648541458
-    second: proj_p_chr_Attack_299
-  - first:
-      213: 5165550674206094215
-    second: proj_p_chr_Attack_300
-  - first:
-      213: 6007005975747675417
-    second: proj_p_chr_Attack_301
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -1050,10 +144,10 @@ TextureImporter:
       name: proj_p_chr_Attack_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 900
-        width: 300
-        height: 450
+        x: 90
+        y: 905
+        width: 166
+        height: 395
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1061,8 +155,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d20561f581ed830a0800000000000000
-      internalID: -6901522232689405907
+      spriteID: 2e53a5fa4a3aa56a0800000000000000
+      internalID: -6459670787797666334
       vertices: []
       indices: 
       edges: []
@@ -1071,10 +165,10 @@ TextureImporter:
       name: proj_p_chr_Attack_1
       rect:
         serializedVersion: 2
-        x: 300
-        y: 900
-        width: 300
-        height: 450
+        x: 374
+        y: 905
+        width: 182
+        height: 394
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1082,8 +176,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67fc9e7a2f3b33c40800000000000000
-      internalID: 5490930225475342198
+      spriteID: 97535f4c075dc6bd0800000000000000
+      internalID: -2635497001601124999
       vertices: []
       indices: 
       edges: []
@@ -1092,10 +186,10 @@ TextureImporter:
       name: proj_p_chr_Attack_2
       rect:
         serializedVersion: 2
-        x: 600
-        y: 900
-        width: 300
-        height: 450
+        x: 653
+        y: 905
+        width: 212
+        height: 391
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1103,8 +197,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a7d1b54060e7ce00800000000000000
-      internalID: 1065066540987176864
+      spriteID: 8667e7c628eef6d80800000000000000
+      internalID: -8255117348013443480
       vertices: []
       indices: 
       edges: []
@@ -1113,10 +207,10 @@ TextureImporter:
       name: proj_p_chr_Attack_3
       rect:
         serializedVersion: 2
-        x: 900
-        y: 900
-        width: 300
-        height: 450
+        x: 946
+        y: 904
+        width: 221
+        height: 378
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1124,8 +218,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a776a92497c580590800000000000000
-      internalID: -7707809086366390406
+      spriteID: b189db9a2a5ff1d10800000000000000
+      internalID: 2098666030359222299
       vertices: []
       indices: 
       edges: []
@@ -1134,10 +228,10 @@ TextureImporter:
       name: proj_p_chr_Attack_4
       rect:
         serializedVersion: 2
-        x: 1200
-        y: 900
-        width: 300
-        height: 450
+        x: 1273
+        y: 921
+        width: 223
+        height: 402
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1145,8 +239,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2bf1503ea693e6ad0800000000000000
-      internalID: -2707163194765008974
+      spriteID: 74d013d95dd168670800000000000000
+      internalID: 8540546546657201479
       vertices: []
       indices: 
       edges: []
@@ -1155,10 +249,10 @@ TextureImporter:
       name: proj_p_chr_Attack_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 450
-        width: 300
-        height: 450
+        x: 101
+        y: 474
+        width: 197
+        height: 412
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1166,8 +260,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7f5f349af34ee200800000000000000
-      internalID: 211180976041058175
+      spriteID: 7f45a318475d88250800000000000000
+      internalID: 5947238004303746295
       vertices: []
       indices: 
       edges: []
@@ -1176,10 +270,10 @@ TextureImporter:
       name: proj_p_chr_Attack_6
       rect:
         serializedVersion: 2
-        x: 300
-        y: 450
-        width: 300
-        height: 450
+        x: 386
+        y: 465
+        width: 192
+        height: 403
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1187,8 +281,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc37e31c475d1cb40800000000000000
-      internalID: 5458878920784769996
+      spriteID: 77521bab21e75f9b0800000000000000
+      internalID: -5046989188492089993
       vertices: []
       indices: 
       edges: []
@@ -1197,10 +291,10 @@ TextureImporter:
       name: proj_p_chr_Attack_7
       rect:
         serializedVersion: 2
-        x: 600
-        y: 450
-        width: 300
-        height: 450
+        x: 641
+        y: 456
+        width: 224
+        height: 394
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1208,8 +302,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68131ee2f91f93cd0800000000000000
-      internalID: -2577763645704294010
+      spriteID: bda47f9a25101c700800000000000000
+      internalID: 558729283321154267
       vertices: []
       indices: 
       edges: []
@@ -1218,10 +312,10 @@ TextureImporter:
       name: proj_p_chr_Attack_8
       rect:
         serializedVersion: 2
-        x: 900
-        y: 450
-        width: 300
-        height: 450
+        x: 919
+        y: 454
+        width: 232
+        height: 392
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1229,8 +323,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5d0b6cbdfcfc5770800000000000000
-      internalID: 8601027555088862558
+      spriteID: e824ca07d87d504a0800000000000000
+      internalID: -6627654274125118834
       vertices: []
       indices: 
       edges: []
@@ -1239,10 +333,10 @@ TextureImporter:
       name: proj_p_chr_Attack_9
       rect:
         serializedVersion: 2
-        x: 1200
-        y: 450
-        width: 300
-        height: 450
+        x: 1217
+        y: 457
+        width: 239
+        height: 392
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1250,8 +344,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7b76ba09d9e27ff0800000000000000
-      internalID: -39712328296006785
+      spriteID: 506102922036b2dc0800000000000000
+      internalID: -3662725011004713467
       vertices: []
       indices: 
       edges: []
@@ -1260,10 +354,10 @@ TextureImporter:
       name: proj_p_chr_Attack_10
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 300
-        height: 450
+        x: 54
+        y: 7
+        width: 201
+        height: 388
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1271,8 +365,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f0cc40aa2f27b800800000000000000
-      internalID: 628022533165990135
+      spriteID: a4305d6116388ff50800000000000000
+      internalID: 6915421680845521738
       vertices: []
       indices: 
       edges: []
@@ -1281,10 +375,10 @@ TextureImporter:
       name: proj_p_chr_Attack_11
       rect:
         serializedVersion: 2
-        x: 300
-        y: 0
-        width: 300
-        height: 450
+        x: 381
+        y: 7
+        width: 175
+        height: 386
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1292,8 +386,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7249adf8a9abfa780800000000000000
-      internalID: -8669505584663718873
+      spriteID: 2f119a1d047232bc0800000000000000
+      internalID: -3809157700476399118
       vertices: []
       indices: 
       edges: []
@@ -1302,10 +396,10 @@ TextureImporter:
       name: proj_p_chr_Attack_12
       rect:
         serializedVersion: 2
-        x: 600
-        y: 0
-        width: 300
-        height: 450
+        x: 638
+        y: 7
+        width: 219
+        height: 388
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1313,8 +407,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9cdf4e57711600ee0800000000000000
-      internalID: -1296929939292619319
+      spriteID: ab4d1118c3dd56120800000000000000
+      internalID: 2406572827832603834
       vertices: []
       indices: 
       edges: []
@@ -1323,10 +417,10 @@ TextureImporter:
       name: proj_p_chr_Attack_13
       rect:
         serializedVersion: 2
-        x: 900
-        y: 0
-        width: 300
-        height: 450
+        x: 918
+        y: 7
+        width: 239
+        height: 393
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1334,8 +428,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94549f70707664d00800000000000000
-      internalID: 956565250759017801
+      spriteID: 8655b65b857005a20800000000000000
+      internalID: 3048945025312052584
       vertices: []
       indices: 
       edges: []
