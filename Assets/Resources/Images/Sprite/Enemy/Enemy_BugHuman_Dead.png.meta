@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fbc11dbcdf18c8e4d9979487d9b63569
+guid: ec864d79792b0494ea7ee2f630f3c7b9
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -34,39 +34,6 @@ TextureImporter:
     second: Enemy_BugHuman_Dead_9
   - first:
       213: -9209824637814980784
-    second: Enemy_BugHuman_Dead_10
-  - first:
-      213: 472177539993125690
-    second: Enemy_BugHuman_Dead_0
-  - first:
-      213: 3418771834069657125
-    second: Enemy_BugHuman_Dead_1
-  - first:
-      213: 2974650274929190021
-    second: Enemy_BugHuman_Dead_2
-  - first:
-      213: 5892717753289870541
-    second: Enemy_BugHuman_Dead_3
-  - first:
-      213: -8508993568486534835
-    second: Enemy_BugHuman_Dead_4
-  - first:
-      213: 5286979930759186818
-    second: Enemy_BugHuman_Dead_5
-  - first:
-      213: -4778950733590249038
-    second: Enemy_BugHuman_Dead_6
-  - first:
-      213: -5171519162239557558
-    second: Enemy_BugHuman_Dead_7
-  - first:
-      213: -4963469342261324276
-    second: Enemy_BugHuman_Dead_8
-  - first:
-      213: 3777677649500213094
-    second: Enemy_BugHuman_Dead_9
-  - first:
-      213: 1617280497502587076
     second: Enemy_BugHuman_Dead_10
   externalObjects: {}
   serializedVersion: 11
@@ -168,10 +135,10 @@ TextureImporter:
       name: Enemy_BugHuman_Dead_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 450
-        width: 300
-        height: 450
+        x: 111
+        y: 456
+        width: 155
+        height: 365
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,8 +146,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a33453e88f28d8600800000000000000
-      internalID: 472177539993125690
+      spriteID: f9b0f5f796e9a3c90800000000000000
+      internalID: -7189259679197885537
       vertices: []
       indices: 
       edges: []
@@ -189,10 +156,10 @@ TextureImporter:
       name: Enemy_BugHuman_Dead_1
       rect:
         serializedVersion: 2
-        x: 300
-        y: 450
-        width: 300
-        height: 450
+        x: 401
+        y: 458
+        width: 169
+        height: 363
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,8 +167,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52625d1aedae17f20800000000000000
-      internalID: 3418771834069657125
+      spriteID: e4ddbf8955561f3c0800000000000000
+      internalID: -4327566348613067442
       vertices: []
       indices: 
       edges: []
@@ -210,10 +177,10 @@ TextureImporter:
       name: Enemy_BugHuman_Dead_2
       rect:
         serializedVersion: 2
-        x: 600
-        y: 450
-        width: 300
-        height: 450
+        x: 701
+        y: 458
+        width: 169
+        height: 363
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,8 +188,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5842c282aa4184920800000000000000
-      internalID: 2974650274929190021
+      spriteID: 953a3ca01de707850800000000000000
+      internalID: 6372732909023109977
       vertices: []
       indices: 
       edges: []
@@ -231,10 +198,10 @@ TextureImporter:
       name: Enemy_BugHuman_Dead_3
       rect:
         serializedVersion: 2
-        x: 900
-        y: 450
-        width: 300
-        height: 450
+        x: 994
+        y: 458
+        width: 161
+        height: 354
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,8 +209,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dcc0b7e539327c150800000000000000
-      internalID: 5892717753289870541
+      spriteID: 5d5a7917640e83320800000000000000
+      internalID: 2538024983181370837
       vertices: []
       indices: 
       edges: []
@@ -252,10 +219,10 @@ TextureImporter:
       name: Enemy_BugHuman_Dead_4
       rect:
         serializedVersion: 2
-        x: 1200
-        y: 450
-        width: 300
-        height: 450
+        x: 1294
+        y: 458
+        width: 161
+        height: 354
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -263,8 +230,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d41d64a9e6bf9e980800000000000000
-      internalID: -8508993568486534835
+      spriteID: 049cb003670f6d760800000000000000
+      internalID: 7482432221325543744
       vertices: []
       indices: 
       edges: []
@@ -273,10 +240,10 @@ TextureImporter:
       name: Enemy_BugHuman_Dead_5
       rect:
         serializedVersion: 2
-        x: 1500
-        y: 450
-        width: 300
-        height: 450
+        x: 1589
+        y: 453
+        width: 178
+        height: 318
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,8 +251,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28945834c302f5940800000000000000
-      internalID: 5286979930759186818
+      spriteID: d3b4673db9c40bda0800000000000000
+      internalID: -5931156477095556291
       vertices: []
       indices: 
       edges: []
@@ -294,10 +261,10 @@ TextureImporter:
       name: Enemy_BugHuman_Dead_6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 300
-        height: 450
+        x: 73
+        y: 3
+        width: 194
+        height: 317
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -305,8 +272,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b1c245b0a1cdadb0800000000000000
-      internalID: -4778950733590249038
+      spriteID: 9e4fe570ee6395c50800000000000000
+      internalID: 6654410320370398441
       vertices: []
       indices: 
       edges: []
@@ -315,10 +282,10 @@ TextureImporter:
       name: Enemy_BugHuman_Dead_7
       rect:
         serializedVersion: 2
-        x: 300
-        y: 0
-        width: 300
-        height: 450
+        x: 373
+        y: 3
+        width: 194
+        height: 317
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -326,8 +293,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a40e599c8b21b38b0800000000000000
-      internalID: -5171519162239557558
+      spriteID: f05f957e92df6d280800000000000000
+      internalID: -9018742847345920753
       vertices: []
       indices: 
       edges: []
@@ -336,10 +303,10 @@ TextureImporter:
       name: Enemy_BugHuman_Dead_8
       rect:
         serializedVersion: 2
-        x: 600
-        y: 0
-        width: 300
-        height: 450
+        x: 681
+        y: 4
+        width: 182
+        height: 313
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -347,8 +314,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c06d8f84ee63e1bb0800000000000000
-      internalID: -4963469342261324276
+      spriteID: 34f756880ea567680800000000000000
+      internalID: -8757712504967823549
       vertices: []
       indices: 
       edges: []
@@ -357,10 +324,10 @@ TextureImporter:
       name: Enemy_BugHuman_Dead_9
       rect:
         serializedVersion: 2
-        x: 900
-        y: 0
-        width: 300
-        height: 450
+        x: 981
+        y: 4
+        width: 182
+        height: 313
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -368,8 +335,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66f8466aec10d6430800000000000000
-      internalID: 3777677649500213094
+      spriteID: 54b3269293ae0b740800000000000000
+      internalID: 5165886303822297925
       vertices: []
       indices: 
       edges: []
@@ -378,10 +345,10 @@ TextureImporter:
       name: Enemy_BugHuman_Dead_10
       rect:
         serializedVersion: 2
-        x: 1200
-        y: 0
-        width: 300
-        height: 450
+        x: 1263
+        y: 2
+        width: 199
+        height: 307
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -389,8 +356,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c80fc33b0cb17610800000000000000
-      internalID: 1617280497502587076
+      spriteID: 05fb563a941203080800000000000000
+      internalID: -9209824637814980784
       vertices: []
       indices: 
       edges: []
