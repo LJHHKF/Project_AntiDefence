@@ -22,6 +22,10 @@ TagManager:
   - SearchRange
   - ClearPanel
   - SFX_Manager
+  - BT
+  - SNT
+  - PT
+  - ObjectPools
   layers:
   - Default
   - TransparentFX

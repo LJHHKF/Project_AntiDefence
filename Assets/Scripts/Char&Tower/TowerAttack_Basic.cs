@@ -25,6 +25,11 @@ public class TowerAttack_Basic : MonoBehaviour
 
     private float touch_Time;
 
+    private Transform t_objectPool_AtkEf;
+    private List<GameObject> listPool_AtkEf = new List<GameObject>();
+    private int cnt_AtkEf = -1;
+    private bool is_serched_atk = false;
+
     private void Awake()
     {
         imageObject = GameObject.FindGameObjectWithTag("BT_Cool");
@@ -38,6 +43,8 @@ public class TowerAttack_Basic : MonoBehaviour
 
         m_meshR = gameObject.GetComponent<MeshRenderer>();
         m_color = m_meshR.material.color;
+
+        t_objectPool_AtkEf = GameObject.FindGameObjectWithTag("ObjectPools").transform.Find("AtkEffects");
 
         gm = GameObject.FindGameObjectWithTag("GameManager");
         si_manager = gm.GetComponent<SelectedItemManager>();
@@ -54,6 +61,10 @@ public class TowerAttack_Basic : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+        m_meshR.material.color = new Color(m_color.r, m_color.g, m_color.b, m_color.a);
+    }
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -85,13 +96,7 @@ public class TowerAttack_Basic : MonoBehaviour
             StartCoroutine(FR_Stay());
             StartCoroutine(On_Clear());
             StartCoroutine(Off_Anim());
-            GameObject effect = Instantiate(a_Effect, firePos);
-            //if (si_manager.i_extend_b)
-            //{
-            //    Vector3 upScale = Vector3.Scale(a_Effect.transform.localScale, new Vector3(1.0f, 1.0f, 1.5f));
-            //    effect.transform.localScale = upScale;
-            //}
-            Destroy(effect, 1.0f);
+            PullingAtkEffect(1.0f);
 
             ta_manager.BTActived();
             
@@ -125,5 +130,46 @@ public class TowerAttack_Basic : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         animator.SetBool("IsAttack", false);
         StopCoroutine(Off_Anim());
+    }
+
+    private void PullingAtkEffect(float time)
+    {
+        if (cnt_AtkEf < 0)
+        {
+            ChangeEffectPooling();
+        }
+        is_serched_atk = false;
+        for (int i = 0; i < cnt_AtkEf; i++)
+        {
+            if (listPool_AtkEf[i].activeSelf == false)
+            {
+                listPool_AtkEf[i].transform.position = firePos.position;
+                listPool_AtkEf[i].transform.rotation = firePos.rotation;
+                listPool_AtkEf[i].SetActive(true);
+                StartCoroutine(StopEffect(listPool_AtkEf[i], time));
+                is_serched_atk = true;
+            }
+        }
+        if (is_serched_atk == false)
+        {
+            ChangeEffectPooling();
+            PullingAtkEffect(time);
+        }
+    }
+
+    private void ChangeEffectPooling()
+    {
+        cnt_AtkEf++;
+        var effect = Instantiate(a_Effect, t_objectPool_AtkEf);
+        effect.name = "Basic_Effect_" + cnt_AtkEf.ToString("000");
+        effect.SetActive(false);
+        listPool_AtkEf.Add(effect);
+    }
+
+    IEnumerator StopEffect(GameObject effect, float time)
+    {
+        yield return new WaitForSeconds(time);
+        effect.SetActive(false);
+        yield break;
     }
 }

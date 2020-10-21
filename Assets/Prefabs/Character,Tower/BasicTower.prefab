@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 6617292053615636882}
   m_Layer: 0
   m_Name: BasicTower
-  m_TagString: Untagged
+  m_TagString: BT
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -277,7 +277,7 @@ PrefabInstance:
     - target: {fileID: 1278563688094177323, guid: be02c90d9e4f2944dbec8e52b488d783,
         type: 3}
       propertyPath: m_Center.y
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4205831391949006521, guid: be02c90d9e4f2944dbec8e52b488d783,
         type: 3}
@@ -382,7 +382,7 @@ PrefabInstance:
     - target: {fileID: 8437537712463506242, guid: be02c90d9e4f2944dbec8e52b488d783,
         type: 3}
       propertyPath: m_Center.y
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8437537712463506242, guid: be02c90d9e4f2944dbec8e52b488d783,
         type: 3}
