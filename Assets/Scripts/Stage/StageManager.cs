@@ -37,7 +37,7 @@ public class StageManager : MonoBehaviour
     [Header("Other Setting")]
     public GameObject startEffect;
     public GameObject startEffect2;
-    public GameObject sfx_manager;
+    //public GameObject sfx_manager;
 
     [Header("Wall&Tile Image Setting")]
     public Material[] tile_far_material;
@@ -51,6 +51,11 @@ public class StageManager : MonoBehaviour
     public int farTileIndex = 0;
     public int closeWallIndex = 0;
     public int farWallIndex = 0;
+
+    [Header("Wall move Setting")]
+    public float wallMoveSpeed = 0.001f;
+    public float wallMinY = 4.95f;
+    public float wallMaxY = 5.5f;
 
 
     // private Image s_bar;
@@ -67,12 +72,14 @@ public class StageManager : MonoBehaviour
     private SelectedItemManager itemM;
     private BGM_Manager bgmM;
 
+    private GameObject towerBoard;
     private TA_Manager ta_M;
+    private PlayerManager playerM;
 
 
     private void Awake()
     {
-        Instantiate(sfx_manager,GameObject.FindGameObjectWithTag("MainCamera").transform);
+        //Instantiate(sfx_manager,GameObject.FindGameObjectWithTag("MainCamera").transform);
     }
 
     // Start is called before the first frame update
@@ -83,8 +90,6 @@ public class StageManager : MonoBehaviour
         ui_Canvas = GameObject.FindGameObjectWithTag("UI_Canvas");
         remainPanel = ui_Canvas.transform.Find("RemainPanel").gameObject;
 
-
-        //s_bar = remainPanel.transform.Find("StageRBar").GetComponent<Image>();
         t_cur = remainPanel.transform.Find("T_Current").GetComponent<Text>();
         t_full = remainPanel.transform.Find("T_Full").GetComponent<Text>();
 
@@ -95,9 +100,10 @@ public class StageManager : MonoBehaviour
         itemM = gm.GetComponent<SelectedItemManager>();
         bgmM = gm.GetComponent<BGM_Manager>();
 
-        
 
-        ta_M = GameObject.FindGameObjectWithTag("TowerBoard").GetComponent<TA_Manager>();
+        towerBoard = GameObject.FindGameObjectWithTag("TowerBoard");
+        ta_M = towerBoard.GetComponent<TA_Manager>();
+        playerM = towerBoard.GetComponent<PlayerManager>();
 
         if(itemM.i_protectWall)
         {
@@ -120,7 +126,6 @@ public class StageManager : MonoBehaviour
     {
         if (fever_had)
         {
-            //if (cnt_EnemyDie % fever_cnt == 0 && cnt_EnemyDie != 0)
             if (cnt_EnemyDie >= fever_limit * fever_cnt)
             {
                 ta_M.FeverActivate(fever_time);
@@ -174,7 +179,6 @@ public class StageManager : MonoBehaviour
                 StopCoroutine(CountTimeForSpawn());
             }
 
-            //ran = UnityEngine.Random.Range(0 ,delayTimes.Length);
             yield return new WaitForSeconds(delayTimesIndex[count - 1]);
         }
     }
@@ -226,6 +230,7 @@ public class StageManager : MonoBehaviour
     public void DlgDone()
     {
         dlg_isDone = true;
+        playerM.Ai_Barrier_Check();
     }
 
     public bool GetDlgIsDone()
@@ -241,6 +246,21 @@ public class StageManager : MonoBehaviour
     public void EventEnd()
     {
         event_isDone = true;
+    }
+
+    public float GetWallMoveSpeed()
+    {
+        return wallMoveSpeed;
+    }
+
+    public float GetWallMoveMin()
+    {
+        return wallMinY;
+    }
+
+    public float GetWallMoveMax()
+    {
+        return wallMaxY;
     }
 
     private void StageClear()

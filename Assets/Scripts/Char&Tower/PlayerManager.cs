@@ -35,6 +35,9 @@ public class PlayerManager : MonoBehaviour
     private Animator m_animator;
 
     public GameObject effect_AI_Barrier;
+    private GameObject sfx_Manager;
+    private AudioSource sfx_Barrier_Idle;
+    private AudioSource sfx_Barrier_Destruction;
    
 
     // Start is called before the first frame update
@@ -54,6 +57,10 @@ public class PlayerManager : MonoBehaviour
 
         stage = GameObject.FindGameObjectWithTag("StageMObject");
         stageManager = stage.GetComponent<StageManager>();
+
+        sfx_Manager = GameObject.FindGameObjectWithTag("SFX_Manager");
+        sfx_Barrier_Idle = sfx_Manager.transform.Find("S_Barrier_Idle").GetComponent<AudioSource>();
+        sfx_Barrier_Destruction = sfx_Manager.transform.Find("S_Barrier_Destruction").GetComponent<AudioSource>();
      
 
         if(selectedItemManager.i_recovery)
@@ -64,15 +71,6 @@ public class PlayerManager : MonoBehaviour
         else if (bonus_hearts.IsActive())
         {
             bonus_hearts.gameObject.SetActive(false);
-        }
-
-        if (selectedItemManager.i_aiBarrier)
-        {
-            effect_AI_Barrier.SetActive(true);
-        }
-        else
-        {
-            effect_AI_Barrier.SetActive(false);
         }
     }
 
@@ -94,6 +92,7 @@ public class PlayerManager : MonoBehaviour
         {
             selectedItemManager.BarrierBreak();
             effect_AI_Barrier.SetActive(false);
+            StartCoroutine(OnSoundBarrierDestruction());
         }
         else if (state != State.DIE)
         {
@@ -116,16 +115,33 @@ public class PlayerManager : MonoBehaviour
 
     public void OnAttackAnim()
     {
-        //StartCoroutine(OnAttackMotion());
         m_animator.SetTrigger("IsAttack_Trigger");
     }
 
-    //IEnumerator OnAttackMotion()
-    //{
-    //    //m_animator.SetBool("IsAttack", true);
-    //    m_animator.SetTrigger("IsAttack_Trigger");
-    //    //yield return new WaitForSeconds(1.0f);
-    //    //m_animator.SetBool("IsAttack", false);
-    //    yield break;
-    //}
+    public void Ai_Barrier_Check()
+    {
+        if (selectedItemManager.i_aiBarrier)
+        {
+            effect_AI_Barrier.SetActive(true);
+            OnSoundBarrierIdle();
+        }
+        else
+        {
+            effect_AI_Barrier.SetActive(false);
+        }
+    }
+
+    private void OnSoundBarrierIdle()
+    {
+        sfx_Barrier_Idle.Play();
+    }
+
+    private IEnumerator OnSoundBarrierDestruction()
+    {
+        sfx_Barrier_Idle.Stop();
+        sfx_Barrier_Destruction.Play();
+        yield return new WaitForSeconds(1.0f);
+        sfx_Barrier_Destruction.Stop();
+        yield break;
+    }
 }

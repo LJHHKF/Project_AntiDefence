@@ -20,7 +20,7 @@ public class ChangeTower : MonoBehaviour
     private float[] aim_rot = new float[2];
 
     private GameObject sfx_manager;
-    private AudioSource sfx_BTN_Click;
+    private AudioSource sfx_T_Change;
 
     private TowerAttack_Basic[] taM_B = new TowerAttack_Basic[2];
     private TowerAttack_Snip[] taM_S = new TowerAttack_Snip[2];
@@ -36,13 +36,15 @@ public class ChangeTower : MonoBehaviour
 
         curTower = basicTower;
 
+        sfx_manager = GameObject.FindGameObjectWithTag("SFX_Manager").gameObject;
+        sfx_T_Change = sfx_manager.transform.Find("S_T_Change").gameObject.GetComponent<AudioSource>();
+
         for (int i = 0; i < t_Positions.Length; i++)
         {
             curTowers[i] = Instantiate(curTower, t_Pos[i]);
             t_img_panel[i] = curTowers[i].transform.GetChild(0).gameObject;
             taM_B[i] = curTowers[i].GetComponentInChildren<TowerAttack_Basic>();
         }
-        StartCoroutine(Get_SFX_Manager());
     }
 
     private void Update()
@@ -52,7 +54,7 @@ public class ChangeTower : MonoBehaviour
 
     public void InstSNT()
     {
-        StartCoroutine(Sound_BTN_Click());
+        StartCoroutine(Sound_T_Change());
         curTower = sniperTower;
         for (int i = 0; i < curTowers.Length; i++)
         {
@@ -68,7 +70,7 @@ public class ChangeTower : MonoBehaviour
 
     public void InstBasic()
     {
-        StartCoroutine(Sound_BTN_Click());
+        StartCoroutine(Sound_T_Change());
         curTower = basicTower;
         for (int i = 0; i < curTowers.Length; i++)
         {
@@ -84,7 +86,7 @@ public class ChangeTower : MonoBehaviour
 
     public void InstPT()
     {
-        StartCoroutine(Sound_BTN_Click());
+        StartCoroutine(Sound_T_Change());
         curTower = pushTower;
         for (int i = 0; i < curTowers.Length; i++)
         {
@@ -141,19 +143,11 @@ public class ChangeTower : MonoBehaviour
         }
     }
 
-    private IEnumerator Sound_BTN_Click()
+    private IEnumerator Sound_T_Change()
     {
-        sfx_BTN_Click.Play();
-        yield return new WaitForSeconds(1.0f);
-        sfx_BTN_Click.Stop();
-        yield break;
-    }
-
-    private IEnumerator Get_SFX_Manager()
-    {
-        yield return new WaitForSeconds(1.0f);
-        sfx_manager = GameObject.FindGameObjectWithTag("MainCamera").transform.Find("SFX_Manager(Clone)").gameObject;
-        sfx_BTN_Click = sfx_manager.transform.Find("S_BTN_Click").gameObject.GetComponent<AudioSource>();
+        sfx_T_Change.Play();
+        yield return new WaitForFixedUpdate();
+        sfx_T_Change.Stop();
         yield break;
     }
 }
