@@ -12,6 +12,7 @@ public class PT_Contact : MonoBehaviour
 
     private Collider m_Coll;
 
+    private float touch_Time;
 
 
     // Start is called before the first frame update
@@ -36,7 +37,15 @@ public class PT_Contact : MonoBehaviour
         }
         else if (Input.GetMouseButtonUp(0))
         {
+            touch_Time = 0f;
             m_Coll.enabled = true;
+        }
+
+        touch_Time += Time.deltaTime;
+
+        if (touch_Time >= 0.5f)
+        {
+            m_Coll.enabled = false;
         }
     }
 

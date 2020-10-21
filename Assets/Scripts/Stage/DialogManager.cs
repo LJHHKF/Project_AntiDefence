@@ -142,6 +142,8 @@ public class DialogManager : MonoBehaviour
                 ori_alpha_remain[i] = imgs_RemainPanel[i].color.a;
                 imgs_LifePanel[i].color = new Color(imgs_RemainPanel[i].color.r, imgs_RemainPanel[i].color.g, imgs_RemainPanel[i].color.b, 0);
             }
+            //이미지 변경하면서 왠지 하나만 안되서 예외로 추가처리
+            ui_RemainPanel.GetComponent<Image>().color = new Color(255, 255, 255, 0);
 
             for (int i = 0; i < txts_Buttons.Length; i++)
             {
@@ -235,6 +237,9 @@ public class DialogManager : MonoBehaviour
             imgs_LifePanel[i].color = new Color(imgs_LifePanel[i].color.r, imgs_LifePanel[i].color.g, imgs_LifePanel[i].color.b, ori_alpha_life[i]);
         for (int i = 0; i < imgs_RemainPanel.Length; i++)
             imgs_LifePanel[i].color = new Color(imgs_RemainPanel[i].color.r, imgs_RemainPanel[i].color.g, imgs_RemainPanel[i].color.b, ori_alpha_remain[i]);
+
+        //하나만 제대로 처리가 안되서 따로 예외처리
+        ui_RemainPanel.GetComponent<Image>().color = new Color(255, 255, 255, 255);
 
         for (int i = 0; i < txts_Buttons.Length; i++)
             txts_Buttons[i].color = new Color(txts_Buttons[i].color.r, txts_Buttons[i].color.g, txts_Buttons[i].color.b, ori_alpha_txt_buttons[i]);

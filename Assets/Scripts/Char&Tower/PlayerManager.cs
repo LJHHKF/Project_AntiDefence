@@ -35,9 +35,10 @@ public class PlayerManager : MonoBehaviour
     private Animator m_animator;
 
     public GameObject effect_AI_Barrier;
-    private GameObject sfx_Manager;
-    private AudioSource sfx_Barrier_Idle;
-    private AudioSource sfx_Barrier_Destruction;
+    
+    //private GameObject sfx_Manager;
+    //private AudioSource sfx_Barrier_Idle;
+    //private AudioSource sfx_Barrier_Destruction;
    
 
     // Start is called before the first frame update
@@ -58,9 +59,9 @@ public class PlayerManager : MonoBehaviour
         stage = GameObject.FindGameObjectWithTag("StageMObject");
         stageManager = stage.GetComponent<StageManager>();
 
-        sfx_Manager = GameObject.FindGameObjectWithTag("SFX_Manager");
-        sfx_Barrier_Idle = sfx_Manager.transform.Find("S_Barrier_Idle").GetComponent<AudioSource>();
-        sfx_Barrier_Destruction = sfx_Manager.transform.Find("S_Barrier_Destruction").GetComponent<AudioSource>();
+        //sfx_Manager = GameObject.FindGameObjectWithTag("SFX_Manager");
+        //sfx_Barrier_Idle = sfx_Manager.transform.Find("S_Barrier_Idle").GetComponent<AudioSource>();
+        //sfx_Barrier_Destruction = sfx_Manager.transform.Find("S_Barrier_Destruction").GetComponent<AudioSource>();
      
 
         if(selectedItemManager.i_recovery)
@@ -92,7 +93,7 @@ public class PlayerManager : MonoBehaviour
         {
             selectedItemManager.BarrierBreak();
             effect_AI_Barrier.SetActive(false);
-            StartCoroutine(OnSoundBarrierDestruction());
+            //StartCoroutine(OnSoundBarrierDestruction());
         }
         else if (state != State.DIE)
         {
@@ -123,7 +124,7 @@ public class PlayerManager : MonoBehaviour
         if (selectedItemManager.i_aiBarrier)
         {
             effect_AI_Barrier.SetActive(true);
-            OnSoundBarrierIdle();
+            //OnSoundBarrierIdle();
         }
         else
         {
@@ -131,17 +132,17 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    private void OnSoundBarrierIdle()
-    {
-        sfx_Barrier_Idle.Play();
-    }
+    //private void OnSoundBarrierIdle()
+    //{
+    //    sfx_Barrier_Idle.Play();
+    //}
 
-    private IEnumerator OnSoundBarrierDestruction()
-    {
-        sfx_Barrier_Idle.Stop();
-        sfx_Barrier_Destruction.Play();
-        yield return new WaitForSeconds(1.0f);
-        sfx_Barrier_Destruction.Stop();
-        yield break;
-    }
+    //private IEnumerator OnSoundBarrierDestruction()
+    //{
+    //    sfx_Barrier_Idle.Stop();
+    //    sfx_Barrier_Destruction.Play();
+    //    yield return new WaitForSeconds(1.0f);
+    //    sfx_Barrier_Destruction.Stop();
+    //    yield break;
+    //}
 }

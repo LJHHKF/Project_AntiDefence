@@ -83,7 +83,7 @@ public class ItemShopSceanManager : MonoBehaviour
         img_ShopOwner = t_panel_ShopOwner.Find("Image_ShopOwner").GetComponent<Image>();
         img_ShopOwner.sprite = shopOwnerImg;
 
-        t_content = gameObject.transform.Find("ItemScroll").Find("Viewport").Find("Content");
+        t_content = gameObject.transform.Find("Panel_ItemBG").Find("ItemScroll").Find("Viewport").Find("Content");
         t_ItemSet0 = t_content.Find("Item_Set0");
         t_ItemSet1 = t_content.Find("Item_Set1");
         t_ItemSet2 = t_content.Find("Item_Set2");
