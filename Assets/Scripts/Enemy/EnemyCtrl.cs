@@ -26,12 +26,10 @@ public class EnemyCtrl : MonoBehaviour
     [Header("HpBar Setting")]
     public GameObject hpBarPrefab;
     public Vector3 hpBarOffset = new Vector3(0, 2.2f, 0);
-    private Canvas uiCanvas;
+    private Transform t_uiCanvas;
+    private Transform t_HPBars;
     private Image hpBarImage;
     private GameObject hpBar;
-
-    [Header("DropMoneyNotice Setting")]
-    public GameObject dropMoneySetPrefab;
 
     [Header("EnemyDieEffect Setting")]
     public GameObject dieEffectPrefab;
@@ -64,7 +62,6 @@ public class EnemyCtrl : MonoBehaviour
     private StageManager stgManager;
 
 
-
     void Start()
     {
         towerboard = GameObject.FindGameObjectWithTag("TowerBoard");
@@ -84,37 +81,40 @@ public class EnemyCtrl : MonoBehaviour
         StartCoroutine(CheckState());
     }
 
+    private void OnEnable()
+    {
+        if (isDie)
+        {
+            state = State.MOVE;
+            enemyHP = initHP;
+            StartCoroutine(CheckState());
+            ResetHPBar();
+            isDie = false;
+        }
+    }
 
     // Update is called once per frame
     void Update()
     {
-        //direction = (character_t.position - enemy_t.position).normalized;
-        //move_Vector = direction * moveSpeed;
-        //this.gameObject.transform.Translate(move_Vector);
-
         ImageSlopeRotate();
 
         if (state == State.DIE)
         {
             if (isDie == false)
             {
-                SetDropMoneyBar();
+                isDie = true;
                 stgManager.EnemyDied(dropMoneyValue);
+                stgManager.PullingDropMoneyBar(gameObject.transform.position, dropMoneyValue, 1.0f);
 
-                Quaternion qut = Quaternion.identity;
-                GameObject effect = Instantiate(dieEffectPrefab,
-                       new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z),
-                       qut);
 
-                Destroy(effect, 1.0f);
-                Destroy(hpBar);
+                stgManager.PullingEnemyDieEffect(gameObject.transform.localPosition, 1.0f);
+
+                hpBar.SetActive(false);
                 if (m_anim != null)
                 {
                     m_anim.SetTrigger("IsDie");
                 }
-                Destroy(gameObject, 1.0f);
-
-                isDie = true;
+                StartCoroutine(DieDelay(1.0f));
             }
         }
         else if (state == State.MOVE)
@@ -123,9 +123,6 @@ public class EnemyCtrl : MonoBehaviour
 
             direction = target.transform.position - transform.position;
             transform.rotation = Quaternion.Slerp(transform.rotation, target.transform.rotation, rotSpeed * Time.deltaTime);
-
-            //Vector3 move_vector = new Vector3(target.transform.position.x - transform.position.x, 0, target.transform.position.z - transform.position.z).normalized * moveSpeed * Time.deltaTime;
-            //m_rigidbody.MovePosition(transform.position + move_vector);
 
             if (direction.x > 0)
             {
@@ -169,8 +166,9 @@ public class EnemyCtrl : MonoBehaviour
 
     void SetHPBar()
     {
-        uiCanvas = GameObject.FindGameObjectWithTag("UI_Canvas").GetComponent<Canvas>();
-        hpBar = Instantiate(hpBarPrefab, uiCanvas.transform);
+        t_uiCanvas = GameObject.FindGameObjectWithTag("UI_Canvas").GetComponent<Transform>();
+        t_HPBars = t_uiCanvas.Find("EnemyHPBar").transform;
+        hpBar = Instantiate(hpBarPrefab, t_HPBars);
         hpBarImage = hpBar.GetComponentsInChildren<Image>()[1];
 
         var _hpBar = hpBar.GetComponent<EnemyHPBar>();
@@ -178,14 +176,12 @@ public class EnemyCtrl : MonoBehaviour
         _hpBar.offset = hpBarOffset;
     }
 
-    void SetDropMoneyBar()
+    void ResetHPBar()
     {
-        GameObject _moneyBar = Instantiate(dropMoneySetPrefab, uiCanvas.transform);
-        var _dropMoney = _moneyBar.GetComponent<EnemyDropMoneySet>();
-        _dropMoney.TargetTr = new Vector3(this.gameObject.transform.position.x,
-                                          this.gameObject.transform.position.y,
-                                          this.gameObject.transform.position.z);
-        _dropMoney.SetDropMoney(dropMoneyValue);
+        hpBar.SetActive(true);
+        var _hpBar = hpBar.GetComponent<EnemyHPBar>();
+        _hpBar.TargetTr = this.gameObject.transform;
+        _hpBar.offset = hpBarOffset;
     }
 
     public void SetTarget(GameObject t)
@@ -216,8 +212,6 @@ public class EnemyCtrl : MonoBehaviour
         {
             if (state == State.DIE) yield break;
 
-            //float dist = (character_t.position - transform.position).sqrMagnitude; // 이게 더 빠르다곤 하는데 정확히 이해 못함.
-            //윗 방식서는 아래 attackdist 뒤에 '* attackdist' 추가 필요.
             float dist = Vector3.Distance(target.transform.position, transform.position);
 
             if (dist <= attackDist)
@@ -269,5 +263,12 @@ public class EnemyCtrl : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
         state = State.MOVE;
         StopCoroutine(Pushed_delay());
+    }
+
+    IEnumerator DieDelay(float sec)
+    {
+        yield return new WaitForSeconds(sec);
+        gameObject.SetActive(false);
+        yield break;
     }
 }

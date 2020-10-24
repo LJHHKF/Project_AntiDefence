@@ -63,7 +63,7 @@ public class TowerAttack_Basic : MonoBehaviour
 
     private void OnEnable()
     {
-        m_meshR.material.color = new Color(m_color.r, m_color.g, m_color.b, m_color.a);
+        StartCoroutine(DelayEnable(0.2f));
     }
     private void Update()
     {
@@ -170,6 +170,13 @@ public class TowerAttack_Basic : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         effect.SetActive(false);
+        yield break;
+    }
+
+    IEnumerator DelayEnable(float sec)
+    {
+        yield return new WaitForSeconds(sec);
+        m_meshR.material.color = new Color(m_color.r, m_color.g, m_color.b, m_color.a);
         yield break;
     }
 }

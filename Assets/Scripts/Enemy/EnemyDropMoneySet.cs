@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class EnemyDropMoneySet : MonoBehaviour
 {
     public GameObject dropMoney_Prefab;
-    public Vector3 moneyBarOffset = new Vector3(0, 2.2f, 0);
     private Canvas uiCanvas;
     private Text txt_money;
     private GameObject dropMoney;

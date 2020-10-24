@@ -1093,7 +1093,7 @@ Transform:
   - {fileID: 639724253}
   - {fileID: 1302599919}
   m_Father: {fileID: 875705939}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &306950367
 GameObject:
@@ -2202,7 +2202,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 875705939}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &517890871
 GameObject:
@@ -3700,7 +3700,11 @@ MonoBehaviour:
   b_spawnPoints: {fileID: 629551869}
   spawn_Effect: {fileID: 1364533406246740010, guid: a96f4fcf643375b438cee60e8a2c16ef,
     type: 3}
-  e_direction_Effects: {fileID: 8232089510043794692, guid: 7b780b9fdb20e2f45bd741558ba1a23c,
+  e_direction_Effect: {fileID: 8232089510043794692, guid: 7b780b9fdb20e2f45bd741558ba1a23c,
+    type: 3}
+  e_Die_Effect: {fileID: 1222048909045955687, guid: 94af62a6c199fd1469b7ff6560617c81,
+    type: 3}
+  dropMoneyBarPrefab: {fileID: 2559093174305140782, guid: 906c35219dd5b954492ee359158cdf26,
     type: 3}
   enemies:
   - {fileID: 6594383046016651844, guid: 0a9f429330c94a443a5332d50890d231, type: 3}
@@ -4121,6 +4125,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 846666883}
   m_CullTransparentMesh: 0
+--- !u!1 &849625369
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 849625370}
+  m_Layer: 0
+  m_Name: EnemyDieEffect
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &849625370
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849625369}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 875705939}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &852403662
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4305,6 +4339,7 @@ Transform:
   - {fileID: 1337995140}
   - {fileID: 1332933833}
   - {fileID: 1017788026}
+  - {fileID: 849625370}
   - {fileID: 1278503724}
   - {fileID: 304057237}
   - {fileID: 1685467499}
@@ -4645,7 +4680,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 875705939}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &967693091
 GameObject:
@@ -5587,7 +5622,7 @@ Transform:
   - {fileID: 51183593}
   - {fileID: 1013286691}
   m_Father: {fileID: 875705939}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1302599918
 PrefabInstance:
@@ -7718,7 +7753,7 @@ Transform:
   - {fileID: 1085854012}
   - {fileID: 698716779}
   m_Father: {fileID: 875705939}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1685519918
 GameObject:
@@ -8356,6 +8391,8 @@ RectTransform:
   - {fileID: 2032607114}
   - {fileID: 1717014901}
   - {fileID: 807831000}
+  - {fileID: 1922090278}
+  - {fileID: 1894915234}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8513,6 +8550,76 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1855932904}
   m_CullTransparentMesh: 0
+--- !u!1 &1894915233
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1894915234}
+  m_Layer: 5
+  m_Name: EnemyDropMoney
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1894915234
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1894915233}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1842714121}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1922090277
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1922090278}
+  m_Layer: 5
+  m_Name: EnemyHPBar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1922090278
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922090277}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1842714121}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1938718667
 PrefabInstance:
   m_ObjectHideFlags: 0
