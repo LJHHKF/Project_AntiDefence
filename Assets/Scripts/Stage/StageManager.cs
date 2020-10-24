@@ -6,13 +6,21 @@ using UnityEngine.UI;
 public class StageManager : MonoBehaviour
 {
 
+    private struct Pools
+    {
+        public List<GameObject> listPool;
+        public int cnt;
+        public bool is_serched;
+    }
 
     [Header ("Enemy Spawn Preset")]
     public Transform p_enemySpawnPoints;
     public GameObject b_spawnPoints;
     private Transform[] c_enemySpawnPoints;
     public GameObject spawn_Effect;
-    public GameObject e_direction_Effects;
+    public GameObject e_direction_Effect;
+    public GameObject e_Die_Effect;
+    public GameObject dropMoneyBarPrefab;
     public GameObject[] enemies;
     private GameObject ui_Canvas;
     private GameObject remainPanel;
@@ -25,16 +33,15 @@ public class StageManager : MonoBehaviour
     public int[] spawnEnemyIndex = { 0, 0, 0, 0, 0 };
     private Transform t_objPools;
     private Transform t_objectPool_Enemy;
-    private List<GameObject> listPool_Enemy = new List<GameObject>();
-    private int cnt_enemyPool = 0;
+    private Pools[] arr_enemyPools;
     private Transform t_objectPool_SpawnEf;
-    private List<GameObject> listPool_SpawnEf = new List<GameObject>();
-    private int cnt_spEfPool = -1;
-    private bool is_serched_sp = false;
+    private Pools pools_SpawnEf;
     private Transform t_objectPool_DirEffect;
-    private List<GameObject> listPool_DirEf = new List<GameObject>();
-    private int cnt_DirEfPool = -1;
-    private bool is_serched_dir = false;
+    private Pools pools_DirEf;
+    private Transform t_objectPool_DieEffect;
+    private Pools pools_DieEf;
+    private Transform t_objectPool_DropMoney;
+    private Pools pools_DropMoney;
 
     [Header ("Chp,Stage info")]
     public int chpter_num = 0;
@@ -114,6 +121,8 @@ public class StageManager : MonoBehaviour
         t_objectPool_Enemy = t_objPools.Find("Enemies");
         t_objectPool_SpawnEf = t_objPools.Find("SpawnEffect");
         t_objectPool_DirEffect = t_objPools.Find("DirEffect");
+        t_objectPool_DieEffect = t_objPools.Find("EnemyDieEffect");
+        t_objectPool_DropMoney = ui_Canvas.transform.Find("EnemyDropMoney").transform;
 
 
         towerBoard = GameObject.FindGameObjectWithTag("TowerBoard");
@@ -134,7 +143,8 @@ public class StageManager : MonoBehaviour
             b_spawnPoints.SetActive(false);
         }
 
-        EnemyPooling();
+        PoolsInit();
+
 
         GameObject effect = Instantiate(startEffect, gameObject.transform);
         GameObject effect2 = Instantiate(startEffect2, gameObject.transform);
@@ -184,48 +194,57 @@ public class StageManager : MonoBehaviour
         }
     }
 
-    private void SpawnEnemy(int sp_index)
+    private void SpawnEnemy(int sp_index, int cnt)
     {
-        GameObject enemy = listPool_Enemy[cnt_enemyPool++];
-        enemy.transform.position = c_enemySpawnPoints[sp_index].position;
-        enemy.transform.rotation = Quaternion.identity;
-        enemy.SetActive(true);
-
-        PullingSpawnEffect(sp_index, 2.0f);
-        PullingDirEffect(sp_index, 1.0f);
-    }
-
-    private void EnemyPooling()
-    {
-        for (int i = 0; i < spawnEnemyIndex.Length; i++)
+        if (arr_enemyPools[spawnEnemyIndex[cnt]].cnt < 0)
         {
-            var enemy = Instantiate(enemies[spawnEnemyIndex[i]], t_objectPool_Enemy);
-            enemy.name = "Enemy_" + i.ToString("000");
-            enemy.SetActive(false);
-            listPool_Enemy.Add(enemy);
+            EnemyPooling(cnt);
+        }
+
+        arr_enemyPools[spawnEnemyIndex[cnt]].is_serched = false;
+
+        for (int i = 0; i < arr_enemyPools[spawnEnemyIndex[cnt]].cnt; i++)
+        {
+            if (arr_enemyPools[spawnEnemyIndex[cnt]].listPool[i].activeSelf == false)
+            {
+                GameObject enemy = arr_enemyPools[spawnEnemyIndex[cnt]].listPool[i];
+                enemy.transform.position = c_enemySpawnPoints[sp_index].position;
+                enemy.transform.rotation = Quaternion.identity;
+                enemy.SetActive(true);
+                PullingSpawnEffect(sp_index, 2.0f);
+                PullingDirEffect(sp_index, 1.0f);
+                arr_enemyPools[spawnEnemyIndex[cnt]].is_serched = true;
+                break;
+            }
+        }
+        if (arr_enemyPools[spawnEnemyIndex[cnt]].is_serched == false)
+        {
+            EnemyPooling(cnt);
+            SpawnEnemy(sp_index, cnt);
         }
     }
 
     private void PullingSpawnEffect(int sp_index, float time)
     {
-        if(cnt_spEfPool < 0)
+        if(pools_SpawnEf.cnt < 0)
         {
             SpawnEffectPooling();
         }
 
-        is_serched_sp = false;
-        for (int i = 0; i < cnt_spEfPool; i++)
+        pools_SpawnEf.is_serched = false;
+        for (int i = 0; i < pools_SpawnEf.cnt; i++)
         {
-            if (listPool_SpawnEf[i].activeSelf == false)
+            if (pools_SpawnEf.listPool[i].activeSelf == false)
             {
-                listPool_SpawnEf[i].transform.position = c_enemySpawnPoints[sp_index].position;
-                listPool_SpawnEf[i].transform.rotation = c_enemySpawnPoints[sp_index].rotation;
-                listPool_SpawnEf[i].SetActive(true);
-                StartCoroutine(StopEffect(listPool_SpawnEf[i], time));
-                is_serched_sp = true;
+                pools_SpawnEf.listPool[i].transform.position = c_enemySpawnPoints[sp_index].position;
+                pools_SpawnEf.listPool[i].transform.rotation = c_enemySpawnPoints[sp_index].rotation;
+                pools_SpawnEf.listPool[i].SetActive(true);
+                StartCoroutine(StopEffect(pools_SpawnEf.listPool[i], time));
+                pools_SpawnEf.is_serched = true;
+                break;
             }
         }
-        if(is_serched_sp == false)
+        if(pools_SpawnEf.is_serched == false)
         {
             SpawnEffectPooling();
             PullingSpawnEffect(sp_index, time);
@@ -234,45 +253,127 @@ public class StageManager : MonoBehaviour
 
     private void PullingDirEffect(int sp_index, float time)
     {
-        if (cnt_DirEfPool < 0)
+        if (pools_DirEf.cnt < 0)
         {
             DirEffectPooling();
         }
-        is_serched_dir = false;
-        for (int i = 0; i < cnt_DirEfPool; i++)
+        pools_DirEf.is_serched = false;
+        for (int i = 0; i < pools_DirEf.cnt; i++)
         {
-            if(listPool_DirEf[i].activeSelf == false)
+            if(pools_DirEf.listPool[i].activeSelf == false)
             {
-                listPool_DirEf[i].transform.position = c_enemySpawnPoints[sp_index].position;
-                listPool_DirEf[i].transform.rotation = c_enemySpawnPoints[sp_index].rotation;
-                listPool_DirEf[i].SetActive(true);
-                StartCoroutine(StopEffect(listPool_DirEf[i], time));
-                is_serched_dir = true;
+                pools_DirEf.listPool[i].transform.position = c_enemySpawnPoints[sp_index].position;
+                pools_DirEf.listPool[i].transform.rotation = c_enemySpawnPoints[sp_index].rotation;
+                pools_DirEf.listPool[i].SetActive(true);
+                StartCoroutine(StopEffect(pools_DirEf.listPool[i], time));
+                pools_DirEf.is_serched = true;
+                break;
             }
         }
-        if (is_serched_dir == false)
+        if (pools_DirEf.is_serched == false)
         {
             DirEffectPooling();
             PullingDirEffect(sp_index, time);
         }
     }
 
+    public void PullingEnemyDieEffect(Vector3 t_enemy, float time)
+    {
+        if (pools_DieEf.cnt < 0)
+        {
+            EnemyDieEffectPooling();
+        }
+        pools_DieEf.is_serched = false;
+        for (int i = 0; i < pools_DieEf.cnt; i++)
+        {
+            if (pools_DieEf.listPool[i].activeSelf == false)
+            {
+                pools_DieEf.listPool[i].transform.position = new Vector3(t_enemy.x, t_enemy.y, t_enemy.z);
+                pools_DieEf.listPool[i].SetActive(true);
+                StartCoroutine(StopEffect(pools_DieEf.listPool[i], time));
+                pools_DieEf.is_serched = true;
+                break;
+            }
+        }
+        if (pools_DieEf.is_serched == false)
+        {
+            EnemyDieEffectPooling();
+            PullingEnemyDieEffect(t_enemy, time);
+        }
+    }
+
+    public void PullingDropMoneyBar(Vector3 t_enemy, int dropMoneyValue, float time)
+    {
+        if(pools_DropMoney.cnt < 0)
+        {
+            DropMoneyBarPooling();
+        }
+
+        pools_DropMoney.is_serched = false;
+
+        for (int i = 0; i < pools_DropMoney.cnt; i++)
+        {
+            if (pools_DropMoney.listPool[i].activeSelf == false)
+            {
+                var _dropMoney = pools_DropMoney.listPool[i].GetComponent<EnemyDropMoneyBar>();
+                _dropMoney.TargetTr = new Vector3(t_enemy.x, t_enemy.y, t_enemy.z);
+                _dropMoney.SetDropMoney(dropMoneyValue);
+                _dropMoney.SetTime(time);
+                pools_DropMoney.listPool[i].SetActive(true);
+                pools_DropMoney.is_serched = true;
+                break;
+            }
+        }
+        if (pools_DropMoney.is_serched == false)
+        {
+            DropMoneyBarPooling();
+            PullingDropMoneyBar(t_enemy, dropMoneyValue, time);
+        }
+    }
+
+    private void EnemyPooling(int sp_index)
+    {
+        arr_enemyPools[spawnEnemyIndex[sp_index]].cnt++;
+        var enemy = Instantiate(enemies[spawnEnemyIndex[sp_index]], t_objectPool_Enemy);
+        enemy.name = "Enemy_" + spawnEnemyIndex[sp_index].ToString("00") + "_" + arr_enemyPools[spawnEnemyIndex[sp_index]].cnt.ToString("000");
+        enemy.SetActive(false);
+        arr_enemyPools[spawnEnemyIndex[sp_index]].listPool.Add(enemy);
+    }
+
     private void SpawnEffectPooling()
     {
-        cnt_spEfPool++;
+        pools_SpawnEf.cnt++;
         var effect = Instantiate(spawn_Effect, t_objectPool_SpawnEf);
-        effect.name = "sp_Effect_" + cnt_spEfPool.ToString("000");
+        effect.name = "sp_Effect_" + pools_SpawnEf.cnt.ToString("000");
         effect.SetActive(false);
-        listPool_SpawnEf.Add(effect);
+        pools_SpawnEf.listPool.Add(effect);
     }
 
     private void DirEffectPooling()
     {
-        cnt_DirEfPool++;
-        var effct = Instantiate(e_direction_Effects, t_objectPool_DirEffect);
-        effct.name = "dir_Effect_" + cnt_DirEfPool.ToString("000");
+        pools_DirEf.cnt++;
+        var effct = Instantiate(e_direction_Effect, t_objectPool_DirEffect);
+        effct.name = "dir_Effect_" + pools_DirEf.cnt.ToString("000");
         effct.SetActive(false);
-        listPool_DirEf.Add(effct);
+        pools_DirEf.listPool.Add(effct);
+    }
+
+    private void EnemyDieEffectPooling()
+    {
+        pools_DieEf.cnt++;
+        var effect = Instantiate(e_Die_Effect, t_objectPool_DieEffect);
+        effect.name = "die_Effect_" + pools_DieEf.cnt.ToString("000");
+        effect.SetActive(false);
+        pools_DieEf.listPool.Add(effect);
+    }
+
+    private void DropMoneyBarPooling()
+    {
+        pools_DropMoney.cnt++;
+        var bar = Instantiate(dropMoneyBarPrefab, t_objectPool_DropMoney);
+        bar.name = "DropMoneyBar_" + pools_DropMoney.cnt.ToString("000");
+        bar.SetActive(false);
+        pools_DropMoney.listPool.Add(bar);
     }
 
     IEnumerator StopEffect(GameObject effect, float time)
@@ -292,7 +393,7 @@ public class StageManager : MonoBehaviour
         {
             if (spawnPointIndex.Length > count)
             {
-                SpawnEnemy(spawnPointIndex[count]);
+                SpawnEnemy(spawnPointIndex[count], count);
                 count++;
             }
             else
@@ -413,5 +514,32 @@ public class StageManager : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         sfx_Barricade_Destruction.Stop();
         yield break;
+    }
+
+    private void PoolsInit()
+    {
+        pools_SpawnEf.listPool= new List<GameObject>();
+        pools_SpawnEf.cnt = -1;
+        pools_SpawnEf.is_serched = false;
+    
+        pools_DirEf.listPool = new List<GameObject>();
+        pools_DirEf.cnt = -1;
+        pools_DirEf.is_serched = false;
+    
+        pools_DieEf.listPool = new List<GameObject>();
+        pools_DieEf.cnt = -1;
+        pools_DieEf.is_serched = false;
+
+        pools_DropMoney.listPool = new List<GameObject>();
+        pools_DropMoney.cnt = -1;
+        pools_DropMoney.is_serched = false;
+
+        arr_enemyPools = new Pools[enemies.Length];
+        for (int i = 0; i < enemies.Length; i++)
+        {
+            arr_enemyPools[i].listPool = new List<GameObject>();
+            arr_enemyPools[i].cnt = -1;
+            arr_enemyPools[i].is_serched = false;
+        }
     }
 }

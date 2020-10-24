@@ -49,6 +49,9 @@ public class TowerAttack_Snip : MonoBehaviour
 
         gm = GameObject.FindGameObjectWithTag("GameManager");
         si_manager = gm.GetComponent<SelectedItemManager>();
+
+        t_objectPool_AtkEf = GameObject.FindGameObjectWithTag("ObjectPools").transform.Find("AtkEffects");
+
         if (si_manager.i_extend_sn)
         {
             Vector3 upScale = Vector3.Scale(gameObject.transform.localScale, new Vector3(1.5f, 1f, 1f));
@@ -80,7 +83,7 @@ public class TowerAttack_Snip : MonoBehaviour
 
     private void OnEnable()
     {
-        m_meshR.material.color = new Color(m_color.r, m_color.g, m_color.b, m_color.a);
+        StartCoroutine(DelayEnable(0.2f));
     }
     private void OnTriggerStay(Collider other)
     {
@@ -164,6 +167,13 @@ public class TowerAttack_Snip : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         effect.SetActive(false);
+        yield break;
+    }
+
+    IEnumerator DelayEnable(float sec)
+    {
+        yield return new WaitForSeconds(sec);
+        m_meshR.material.color = new Color(m_color.r, m_color.g, m_color.b, m_color.a);
         yield break;
     }
 }

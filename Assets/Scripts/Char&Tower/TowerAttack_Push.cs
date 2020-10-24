@@ -37,6 +37,9 @@ public class TowerAttack_Push : MonoBehaviour
 
         gm = GameObject.FindGameObjectWithTag("GameManager");
         si_manager = gm.GetComponent<SelectedItemManager>();
+
+        t_objectPool_AtkEf = GameObject.FindGameObjectWithTag("ObjectPools").transform.Find("AtkEffects");
+
         if (si_manager.i_extend_p)
         {
             Vector3 upScale = Vector3.Scale(p_turret.transform.localScale, new Vector3(1f, 1.5f, 1f));
@@ -52,7 +55,7 @@ public class TowerAttack_Push : MonoBehaviour
 
     private void OnEnable()
     {
-        m_meshR.material.color = new Color(m_color.r, m_color.g, m_color.b, m_color.a);
+        StartCoroutine(DelayEnable(0.2f));
     }
     public void P_Contact()
     {
@@ -135,6 +138,13 @@ public class TowerAttack_Push : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         effect.SetActive(false);
+        yield break;
+    }
+
+    IEnumerator DelayEnable(float sec)
+    {
+        yield return new WaitForSeconds(sec);
+        m_meshR.material.color = new Color(m_color.r, m_color.g, m_color.b, m_color.a);
         yield break;
     }
 }
