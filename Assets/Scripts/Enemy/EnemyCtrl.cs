@@ -128,6 +128,10 @@ public class EnemyCtrl : MonoBehaviour
             {
                 t_img.localEulerAngles = new Vector3(0, 180, 0);
             }
+            else
+            {
+                t_img.localEulerAngles = new Vector3(0, 0, 0);
+            }
 
         }
         else if (state == State.PUSHED)
@@ -160,7 +164,6 @@ public class EnemyCtrl : MonoBehaviour
         if (enemyHP <= 0.0f)
         {
             state = State.DIE;
-            hpBarImage.GetComponentsInParent<Image>()[1].color = Color.clear;
         }
     }
 

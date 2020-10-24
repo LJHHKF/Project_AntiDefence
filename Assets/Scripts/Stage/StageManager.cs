@@ -519,26 +519,26 @@ public class StageManager : MonoBehaviour
     private void PoolsInit()
     {
         pools_SpawnEf.listPool= new List<GameObject>();
-        pools_SpawnEf.cnt = -1;
+        pools_SpawnEf.cnt = 0;
         pools_SpawnEf.is_serched = false;
     
         pools_DirEf.listPool = new List<GameObject>();
-        pools_DirEf.cnt = -1;
+        pools_DirEf.cnt = 0;
         pools_DirEf.is_serched = false;
     
         pools_DieEf.listPool = new List<GameObject>();
-        pools_DieEf.cnt = -1;
+        pools_DieEf.cnt = 0;
         pools_DieEf.is_serched = false;
 
         pools_DropMoney.listPool = new List<GameObject>();
-        pools_DropMoney.cnt = -1;
+        pools_DropMoney.cnt = 0;
         pools_DropMoney.is_serched = false;
 
         arr_enemyPools = new Pools[enemies.Length];
         for (int i = 0; i < enemies.Length; i++)
         {
             arr_enemyPools[i].listPool = new List<GameObject>();
-            arr_enemyPools[i].cnt = -1;
+            arr_enemyPools[i].cnt = 0;
             arr_enemyPools[i].is_serched = false;
         }
     }
