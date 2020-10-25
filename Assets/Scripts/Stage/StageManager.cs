@@ -196,7 +196,7 @@ public class StageManager : MonoBehaviour
 
     private void SpawnEnemy(int sp_index, int cnt)
     {
-        if (arr_enemyPools[spawnEnemyIndex[cnt]].cnt < 0)
+        if (arr_enemyPools[spawnEnemyIndex[cnt]].cnt <= 0)
         {
             EnemyPooling(cnt);
         }
@@ -226,7 +226,7 @@ public class StageManager : MonoBehaviour
 
     private void PullingSpawnEffect(int sp_index, float time)
     {
-        if(pools_SpawnEf.cnt < 0)
+        if(pools_SpawnEf.cnt <= 0)
         {
             SpawnEffectPooling();
         }
@@ -253,7 +253,7 @@ public class StageManager : MonoBehaviour
 
     private void PullingDirEffect(int sp_index, float time)
     {
-        if (pools_DirEf.cnt < 0)
+        if (pools_DirEf.cnt <= 0)
         {
             DirEffectPooling();
         }
@@ -279,7 +279,7 @@ public class StageManager : MonoBehaviour
 
     public void PullingEnemyDieEffect(Vector3 t_enemy, float time)
     {
-        if (pools_DieEf.cnt < 0)
+        if (pools_DieEf.cnt <= 0)
         {
             EnemyDieEffectPooling();
         }
@@ -304,7 +304,7 @@ public class StageManager : MonoBehaviour
 
     public void PullingDropMoneyBar(Vector3 t_enemy, int dropMoneyValue, float time)
     {
-        if(pools_DropMoney.cnt < 0)
+        if(pools_DropMoney.cnt <= 0)
         {
             DropMoneyBarPooling();
         }
