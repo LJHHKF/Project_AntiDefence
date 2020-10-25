@@ -240,7 +240,7 @@ GameObject:
   - component: {fileID: 1787685108205442023}
   m_Layer: 0
   m_Name: SNTower
-  m_TagString: Untagged
+  m_TagString: SNT
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -271,7 +271,7 @@ PrefabInstance:
     - target: {fileID: 1278563688094177323, guid: be02c90d9e4f2944dbec8e52b488d783,
         type: 3}
       propertyPath: m_Center.y
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1278563688094177323, guid: be02c90d9e4f2944dbec8e52b488d783,
         type: 3}
@@ -396,7 +396,7 @@ PrefabInstance:
     - target: {fileID: 8437537712463506242, guid: be02c90d9e4f2944dbec8e52b488d783,
         type: 3}
       propertyPath: m_Center.y
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be02c90d9e4f2944dbec8e52b488d783, type: 3}

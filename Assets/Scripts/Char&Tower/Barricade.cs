@@ -16,6 +16,13 @@ public class Barricade : MonoBehaviour
     [HideInInspector]
     public bool isDie = false;
 
+    private StageManager stageM;
+
+    private void Start()
+    {
+        stageM = GameObject.FindGameObjectWithTag("StageMObject").GetComponent<StageManager>();
+    }
+
     public void Barricade_damaged(float dmg)
     {
         if (state != State.DIE)
@@ -26,6 +33,7 @@ public class Barricade : MonoBehaviour
             {
                 state = State.DIE;
                 isDie = true;
+                stageM.BarricadeBreak();
                 Destroy(gameObject);
             }
         }

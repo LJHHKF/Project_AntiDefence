@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1908252340038606381}
   - component: {fileID: 6967522969219454358}
   m_Layer: 0
-  m_Name: S_Barrier_Destruction
+  m_Name: S_Barricade_Destruction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -392,7 +392,7 @@ GameObject:
   - component: {fileID: 3220557217480469637}
   - component: {fileID: 2572099266147037645}
   m_Layer: 0
-  m_Name: S_Barrier_Idle
+  m_Name: S_Barricade_Idle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
