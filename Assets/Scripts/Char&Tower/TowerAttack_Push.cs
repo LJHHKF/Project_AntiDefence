@@ -23,7 +23,7 @@ public class TowerAttack_Push : MonoBehaviour
 
     private Transform t_objectPool_AtkEf;
     private List<GameObject> listPool_AtkEf = new List<GameObject>();
-    private int cnt_AtkEf = -1;
+    private int cnt_AtkEf = 0;
     private bool is_serched_atk = false;
 
     // Start is called before the first frame update
@@ -102,7 +102,7 @@ public class TowerAttack_Push : MonoBehaviour
 
     private void PullingAtkEffect(float time)
     {
-        if (cnt_AtkEf < 0)
+        if (cnt_AtkEf <= 0)
         {
             ChangeEffectPooling();
         }

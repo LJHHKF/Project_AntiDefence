@@ -31,7 +31,7 @@ public class ChangeTower : MonoBehaviour
     public GameObject[] arrayPool_Snip = new GameObject[2];
     public GameObject[] arrayPool_Push = new GameObject[2];
     private List<GameObject> listPool_changeEf = new List<GameObject>();
-    private int cnt_cEf = -1;
+    private int cnt_cEf = 0;
     private bool is_serched_c = false;
 
     private TowerAttack_Basic[] taM_B = new TowerAttack_Basic[2];
@@ -186,7 +186,7 @@ public class ChangeTower : MonoBehaviour
 
     private void PullingChangeEffect(int idx_t_pos, float time)
     {
-        if (cnt_cEf < 0)
+        if (cnt_cEf <= 0)
         {
             ChangeEffectPooling();
         }
