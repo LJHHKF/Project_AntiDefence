@@ -118,7 +118,7 @@ public class TowerAttack_Basic : MonoBehaviour
     IEnumerator On_Clear()
     {
         m_meshR.material.color = new Color(m_color.r, m_color.g, m_color.b, 0.0f);
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.3f);
         m_meshR.material.color = new Color(m_color.r, m_color.g, m_color.b, m_color.a);
         
         StopCoroutine(On_Clear());
@@ -126,7 +126,7 @@ public class TowerAttack_Basic : MonoBehaviour
 
     IEnumerator Off_Anim()
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(1.0f);
         animator.SetBool("IsAttack", false);
         StopCoroutine(Off_Anim());
     }
