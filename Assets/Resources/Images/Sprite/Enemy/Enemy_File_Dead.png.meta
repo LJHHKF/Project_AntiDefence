@@ -1034,6 +1034,72 @@ TextureImporter:
   - first:
       213: -5084995538675113886
     second: Enemy_File_Dead_343
+  - first:
+      213: 8275935047302642318
+    second: Enemy_File_Dead_0
+  - first:
+      213: -5986270758483949994
+    second: Enemy_File_Dead_1
+  - first:
+      213: 7366338482797195119
+    second: Enemy_File_Dead_2
+  - first:
+      213: 6130819282142195003
+    second: Enemy_File_Dead_3
+  - first:
+      213: -6705096763331446564
+    second: Enemy_File_Dead_4
+  - first:
+      213: 9191357669829868027
+    second: Enemy_File_Dead_5
+  - first:
+      213: 5989976315667091903
+    second: Enemy_File_Dead_6
+  - first:
+      213: -7306610882702189581
+    second: Enemy_File_Dead_7
+  - first:
+      213: 4996784441472578891
+    second: Enemy_File_Dead_8
+  - first:
+      213: -178667754226915065
+    second: Enemy_File_Dead_9
+  - first:
+      213: -252901205470954720
+    second: Enemy_File_Dead_10
+  - first:
+      213: 184547898159540607
+    second: Enemy_File_Dead_11
+  - first:
+      213: -8949147005531700493
+    second: Enemy_File_Dead_12
+  - first:
+      213: 3873699354441017505
+    second: Enemy_File_Dead_13
+  - first:
+      213: 6411294591015971560
+    second: Enemy_File_Dead_14
+  - first:
+      213: -5308671396667127586
+    second: Enemy_File_Dead_15
+  - first:
+      213: -2279393533973650437
+    second: Enemy_File_Dead_16
+  - first:
+      213: 2305224689885342757
+    second: Enemy_File_Dead_17
+  - first:
+      213: 2828853788921378244
+    second: Enemy_File_Dead_18
+  - first:
+      213: -6613819370196068727
+    second: Enemy_File_Dead_19
+  - first:
+      213: -5896273992740398433
+    second: Enemy_File_Dead_20
+  - first:
+      213: -9114099346535928472
+    second: Enemy_File_Dead_21
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -1134,10 +1200,10 @@ TextureImporter:
       name: Enemy_File_Dead_0
       rect:
         serializedVersion: 2
-        x: 35
-        y: 1473
-        width: 230
-        height: 203
+        x: 0
+        y: 1350
+        width: 300
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1145,8 +1211,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8b6a6d5ae22acf90800000000000000
-      internalID: -6932690286398510194
+      spriteID: e8afda6e3170ad270800000000000000
+      internalID: 8275935047302642318
       vertices: []
       indices: 
       edges: []
@@ -1155,10 +1221,10 @@ TextureImporter:
       name: Enemy_File_Dead_1
       rect:
         serializedVersion: 2
-        x: 335
-        y: 1473
-        width: 230
-        height: 202
+        x: 300
+        y: 1350
+        width: 300
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1166,8 +1232,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f67823a351b3c80c0800000000000000
-      internalID: -4572214559331154065
+      spriteID: 6568147367e7ceca0800000000000000
+      internalID: -5986270758483949994
       vertices: []
       indices: 
       edges: []
@@ -1176,10 +1242,10 @@ TextureImporter:
       name: Enemy_File_Dead_2
       rect:
         serializedVersion: 2
-        x: 635
-        y: 1507
-        width: 241
-        height: 174
+        x: 600
+        y: 1350
+        width: 300
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1187,8 +1253,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70e789766bd5213a0800000000000000
-      internalID: -6696186657943028217
+      spriteID: f6faa6252dd7a3660800000000000000
+      internalID: 7366338482797195119
       vertices: []
       indices: 
       edges: []
@@ -1197,10 +1263,10 @@ TextureImporter:
       name: Enemy_File_Dead_3
       rect:
         serializedVersion: 2
-        x: 935
-        y: 1507
-        width: 241
-        height: 174
+        x: 900
+        y: 1350
+        width: 300
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1208,8 +1274,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 152df1f2c34f1cbc0800000000000000
-      internalID: -3764459274179194287
+      spriteID: b3d633697ab051550800000000000000
+      internalID: 6130819282142195003
       vertices: []
       indices: 
       edges: []
@@ -1218,10 +1284,10 @@ TextureImporter:
       name: Enemy_File_Dead_4
       rect:
         serializedVersion: 2
-        x: 1235
-        y: 1507
-        width: 241
-        height: 174
+        x: 1200
+        y: 1350
+        width: 300
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1229,8 +1295,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34495a3bc6e11b560800000000000000
-      internalID: 7327671520927781955
+      spriteID: cd8f105d406b2f2a0800000000000000
+      internalID: -6705096763331446564
       vertices: []
       indices: 
       edges: []
@@ -1239,10 +1305,10 @@ TextureImporter:
       name: Enemy_File_Dead_5
       rect:
         serializedVersion: 2
-        x: 1535
-        y: 1507
-        width: 240
-        height: 174
+        x: 1500
+        y: 1350
+        width: 300
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1250,8 +1316,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 373bffe23cb4ab810800000000000000
-      internalID: 1781819904257667955
+      spriteID: bf975c15a134e8f70800000000000000
+      internalID: 9191357669829868027
       vertices: []
       indices: 
       edges: []
@@ -1260,10 +1326,10 @@ TextureImporter:
       name: Enemy_File_Dead_6
       rect:
         serializedVersion: 2
-        x: 35
-        y: 1058
-        width: 241
-        height: 173
+        x: 0
+        y: 900
+        width: 300
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1271,8 +1337,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2fefaee516d8e3240800000000000000
-      internalID: 4773408104403107570
+      spriteID: fb1175c09bba02350800000000000000
+      internalID: 5989976315667091903
       vertices: []
       indices: 
       edges: []
@@ -1281,10 +1347,10 @@ TextureImporter:
       name: Enemy_File_Dead_7
       rect:
         serializedVersion: 2
-        x: 335
-        y: 1058
-        width: 241
-        height: 173
+        x: 300
+        y: 900
+        width: 300
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1292,8 +1358,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95115d530e675bb60800000000000000
-      internalID: 7761240238190825817
+      spriteID: 3fb58804d14b99a90800000000000000
+      internalID: -7306610882702189581
       vertices: []
       indices: 
       edges: []
@@ -1302,10 +1368,10 @@ TextureImporter:
       name: Enemy_File_Dead_8
       rect:
         serializedVersion: 2
-        x: 635
-        y: 1058
-        width: 241
-        height: 173
+        x: 600
+        y: 900
+        width: 300
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1313,8 +1379,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 166f70964bb403100800000000000000
-      internalID: 85651631148365409
+      spriteID: b45fb25b9f4285540800000000000000
+      internalID: 4996784441472578891
       vertices: []
       indices: 
       edges: []
@@ -1323,10 +1389,10 @@ TextureImporter:
       name: Enemy_File_Dead_9
       rect:
         serializedVersion: 2
-        x: 935
-        y: 1058
-        width: 241
-        height: 173
+        x: 900
+        y: 900
+        width: 300
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1334,8 +1400,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a662eb70cd92d9460800000000000000
-      internalID: 7249997000135812714
+      spriteID: 709ec78cf9e358df0800000000000000
+      internalID: -178667754226915065
       vertices: []
       indices: 
       edges: []
@@ -1344,10 +1410,10 @@ TextureImporter:
       name: Enemy_File_Dead_10
       rect:
         serializedVersion: 2
-        x: 1228
-        y: 1058
-        width: 249
-        height: 173
+        x: 1200
+        y: 900
+        width: 300
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1355,8 +1421,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 469599f912579bdb0800000000000000
-      internalID: -4775657142577702556
+      spriteID: 02bb2ac81b38d7cf0800000000000000
+      internalID: -252901205470954720
       vertices: []
       indices: 
       edges: []
@@ -1365,10 +1431,10 @@ TextureImporter:
       name: Enemy_File_Dead_11
       rect:
         serializedVersion: 2
-        x: 1535
-        y: 1058
-        width: 245
-        height: 173
+        x: 1500
+        y: 900
+        width: 300
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1376,8 +1442,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bfb6bd4c134acbfc0800000000000000
-      internalID: -3477724278573798405
+      spriteID: f7928d9e555af8200800000000000000
+      internalID: 184547898159540607
       vertices: []
       indices: 
       edges: []
@@ -1386,10 +1452,10 @@ TextureImporter:
       name: Enemy_File_Dead_12
       rect:
         serializedVersion: 2
-        x: 35
-        y: 607
-        width: 245
-        height: 174
+        x: 0
+        y: 450
+        width: 300
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1397,8 +1463,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7e1e0de586510990800000000000000
-      internalID: -7421555577722102145
+      spriteID: 3f2488c863e3ec380800000000000000
+      internalID: -8949147005531700493
       vertices: []
       indices: 
       edges: []
@@ -1407,10 +1473,10 @@ TextureImporter:
       name: Enemy_File_Dead_13
       rect:
         serializedVersion: 2
-        x: 339
-        y: 597
-        width: 234
-        height: 184
+        x: 300
+        y: 450
+        width: 300
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1418,8 +1484,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0eb5e3dfa0d94ad30800000000000000
-      internalID: 4441847803018107872
+      spriteID: 1a8ed140a0522c530800000000000000
+      internalID: 3873699354441017505
       vertices: []
       indices: 
       edges: []
@@ -1428,10 +1494,10 @@ TextureImporter:
       name: Enemy_File_Dead_14
       rect:
         serializedVersion: 2
-        x: 643
-        y: 603
-        width: 236
-        height: 185
+        x: 600
+        y: 450
+        width: 300
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1439,8 +1505,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe754c57881dcd0e0800000000000000
-      internalID: -2243688130315790353
+      spriteID: 8eae3e7467e79f850800000000000000
+      internalID: 6411294591015971560
       vertices: []
       indices: 
       edges: []
@@ -1449,10 +1515,10 @@ TextureImporter:
       name: Enemy_File_Dead_15
       rect:
         serializedVersion: 2
-        x: 943
-        y: 603
-        width: 236
-        height: 185
+        x: 900
+        y: 450
+        width: 300
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1460,8 +1526,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ce392f2503109930800000000000000
-      internalID: 4147836169795223238
+      spriteID: ed80164cd7fc356b0800000000000000
+      internalID: -5308671396667127586
       vertices: []
       indices: 
       edges: []
@@ -1470,10 +1536,10 @@ TextureImporter:
       name: Enemy_File_Dead_16
       rect:
         serializedVersion: 2
-        x: 1245
-        y: 602
-        width: 244
-        height: 200
+        x: 1200
+        y: 450
+        width: 300
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1481,8 +1547,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7af29d8398cfb070800000000000000
-      internalID: 8124432788860631676
+      spriteID: bf3ad2858a7fd50e0800000000000000
+      internalID: -2279393533973650437
       vertices: []
       indices: 
       edges: []
@@ -1491,10 +1557,10 @@ TextureImporter:
       name: Enemy_File_Dead_17
       rect:
         serializedVersion: 2
-        x: 1551
-        y: 607
-        width: 231
-        height: 211
+        x: 1500
+        y: 450
+        width: 300
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1502,8 +1568,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d6163a3996c074cb0800000000000000
-      internalID: -4879918023644585619
+      spriteID: 52c631054adcdff10800000000000000
+      internalID: 2305224689885342757
       vertices: []
       indices: 
       edges: []
@@ -1512,10 +1578,10 @@ TextureImporter:
       name: Enemy_File_Dead_18
       rect:
         serializedVersion: 2
-        x: 51
-        y: 157
-        width: 231
-        height: 212
+        x: 0
+        y: 0
+        width: 300
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1523,8 +1589,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b50608a06ad0f9df0800000000000000
-      internalID: -171403254024871845
+      spriteID: 4c53d2a788b124720800000000000000
+      internalID: 2828853788921378244
       vertices: []
       indices: 
       edges: []
@@ -1533,10 +1599,10 @@ TextureImporter:
       name: Enemy_File_Dead_19
       rect:
         serializedVersion: 2
-        x: 340
-        y: 87
-        width: 249
-        height: 288
+        x: 300
+        y: 0
+        width: 300
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1544,8 +1610,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0bba067addd8de740800000000000000
-      internalID: 5182954729308728240
+      spriteID: 9869dd6035ef634a0800000000000000
+      internalID: -6613819370196068727
       vertices: []
       indices: 
       edges: []
@@ -1554,10 +1620,10 @@ TextureImporter:
       name: Enemy_File_Dead_20
       rect:
         serializedVersion: 2
-        x: 626
-        y: 61
-        width: 286
-        height: 346
+        x: 600
+        y: 0
+        width: 300
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1565,8 +1631,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce50425b41de90f40800000000000000
-      internalID: 5695343876980868588
+      spriteID: f9a955c1b0a3c2ea0800000000000000
+      internalID: -5896273992740398433
       vertices: []
       indices: 
       edges: []
@@ -1575,10 +1641,10 @@ TextureImporter:
       name: Enemy_File_Dead_21
       rect:
         serializedVersion: 2
-        x: 930
-        y: 58
-        width: 261
-        height: 389
+        x: 900
+        y: 0
+        width: 300
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1586,8 +1652,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a0b64fd8a76698b0800000000000000
-      internalID: -5145811549226094431
+      spriteID: 86d2b12dee6348180800000000000000
+      internalID: -9114099346535928472
       vertices: []
       indices: 
       edges: []
