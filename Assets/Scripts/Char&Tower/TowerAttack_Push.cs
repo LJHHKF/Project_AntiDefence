@@ -115,6 +115,7 @@ public class TowerAttack_Push : MonoBehaviour
                 listPool_AtkEf[i].SetActive(true);
                 StartCoroutine(StopEffect(listPool_AtkEf[i], time));
                 is_serched_atk = true;
+                break;
             }
         }
         if (is_serched_atk == false)
