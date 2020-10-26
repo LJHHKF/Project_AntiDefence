@@ -14,6 +14,11 @@ public class LobbyManager : MonoBehaviour
     private SkinManager skinM;
     private BGM_Manager bgmM;
     private AudioManager audioM;
+    private TouchEfManager touchEfM;
+
+    private Transform t_touchEfPool;
+    private List<GameObject> listPool_touchEf = new List<GameObject>();
+    private bool is_serched_touchEf;
 
     private Transform t_subButtons;
     private Text txt_money;
@@ -30,6 +35,9 @@ public class LobbyManager : MonoBehaviour
         skinM = gm.GetComponent<SkinManager>();
         bgmM = gm.GetComponent<BGM_Manager>();
         audioM = gm.GetComponent<AudioManager>();
+        touchEfM = gm.GetComponent<TouchEfManager>();
+
+        t_touchEfPool = gameObject.transform.Find("TouchEffect_Pool");
 
         t_subButtons = gameObject.transform.Find("Panel_SubButtons");
         txt_money = t_subButtons.Find("Panel_Money").Find("Text").GetComponent<Text>();
@@ -58,6 +66,11 @@ public class LobbyManager : MonoBehaviour
                 panel_exit.SetActive(true);
             }
         //}
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            SpawnTouchEf(Input.mousePosition);
+        }
     }
 
     public void BTN_Setting()
@@ -100,4 +113,51 @@ public class LobbyManager : MonoBehaviour
         Time.timeScale = 1.0f;
         panel_exit.SetActive(false);
     }
+
+    private void SpawnTouchEf(Vector3 mousePosition)
+    {
+        if (listPool_touchEf.Count == 0)
+        {
+            PoolingTouchEf();
+        }
+        is_serched_touchEf = false;
+
+
+        for (int i = 0; i < listPool_touchEf.Count; i++)
+        {
+            if (listPool_touchEf[i].activeSelf == false)
+            {
+                Animator m_animator = listPool_touchEf[i].GetComponent<Animator>();
+                RectTransform m_rect = listPool_touchEf[i].GetComponent<RectTransform>();
+                m_rect.position = mousePosition;
+                listPool_touchEf[i].SetActive(true);
+                m_animator.SetTrigger("IsTouched_Trigger");
+                StartCoroutine(StopEffect(listPool_touchEf[i], 0.5f));
+                is_serched_touchEf = true;
+                break;
+            }
+        }
+
+        if (is_serched_touchEf == false)
+        {
+            PoolingTouchEf();
+            SpawnTouchEf(mousePosition);
+        }
+    }
+
+    private void PoolingTouchEf()
+    {
+        GameObject effect = touchEfM.Instantiate(t_touchEfPool);
+        listPool_touchEf.Add(effect);
+        effect.name = "TouchEffect_" + listPool_touchEf.Count.ToString("00");
+        effect.SetActive(false);
+    }
+
+    IEnumerator StopEffect(GameObject target, float time)
+    {
+        yield return new WaitForSeconds(time);
+        target.SetActive(false);
+        yield break;
+    }
+
 }
