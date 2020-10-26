@@ -31,7 +31,6 @@ public class ChangeTower : MonoBehaviour
     public GameObject[] arrayPool_Snip = new GameObject[2];
     public GameObject[] arrayPool_Push = new GameObject[2];
     private List<GameObject> listPool_changeEf = new List<GameObject>();
-    private int cnt_cEf = 0;
     private bool is_serched_c = false;
 
     private TowerAttack_Basic[] taM_B = new TowerAttack_Basic[2];
@@ -186,12 +185,12 @@ public class ChangeTower : MonoBehaviour
 
     private void PullingChangeEffect(int idx_t_pos, float time)
     {
-        if (cnt_cEf <= 0)
+        if (listPool_changeEf.Count <= 0)
         {
             ChangeEffectPooling();
         }
         is_serched_c = false;
-        for (int i = 0; i < cnt_cEf; i++)
+        for (int i = 0; i < listPool_changeEf.Count; i++)
         {
             if (listPool_changeEf[i].activeSelf == false)
             {
@@ -211,11 +210,11 @@ public class ChangeTower : MonoBehaviour
 
     private void ChangeEffectPooling()
     {
-        cnt_cEf++;
         var effect = Instantiate(c_Effects, t_objectPool_changeEf);
-        effect.name = "Change_Effect_" + cnt_cEf.ToString("000");
-        effect.SetActive(false);
         listPool_changeEf.Add(effect);
+        effect.name = "Change_Effect_" + listPool_changeEf.Count.ToString("000");
+        effect.SetActive(false);
+        
     }
 
     IEnumerator StopEffect(GameObject effect, float time)

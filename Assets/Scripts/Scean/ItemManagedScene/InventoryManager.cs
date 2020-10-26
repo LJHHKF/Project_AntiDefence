@@ -49,6 +49,11 @@ public class InventoryManager : MonoBehaviour
     private LoadingManager loadingM;
     private BGM_Manager bgmM;
     private AudioManager audioM;
+    private TouchEfManager touchEfM;
+
+    private Transform t_touchEfPool;
+    private List<GameObject> listPool_touchEf = new List<GameObject>();
+    private bool is_serched_touchEf;
 
     // Start is called before the first frame update
     void Start()
@@ -88,6 +93,17 @@ public class InventoryManager : MonoBehaviour
         sub_txt_itemInfo = sub_panel_itemInfo.transform.Find("Panel_InfoText").Find("Text").GetComponent<Text>();
         sub_txt_infoHeader = sub_panel_itemInfo.transform.Find("Panel_InfoTextHeader").Find("Text").GetComponent<Text>();
         sub_panel_information.SetActive(false);
+
+        touchEfM = gm.GetComponent<TouchEfManager>();
+        t_touchEfPool = gameObject.transform.Find("TouchEffect_Pool");
+    }
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            SpawnTouchEf(Input.mousePosition);
+        }
     }
 
     public void BTN_Return()
@@ -168,6 +184,51 @@ public class InventoryManager : MonoBehaviour
             sub_txt_price.text = i_prices[i_num].ToString();
             sub_panel_information.SetActive(true);
         }
+    }
+
+    private void SpawnTouchEf(Vector3 mousePosition)
+    {
+        if (listPool_touchEf.Count == 0)
+        {
+            PoolingTouchEf();
+        }
+        is_serched_touchEf = false;
+
+        for (int i = 0; i < listPool_touchEf.Count; i++)
+        {
+            if (listPool_touchEf[i].activeSelf == false)
+            {
+                Animator m_animator = listPool_touchEf[i].GetComponent<Animator>();
+                RectTransform m_rect = listPool_touchEf[i].GetComponent<RectTransform>();
+                m_rect.position = mousePosition;
+                listPool_touchEf[i].SetActive(true);
+                m_animator.SetTrigger("IsTouched_Trigger");
+                StartCoroutine(StopEffect(listPool_touchEf[i], 0.5f));
+                is_serched_touchEf = true;
+                break;
+            }
+        }
+
+        if (is_serched_touchEf == false)
+        {
+            PoolingTouchEf();
+            SpawnTouchEf(mousePosition);
+        }
+    }
+
+    private void PoolingTouchEf()
+    {
+        GameObject effect = touchEfM.Instantiate(t_touchEfPool);
+        listPool_touchEf.Add(effect);
+        effect.name = "TouchEffect_" + listPool_touchEf.Count.ToString("00");
+        effect.SetActive(false);
+    }
+
+    IEnumerator StopEffect(GameObject target, float time)
+    {
+        yield return new WaitForSeconds(time);
+        target.SetActive(false);
+        yield break;
     }
 
     private void SetItemInfo()

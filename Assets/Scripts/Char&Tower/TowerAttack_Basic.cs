@@ -27,7 +27,6 @@ public class TowerAttack_Basic : MonoBehaviour
 
     private Transform t_objectPool_AtkEf;
     private List<GameObject> listPool_AtkEf = new List<GameObject>();
-    private int cnt_AtkEf = 0;
     private bool is_serched_atk = false;
 
     private void Awake()
@@ -134,12 +133,12 @@ public class TowerAttack_Basic : MonoBehaviour
 
     private void PullingAtkEffect(float time)
     {
-        if (cnt_AtkEf <= 0)
+        if (listPool_AtkEf.Count <= 0)
         {
-            ChangeEffectPooling();
+            AttackEffectPooling();
         }
         is_serched_atk = false;
-        for (int i = 0; i < cnt_AtkEf; i++)
+        for (int i = 0; i < listPool_AtkEf.Count; i++)
         {
             if (listPool_AtkEf[i].activeSelf == false)
             {
@@ -152,18 +151,17 @@ public class TowerAttack_Basic : MonoBehaviour
         }
         if (is_serched_atk == false)
         {
-            ChangeEffectPooling();
+            AttackEffectPooling();
             PullingAtkEffect(time);
         }
     }
 
-    private void ChangeEffectPooling()
+    private void AttackEffectPooling()
     {
-        cnt_AtkEf++;
         var effect = Instantiate(a_Effect, t_objectPool_AtkEf);
-        effect.name = "Basic_Effect_" + cnt_AtkEf.ToString("000");
-        effect.SetActive(false);
         listPool_AtkEf.Add(effect);
+        effect.name = "Basic_Effect_" + listPool_AtkEf.Count.ToString("000");
+        effect.SetActive(false);
     }
 
     IEnumerator StopEffect(GameObject effect, float time)

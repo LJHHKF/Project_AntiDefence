@@ -31,6 +31,7 @@ public class TA_Manager : MonoBehaviour
     private GameObject sfx_manager;
     private AudioSource sfx_SNT_Attack;
     private AudioSource sfx_BT_Attack;
+    private AudioSource sfx_PT_Attack;
 
     private ChangeTower changeT;
 
@@ -62,6 +63,7 @@ public class TA_Manager : MonoBehaviour
         sfx_manager = GameObject.FindGameObjectWithTag("SFX_Manager").gameObject;
         sfx_SNT_Attack = sfx_manager.transform.Find("S_SNT_Attack").gameObject.GetComponent<AudioSource>();
         sfx_BT_Attack = sfx_manager.transform.Find("S_BT_Attack").gameObject.GetComponent<AudioSource>();
+        sfx_PT_Attack = sfx_manager.transform.Find("S_PT_Attack").gameObject.GetComponent<AudioSource>();
 
         if (si_manager.i_muls_b)
         {
@@ -113,6 +115,7 @@ public class TA_Manager : MonoBehaviour
         //StartCoroutine(CoolTime(2));
 
         playerM.OnAttackAnim();
+        StartCoroutine(Sound_PT_Attack());
         changeT.AttackActivated(2);
 
     }
@@ -161,6 +164,14 @@ public class TA_Manager : MonoBehaviour
         sfx_BT_Attack.Play();
         yield return new WaitForSeconds(1.0f);
         sfx_BT_Attack.Stop();
+        yield break;
+    }
+
+    private IEnumerator Sound_PT_Attack()
+    {
+        sfx_PT_Attack.Play();
+        yield return new WaitForSeconds(1.0f);
+        sfx_PT_Attack.Stop();
         yield break;
     }
 
