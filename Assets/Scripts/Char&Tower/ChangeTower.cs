@@ -199,6 +199,7 @@ public class ChangeTower : MonoBehaviour
                 listPool_changeEf[i].SetActive(true);
                 StartCoroutine(StopEffect(listPool_changeEf[i], time));
                 is_serched_c = true;
+                break;
             }
         }
         if (is_serched_c == false)
