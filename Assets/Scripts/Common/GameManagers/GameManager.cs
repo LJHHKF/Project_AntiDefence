@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [HideInInspector]
-    public LoadingManager loadingM;
+    private LoadingManager loadingM;
 
 
     private void Awake()

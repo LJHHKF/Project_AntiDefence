@@ -1,7 +1,65 @@
 fileFormatVersion: 2
 guid: aea13f13b7862794fbaebf6a8eb99948
 TextureImporter:
+<<<<<<< HEAD
   internalIDToNameTable: []
+=======
+  internalIDToNameTable:
+  - first:
+      213: 8353659244979048591
+    second: proj_p_chr_win_0
+  - first:
+      213: 3468549712444999846
+    second: proj_p_chr_win_1
+  - first:
+      213: 7596057090931382881
+    second: proj_p_chr_win_2
+  - first:
+      213: 290050033660392717
+    second: proj_p_chr_win_3
+  - first:
+      213: 8825712190702148573
+    second: proj_p_chr_win_4
+  - first:
+      213: 2505194309104840507
+    second: proj_p_chr_win_5
+  - first:
+      213: 6641162710540269963
+    second: proj_p_chr_win_6
+  - first:
+      213: -8840324776682622523
+    second: proj_p_chr_win_7
+  - first:
+      213: -2570382180066346432
+    second: proj_p_chr_win_8
+  - first:
+      213: 7473765951119297807
+    second: proj_p_chr_win_9
+  - first:
+      213: 1534617191273142321
+    second: proj_p_chr_win_10
+  - first:
+      213: 8887359374799256506
+    second: proj_p_chr_win_11
+  - first:
+      213: 2859985102236236701
+    second: proj_p_chr_win_12
+  - first:
+      213: -1075376447169881995
+    second: proj_p_chr_win_13
+  - first:
+      213: -7140096627395295152
+    second: proj_p_chr_win_14
+  - first:
+      213: -3656153395416643887
+    second: proj_p_chr_win_15
+  - first:
+      213: 8973925501222246732
+    second: proj_p_chr_win_16
+  - first:
+      213: 1755475413052789359
+    second: proj_p_chr_win_17
+>>>>>>> LJH
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -97,11 +155,397 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
+<<<<<<< HEAD
     sprites: []
     outline: []
     physicsShape: []
     bones: []
     spriteID: 
+=======
+    sprites:
+    - serializedVersion: 2
+      name: proj_p_chr_win_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1020
+        width: 300
+        height: 510
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8052afd2d82ee370800000000000000
+      internalID: 8353659244979048591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proj_p_chr_win_1
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1020
+        width: 300
+        height: 510
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a841181693c22030800000000000000
+      internalID: 3468549712444999846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proj_p_chr_win_2
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1020
+        width: 300
+        height: 510
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16a5d86bdad9a6960800000000000000
+      internalID: 7596057090931382881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proj_p_chr_win_3
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 1020
+        width: 300
+        height: 510
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d05fa6708f6760400800000000000000
+      internalID: 290050033660392717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proj_p_chr_win_4
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1020
+        width: 300
+        height: 510
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddbd2a01a7a3b7a70800000000000000
+      internalID: 8825712190702148573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proj_p_chr_win_5
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 1020
+        width: 300
+        height: 510
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3f268773fc34c220800000000000000
+      internalID: 2505194309104840507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proj_p_chr_win_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 510
+        width: 300
+        height: 510
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b89b2518c462a2c50800000000000000
+      internalID: 6641162710540269963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proj_p_chr_win_7
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 510
+        width: 300
+        height: 510
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c17fb2247bd05580800000000000000
+      internalID: -8840324776682622523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proj_p_chr_win_8
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 510
+        width: 300
+        height: 510
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04ab624960b245cd0800000000000000
+      internalID: -2570382180066346432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proj_p_chr_win_9
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 510
+        width: 300
+        height: 510
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0d00eae88628b760800000000000000
+      internalID: 7473765951119297807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proj_p_chr_win_10
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 510
+        width: 300
+        height: 510
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1381b08643e0c4510800000000000000
+      internalID: 1534617191273142321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proj_p_chr_win_11
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 510
+        width: 300
+        height: 510
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abbb52e934e365b70800000000000000
+      internalID: 8887359374799256506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proj_p_chr_win_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 300
+        height: 510
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9b33b13c45b0b720800000000000000
+      internalID: 2859985102236236701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proj_p_chr_win_13
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 300
+        height: 510
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5781e92a1de7311f0800000000000000
+      internalID: -1075376447169881995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proj_p_chr_win_14
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 300
+        height: 510
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 058832e72f749ec90800000000000000
+      internalID: -7140096627395295152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proj_p_chr_win_15
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 0
+        width: 300
+        height: 510
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d64ad5abdbb24dc0800000000000000
+      internalID: -3656153395416643887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proj_p_chr_win_16
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 0
+        width: 300
+        height: 510
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c49db2d82b9c98c70800000000000000
+      internalID: 8973925501222246732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proj_p_chr_win_17
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 0
+        width: 300
+        height: 510
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6291f65693bc5810800000000000000
+      internalID: 1755475413052789359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 1d5a3fa42b28cf84ebd3844ba1a81ae8
+>>>>>>> LJH
     internalID: 0
     vertices: []
     indices: 

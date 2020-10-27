@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 using UnityEngine.UI;
 
 public class StageManager : MonoBehaviour
@@ -40,7 +41,7 @@ public class StageManager : MonoBehaviour
     private Pools pools_DirEf;
     private Transform t_objectPool_DieEffect;
     private Pools pools_DieEf;
-    private Transform t_objectPool_DropMoney;
+    private Transform t_DropMoneyPool;
     private Pools pools_DropMoney;
 
     [Header ("Chp,Stage info")]
@@ -88,6 +89,7 @@ public class StageManager : MonoBehaviour
     private LoadingManager loadingM;
     private SelectedItemManager itemM;
     private BGM_Manager bgmM;
+    private TouchEfManager touchEfM;
 
     private GameObject towerBoard;
     private TA_Manager ta_M;
@@ -95,9 +97,12 @@ public class StageManager : MonoBehaviour
 
     private GameObject sfx_manager;
     private int alive_Barricade = 0;
+    private bool isSet_Barriacde = false;
     private AudioSource sfx_Barricade_Idle;
     private AudioSource sfx_Barricade_Destruction;
 
+    private Transform t_touchEfPool;
+    private Pools pools_TouchEffect;
 
     // Start is called before the first frame update
     void Start()
@@ -116,13 +121,15 @@ public class StageManager : MonoBehaviour
         loadingM = gm.GetComponent<LoadingManager>();
         itemM = gm.GetComponent<SelectedItemManager>();
         bgmM = gm.GetComponent<BGM_Manager>();
+        touchEfM = gm.GetComponent<TouchEfManager>();
 
         t_objPools = GameObject.FindGameObjectWithTag("ObjectPools").transform;
         t_objectPool_Enemy = t_objPools.Find("Enemies");
         t_objectPool_SpawnEf = t_objPools.Find("SpawnEffect");
         t_objectPool_DirEffect = t_objPools.Find("DirEffect");
         t_objectPool_DieEffect = t_objPools.Find("EnemyDieEffect");
-        t_objectPool_DropMoney = ui_Canvas.transform.Find("EnemyDropMoney").transform;
+        t_DropMoneyPool = ui_Canvas.transform.Find("EnemyDropMoney").transform;
+        t_touchEfPool = ui_Canvas.transform.Find("TouchEffect_Pool").transform;
 
 
         towerBoard = GameObject.FindGameObjectWithTag("TowerBoard");
@@ -137,6 +144,7 @@ public class StageManager : MonoBehaviour
         {
             b_spawnPoints.SetActive(true);
             alive_Barricade = 4;
+            isSet_Barriacde = true;
         }
         else
         {
@@ -178,10 +186,23 @@ public class StageManager : MonoBehaviour
             }
         }
 
-        if(alive_Barricade == 0)
+        if (isSet_Barriacde)
         {
-            sfx_Barricade_Idle.Stop();
+            if (alive_Barricade == 0)
+            {
+                sfx_Barricade_Idle.Stop();
+                isSet_Barriacde = false;
+            }
         }
+
+        if (dlg_isDone)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                PullingTouchEf(Input.mousePosition);
+            }
+        }
+       
     }
 
     private void LateUpdate()
@@ -331,10 +352,40 @@ public class StageManager : MonoBehaviour
         }
     }
 
+    private void PullingTouchEf(Vector3 mousePosition)
+    {
+        if (pools_TouchEffect.cnt == 0)
+        {
+            PoolingTouchEf();
+        }
+        pools_TouchEffect.is_serched = false;
+
+        for (int i = 0; i < pools_TouchEffect.cnt; i++)
+        {
+            if (pools_TouchEffect.listPool[i].activeSelf == false)
+            {
+                Animator m_animator = pools_TouchEffect.listPool[i].GetComponent<Animator>();
+                RectTransform m_rect = pools_TouchEffect.listPool[i].GetComponent<RectTransform>();
+                m_rect.position = mousePosition;
+                pools_TouchEffect.listPool[i].SetActive(true);
+                m_animator.SetTrigger("IsTouched_Trigger");
+                StartCoroutine(StopEffect(pools_TouchEffect.listPool[i], 0.5f));
+                pools_TouchEffect.is_serched = true;
+                break;
+            }
+        }
+
+        if (pools_TouchEffect.is_serched == false)
+        {
+            PoolingTouchEf();
+            PullingTouchEf(mousePosition);
+        }
+    }
+
     private void EnemyPooling(int sp_index)
     {
+        GameObject enemy = Instantiate(enemies[spawnEnemyIndex[sp_index]], t_objectPool_Enemy);
         arr_enemyPools[spawnEnemyIndex[sp_index]].cnt++;
-        var enemy = Instantiate(enemies[spawnEnemyIndex[sp_index]], t_objectPool_Enemy);
         enemy.name = "Enemy_" + spawnEnemyIndex[sp_index].ToString("00") + "_" + arr_enemyPools[spawnEnemyIndex[sp_index]].cnt.ToString("000");
         enemy.SetActive(false);
         arr_enemyPools[spawnEnemyIndex[sp_index]].listPool.Add(enemy);
@@ -342,8 +393,8 @@ public class StageManager : MonoBehaviour
 
     private void SpawnEffectPooling()
     {
+        GameObject effect = Instantiate(spawn_Effect, t_objectPool_SpawnEf);
         pools_SpawnEf.cnt++;
-        var effect = Instantiate(spawn_Effect, t_objectPool_SpawnEf);
         effect.name = "sp_Effect_" + pools_SpawnEf.cnt.ToString("000");
         effect.SetActive(false);
         pools_SpawnEf.listPool.Add(effect);
@@ -351,8 +402,8 @@ public class StageManager : MonoBehaviour
 
     private void DirEffectPooling()
     {
+        GameObject effct = Instantiate(e_direction_Effect, t_objectPool_DirEffect);
         pools_DirEf.cnt++;
-        var effct = Instantiate(e_direction_Effect, t_objectPool_DirEffect);
         effct.name = "dir_Effect_" + pools_DirEf.cnt.ToString("000");
         effct.SetActive(false);
         pools_DirEf.listPool.Add(effct);
@@ -360,8 +411,8 @@ public class StageManager : MonoBehaviour
 
     private void EnemyDieEffectPooling()
     {
+        GameObject effect = Instantiate(e_Die_Effect, t_objectPool_DieEffect);
         pools_DieEf.cnt++;
-        var effect = Instantiate(e_Die_Effect, t_objectPool_DieEffect);
         effect.name = "die_Effect_" + pools_DieEf.cnt.ToString("000");
         effect.SetActive(false);
         pools_DieEf.listPool.Add(effect);
@@ -369,11 +420,20 @@ public class StageManager : MonoBehaviour
 
     private void DropMoneyBarPooling()
     {
+        GameObject bar = Instantiate(dropMoneyBarPrefab, t_DropMoneyPool);
         pools_DropMoney.cnt++;
-        var bar = Instantiate(dropMoneyBarPrefab, t_objectPool_DropMoney);
         bar.name = "DropMoneyBar_" + pools_DropMoney.cnt.ToString("000");
         bar.SetActive(false);
         pools_DropMoney.listPool.Add(bar);
+    }
+
+    private void PoolingTouchEf()
+    {
+        GameObject effect = Instantiate(touchEfM.prefab_TouchEffect, t_touchEfPool);
+        pools_TouchEffect.cnt++;
+        effect.name = "TouchEffect_" + pools_TouchEffect.cnt.ToString("00");
+        effect.SetActive(false);
+        pools_TouchEffect.listPool.Add(effect);
     }
 
     IEnumerator StopEffect(GameObject effect, float time)
@@ -445,14 +505,20 @@ public class StageManager : MonoBehaviour
 
     public void StageFailed()
     {
-        //패배처리 추가 필요
-        StageEnd();
+        StartCoroutine(DelayedStageEnd(1.0f));
+    }
+
+    private void StageClear()
+    {
+        itemM.End_Stage();
+        playerM.OnWinAnim();
+        StartCoroutine(DelayedStageEnd(1.0f));
     }
 
     public void DlgDone()
     {
         dlg_isDone = true;
-        playerM.Ai_Barrier_Check();
+        playerM.SetAiBarrier();
     }
 
     public bool GetDlgIsDone()
@@ -483,12 +549,6 @@ public class StageManager : MonoBehaviour
     public float GetWallMoveMax()
     {
         return wallMaxY;
-    }
-
-    private void StageClear()
-    {
-        itemM.End_Stage();
-        StageEnd();
     }
 
     private void PlayBGM()
@@ -534,6 +594,10 @@ public class StageManager : MonoBehaviour
         pools_DropMoney.cnt = 0;
         pools_DropMoney.is_serched = false;
 
+        pools_TouchEffect.listPool = new List<GameObject>();
+        pools_TouchEffect.cnt = 0;
+        pools_TouchEffect.is_serched = false;
+
         arr_enemyPools = new Pools[enemies.Length];
         for (int i = 0; i < enemies.Length; i++)
         {
@@ -541,5 +605,12 @@ public class StageManager : MonoBehaviour
             arr_enemyPools[i].cnt = 0;
             arr_enemyPools[i].is_serched = false;
         }
+    }
+
+    IEnumerator DelayedStageEnd(float time)
+    {
+        yield return new WaitForSeconds(time);
+        StageEnd();
+        yield break;
     }
 }

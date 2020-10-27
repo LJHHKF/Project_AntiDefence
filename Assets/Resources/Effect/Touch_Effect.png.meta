@@ -47,6 +47,54 @@ TextureImporter:
   - first:
       213: -5679004673386726479
     second: "\uD130\uCE58\uC774\uD399\uD2B8_14"
+<<<<<<< HEAD
+=======
+  - first:
+      213: 1123121826202507915
+    second: Touch_Effect_0
+  - first:
+      213: 1198787994154949415
+    second: Touch_Effect_1
+  - first:
+      213: 6046475260358324098
+    second: Touch_Effect_2
+  - first:
+      213: 5421952757497812782
+    second: Touch_Effect_3
+  - first:
+      213: 3210721531851535746
+    second: Touch_Effect_4
+  - first:
+      213: -3718492955154404173
+    second: Touch_Effect_5
+  - first:
+      213: -3871425449661048119
+    second: Touch_Effect_6
+  - first:
+      213: -4185459863866481154
+    second: Touch_Effect_7
+  - first:
+      213: 885978384309351993
+    second: Touch_Effect_8
+  - first:
+      213: -1572811395951311036
+    second: Touch_Effect_9
+  - first:
+      213: -4121797563342997997
+    second: Touch_Effect_10
+  - first:
+      213: 964621800556503834
+    second: Touch_Effect_11
+  - first:
+      213: -3949513145372741600
+    second: Touch_Effect_12
+  - first:
+      213: -7003610270860982425
+    second: Touch_Effect_13
+  - first:
+      213: -8659696363734126884
+    second: Touch_Effect_14
+>>>>>>> LJH
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -144,7 +192,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
+<<<<<<< HEAD
       name: "\uD130\uCE58\uC774\uD399\uD2B8_0"
+=======
+      name: Touch_Effect_0
+>>>>>>> LJH
       rect:
         serializedVersion: 2
         x: 0
@@ -158,14 +210,23 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: 3173c8e3fcfe111d0800000000000000
       internalID: -3381658171791886573
+=======
+      spriteID: b8ad942b951269f00800000000000000
+      internalID: 1123121826202507915
+>>>>>>> LJH
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
+<<<<<<< HEAD
       name: "\uD130\uCE58\uC774\uD399\uD2B8_1"
+=======
+      name: Touch_Effect_1
+>>>>>>> LJH
       rect:
         serializedVersion: 2
         x: 200
@@ -179,14 +240,23 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: 76dce6ca5801ee110800000000000000
       internalID: 1291988309411548519
+=======
+      spriteID: 72bdb984453f2a010800000000000000
+      internalID: 1198787994154949415
+>>>>>>> LJH
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
+<<<<<<< HEAD
       name: "\uD130\uCE58\uC774\uD399\uD2B8_2"
+=======
+      name: Touch_Effect_2
+>>>>>>> LJH
       rect:
         serializedVersion: 2
         x: 400
@@ -200,14 +270,23 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: 217adf545c6bad4e0800000000000000
       internalID: -1956050129739995374
+=======
+      spriteID: 28f68d4b63569e350800000000000000
+      internalID: 6046475260358324098
+>>>>>>> LJH
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
+<<<<<<< HEAD
       name: "\uD130\uCE58\uC774\uD399\uD2B8_3"
+=======
+      name: Touch_Effect_3
+>>>>>>> LJH
       rect:
         serializedVersion: 2
         x: 600
@@ -221,14 +300,23 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: a7f39504332521110800000000000000
       internalID: 1230136028301967226
+=======
+      spriteID: e275b936e45ae3b40800000000000000
+      internalID: 5421952757497812782
+>>>>>>> LJH
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
+<<<<<<< HEAD
       name: "\uD130\uCE58\uC774\uD399\uD2B8_4"
+=======
+      name: Touch_Effect_4
+>>>>>>> LJH
       rect:
         serializedVersion: 2
         x: 0
@@ -242,14 +330,23 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: ad1cd99993a117730800000000000000
       internalID: 3995003179147051482
+=======
+      spriteID: 28575bad836ce8c20800000000000000
+      internalID: 3210721531851535746
+>>>>>>> LJH
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
+<<<<<<< HEAD
       name: "\uD130\uCE58\uC774\uD399\uD2B8_5"
+=======
+      name: Touch_Effect_5
+>>>>>>> LJH
       rect:
         serializedVersion: 2
         x: 200
@@ -263,14 +360,23 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: a05f4f6e1f6d9aec0800000000000000
       internalID: -3555074096382020342
+=======
+      spriteID: 3bcaa34db52456cc0800000000000000
+      internalID: -3718492955154404173
+>>>>>>> LJH
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
+<<<<<<< HEAD
       name: "\uD130\uCE58\uC774\uD399\uD2B8_6"
+=======
+      name: Touch_Effect_6
+>>>>>>> LJH
       rect:
         serializedVersion: 2
         x: 400
@@ -284,14 +390,23 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: 54d8f87571137d1b0800000000000000
       internalID: -5631978832680481467
+=======
+      spriteID: 9cadb82b01fe54ac0800000000000000
+      internalID: -3871425449661048119
+>>>>>>> LJH
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
+<<<<<<< HEAD
       name: "\uD130\uCE58\uC774\uD399\uD2B8_7"
+=======
+      name: Touch_Effect_7
+>>>>>>> LJH
       rect:
         serializedVersion: 2
         x: 600
@@ -305,14 +420,23 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: a3bf28a296b5d7c10800000000000000
       internalID: 2052897512393734970
+=======
+      spriteID: ef56598ed624ae5c0800000000000000
+      internalID: -4185459863866481154
+>>>>>>> LJH
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
+<<<<<<< HEAD
       name: "\uD130\uCE58\uC774\uD399\uD2B8_8"
+=======
+      name: Touch_Effect_8
+>>>>>>> LJH
       rect:
         serializedVersion: 2
         x: 0
@@ -326,14 +450,23 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: 8cbd77a0b71ad73b0800000000000000
       internalID: -5513072819002942520
+=======
+      spriteID: 936fe6b75a0ab4c00800000000000000
+      internalID: 885978384309351993
+>>>>>>> LJH
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
+<<<<<<< HEAD
       name: "\uD130\uCE58\uC774\uD399\uD2B8_9"
+=======
+      name: Touch_Effect_9
+>>>>>>> LJH
       rect:
         serializedVersion: 2
         x: 200
@@ -347,14 +480,23 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: 24f12d7183cffb3a0800000000000000
       internalID: -6647317207127548094
+=======
+      spriteID: 447c2a55e504c2ae0800000000000000
+      internalID: -1572811395951311036
+>>>>>>> LJH
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
+<<<<<<< HEAD
       name: "\uD130\uCE58\uC774\uD399\uD2B8_10"
+=======
+      name: Touch_Effect_10
+>>>>>>> LJH
       rect:
         serializedVersion: 2
         x: 400
@@ -368,14 +510,23 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: 59a8a1241f9e3a1a0800000000000000
       internalID: -6799333789993891179
+=======
+      spriteID: 316bed054fe6cc6c0800000000000000
+      internalID: -4121797563342997997
+>>>>>>> LJH
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
+<<<<<<< HEAD
       name: "\uD130\uCE58\uC774\uD399\uD2B8_11"
+=======
+      name: Touch_Effect_11
+>>>>>>> LJH
       rect:
         serializedVersion: 2
         x: 600
@@ -389,14 +540,23 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: 9cde6adc50a680760800000000000000
       internalID: 7424300558877912521
+=======
+      spriteID: a13a4c4ba66036d00800000000000000
+      internalID: 964621800556503834
+>>>>>>> LJH
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
+<<<<<<< HEAD
       name: "\uD130\uCE58\uC774\uD399\uD2B8_12"
+=======
+      name: Touch_Effect_12
+>>>>>>> LJH
       rect:
         serializedVersion: 2
         x: 0
@@ -410,14 +570,23 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: fc6886e5873910f70800000000000000
       internalID: 9151758062982825679
+=======
+      spriteID: 020725e38b28039c0800000000000000
+      internalID: -3949513145372741600
+>>>>>>> LJH
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
+<<<<<<< HEAD
       name: "\uD130\uCE58\uC774\uD399\uD2B8_13"
+=======
+      name: Touch_Effect_13
+>>>>>>> LJH
       rect:
         serializedVersion: 2
         x: 200
@@ -431,14 +600,23 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: cba4e16b87ad5c1c0800000000000000
       internalID: -4483937641991091524
+=======
+      spriteID: 767cd0cb09d2ece90800000000000000
+      internalID: -7003610270860982425
+>>>>>>> LJH
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
+<<<<<<< HEAD
       name: "\uD130\uCE58\uC774\uD399\uD2B8_14"
+=======
+      name: Touch_Effect_14
+>>>>>>> LJH
       rect:
         serializedVersion: 2
         x: 400
@@ -452,8 +630,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: 1bb3005965f1031b0800000000000000
       internalID: -5679004673386726479
+=======
+      spriteID: cdea2e8c90492d780800000000000000
+      internalID: -8659696363734126884
+>>>>>>> LJH
       vertices: []
       indices: 
       edges: []
