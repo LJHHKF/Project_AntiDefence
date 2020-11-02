@@ -7,7 +7,6 @@ public class TowerAttack_Push : MonoBehaviour
     public GameObject a_Effect;
     public Transform firePos;
     public GameObject fireRange;
-    public GameObject p_turret;
     public Animator animator;
 
     private GameObject towerBoard;
@@ -15,8 +14,8 @@ public class TowerAttack_Push : MonoBehaviour
 
     private bool pt_attacked = false;
 
-    private MeshRenderer m_meshR;
-    private Color m_color;
+    private MeshRenderer[] m_meshRs;
+    private Color[] m_colors;
 
     private GameObject gm;
     private SelectedItemManager si_manager;
@@ -31,8 +30,12 @@ public class TowerAttack_Push : MonoBehaviour
         towerBoard = GameObject.FindGameObjectWithTag("TowerBoard");
         ta_manager = towerBoard.GetComponent<TA_Manager>();
 
-        m_meshR = gameObject.GetComponentInParent<MeshRenderer>();
-        m_color = m_meshR.material.color;
+        m_meshRs = gameObject.GetComponentsInChildren<MeshRenderer>();
+        m_colors = new Color[m_meshRs.Length];
+        for (int i = 0; i < m_meshRs.Length; i++)
+        {
+            m_colors[i] = m_meshRs[i].material.color;
+        }
 
         gm = GameObject.FindGameObjectWithTag("GameManager");
         si_manager = gm.GetComponent<SelectedItemManager>();
@@ -41,10 +44,10 @@ public class TowerAttack_Push : MonoBehaviour
 
         if (si_manager.i_extend_p)
         {
-            Vector3 upScale = Vector3.Scale(p_turret.transform.localScale, new Vector3(1f, 1.5f, 1f));
-            p_turret.transform.localScale = upScale;
+            Vector3 upScale = Vector3.Scale(gameObject.transform.localScale, new Vector3(1f, 1.5f, 1f));
+            gameObject.transform.localScale = upScale;
             //Vector3 upPosition = Vector3.Scale(p_turret.transform.localPosition, new Vector3(1f, 1.5f, 1f));
-            p_turret.transform.localPosition = new Vector3(0f, 0f, 3f);
+            gameObject.transform.localPosition = new Vector3(0f, 0f, 3f);
             upScale = Vector3.Scale(fireRange.transform.localScale, new Vector3(1f, 1.5f, 1f));
             fireRange.transform.localScale = upScale;
             Vector3 upPosition = Vector3.Scale(fireRange.transform.localPosition, new Vector3(1f, 1.5f, 1f));
@@ -86,9 +89,15 @@ public class TowerAttack_Push : MonoBehaviour
 
     IEnumerator On_Clear()
     {
-        m_meshR.material.color = new Color(m_color.r, m_color.g, m_color.b, 0.0f);
+        for (int i = 0; i < m_meshRs.Length; i++)
+        {
+            m_meshRs[i].material.color = new Color(m_colors[i].r, m_colors[i].g, m_colors[i].b, 0.0f);
+        }
         yield return new WaitForSeconds(1.0f);
-        m_meshR.material.color = new Color(m_color.r, m_color.g, m_color.b, m_color.a);
+        for (int i = 0; i < m_meshRs.Length; i++)
+        {
+            m_meshRs[i].material.color = new Color(m_colors[i].r, m_colors[i].g, m_colors[i].b, m_colors[i].a);
+        }
         StopCoroutine(On_Clear());
     }
 
@@ -143,7 +152,10 @@ public class TowerAttack_Push : MonoBehaviour
     IEnumerator DelayEnable(float sec)
     {
         yield return new WaitForSeconds(sec);
-        m_meshR.material.color = new Color(m_color.r, m_color.g, m_color.b, m_color.a);
+        for (int i = 0; i < m_meshRs.Length; i++)
+        {
+            m_meshRs[i].material.color = new Color(m_colors[i].r, m_colors[i].g, m_colors[i].b, m_colors[i].a);
+        }
         yield break;
     }
 }
