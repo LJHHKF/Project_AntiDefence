@@ -1,9 +1,6 @@
 fileFormatVersion: 2
 guid: e2ad6e4584580dc418e46d1ea84c035f
 TextureImporter:
-<<<<<<< HEAD
-  internalIDToNameTable: []
-=======
   internalIDToNameTable:
   - first:
       213: 5109294488564467775
@@ -56,7 +53,6 @@ TextureImporter:
   - first:
       213: 2072935291107855754
     second: proj_p_chr_ilde_permute_16
->>>>>>> LJH
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -152,13 +148,6 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-<<<<<<< HEAD
-    sprites: []
-    outline: []
-    physicsShape: []
-    bones: []
-    spriteID: 
-=======
     sprites:
     - serializedVersion: 2
       name: proj_p_chr_ilde_permute_0
@@ -521,7 +510,6 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 760c071138e266242b2aa907455ee3b1
->>>>>>> LJH
     internalID: 0
     vertices: []
     indices: 
