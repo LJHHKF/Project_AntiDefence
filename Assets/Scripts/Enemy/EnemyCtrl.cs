@@ -112,9 +112,15 @@ public class EnemyCtrl : MonoBehaviour
                 hpBar.SetActive(false);
                 if (m_anim != null)
                 {
-                    m_anim.SetTrigger("IsDie");
+                    if (!attack_now)
+                    {
+                        m_anim.SetTrigger("IsDie");
+                    }
                 }
-                StartCoroutine(DieDelay(1.0f));
+                if (attack_now)
+                    StartCoroutine(DieDelay(1.5f));
+                else
+                    StartCoroutine(DieDelay(1.0f));
             }
         }
         else if (state == State.MOVE)
@@ -237,6 +243,7 @@ public class EnemyCtrl : MonoBehaviour
             if (target.CompareTag("Player"))
             {
                 pl_manager.Player_Damaged(attackDamage);
+                m_anim.SetTrigger("IsAttack");
                 if (isSuiBomber)
                 {
                     state = State.DIE;
@@ -247,6 +254,7 @@ public class EnemyCtrl : MonoBehaviour
             else if (target.CompareTag("Barricade"))
             {
                 barricade.Barricade_damaged(attackDamage);
+                m_anim.SetTrigger("IsAttack");
                 if (isSuiBomber)
                 {
                     state = State.DIE;

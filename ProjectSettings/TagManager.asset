@@ -26,6 +26,7 @@ TagManager:
   - SNT
   - PT
   - ObjectPools
+  - PT_Sub_AtkR
   layers:
   - Default
   - TransparentFX

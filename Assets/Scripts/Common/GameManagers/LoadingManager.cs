@@ -12,14 +12,16 @@ public class LoadingManager : MonoBehaviour
     [HideInInspector]
     public Image img_loadingbar;
 
-    private Image img_loadingbar_firstScene;
-
     private string prev_Scene;
     private string selectedStage;
     private string selectedChapter;
     private int chapter_num = -1;
 
     private bool had_prev = false;
+
+    private bool is_loaded = false;
+    private bool is_event_done = false;
+    private bool is_looped = true;
 
     public void SetLoadingImage(Image img)
     {
@@ -29,6 +31,16 @@ public class LoadingManager : MonoBehaviour
     public bool GetHadPrev()
     {
         return had_prev;
+    }
+
+    public bool GetIsLoaded()
+    {
+        return is_loaded;
+    }
+
+    public void SetEventDone()
+    {
+        is_event_done = true;
     }
 
     public void LoadSceneGMCallLoading()
@@ -78,8 +90,6 @@ public class LoadingManager : MonoBehaviour
 
     public void FirstSceneLoad(string name)
     {
-        img_loadingbar_firstScene = GameObject.FindGameObjectWithTag("LoadingBar").GetComponent<Image>();
-        img_loadingbar_firstScene.fillAmount = 0.0f;
         StartCoroutine(LoadAsyncScene_First(name));
     }
 
@@ -176,32 +186,26 @@ public class LoadingManager : MonoBehaviour
     IEnumerator LoadAsyncScene_First(string target)
     {
         yield return null;
-        img_loadingbar.fillAmount = 0.0f;
         AsyncOperation asyncScene = SceneManager.LoadSceneAsync(target);
         asyncScene.allowSceneActivation = false;
-        float timeCnt = 0;
-        while (!asyncScene.isDone)
+        while (is_looped)
         {
             yield return null;
-            timeCnt += Time.deltaTime;
             if (asyncScene.progress >= 0.9f)
             {
-                img_loadingbar_firstScene.fillAmount = Mathf.Lerp(img_loadingbar_firstScene.fillAmount, 1, timeCnt);
-                if (img_loadingbar_firstScene.fillAmount >= 1.0f)
+                is_loaded = true;
+                if (is_event_done)
                 {
                     asyncScene.allowSceneActivation = true;
-                }
-            }
-            else
-            {
-                img_loadingbar_firstScene.fillAmount = Mathf.Lerp(img_loadingbar_firstScene.fillAmount, asyncScene.progress, timeCnt);
-                if (img_loadingbar.fillAmount >= asyncScene.progress)
-                {
-                    timeCnt = 0f;
+                    is_looped = false;
+                    break;
                 }
             }
         }
         img_loadingbar = null;
+        is_loaded = false;
+        is_event_done = false;
+        is_looped = true;
         StopCoroutine(LoadAsyncScene(target));
     }
 }
