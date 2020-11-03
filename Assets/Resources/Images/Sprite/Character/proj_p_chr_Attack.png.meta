@@ -44,6 +44,48 @@ TextureImporter:
   - first:
       213: 3048945025312052584
     second: proj_p_chr_Attack_13
+  - first:
+      213: -6901522232689405907
+    second: proj_p_chr_Attack_0
+  - first:
+      213: 5490930225475342198
+    second: proj_p_chr_Attack_1
+  - first:
+      213: 1065066540987176864
+    second: proj_p_chr_Attack_2
+  - first:
+      213: -7707809086366390406
+    second: proj_p_chr_Attack_3
+  - first:
+      213: -2707163194765008974
+    second: proj_p_chr_Attack_4
+  - first:
+      213: 211180976041058175
+    second: proj_p_chr_Attack_5
+  - first:
+      213: 5458878920784769996
+    second: proj_p_chr_Attack_6
+  - first:
+      213: -2577763645704294010
+    second: proj_p_chr_Attack_7
+  - first:
+      213: 8601027555088862558
+    second: proj_p_chr_Attack_8
+  - first:
+      213: -39712328296006785
+    second: proj_p_chr_Attack_9
+  - first:
+      213: 628022533165990135
+    second: proj_p_chr_Attack_10
+  - first:
+      213: -8669505584663718873
+    second: proj_p_chr_Attack_11
+  - first:
+      213: -1296929939292619319
+    second: proj_p_chr_Attack_12
+  - first:
+      213: 956565250759017801
+    second: proj_p_chr_Attack_13
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -144,10 +186,10 @@ TextureImporter:
       name: proj_p_chr_Attack_0
       rect:
         serializedVersion: 2
-        x: 90
-        y: 905
-        width: 166
-        height: 395
+        x: 0
+        y: 900
+        width: 300
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,8 +197,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e53a5fa4a3aa56a0800000000000000
-      internalID: -6459670787797666334
+      spriteID: d20561f581ed830a0800000000000000
+      internalID: -6901522232689405907
       vertices: []
       indices: 
       edges: []
@@ -165,10 +207,10 @@ TextureImporter:
       name: proj_p_chr_Attack_1
       rect:
         serializedVersion: 2
-        x: 374
-        y: 905
-        width: 182
-        height: 394
+        x: 300
+        y: 900
+        width: 300
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,8 +218,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97535f4c075dc6bd0800000000000000
-      internalID: -2635497001601124999
+      spriteID: 67fc9e7a2f3b33c40800000000000000
+      internalID: 5490930225475342198
       vertices: []
       indices: 
       edges: []
@@ -186,10 +228,10 @@ TextureImporter:
       name: proj_p_chr_Attack_2
       rect:
         serializedVersion: 2
-        x: 653
-        y: 905
-        width: 212
-        height: 391
+        x: 600
+        y: 900
+        width: 300
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,8 +239,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8667e7c628eef6d80800000000000000
-      internalID: -8255117348013443480
+      spriteID: 0a7d1b54060e7ce00800000000000000
+      internalID: 1065066540987176864
       vertices: []
       indices: 
       edges: []
@@ -207,10 +249,10 @@ TextureImporter:
       name: proj_p_chr_Attack_3
       rect:
         serializedVersion: 2
-        x: 946
-        y: 904
-        width: 221
-        height: 378
+        x: 900
+        y: 900
+        width: 300
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,8 +260,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b189db9a2a5ff1d10800000000000000
-      internalID: 2098666030359222299
+      spriteID: a776a92497c580590800000000000000
+      internalID: -7707809086366390406
       vertices: []
       indices: 
       edges: []
@@ -228,10 +270,10 @@ TextureImporter:
       name: proj_p_chr_Attack_4
       rect:
         serializedVersion: 2
-        x: 1273
-        y: 921
-        width: 223
-        height: 402
+        x: 1200
+        y: 900
+        width: 300
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -239,8 +281,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74d013d95dd168670800000000000000
-      internalID: 8540546546657201479
+      spriteID: 2bf1503ea693e6ad0800000000000000
+      internalID: -2707163194765008974
       vertices: []
       indices: 
       edges: []
@@ -249,10 +291,10 @@ TextureImporter:
       name: proj_p_chr_Attack_5
       rect:
         serializedVersion: 2
-        x: 101
-        y: 474
-        width: 197
-        height: 412
+        x: 0
+        y: 450
+        width: 300
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -260,8 +302,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f45a318475d88250800000000000000
-      internalID: 5947238004303746295
+      spriteID: f7f5f349af34ee200800000000000000
+      internalID: 211180976041058175
       vertices: []
       indices: 
       edges: []
@@ -270,10 +312,10 @@ TextureImporter:
       name: proj_p_chr_Attack_6
       rect:
         serializedVersion: 2
-        x: 386
-        y: 465
-        width: 192
-        height: 403
+        x: 300
+        y: 450
+        width: 300
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -281,8 +323,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 77521bab21e75f9b0800000000000000
-      internalID: -5046989188492089993
+      spriteID: cc37e31c475d1cb40800000000000000
+      internalID: 5458878920784769996
       vertices: []
       indices: 
       edges: []
@@ -291,10 +333,10 @@ TextureImporter:
       name: proj_p_chr_Attack_7
       rect:
         serializedVersion: 2
-        x: 641
-        y: 456
-        width: 224
-        height: 394
+        x: 600
+        y: 450
+        width: 300
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -302,8 +344,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bda47f9a25101c700800000000000000
-      internalID: 558729283321154267
+      spriteID: 68131ee2f91f93cd0800000000000000
+      internalID: -2577763645704294010
       vertices: []
       indices: 
       edges: []
@@ -312,10 +354,10 @@ TextureImporter:
       name: proj_p_chr_Attack_8
       rect:
         serializedVersion: 2
-        x: 919
-        y: 454
-        width: 232
-        height: 392
+        x: 900
+        y: 450
+        width: 300
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -323,8 +365,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e824ca07d87d504a0800000000000000
-      internalID: -6627654274125118834
+      spriteID: e5d0b6cbdfcfc5770800000000000000
+      internalID: 8601027555088862558
       vertices: []
       indices: 
       edges: []
@@ -333,10 +375,10 @@ TextureImporter:
       name: proj_p_chr_Attack_9
       rect:
         serializedVersion: 2
-        x: 1217
-        y: 457
-        width: 239
-        height: 392
+        x: 1200
+        y: 450
+        width: 300
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -344,8 +386,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 506102922036b2dc0800000000000000
-      internalID: -3662725011004713467
+      spriteID: f7b76ba09d9e27ff0800000000000000
+      internalID: -39712328296006785
       vertices: []
       indices: 
       edges: []
@@ -354,10 +396,10 @@ TextureImporter:
       name: proj_p_chr_Attack_10
       rect:
         serializedVersion: 2
-        x: 54
-        y: 7
-        width: 201
-        height: 388
+        x: 0
+        y: 0
+        width: 300
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -365,8 +407,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4305d6116388ff50800000000000000
-      internalID: 6915421680845521738
+      spriteID: 7f0cc40aa2f27b800800000000000000
+      internalID: 628022533165990135
       vertices: []
       indices: 
       edges: []
@@ -375,10 +417,10 @@ TextureImporter:
       name: proj_p_chr_Attack_11
       rect:
         serializedVersion: 2
-        x: 381
-        y: 7
-        width: 175
-        height: 386
+        x: 300
+        y: 0
+        width: 300
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -386,8 +428,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f119a1d047232bc0800000000000000
-      internalID: -3809157700476399118
+      spriteID: 7249adf8a9abfa780800000000000000
+      internalID: -8669505584663718873
       vertices: []
       indices: 
       edges: []
@@ -396,10 +438,10 @@ TextureImporter:
       name: proj_p_chr_Attack_12
       rect:
         serializedVersion: 2
-        x: 638
-        y: 7
-        width: 219
-        height: 388
+        x: 600
+        y: 0
+        width: 300
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -407,8 +449,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab4d1118c3dd56120800000000000000
-      internalID: 2406572827832603834
+      spriteID: 9cdf4e57711600ee0800000000000000
+      internalID: -1296929939292619319
       vertices: []
       indices: 
       edges: []
@@ -417,10 +459,10 @@ TextureImporter:
       name: proj_p_chr_Attack_13
       rect:
         serializedVersion: 2
-        x: 918
-        y: 7
-        width: 239
-        height: 393
+        x: 900
+        y: 0
+        width: 300
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -428,8 +470,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8655b65b857005a20800000000000000
-      internalID: 3048945025312052584
+      spriteID: 94549f70707664d00800000000000000
+      internalID: 956565250759017801
       vertices: []
       indices: 
       edges: []
