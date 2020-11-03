@@ -8145,6 +8145,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4301678776811937641, guid: 40d77a03ed6afe8489dfc1a4e8e804d0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301678776811937641, guid: 40d77a03ed6afe8489dfc1a4e8e804d0,
+        type: 3}
+      propertyPath: m_Name
+      value: PTower_0
+      objectReference: {fileID: 0}
     - target: {fileID: 8644984374201872779, guid: 40d77a03ed6afe8489dfc1a4e8e804d0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8204,13 +8214,13 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 40d77a03ed6afe8489dfc1a4e8e804d0, type: 3}
 --- !u!4 &1869566932 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 8644984374201872779, guid: 40d77a03ed6afe8489dfc1a4e8e804d0,
+  m_CorrespondingSourceObject: {fileID: 5137194850437605497, guid: 40d77a03ed6afe8489dfc1a4e8e804d0,
     type: 3}
   m_PrefabInstance: {fileID: 1869566931}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1869566933 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1206532998347305056, guid: 40d77a03ed6afe8489dfc1a4e8e804d0,
+  m_CorrespondingSourceObject: {fileID: 4301678776811937641, guid: 40d77a03ed6afe8489dfc1a4e8e804d0,
     type: 3}
   m_PrefabInstance: {fileID: 1869566931}
   m_PrefabAsset: {fileID: 0}
@@ -8548,6 +8558,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4301678776811937641, guid: 40d77a03ed6afe8489dfc1a4e8e804d0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301678776811937641, guid: 40d77a03ed6afe8489dfc1a4e8e804d0,
+        type: 3}
+      propertyPath: m_Name
+      value: PTower_1
+      objectReference: {fileID: 0}
     - target: {fileID: 8644984374201872779, guid: 40d77a03ed6afe8489dfc1a4e8e804d0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8607,13 +8627,13 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 40d77a03ed6afe8489dfc1a4e8e804d0, type: 3}
 --- !u!4 &1956458535 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 8644984374201872779, guid: 40d77a03ed6afe8489dfc1a4e8e804d0,
+  m_CorrespondingSourceObject: {fileID: 5137194850437605497, guid: 40d77a03ed6afe8489dfc1a4e8e804d0,
     type: 3}
   m_PrefabInstance: {fileID: 1956458534}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1956458536 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1206532998347305056, guid: 40d77a03ed6afe8489dfc1a4e8e804d0,
+  m_CorrespondingSourceObject: {fileID: 4301678776811937641, guid: 40d77a03ed6afe8489dfc1a4e8e804d0,
     type: 3}
   m_PrefabInstance: {fileID: 1956458534}
   m_PrefabAsset: {fileID: 0}

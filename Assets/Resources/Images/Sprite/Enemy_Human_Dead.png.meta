@@ -1,40 +1,40 @@
 fileFormatVersion: 2
-guid: 8413caffef1f17c4ea90741a3f0d981f
+guid: 9245f1a31730def4992f43fd574f3ad6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6432160888666927505
-    second: Enemy_Human_Dead_0
+      213: -7189259679197885537
+    second: Enemy_BugHuman_Dead_0
   - first:
-      213: -5309797563188664417
-    second: Enemy_Human_Dead_1
+      213: -4327566348613067442
+    second: Enemy_BugHuman_Dead_1
   - first:
-      213: -7491876278193819526
-    second: Enemy_Human_Dead_2
+      213: 6372732909023109977
+    second: Enemy_BugHuman_Dead_2
   - first:
-      213: -8817471062841097146
-    second: Enemy_Human_Dead_3
+      213: 2538024983181370837
+    second: Enemy_BugHuman_Dead_3
   - first:
-      213: -5198713989917033580
-    second: Enemy_Human_Dead_4
+      213: 7482432221325543744
+    second: Enemy_BugHuman_Dead_4
   - first:
-      213: 4854168964681289363
-    second: Enemy_Human_Dead_5
+      213: -5931156477095556291
+    second: Enemy_BugHuman_Dead_5
   - first:
-      213: -2563616205916625685
-    second: Enemy_Human_Dead_6
+      213: 6654410320370398441
+    second: Enemy_BugHuman_Dead_6
   - first:
-      213: 8828698025185649031
-    second: Enemy_Human_Dead_7
+      213: -9018742847345920753
+    second: Enemy_BugHuman_Dead_7
   - first:
-      213: -7246486839214800209
-    second: Enemy_Human_Dead_8
+      213: -8757712504967823549
+    second: Enemy_BugHuman_Dead_8
   - first:
-      213: 5467345703510796193
-    second: Enemy_Human_Dead_9
+      213: 5165886303822297925
+    second: Enemy_BugHuman_Dead_9
   - first:
-      213: 1288541736103374413
-    second: Enemy_Human_Dead_10
+      213: -9209824637814980784
+    second: Enemy_BugHuman_Dead_10
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -78,7 +78,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 150
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -132,13 +132,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Enemy_Human_Dead_0
+      name: Enemy_BugHuman_Dead_0
       rect:
         serializedVersion: 2
-        x: 115
+        x: 111
         y: 456
-        width: 124
-        height: 373
+        width: 155
+        height: 365
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,20 +146,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 191372bcf30a34950800000000000000
-      internalID: 6432160888666927505
+      spriteID: f9b0f5f796e9a3c90800000000000000
+      internalID: -7189259679197885537
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_Human_Dead_1
+      name: Enemy_BugHuman_Dead_1
       rect:
         serializedVersion: 2
-        x: 389
-        y: 454
-        width: 130
-        height: 361
+        x: 401
+        y: 458
+        width: 169
+        height: 363
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,20 +167,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f97a7e0bf3fcf46b0800000000000000
-      internalID: -5309797563188664417
+      spriteID: e4ddbf8955561f3c0800000000000000
+      internalID: -4327566348613067442
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_Human_Dead_2
+      name: Enemy_BugHuman_Dead_2
       rect:
         serializedVersion: 2
-        x: 689
-        y: 454
-        width: 130
-        height: 361
+        x: 701
+        y: 458
+        width: 169
+        height: 363
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -188,20 +188,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a70f419f732870890800000000000000
-      internalID: -7491876278193819526
+      spriteID: 953a3ca01de707850800000000000000
+      internalID: 6372732909023109977
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_Human_Dead_3
+      name: Enemy_BugHuman_Dead_3
       rect:
         serializedVersion: 2
-        x: 1005
-        y: 454
-        width: 125
-        height: 344
+        x: 994
+        y: 458
+        width: 161
+        height: 354
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -209,20 +209,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 644021a09cc02a580800000000000000
-      internalID: -8817471062841097146
+      spriteID: 5d5a7917640e83320800000000000000
+      internalID: 2538024983181370837
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_Human_Dead_4
+      name: Enemy_BugHuman_Dead_4
       rect:
         serializedVersion: 2
-        x: 1305
-        y: 454
-        width: 125
-        height: 344
+        x: 1294
+        y: 458
+        width: 161
+        height: 354
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -230,41 +230,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49b342e8b257ad7b0800000000000000
-      internalID: -5198713989917033580
+      spriteID: 049cb003670f6d760800000000000000
+      internalID: 7482432221325543744
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_Human_Dead_5
+      name: Enemy_BugHuman_Dead_5
       rect:
         serializedVersion: 2
-        x: 1597
-        y: 454
-        width: 141
-        height: 329
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 39ecd8374f87d5340800000000000000
-      internalID: 4854168964681289363
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy_Human_Dead_6
-      rect:
-        serializedVersion: 2
-        x: 62
-        y: 3
+        x: 1589
+        y: 453
         width: 178
-        height: 328
+        height: 318
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -272,20 +251,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be4a7e1b4a43c6cd0800000000000000
-      internalID: -2563616205916625685
+      spriteID: d3b4673db9c40bda0800000000000000
+      internalID: -5931156477095556291
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_Human_Dead_7
+      name: Enemy_BugHuman_Dead_6
       rect:
         serializedVersion: 2
-        x: 362
+        x: 73
         y: 3
-        width: 178
-        height: 328
+        width: 194
+        height: 317
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -293,20 +272,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7812264d316d58a70800000000000000
-      internalID: 8828698025185649031
+      spriteID: 9e4fe570ee6395c50800000000000000
+      internalID: 6654410320370398441
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_Human_Dead_8
+      name: Enemy_BugHuman_Dead_7
       rect:
         serializedVersion: 2
-        x: 678
+        x: 373
         y: 3
-        width: 162
-        height: 327
+        width: 194
+        height: 317
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -314,20 +293,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa20f0ffc9e4f6b90800000000000000
-      internalID: -7246486839214800209
+      spriteID: f05f957e92df6d280800000000000000
+      internalID: -9018742847345920753
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_Human_Dead_9
+      name: Enemy_BugHuman_Dead_8
       rect:
         serializedVersion: 2
-        x: 978
-        y: 3
-        width: 162
-        height: 327
+        x: 681
+        y: 4
+        width: 182
+        height: 313
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -335,20 +314,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a7e40a33f9efdb40800000000000000
-      internalID: 5467345703510796193
+      spriteID: 34f756880ea567680800000000000000
+      internalID: -8757712504967823549
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_Human_Dead_10
+      name: Enemy_BugHuman_Dead_9
       rect:
         serializedVersion: 2
-        x: 1264
-        y: 6
-        width: 176
-        height: 311
+        x: 981
+        y: 4
+        width: 182
+        height: 313
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -356,8 +335,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4ee4bac1e1d1e110800000000000000
-      internalID: 1288541736103374413
+      spriteID: 54b3269293ae0b740800000000000000
+      internalID: 5165886303822297925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_BugHuman_Dead_10
+      rect:
+        serializedVersion: 2
+        x: 1263
+        y: 2
+        width: 199
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05fb563a941203080800000000000000
+      internalID: -9209824637814980784
       vertices: []
       indices: 
       edges: []

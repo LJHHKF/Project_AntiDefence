@@ -24,6 +24,7 @@ public class LobbyManager : MonoBehaviour
     private Text txt_money;
     private Text txt_level;
     private Image img_skin;
+    private SpriteRenderer spr_skin;
     private Animator m_animator;
     private GameObject panel_exit;
 
@@ -42,16 +43,24 @@ public class LobbyManager : MonoBehaviour
         t_subButtons = gameObject.transform.Find("Panel_SubButtons");
         txt_money = t_subButtons.Find("Panel_Money").Find("Text").GetComponent<Text>();
         txt_level = t_subButtons.Find("Panel_Level").Find("Text").GetComponent<Text>();
-        img_skin = gameObject.transform.Find("Panel_Main").Find("Image_Character").GetComponent<Image>();
-        m_animator = gameObject.transform.Find("Panel_Main").Find("Image_Character").GetComponent<Animator>();
         panel_exit = gameObject.transform.Find("Panel_Exit").gameObject;
 
-        m_animator.runtimeAnimatorController = skinM.anims[skinM.GetSkinIndex()];
+        //2D UI판
+        //img_skin = gameObject.transform.Find("Panel_Main").Find("Image_Character").GetComponent<Image>();
+        //m_animator = gameObject.transform.Find("Panel_Main").Find("Image_Character").GetComponent<Animator>();
+
+        //3D 오브젝트판
+        spr_skin = GameObject.FindGameObjectWithTag("Player").transform.Find("Clear_Panel").Find("Img_Character").GetComponent<SpriteRenderer>();
+        m_animator = GameObject.FindGameObjectWithTag("Player").transform.Find("Clear_Panel").Find("Img_Character").GetComponent<Animator>();
+
         panel_exit.SetActive(false);
 
         txt_money.text = itemM.own_money.ToString();
         txt_level.text = "아직 미구현";
-        img_skin.sprite = skinM.skins[skinM.GetSkinIndex()];
+        m_animator.runtimeAnimatorController = skinM.anims[skinM.GetSkinIndex()];
+
+        //img_skin.sprite = skinM.skins[skinM.GetSkinIndex()];
+        spr_skin.sprite = skinM.skins[skinM.GetSkinIndex()];
 
         bgmM.Play_LobbyAndShop();
     }

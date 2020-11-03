@@ -1,40 +1,40 @@
 fileFormatVersion: 2
-guid: cdd22995d5384234eb98582b24bf1c0d
+guid: dc6dcbe6853c0b045aea534f0481eec5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5766430727890715408
-    second: Enemy_Human_Move_0
+      213: 5910412930216754107
+    second: Enemy_BugHuman_move_0
   - first:
-      213: 5888227445310062835
-    second: Enemy_Human_Move_1
+      213: -3510719879952584163
+    second: Enemy_BugHuman_move_1
   - first:
-      213: -8899431178079635891
-    second: Enemy_Human_Move_2
+      213: 4613255348059734546
+    second: Enemy_BugHuman_move_2
   - first:
-      213: 6260346384334583885
-    second: Enemy_Human_Move_3
+      213: 1902147186213835334
+    second: Enemy_BugHuman_move_3
   - first:
-      213: -7739989426238940453
-    second: Enemy_Human_Move_4
+      213: 5651002312654157116
+    second: Enemy_BugHuman_move_4
   - first:
-      213: 7497564802982130287
-    second: Enemy_Human_Move_5
+      213: -126731547213525801
+    second: Enemy_BugHuman_move_5
   - first:
-      213: 4399404874960636266
-    second: Enemy_Human_Move_6
+      213: 5614524939048805754
+    second: Enemy_BugHuman_move_6
   - first:
-      213: 8439277556035335337
-    second: Enemy_Human_Move_7
+      213: 1327612673566125607
+    second: Enemy_BugHuman_move_7
   - first:
-      213: -7722595019010240292
-    second: Enemy_Human_Move_8
+      213: 9139289418218147085
+    second: Enemy_BugHuman_move_8
   - first:
-      213: -4289483133316420741
-    second: Enemy_Human_Move_9
+      213: 5684235243473094882
+    second: Enemy_BugHuman_move_9
   - first:
-      213: -4071798478313709933
-    second: Enemy_Human_Move_10
+      213: -7153363866711676629
+    second: Enemy_BugHuman_move_10
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -78,7 +78,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 150
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -132,12 +132,117 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Enemy_Human_Move_0
+      name: Enemy_BugHuman_move_0
       rect:
         serializedVersion: 2
-        x: 115
-        y: 456
-        width: 124
+        x: 98
+        y: 452
+        width: 156
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbbf17dce31060250800000000000000
+      internalID: 5910412930216754107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_BugHuman_move_1
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 453
+        width: 174
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d123689aeda674fc0800000000000000
+      internalID: -3510719879952584163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_BugHuman_move_2
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 453
+        width: 174
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21285470c43950040800000000000000
+      internalID: 4613255348059734546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_BugHuman_move_3
+      rect:
+        serializedVersion: 2
+        x: 993
+        y: 459
+        width: 169
+        height: 363
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 642d8c0b9c8c56a10800000000000000
+      internalID: 1902147186213835334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_BugHuman_move_4
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 459
+        width: 169
+        height: 363
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3579aeb9a46c6e40800000000000000
+      internalID: 5651002312654157116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_BugHuman_move_5
+      rect:
+        serializedVersion: 2
+        x: 1582
+        y: 455
+        width: 172
         height: 373
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -146,20 +251,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 013c2d5f13a760050800000000000000
-      internalID: 5766430727890715408
+      spriteID: 7dc808a4452cd3ef0800000000000000
+      internalID: -126731547213525801
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_Human_Move_1
+      name: Enemy_BugHuman_move_6
       rect:
         serializedVersion: 2
-        x: 411
-        y: 455
-        width: 133
-        height: 374
+        x: 83
+        y: 2
+        width: 161
+        height: 369
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,20 +272,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f089621aaf27b150800000000000000
-      internalID: 5888227445310062835
+      spriteID: a75639e5faccaed40800000000000000
+      internalID: 5614524939048805754
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_Human_Move_2
+      name: Enemy_BugHuman_move_7
       rect:
         serializedVersion: 2
-        x: 711
-        y: 455
-        width: 133
-        height: 374
+        x: 383
+        y: 2
+        width: 161
+        height: 369
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -188,20 +293,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d46f687ae7ede7480800000000000000
-      internalID: -8899431178079635891
+      spriteID: 72e273f41b0ac6210800000000000000
+      internalID: 1327612673566125607
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_Human_Move_3
+      name: Enemy_BugHuman_move_8
       rect:
         serializedVersion: 2
-        x: 1002
-        y: 460
+        x: 701
+        y: 2
         width: 164
-        height: 364
+        height: 377
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -209,20 +314,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d48f9292ed731e650800000000000000
-      internalID: 6260346384334583885
+      spriteID: d0d0168cd4745de70800000000000000
+      internalID: 9139289418218147085
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_Human_Move_4
+      name: Enemy_BugHuman_move_9
       rect:
         serializedVersion: 2
-        x: 1302
-        y: 460
+        x: 1001
+        y: 2
         width: 164
-        height: 364
+        height: 377
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -230,41 +335,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bda9fb300a8069490800000000000000
-      internalID: -7739989426238940453
+      spriteID: 2e848fa66d572ee40800000000000000
+      internalID: 5684235243473094882
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_Human_Move_5
+      name: Enemy_BugHuman_move_10
       rect:
         serializedVersion: 2
-        x: 1619
-        y: 458
-        width: 125
-        height: 372
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f62b83ae673bc0860800000000000000
-      internalID: 7497564802982130287
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy_Human_Move_6
-      rect:
-        serializedVersion: 2
-        x: 113
+        x: 1307
         y: 7
-        width: 131
-        height: 366
+        width: 155
+        height: 370
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -272,92 +356,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a69862bbc63dd0d30800000000000000
-      internalID: 4399404874960636266
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy_Human_Move_7
-      rect:
-        serializedVersion: 2
-        x: 413
-        y: 7
-        width: 131
-        height: 366
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9a4b96859365e1570800000000000000
-      internalID: 8439277556035335337
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy_Human_Move_8
-      rect:
-        serializedVersion: 2
-        x: 689
-        y: 11
-        width: 173
-        height: 366
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cd091bb0fb4d3d490800000000000000
-      internalID: -7722595019010240292
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy_Human_Move_9
-      rect:
-        serializedVersion: 2
-        x: 989
-        y: 11
-        width: 173
-        height: 366
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b7b25a021d1b874c0800000000000000
-      internalID: -4289483133316420741
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy_Human_Move_10
-      rect:
-        serializedVersion: 2
-        x: 1318
-        y: 6
-        width: 124
-        height: 368
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 39e92277bd01e77c0800000000000000
-      internalID: -4071798478313709933
+      spriteID: b29298f96752abc90800000000000000
+      internalID: -7153363866711676629
       vertices: []
       indices: 
       edges: []

@@ -5,9 +5,6 @@ using UnityEngine;
 
 public class ChangeTower : MonoBehaviour
 {
-    public GameObject basicTower;
-    public GameObject sniperTower;
-    public GameObject pushTower;
     public GameObject c_Effects;
 
    // private GameObject curTower;
