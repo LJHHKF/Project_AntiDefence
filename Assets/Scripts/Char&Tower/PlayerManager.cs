@@ -14,6 +14,7 @@ public class PlayerManager : MonoBehaviour
     private State state = State.ALLIVE;
     [Header("플레이어 생명력 관리")]
     public float player_HP = 3.0f;
+    private bool is_ended = false;
 
     private GameObject lifePanel;
     private Image[] hearts;
@@ -29,12 +30,15 @@ public class PlayerManager : MonoBehaviour
     private GameObject stage;
     private StageManager stageManager;
 
-    //private Transform m_parent;
-    public GameObject img_character;
+    private Transform t_Character;
+    private GameObject img_character;
     private SpriteRenderer m_spriteRenderer;
     private Animator m_animator;
 
     public GameObject effect_AI_Barrier;
+    
+    private GameObject sfx_Manager;
+    private AudioSource sfx_AiBarrier_Break;
    
 
     // Start is called before the first frame update
@@ -47,6 +51,9 @@ public class PlayerManager : MonoBehaviour
         selectedItemManager = gm.GetComponent<SelectedItemManager>();
         skinM = gm.GetComponent<SkinManager>();
 
+        t_Character = GameObject.FindGameObjectWithTag("Player").transform;
+        img_character = t_Character.Find("Clear_Panel").Find("Img_Character").gameObject;
+
         m_spriteRenderer = img_character.GetComponent<SpriteRenderer>();
         m_spriteRenderer.sprite = skinM.skins[skinM.GetSkinIndex()];
         m_animator = img_character.GetComponent<Animator>();
@@ -54,6 +61,9 @@ public class PlayerManager : MonoBehaviour
 
         stage = GameObject.FindGameObjectWithTag("StageMObject");
         stageManager = stage.GetComponent<StageManager>();
+
+        sfx_Manager = GameObject.FindGameObjectWithTag("SFX_Manager");
+        sfx_AiBarrier_Break = sfx_Manager.transform.Find("S_AiBarrier_Break").gameObject.GetComponent<AudioSource>();
      
 
         if(selectedItemManager.i_recovery)
@@ -65,26 +75,17 @@ public class PlayerManager : MonoBehaviour
         {
             bonus_hearts.gameObject.SetActive(false);
         }
-
-        if (selectedItemManager.i_aiBarrier)
-        {
-            effect_AI_Barrier.SetActive(true);
-        }
-        else
-        {
-            effect_AI_Barrier.SetActive(false);
-        }
     }
 
     void Update()
     {
         if (state == State.DIE)
         {
-            Debug.Log("게임 오버");
-            //게임 오버 처리 코드 추가 필요
-
-            stageManager.StageFailed();
-            
+            if (is_ended == false)
+            {
+                stageManager.StageFailed();
+                is_ended = true;
+            }
         }
     }
 
@@ -94,6 +95,7 @@ public class PlayerManager : MonoBehaviour
         {
             selectedItemManager.BarrierBreak();
             effect_AI_Barrier.SetActive(false);
+            StartCoroutine(OnSoundBarrierBreak());
         }
         else if (state != State.DIE)
         {
@@ -110,22 +112,40 @@ public class PlayerManager : MonoBehaviour
             if (player_HP <= 0)
             {
                 state = State.DIE;
+                m_animator.SetTrigger("IsLose_Trigger");
             }
         }
     }
 
     public void OnAttackAnim()
     {
-        //StartCoroutine(OnAttackMotion());
         m_animator.SetTrigger("IsAttack_Trigger");
     }
 
-    //IEnumerator OnAttackMotion()
-    //{
-    //    //m_animator.SetBool("IsAttack", true);
-    //    m_animator.SetTrigger("IsAttack_Trigger");
-    //    //yield return new WaitForSeconds(1.0f);
-    //    //m_animator.SetBool("IsAttack", false);
-    //    yield break;
-    //}
+
+    public void OnWinAnim()
+    {
+        t_Character.position = new Vector3(0, 1.0f, 0);
+        m_animator.SetTrigger("IsWin_Trigger");
+    }
+
+    public void SetAiBarrier()
+    {
+        if (selectedItemManager.i_aiBarrier)
+        {
+            effect_AI_Barrier.SetActive(true);
+        }
+        else
+        {
+            effect_AI_Barrier.SetActive(false);
+        }
+    }
+
+    private IEnumerator OnSoundBarrierBreak()
+    {
+        sfx_AiBarrier_Break.Play();
+        yield return new WaitForSeconds(1.0f);
+        sfx_AiBarrier_Break.Stop();
+        yield break;
+    }
 }

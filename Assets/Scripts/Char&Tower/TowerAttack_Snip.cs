@@ -23,6 +23,12 @@ public class TowerAttack_Snip : MonoBehaviour
     private GameObject gm;
     private SelectedItemManager si_manager;
 
+    private float touch_Time = 0f;
+
+    private Transform t_objectPool_AtkEf;
+    private List<GameObject> listPool_AtkEf = new List<GameObject>();
+    private bool is_serched_atk = false;
+
     private void Start()
     {
         imageObject = GameObject.FindGameObjectWithTag("SNT_Cool");
@@ -34,11 +40,17 @@ public class TowerAttack_Snip : MonoBehaviour
         m_Coll = this.gameObject.GetComponent<Collider>();
         m_Coll.enabled = false;
 
+        towerBoard = GameObject.FindGameObjectWithTag("TowerBoard");
+        ta_manager = towerBoard.GetComponent<TA_Manager>();
+
         m_meshR = gameObject.GetComponent<MeshRenderer>();
         m_color = m_meshR.material.color;
 
         gm = GameObject.FindGameObjectWithTag("GameManager");
         si_manager = gm.GetComponent<SelectedItemManager>();
+
+        t_objectPool_AtkEf = GameObject.FindGameObjectWithTag("ObjectPools").transform.Find("AtkEffects");
+
         if (si_manager.i_extend_sn)
         {
             Vector3 upScale = Vector3.Scale(gameObject.transform.localScale, new Vector3(1.5f, 1f, 1f));
@@ -56,10 +68,22 @@ public class TowerAttack_Snip : MonoBehaviour
         }
         else if (Input.GetMouseButtonUp(0))
         {
+            touch_Time = 0f;
             m_Coll.enabled = true;
+        }
+
+        touch_Time += Time.deltaTime;
+
+        if (touch_Time >= 0.5f)
+        {
+            m_Coll.enabled = false;
         }
     }
 
+    private void OnEnable()
+    {
+        StartCoroutine(DelayEnable(0.2f));
+    }
     private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Enemy") && (cTimeImg.fillAmount >= 1.0f || cTimeImg.fillAmount <= 0.01f))
@@ -70,13 +94,7 @@ public class TowerAttack_Snip : MonoBehaviour
             StartCoroutine(FR_Stay());
             StartCoroutine(On_Clear());
             StartCoroutine(Off_Anim());
-            GameObject effect = Instantiate(a_Effect, firePos.position, firePos.rotation);
-            //if (si_manager.i_extend_sn)
-            //{
-            //    Vector3 upScale = Vector3.Scale(a_Effect.transform.localScale, new Vector3(1.5f, 1.0f, 1.0f));
-            //    effect.transform.localScale = upScale;
-            //}
-            Destroy(effect, 1.0f);
+            PullingAtkEffect(1.0f);
 
             ta_manager.SNTActived();
             
@@ -108,5 +126,54 @@ public class TowerAttack_Snip : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         animator.SetBool("IsAttack", false);
         StopCoroutine(Off_Anim());
+    }
+
+    private void PullingAtkEffect(float time)
+    {
+        if (listPool_AtkEf.Count <= 0)
+        {
+            AttackEffectPooling();
+        }
+        is_serched_atk = false;
+        for (int i = 0; i < listPool_AtkEf.Count; i++)
+        {
+            if (listPool_AtkEf[i].activeSelf == false)
+            {
+                listPool_AtkEf[i].transform.position = firePos.position;
+                listPool_AtkEf[i].transform.rotation = firePos.rotation;
+                listPool_AtkEf[i].SetActive(true);
+                StartCoroutine(StopEffect(listPool_AtkEf[i], time));
+                is_serched_atk = true;
+                break;
+            }
+        }
+        if (is_serched_atk == false)
+        {
+            AttackEffectPooling();
+            PullingAtkEffect(time);
+        }
+    }
+
+    private void AttackEffectPooling()
+    {
+        var effect = Instantiate(a_Effect, t_objectPool_AtkEf);
+        listPool_AtkEf.Add(effect);
+        effect.name = "Snip_Effect_" + listPool_AtkEf.Count.ToString("000");
+        effect.SetActive(false);
+        
+    }
+
+    IEnumerator StopEffect(GameObject effect, float time)
+    {
+        yield return new WaitForSeconds(time);
+        effect.SetActive(false);
+        yield break;
+    }
+
+    IEnumerator DelayEnable(float sec)
+    {
+        yield return new WaitForSeconds(sec);
+        m_meshR.material.color = new Color(m_color.r, m_color.g, m_color.b, m_color.a);
+        yield break;
     }
 }

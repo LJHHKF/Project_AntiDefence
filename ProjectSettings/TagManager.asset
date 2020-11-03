@@ -21,6 +21,12 @@ TagManager:
   - Barricade
   - SearchRange
   - ClearPanel
+  - SFX_Manager
+  - BT
+  - SNT
+  - PT
+  - ObjectPools
+  - PT_Sub_AtkR
   layers:
   - Default
   - TransparentFX

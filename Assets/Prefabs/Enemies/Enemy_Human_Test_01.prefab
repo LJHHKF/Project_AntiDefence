@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 1031868892509406851}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children: []
   m_Father: {fileID: 4116527836157317482}
   m_RootOrder: 0
@@ -71,13 +71,13 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 5766430727890715408, guid: cdd22995d5384234eb98582b24bf1c0d,
+  m_Sprite: {fileID: 5766430727890715408, guid: d326c203f19ba1647af5c7b30d397f64,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.26}
+  m_Size: {x: 3, y: 4.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -181,12 +181,10 @@ MonoBehaviour:
   hpBarPrefab: {fileID: 3409465954649286926, guid: f7a7a0026701b5f4797e1af0de879731,
     type: 3}
   hpBarOffset: {x: 0, y: 2.2, z: 0}
-  dropMoneySetPrefab: {fileID: 314604016676123830, guid: d79bfa13606450247bbce072aaeee598,
-    type: 3}
-  dieEffectPrefab: {fileID: 1000011128802252, guid: 96730f8640590934eacb6f860058e7f9,
+  dieEffectPrefab: {fileID: 1222048909045955687, guid: 94af62a6c199fd1469b7ff6560617c81,
     type: 3}
   m_anim: {fileID: 1458095969950917778}
-  attackDist: 2
+  attackDist: 3
   attackDamage: 1
   moveSpeed: 1
   rotSpeed: 1
