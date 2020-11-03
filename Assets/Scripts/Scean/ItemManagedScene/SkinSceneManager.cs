@@ -234,8 +234,8 @@ public class SkinSceneManager : MonoBehaviour
         }
         else
         {
-            sub_txt_warning.text = "더는 왼쪽 방향으로 스킨이 없습니다.";
-            sub_panel_warning.SetActive(true);
+            //sub_txt_warning.text = "더는 왼쪽 방향으로 스킨이 없습니다.";
+            //sub_panel_warning.SetActive(true);
         }
 
     }
@@ -250,21 +250,6 @@ public class SkinSceneManager : MonoBehaviour
     {
         audioM.SFX_BTN_Click();
         loadingM.LoadScene("Lobby");
-    }
-
-    public void BTN_Reset()
-    {
-        audioM.SFX_BTN_Click();
-        string key;
-
-        for (int i = 1; i < max_skin-1; i++)
-        {
-            skins[i].is_had = 0;
-            key = "HadSkin" + i.ToString();
-            PlayerPrefs.SetInt(key, 0);
-        }
-
-        UpdateScene();
     }
 
     private void UpdateItemInfo()
