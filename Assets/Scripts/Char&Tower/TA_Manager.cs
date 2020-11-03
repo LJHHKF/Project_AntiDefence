@@ -8,6 +8,8 @@ public class TA_Manager : MonoBehaviour
 
     private GameObject[] imageObject = new GameObject[3];
     private Image[] cTimeImg = new Image[3];
+    private Text[] cTimeTxt = new Text[3];
+    private GameObject[] imgs_NonActive = new GameObject[3];
 
     public float b_AtCT = 4f;
     public float sn_AtCT = 6f;
@@ -41,10 +43,16 @@ public class TA_Manager : MonoBehaviour
     {
         imageObject[0] = GameObject.FindGameObjectWithTag("BT_Cool");
         cTimeImg[0] = imageObject[0].GetComponent<Image>();
+        cTimeTxt[0] = imageObject[0].GetComponentInChildren<Text>();
+        imgs_NonActive[0] = GameObject.FindGameObjectWithTag("UI_Canvas").transform.Find("Buttons").Find("Button_BT").Find("Image_NonActive").gameObject;
         imageObject[1] = GameObject.FindGameObjectWithTag("SNT_Cool");
         cTimeImg[1] = imageObject[1].GetComponent<Image>();
+        cTimeTxt[1] = imageObject[1].GetComponentInChildren<Text>();
+        imgs_NonActive[1] = GameObject.FindGameObjectWithTag("UI_Canvas").transform.Find("Buttons").Find("Button_SNT").Find("Image_NonActive").gameObject;
         imageObject[2] = GameObject.FindGameObjectWithTag("PT_Cool");
         cTimeImg[2] = imageObject[2].GetComponent<Image>();
+        cTimeTxt[2] = imageObject[2].GetComponentInChildren<Text>();
+        imgs_NonActive[2] = GameObject.FindGameObjectWithTag("UI_Canvas").transform.Find("Buttons").Find("Button_PT").Find("Image_NonActive").gameObject;
 
         attackCT[0] = b_AtCT;
         attackCT[1] = sn_AtCT;
@@ -83,7 +91,26 @@ public class TA_Manager : MonoBehaviour
     {
         for (int i = 0; i < 3; i++)
         {
-            cTimeImg[i].fillAmount += Time.deltaTime / attackCT[i];
+            if(cTimeImg[i].fillAmount != 1.0f)
+            {
+                cTimeImg[i].fillAmount += Time.deltaTime / attackCT[i];
+                if (cTimeTxt[i].gameObject.activeSelf == false)
+                {
+                    cTimeTxt[i].gameObject.SetActive(true);
+                }
+                if (imgs_NonActive[i].activeSelf == false)
+                {
+                    imgs_NonActive[i].SetActive(true);
+                }
+
+                cTimeTxt[i].text = (cTimeImg[i].fillAmount * attackCT[i]).ToString("00.00");
+            }
+            else
+            {
+                cTimeTxt[i].gameObject.SetActive(false);
+                imgs_NonActive[i].SetActive(false);
+            }
+            
         }
     }
 

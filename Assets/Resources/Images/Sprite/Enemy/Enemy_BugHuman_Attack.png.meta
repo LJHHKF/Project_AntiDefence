@@ -38,6 +38,42 @@ TextureImporter:
   - first:
       213: -8636966973406144797
     second: Enemy_BugHuman_Attack_11
+  - first:
+      213: 5824499840968276137
+    second: Enemy_BugHuman_Attack_0
+  - first:
+      213: -9006203721083909221
+    second: Enemy_BugHuman_Attack_1
+  - first:
+      213: 2728230236548654661
+    second: Enemy_BugHuman_Attack_2
+  - first:
+      213: 3603738480001915923
+    second: Enemy_BugHuman_Attack_3
+  - first:
+      213: 9156701788340238483
+    second: Enemy_BugHuman_Attack_4
+  - first:
+      213: -36522100523307296
+    second: Enemy_BugHuman_Attack_5
+  - first:
+      213: 8945991630031275331
+    second: Enemy_BugHuman_Attack_6
+  - first:
+      213: 4174795162497236591
+    second: Enemy_BugHuman_Attack_7
+  - first:
+      213: 5536408080575820499
+    second: Enemy_BugHuman_Attack_8
+  - first:
+      213: 1006392401205848875
+    second: Enemy_BugHuman_Attack_9
+  - first:
+      213: 4696995446741799463
+    second: Enemy_BugHuman_Attack_10
+  - first:
+      213: 3954125523818863453
+    second: Enemy_BugHuman_Attack_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -138,10 +174,10 @@ TextureImporter:
       name: Enemy_BugHuman_Attack_0
       rect:
         serializedVersion: 2
-        x: 111
-        y: 456
-        width: 155
-        height: 365
+        x: 0
+        y: 450
+        width: 300
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,8 +185,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8c06845e37fdeb80800000000000000
-      internalID: -8363757085879038837
+      spriteID: 9a8bb3feeb7c4d050800000000000000
+      internalID: 5824499840968276137
       vertices: []
       indices: 
       edges: []
@@ -159,10 +195,10 @@ TextureImporter:
       name: Enemy_BugHuman_Attack_1
       rect:
         serializedVersion: 2
-        x: 372
-        y: 456
-        width: 187
-        height: 355
+        x: 300
+        y: 450
+        width: 300
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -170,8 +206,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61bc2cdbb59feb510800000000000000
-      internalID: 1566963892792511254
+      spriteID: b9b0efdbe69830380800000000000000
+      internalID: -9006203721083909221
       vertices: []
       indices: 
       edges: []
@@ -180,10 +216,10 @@ TextureImporter:
       name: Enemy_BugHuman_Attack_2
       rect:
         serializedVersion: 2
-        x: 670
-        y: 457
-        width: 184
-        height: 358
+        x: 600
+        y: 450
+        width: 300
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -191,8 +227,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7270b1994f68937b0800000000000000
-      internalID: -5244011905997404377
+      spriteID: 54666f202fe9cd520800000000000000
+      internalID: 2728230236548654661
       vertices: []
       indices: 
       edges: []
@@ -201,10 +237,10 @@ TextureImporter:
       name: Enemy_BugHuman_Attack_3
       rect:
         serializedVersion: 2
-        x: 970
-        y: 457
-        width: 184
-        height: 358
+        x: 900
+        y: 450
+        width: 300
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -212,8 +248,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5edf98c9b693f3060800000000000000
-      internalID: 6935325085524426213
+      spriteID: 31c9bebdd0d030230800000000000000
+      internalID: 3603738480001915923
       vertices: []
       indices: 
       edges: []
@@ -222,10 +258,10 @@ TextureImporter:
       name: Enemy_BugHuman_Attack_4
       rect:
         serializedVersion: 2
-        x: 1237
-        y: 458
-        width: 217
-        height: 361
+        x: 1200
+        y: 450
+        width: 300
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -233,8 +269,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 632329634be807440800000000000000
-      internalID: 4931598496631501366
+      spriteID: 398343023c3231f70800000000000000
+      internalID: 9156701788340238483
       vertices: []
       indices: 
       edges: []
@@ -243,10 +279,10 @@ TextureImporter:
       name: Enemy_BugHuman_Attack_5
       rect:
         serializedVersion: 2
-        x: 1582
-        y: 458
-        width: 199
-        height: 361
+        x: 1500
+        y: 450
+        width: 300
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -254,8 +290,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02beedae5c0360480800000000000000
-      internalID: -8933399184235631840
+      spriteID: 0ee6bd3d75f3e7ff0800000000000000
+      internalID: -36522100523307296
       vertices: []
       indices: 
       edges: []
@@ -264,10 +300,10 @@ TextureImporter:
       name: Enemy_BugHuman_Attack_6
       rect:
         serializedVersion: 2
-        x: 82
-        y: 7
-        width: 199
-        height: 363
+        x: 0
+        y: 0
+        width: 300
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -275,8 +311,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9562f7d57d350c2f0800000000000000
-      internalID: -954670936550857127
+      spriteID: 345c1a75dfb862c70800000000000000
+      internalID: 8945991630031275331
       vertices: []
       indices: 
       edges: []
@@ -285,10 +321,10 @@ TextureImporter:
       name: Enemy_BugHuman_Attack_7
       rect:
         serializedVersion: 2
-        x: 319
-        y: 6
-        width: 241
-        height: 341
+        x: 300
+        y: 0
+        width: 300
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -296,8 +332,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca59a32e59c873c70800000000000000
-      internalID: 8950777359795656108
+      spriteID: f6ebaaec41adfe930800000000000000
+      internalID: 4174795162497236591
       vertices: []
       indices: 
       edges: []
@@ -306,10 +342,10 @@ TextureImporter:
       name: Enemy_BugHuman_Attack_8
       rect:
         serializedVersion: 2
-        x: 609
-        y: 6
-        width: 252
-        height: 311
+        x: 600
+        y: 0
+        width: 300
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -317,8 +353,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 57e3578d2624b84a0800000000000000
-      internalID: -6590100637420798347
+      spriteID: 3d2f25ee0d545dc40800000000000000
+      internalID: 5536408080575820499
       vertices: []
       indices: 
       edges: []
@@ -327,10 +363,10 @@ TextureImporter:
       name: Enemy_BugHuman_Attack_9
       rect:
         serializedVersion: 2
-        x: 925
-        y: 7
-        width: 240
-        height: 345
+        x: 900
+        y: 0
+        width: 300
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -338,8 +374,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c040b070014dd700800000000000000
-      internalID: 566680598264955081
+      spriteID: b2be68a8e8c67fd00800000000000000
+      internalID: 1006392401205848875
       vertices: []
       indices: 
       edges: []
@@ -348,10 +384,10 @@ TextureImporter:
       name: Enemy_BugHuman_Attack_10
       rect:
         serializedVersion: 2
-        x: 1225
-        y: 7
-        width: 240
-        height: 345
+        x: 1200
+        y: 0
+        width: 300
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -359,8 +395,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6db6e8a021c58920800000000000000
-      internalID: 2992009873474370924
+      spriteID: 7221caa19741f2140800000000000000
+      internalID: 4696995446741799463
       vertices: []
       indices: 
       edges: []
@@ -369,10 +405,10 @@ TextureImporter:
       name: Enemy_BugHuman_Attack_11
       rect:
         serializedVersion: 2
-        x: 1589
-        y: 3
-        width: 192
-        height: 367
+        x: 1500
+        y: 0
+        width: 300
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -380,8 +416,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e6985d5c44532880800000000000000
-      internalID: -8636966973406144797
+      spriteID: d5b578cc630efd630800000000000000
+      internalID: 3954125523818863453
       vertices: []
       indices: 
       edges: []
