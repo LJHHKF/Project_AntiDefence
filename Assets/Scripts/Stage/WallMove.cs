@@ -9,6 +9,8 @@ public class WallMove : MonoBehaviour
     private bool trigger = true;
     private float moveSpeed = 0.01f;
     private StageManager stageM;
+
+    private bool switch_move = false;
     
     // Start is called before the first frame update
     void Start()
@@ -33,6 +35,20 @@ public class WallMove : MonoBehaviour
             m_transform.Translate(new Vector3(0, -moveSpeed, 0));
             if (m_transform.localPosition.y <= stageM.GetWallMoveMin())
                 trigger = true;
+        }
+    }
+
+    public void TurnMoveSpeed()
+    {
+        if(!switch_move)
+        {
+            switch_move = true;
+            moveSpeed = 0.0f;
+        }
+        else
+        {
+            switch_move = false;
+            moveSpeed = stageM.GetWallMoveSpeed();
         }
     }
 }

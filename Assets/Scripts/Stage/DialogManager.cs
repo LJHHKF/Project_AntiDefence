@@ -55,6 +55,8 @@ public class DialogManager : MonoBehaviour
     private Text[] txts_Remain;
     private float[] ori_alpha_txt_remain;
 
+    private GameObject ui_pauseBtn;
+
 
     private GameObject panel_Dialog;
     private DialogueObject[] Dialogues = new DialogueObject[5];
@@ -82,6 +84,8 @@ public class DialogManager : MonoBehaviour
         ui_RemainPanel = t_UI_Canvas.Find("RemainPanel").gameObject;
         imgs_RemainPanel = ui_RemainPanel.GetComponentsInChildren<Image>();
         txts_Remain = ui_RemainPanel.GetComponentsInChildren<Text>();
+
+        ui_pauseBtn = t_UI_Canvas.Find("TempBG").gameObject;
 
         //stageM = GameObject.FindGameObjectWithTag("StageMObject").GetComponent<StageManager>();
         stageM = gameObject.GetComponent<StageManager>();
@@ -155,6 +159,7 @@ public class DialogManager : MonoBehaviour
                 ori_alpha_txt_remain[i] = txts_Remain[i].color.a;
                 txts_Remain[i].color = new Color(txts_Remain[i].color.r, txts_Remain[i].color.g, txts_Remain[i].color.b, 0);
             }
+            ui_pauseBtn.SetActive(false);
         }
         else
         {
@@ -246,6 +251,7 @@ public class DialogManager : MonoBehaviour
         for (int i = 0; i < txts_Remain.Length; i++)
             txts_Remain[i].color = new Color(txts_Remain[i].color.r, txts_Remain[i].color.g, txts_Remain[i].color.b, ori_alpha_txt_remain[i]);
 
+        ui_pauseBtn.SetActive(true);
 
         Destroy(this);
 
