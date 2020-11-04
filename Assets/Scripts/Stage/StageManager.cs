@@ -57,6 +57,7 @@ public class StageManager : MonoBehaviour
     [Header("Other Setting")]
     public GameObject startEffect;
     public GameObject startEffect2;
+    private bool is_started = false;
 
     [Header("Wall&Tile Image Setting")]
     public Material[] tile_far_material;
@@ -153,12 +154,6 @@ public class StageManager : MonoBehaviour
 
         PoolsInit();
 
-
-        GameObject effect = Instantiate(startEffect, gameObject.transform);
-        GameObject effect2 = Instantiate(startEffect2, gameObject.transform);
-        Destroy(effect, 1.0f);
-        Destroy(effect2, 5.0f);
-
         PlayBGM();
     }
 
@@ -197,9 +192,21 @@ public class StageManager : MonoBehaviour
 
         if (dlg_isDone)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Time.timeScale != 0.0f)
             {
-                PullingTouchEf(Input.mousePosition);
+                if (Input.GetMouseButtonDown(0))
+                {
+                    PullingTouchEf(Input.mousePosition);
+                }
+            }
+
+            if (!is_started)
+            {
+                GameObject effect = Instantiate(startEffect, gameObject.transform);
+                GameObject effect2 = Instantiate(startEffect2, gameObject.transform);
+                Destroy(effect, 1.0f);
+                Destroy(effect2, 5.0f);
+                is_started = true;
             }
         }
        
@@ -505,6 +512,7 @@ public class StageManager : MonoBehaviour
 
     public void StageFailed()
     {
+        loadingM.SetLoadingString("SYSTEM OVERLOAD");
         StartCoroutine(DelayedStageEnd(1.0f));
     }
 
@@ -512,6 +520,7 @@ public class StageManager : MonoBehaviour
     {
         itemM.End_Stage();
         playerM.OnWinAnim();
+        loadingM.SetLoadingString("SYSTEM STABILIZATION");
         StartCoroutine(DelayedStageEnd(1.0f));
     }
 

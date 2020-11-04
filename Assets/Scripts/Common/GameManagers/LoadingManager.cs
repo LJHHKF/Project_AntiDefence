@@ -9,8 +9,10 @@ public class LoadingManager : MonoBehaviour
 {
     //public GameObject loadingBar_prefab;
 
-    [HideInInspector]
-    public Image img_loadingbar;
+    //[HideInInspector]
+    private Image img_loadingbar;
+    private string loadingString;
+    private bool is_stageEnd = false;
 
     private string prev_Scene;
     private string selectedStage;
@@ -26,6 +28,16 @@ public class LoadingManager : MonoBehaviour
     public void SetLoadingImage(Image img)
     {
         img_loadingbar = img;
+    }
+
+    public void SetLoadingString(string str)
+    {
+        loadingString = str;
+    }
+
+    public string GetLoadingString()
+    {
+        return loadingString;
     }
 
     public bool GetHadPrev()
@@ -63,6 +75,7 @@ public class LoadingManager : MonoBehaviour
             if (chapter_num < 10)
             {
                 selectedChapter = "Chp0" + chapter_num.ToString();
+                is_stageEnd = true;
                 LoadScene(selectedChapter + "_StageSelect");
             }
             //if (chapter_num == 0)
@@ -105,6 +118,11 @@ public class LoadingManager : MonoBehaviour
         //}
         had_prev = false;
         prev_Scene = null;
+        if(!is_stageEnd)
+        {
+            loadingString = "Now Loading...";
+        }
+        is_stageEnd = false;
         CallLoadingScene(name);
     }
 

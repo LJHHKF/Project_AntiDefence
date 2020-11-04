@@ -27,19 +27,21 @@ public class TowerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        //마우스 기반
-        if (Input.GetMouseButtonDown(0))
+        if (Time.timeScale != 0.0f)
         {
-            SwipeEvent();
-        }
-        else if (Input.GetMouseButton(0))
-        {
-            SwipeEvent();
-        }
-        else if (Input.GetMouseButtonUp(0))
-        {
-            onDrag = false;
+            //마우스 기반
+            if (Input.GetMouseButtonDown(0))
+            {
+                SwipeEvent();
+            }
+            else if (Input.GetMouseButton(0))
+            {
+                SwipeEvent();
+            }
+            else if (Input.GetMouseButtonUp(0))
+            {
+                onDrag = false;
+            }
         }
 
 
