@@ -11,8 +11,9 @@ public class DialogManager : MonoBehaviour
     public Sprite spr_Dialogue_Left;
     public Sprite spr_Dialogue_Right;
 
-    //[Header("Set Scean Info")]
-    //public int cur_scene_index;
+    [Header("Set Fade")]
+    public float fadeTime = 1.0f;
+    private float time = 0.0f;
 
     [Header("Set Dialouge")]
     [TextArea]
@@ -56,10 +57,13 @@ public class DialogManager : MonoBehaviour
     private float[] ori_alpha_txt_remain;
 
     private GameObject ui_pauseBtn;
+    private GameObject dlgBG;
 
 
     private GameObject panel_Dialog;
     private DialogueObject[] Dialogues = new DialogueObject[5];
+    private Image img_panelDialog;
+    private float ori_alpha_panelDlg;
 
     private StageManager stageM;
 
@@ -72,6 +76,8 @@ public class DialogManager : MonoBehaviour
 
         panel_Dialog = t_UI_Canvas.Find("Panel_Dialog").gameObject;
         btn_skip = panel_Dialog.transform.Find("BTN_Skip").gameObject;
+        img_panelDialog = panel_Dialog.GetComponent<Image>();
+        ori_alpha_panelDlg = img_panelDialog.color.a;
 
         ui_Buttons = t_UI_Canvas.Find("Buttons").gameObject;
         btn_Buttons = ui_Buttons.GetComponentsInChildren<Button>();
@@ -86,6 +92,7 @@ public class DialogManager : MonoBehaviour
         txts_Remain = ui_RemainPanel.GetComponentsInChildren<Text>();
 
         ui_pauseBtn = t_UI_Canvas.Find("TempBG").gameObject;
+        dlgBG = t_UI_Canvas.Find("Img_DlgBG").gameObject;
 
         //stageM = GameObject.FindGameObjectWithTag("StageMObject").GetComponent<StageManager>();
         stageM = gameObject.GetComponent<StageManager>();
@@ -117,7 +124,6 @@ public class DialogManager : MonoBehaviour
 
         if (txt_dialogue.Length > 0)
         {
-            Time.timeScale = 0.0f;
             panel_Dialog.SetActive(true);
             btn_skip.SetActive(true);
 
@@ -160,10 +166,13 @@ public class DialogManager : MonoBehaviour
                 txts_Remain[i].color = new Color(txts_Remain[i].color.r, txts_Remain[i].color.g, txts_Remain[i].color.b, 0);
             }
             ui_pauseBtn.SetActive(false);
+            dlgBG.SetActive(true);
+            img_panelDialog.color = new Color(img_panelDialog.color.r, img_panelDialog.color.g, img_panelDialog.color.b, 0.0f);
         }
         else
         {
             panel_Dialog.SetActive(false);
+            dlgBG.SetActive(false);
             stageM.DlgDone();
             Destroy(this);
         }
@@ -172,9 +181,25 @@ public class DialogManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if(img_panelDialog.color.a <= ori_alpha_panelDlg)
         {
-            DlgProgress();
+            time += Time.deltaTime;
+            img_panelDialog.color = new Color(
+                img_panelDialog.color.r,
+                img_panelDialog.color.g,
+                img_panelDialog.color.b,
+                (time / fadeTime) * ori_alpha_panelDlg);
+        }
+        else
+        {
+            Time.timeScale = 0.0f;
+        }
+        if (Time.timeScale == 0.0f)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                DlgProgress();
+            }
         }
     }
 
@@ -252,6 +277,7 @@ public class DialogManager : MonoBehaviour
             txts_Remain[i].color = new Color(txts_Remain[i].color.r, txts_Remain[i].color.g, txts_Remain[i].color.b, ori_alpha_txt_remain[i]);
 
         ui_pauseBtn.SetActive(true);
+        dlgBG.SetActive(false);
 
         Destroy(this);
 

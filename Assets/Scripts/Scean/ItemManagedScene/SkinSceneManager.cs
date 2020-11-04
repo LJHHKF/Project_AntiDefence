@@ -269,19 +269,49 @@ public class SkinSceneManager : MonoBehaviour
 
     IEnumerator Anim_Ctrl(int index)
     {
+        int anim_num = 0;
+        anim_skin.SetBool("IsSkinShop", true);
         while (true)
         {
-            if (anim_skin.GetBool("IsAttack"))
+            if (index != cnt_skin)
             {
-                anim_skin.SetBool("IsAttack", false);
-                yield return new WaitForSeconds(1.5f);
+                anim_skin.SetBool("IsSkinShop", false);
+                yield break;
             }
-            else
+            switch(anim_num)
             {
-                anim_skin.SetBool("IsAttack", true);
-                anim_skin.SetTrigger("IsAttack_Trigger");
-                yield return new WaitForSeconds(1.5f);
+                case 0:
+                    //Idle 애님
+                    yield return new WaitForSeconds(1.0f);
+                    anim_num = 1;
+                    break;
+                case 1:
+                    anim_skin.SetTrigger("IsAttack_Trigger");
+                    yield return new WaitForSeconds(1.0f);
+                    anim_num = 2;
+                    break;
+                case 2:
+                    anim_skin.SetTrigger("IsWin_Trigger");
+                    yield return new WaitForSeconds(1.0f);
+                    anim_num = 3;
+                    break;
+                case 3:
+                    anim_skin.SetTrigger("IsLose_Trigger");
+                    yield return new WaitForSeconds(1.0f);
+                    anim_num = 0;
+                    break;
             }
+            //if (anim_skin.GetBool("IsAttack"))
+            //{
+            //    anim_skin.SetBool("IsAttack", false);
+            //    yield return new WaitForSeconds(1.5f);
+            //}
+            //else
+            //{
+            //    anim_skin.SetBool("IsAttack", true);
+            //    anim_skin.SetTrigger("IsAttack_Trigger");
+            //    yield return new WaitForSeconds(1.5f);
+            //}
         }
     }
 

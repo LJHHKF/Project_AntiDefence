@@ -13,5 +13,6 @@ public class WhenLoadScene : MonoBehaviour
         gm = GameObject.FindGameObjectWithTag("GameManager");
         loadingM = gm.GetComponent<LoadingManager>();
         loadingM.SetLoadingImage(gameObject.GetComponent<Image>());
+        gameObject.transform.Find("Text").GetComponent<Text>().text = loadingM.GetLoadingString();
     }
 }
