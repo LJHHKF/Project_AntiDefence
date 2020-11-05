@@ -234,8 +234,8 @@ public class SkinSceneManager : MonoBehaviour
         }
         else
         {
-            sub_txt_warning.text = "더는 왼쪽 방향으로 스킨이 없습니다.";
-            sub_panel_warning.SetActive(true);
+            //sub_txt_warning.text = "더는 왼쪽 방향으로 스킨이 없습니다.";
+            //sub_panel_warning.SetActive(true);
         }
 
     }
@@ -250,21 +250,6 @@ public class SkinSceneManager : MonoBehaviour
     {
         audioM.SFX_BTN_Click();
         loadingM.LoadScene("Lobby");
-    }
-
-    public void BTN_Reset()
-    {
-        audioM.SFX_BTN_Click();
-        string key;
-
-        for (int i = 1; i < max_skin-1; i++)
-        {
-            skins[i].is_had = 0;
-            key = "HadSkin" + i.ToString();
-            PlayerPrefs.SetInt(key, 0);
-        }
-
-        UpdateScene();
     }
 
     private void UpdateItemInfo()
@@ -284,19 +269,49 @@ public class SkinSceneManager : MonoBehaviour
 
     IEnumerator Anim_Ctrl(int index)
     {
+        int anim_num = 0;
+        anim_skin.SetBool("IsSkinShop", true);
         while (true)
         {
-            if (anim_skin.GetBool("IsAttack"))
+            if (index != cnt_skin)
             {
-                anim_skin.SetBool("IsAttack", false);
-                yield return new WaitForSeconds(1.5f);
+                anim_skin.SetBool("IsSkinShop", false);
+                yield break;
             }
-            else
+            switch(anim_num)
             {
-                anim_skin.SetBool("IsAttack", true);
-                anim_skin.SetTrigger("IsAttack_Trigger");
-                yield return new WaitForSeconds(1.5f);
+                case 0:
+                    //Idle 애님
+                    yield return new WaitForSeconds(1.0f);
+                    anim_num = 1;
+                    break;
+                case 1:
+                    anim_skin.SetTrigger("IsAttack_Trigger");
+                    yield return new WaitForSeconds(1.0f);
+                    anim_num = 2;
+                    break;
+                case 2:
+                    anim_skin.SetTrigger("IsWin_Trigger");
+                    yield return new WaitForSeconds(1.0f);
+                    anim_num = 3;
+                    break;
+                case 3:
+                    anim_skin.SetTrigger("IsLose_Trigger");
+                    yield return new WaitForSeconds(1.0f);
+                    anim_num = 0;
+                    break;
             }
+            //if (anim_skin.GetBool("IsAttack"))
+            //{
+            //    anim_skin.SetBool("IsAttack", false);
+            //    yield return new WaitForSeconds(1.5f);
+            //}
+            //else
+            //{
+            //    anim_skin.SetBool("IsAttack", true);
+            //    anim_skin.SetTrigger("IsAttack_Trigger");
+            //    yield return new WaitForSeconds(1.5f);
+            //}
         }
     }
 

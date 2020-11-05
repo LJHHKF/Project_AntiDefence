@@ -103,7 +103,7 @@ public class TA_Manager : MonoBehaviour
                     imgs_NonActive[i].SetActive(true);
                 }
 
-                cTimeTxt[i].text = (cTimeImg[i].fillAmount * attackCT[i]).ToString("00.00");
+                cTimeTxt[i].text = (attackCT[i] - (cTimeImg[i].fillAmount * attackCT[i])).ToString("00.00");
             }
             else
             {
