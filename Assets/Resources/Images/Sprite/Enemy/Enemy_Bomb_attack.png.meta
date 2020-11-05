@@ -1,9 +1,6 @@
 fileFormatVersion: 2
 guid: 2ca0f310f798b8a41ab958c5a6542874
 TextureImporter:
-<<<<<<< HEAD
-  internalIDToNameTable: []
-=======
   internalIDToNameTable:
   - first:
       213: 9095311459872685807
@@ -140,7 +137,6 @@ TextureImporter:
   - first:
       213: -5768616228689360138
     second: Enemy_Bomb_attack_44
->>>>>>> main
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -196,14 +192,14 @@ TextureImporter:
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
-  applyGammaDecoding: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -215,7 +211,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -227,7 +223,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -236,13 +232,6 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-<<<<<<< HEAD
-    sprites: []
-    outline: []
-    physicsShape: []
-    bones: []
-    spriteID: 
-=======
     sprites:
     - serializedVersion: 2
       name: Enemy_Bomb_attack_0
@@ -1192,8 +1181,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: ac16bf2f496746f45919e1d95236943a
->>>>>>> main
+    spriteID: f67ab9fecd097b94487edf8c0d7fe0ad
     internalID: 0
     vertices: []
     indices: 
