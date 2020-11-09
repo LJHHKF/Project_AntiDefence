@@ -29,6 +29,7 @@ public class TowerAttack_Snip : MonoBehaviour
     private List<GameObject> listPool_AtkEf = new List<GameObject>();
     private bool is_serched_atk = false;
 
+    private StageManager stageM;
     private void Start()
     {
         imageObject = GameObject.FindGameObjectWithTag("SNT_Cool");
@@ -46,6 +47,8 @@ public class TowerAttack_Snip : MonoBehaviour
         m_meshR = gameObject.GetComponent<MeshRenderer>();
         m_color = m_meshR.material.color;
 
+        stageM = GameObject.FindGameObjectWithTag("StageMObject").GetComponent<StageManager>();
+
         gm = GameObject.FindGameObjectWithTag("GameManager");
         si_manager = gm.GetComponent<SelectedItemManager>();
 
@@ -62,21 +65,24 @@ public class TowerAttack_Snip : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (stageM.GetEventIsDone())
         {
-            m_Coll.enabled = false;
-        }
-        else if (Input.GetMouseButtonUp(0))
-        {
-            touch_Time = 0f;
-            m_Coll.enabled = true;
-        }
+            if (Input.GetMouseButtonDown(0))
+            {
+                m_Coll.enabled = false;
+            }
+            else if (Input.GetMouseButtonUp(0))
+            {
+                touch_Time = 0f;
+                m_Coll.enabled = true;
+            }
 
-        touch_Time += Time.deltaTime;
+            touch_Time += Time.deltaTime;
 
-        if (touch_Time >= 0.5f)
-        {
-            m_Coll.enabled = false;
+            if (touch_Time >= 0.5f)
+            {
+                m_Coll.enabled = false;
+            }
         }
     }
 

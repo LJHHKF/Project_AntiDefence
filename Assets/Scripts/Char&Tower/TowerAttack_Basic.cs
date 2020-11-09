@@ -28,6 +28,7 @@ public class TowerAttack_Basic : MonoBehaviour
     private Transform t_objectPool_AtkEf;
     private List<GameObject> listPool_AtkEf = new List<GameObject>();
     private bool is_serched_atk = false;
+    private StageManager stageM;
 
     private void Awake()
     {
@@ -44,6 +45,8 @@ public class TowerAttack_Basic : MonoBehaviour
         m_color = m_meshR.material.color;
 
         t_objectPool_AtkEf = GameObject.FindGameObjectWithTag("ObjectPools").transform.Find("AtkEffects");
+
+        stageM = GameObject.FindGameObjectWithTag("StageMObject").GetComponent<StageManager>();
 
         gm = GameObject.FindGameObjectWithTag("GameManager");
         si_manager = gm.GetComponent<SelectedItemManager>();
@@ -66,21 +69,24 @@ public class TowerAttack_Basic : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (stageM.GetEventIsDone())
         {
-            m_Coll.enabled = false;
-        }
-        else if (Input.GetMouseButtonUp(0))
-        {
-            touch_Time = 0f;
-            m_Coll.enabled = true;
-        }
+            if (Input.GetMouseButtonDown(0))
+            {
+                m_Coll.enabled = false;
+            }
+            else if (Input.GetMouseButtonUp(0))
+            {
+                touch_Time = 0f;
+                m_Coll.enabled = true;
+            }
 
-        touch_Time += Time.deltaTime;
+            touch_Time += Time.deltaTime;
 
-        if (touch_Time >= 0.5f)
-        {
-            m_Coll.enabled = false;
+            if (touch_Time >= 0.5f)
+            {
+                m_Coll.enabled = false;
+            }
         }
     }
 
