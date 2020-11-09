@@ -41,7 +41,7 @@ TagManager:
   - CharacterLayer
   - TowerLayer
   - SubUI
-  - 
+  - Tile
   - 
   - 
   - 
@@ -61,6 +61,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Tile
+    uniqueID: 106530605
+    locked: 0
   - name: AttackRange
     uniqueID: 3628144289
     locked: 0
