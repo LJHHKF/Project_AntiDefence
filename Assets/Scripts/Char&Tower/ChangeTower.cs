@@ -105,12 +105,12 @@ public class ChangeTower : MonoBehaviour
 
         for (int i = 0; i < 2; i++)
         {
-            if(curTowers[i].CompareTag("SNT"))
+            if (curTowers[i].CompareTag("SNT"))
             {
                 curTowers[i].transform.parent = t_objectPool_Snip;
                 curTowers[i].SetActive(false);
             }
-            else if(curTowers[i].CompareTag("PT"))
+            else if (curTowers[i].CompareTag("PT"))
             {
                 curTowers[i].transform.parent = t_objectPool_Push;
                 curTowers[i].SetActive(false);
@@ -137,7 +137,7 @@ public class ChangeTower : MonoBehaviour
                 curTowers[i].transform.parent = t_objectPool_Basic;
                 curTowers[i].SetActive(false);
             }
-            else if(curTowers[i].CompareTag("SNT"))
+            else if (curTowers[i].CompareTag("SNT"))
             {
                 curTowers[i].transform.parent = t_objectPool_Snip;
                 curTowers[i].SetActive(false);

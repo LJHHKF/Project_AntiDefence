@@ -23,6 +23,9 @@ public class EnemyCtrl : MonoBehaviour
     private Transform t_img;
     private float slope;
 
+    [Header("EnemyIndex")]
+    public int enemyIndex;
+
     [Header("HpBar Setting")]
     public GameObject hpBarPrefab;
     public Vector3 hpBarOffset = new Vector3(0, 2.2f, 0);
@@ -60,6 +63,7 @@ public class EnemyCtrl : MonoBehaviour
     private Vector3 direction;
     private GameObject o_stgM;
     private StageManager stgManager;
+    private EnemyInfoUI enemyInfo;
 
 
     void Start()
@@ -72,6 +76,8 @@ public class EnemyCtrl : MonoBehaviour
 
         o_stgM = GameObject.FindGameObjectWithTag("StageMObject");
         stgManager = o_stgM.GetComponent<StageManager>();
+
+        enemyInfo = GameObject.FindGameObjectWithTag("UI_Canvas").transform.Find("Panel_EnemyInfo").GetComponent<EnemyInfoUI>();
 
         t_imgPanel = gameObject.transform.Find("Clear_Panel").GetComponent<Transform>();
         t_img = t_imgPanel.Find("Image").GetComponent<Transform>();
@@ -152,6 +158,14 @@ public class EnemyCtrl : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.CompareTag("SubAtkR"))
+        {
+            if(enemyInfo.GetIsShowed(enemyIndex) == false)
+            {
+                enemyInfo.ShowEnemyInfo(enemyIndex);
+            }
+        }
+
         if (other.CompareTag("BT_AtkR"))
         {
             enemyHP -= ta_manager.b_AtDmg;
