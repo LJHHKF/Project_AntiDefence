@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2605030565364620345}
   - component: {fileID: 6955568025443255969}
   - component: {fileID: 9153505949509765477}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Tile_Far
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,7 +52,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
+  m_DynamicOccludee: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -107,5 +107,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f743db1a444aa345afbc90c46ffdd40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileMaterial:
-  - {fileID: 2100000, guid: 0b781e32af77ed14db4c06348d91501d, type: 2}
