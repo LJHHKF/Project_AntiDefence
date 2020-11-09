@@ -1,7 +1,43 @@
 fileFormatVersion: 2
-guid: 3a33a5fe9c70d3c47b8f958131281262
+guid: f0da294f9386698478d9db23b40b31c7
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 8308281940292804450
+    second: Touch_Effect(ver2)_0
+  - first:
+      213: 7767979062067033918
+    second: Touch_Effect(ver2)_1
+  - first:
+      213: -2856666666592003249
+    second: Touch_Effect(ver2)_2
+  - first:
+      213: 1619927965623946390
+    second: Touch_Effect(ver2)_3
+  - first:
+      213: -2975067081160145356
+    second: Touch_Effect(ver2)_4
+  - first:
+      213: -4918613327021399951
+    second: Touch_Effect(ver2)_5
+  - first:
+      213: 39613622489437718
+    second: Touch_Effect(ver2)_6
+  - first:
+      213: -194971037027740611
+    second: Touch_Effect(ver2)_7
+  - first:
+      213: -5067582978034240742
+    second: Touch_Effect(ver2)_8
+  - first:
+      213: -7451551563420578121
+    second: Touch_Effect(ver2)_9
+  - first:
+      213: 5759913251884945204
+    second: Touch_Effect(ver2)_10
+  - first:
+      213: -3179619809964761695
+    second: Touch_Effect(ver2)_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -40,12 +76,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 150
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
