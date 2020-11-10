@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TouchEffect_Off
+  m_Name: TouchEffect_2_Off
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,16 +20,16 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 1123121826202507915, guid: 76ebec9c64f530145b2020ed60a58fbb,
+      value: {fileID: 8308281940292804450, guid: f0da294f9386698478d9db23b40b31c7,
         type: 3}
-    - time: 0.25
-      value: {fileID: 1198787994154949415, guid: 76ebec9c64f530145b2020ed60a58fbb,
+    - time: 1
+      value: {fileID: 7767979062067033918, guid: f0da294f9386698478d9db23b40b31c7,
         type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 4
+  m_SampleRate: 1
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -44,14 +44,14 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 1123121826202507915, guid: 76ebec9c64f530145b2020ed60a58fbb, type: 3}
-    - {fileID: 1198787994154949415, guid: 76ebec9c64f530145b2020ed60a58fbb, type: 3}
+    - {fileID: 8308281940292804450, guid: f0da294f9386698478d9db23b40b31c7, type: 3}
+    - {fileID: 7767979062067033918, guid: f0da294f9386698478d9db23b40b31c7, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.5
+    m_StopTime: 2
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

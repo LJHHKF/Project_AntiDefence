@@ -14,6 +14,7 @@ public class PT_Contact : MonoBehaviour
 
     private float touch_Time;
 
+    private StageManager stageM;
 
     // Start is called before the first frame update
     void Start()
@@ -26,26 +27,31 @@ public class PT_Contact : MonoBehaviour
         m_Coll = this.gameObject.GetComponent<Collider>();
         m_Coll.enabled = false;
 
+        stageM = GameObject.FindGameObjectWithTag("StageMObject").GetComponent<StageManager>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (stageM.GetEventIsDone())
         {
-            m_Coll.enabled = false;
-        }
-        else if (Input.GetMouseButtonUp(0))
-        {
-            touch_Time = 0f;
-            m_Coll.enabled = true;
-        }
+            if (Input.GetMouseButtonDown(0))
+            {
+                m_Coll.enabled = false;
+            }
+            else if (Input.GetMouseButtonUp(0))
+            {
+                touch_Time = 0f;
+                m_Coll.enabled = true;
+            }
 
-        touch_Time += Time.deltaTime;
+            touch_Time += Time.deltaTime;
 
-        if (touch_Time >= 0.5f)
-        {
-            m_Coll.enabled = false;
+            if (touch_Time >= 0.5f)
+            {
+                m_Coll.enabled = false;
+            }
         }
     }
 

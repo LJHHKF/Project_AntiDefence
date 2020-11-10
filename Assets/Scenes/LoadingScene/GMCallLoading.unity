@@ -787,6 +787,7 @@ GameObject:
   - component: {fileID: 1559065142}
   - component: {fileID: 1559065143}
   - component: {fileID: 1559065144}
+  - component: {fileID: 1559065145}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameManager
@@ -902,8 +903,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87f42660a5ce89a4f9c7bec541f5f648, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  img_loadingbar: {fileID: 1929190306749877288, guid: b7d4dded2d59eb64ebb88689246881c1,
-    type: 3}
 --- !u!114 &1559065141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -967,6 +966,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab_TouchEffect: {fileID: 2725433861938991575, guid: 11037059764bfa14e8cf15cb7b17f9c9,
     type: 3}
+--- !u!114 &1559065145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1559065136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0196e31ced3dd9e45a14d6edae7c7755, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monsterImage:
+  - {fileID: 5766430727890715408, guid: d326c203f19ba1647af5c7b30d397f64, type: 3}
+  - {fileID: -7308445340890850486, guid: ab49ff602d423bf4d9d5885c30c449b8, type: 3}
+  monsterInfoTxt:
+  - "(\uB354\uBBF8 \uD14D\uC2A4\uD2B8)"
+  - "\uD3ED\uD0C4\uD615 \uBC14\uC774\uB7EC\uC2A4\n\uC790\uD3ED\uC744 \uD558\uBA70,
+    \uCCB4\uB825\uC774 \uB9CE\uC9C0\uB9CC, \uB9E4\uC6B0 \uB290\uB9AC\uB2E4."
 --- !u!1 &2023976027
 GameObject:
   m_ObjectHideFlags: 0

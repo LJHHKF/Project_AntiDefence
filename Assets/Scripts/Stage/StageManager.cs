@@ -116,7 +116,14 @@ public class StageManager : MonoBehaviour
         t_cur = remainPanel.transform.Find("T_Current").GetComponent<Text>();
         t_full = remainPanel.transform.Find("T_Full").GetComponent<Text>();
 
-        t_full.text = spawnPointIndex.Length.ToString();
+        if (chpter_num == 0 && stage_num == 1)
+        {
+            t_full.text = (spawnPointIndex.Length + 3).ToString();
+        }
+        else
+        {
+            t_full.text = spawnPointIndex.Length.ToString();
+        }
 
         gm = GameObject.FindGameObjectWithTag("GameManager");
         loadingM = gm.GetComponent<LoadingManager>();
@@ -219,6 +226,36 @@ public class StageManager : MonoBehaviour
         if (t_cur.text == t_full.text)
         {
             StageClear();
+        }
+    }
+
+    public void Pub_SpawnEnemy(int sp_index, int enemy_index)
+    {
+        if (arr_enemyPools[enemy_index].cnt <= 0)
+        {
+            Pub_EnemyPooling(enemy_index);
+        }
+
+        arr_enemyPools[enemy_index].is_serched = false;
+
+        for (int i = 0; i < arr_enemyPools[enemy_index].cnt; i++)
+        {
+            if (arr_enemyPools[enemy_index].listPool[i].activeSelf == false)
+            {
+                GameObject enemy = arr_enemyPools[enemy_index].listPool[i];
+                enemy.transform.position = c_enemySpawnPoints[sp_index].position;
+                enemy.transform.rotation = Quaternion.identity;
+                enemy.SetActive(true);
+                PullingSpawnEffect(sp_index, 2.0f);
+                PullingDirEffect(sp_index, 1.0f);
+                arr_enemyPools[enemy_index].is_serched = true;
+                break;
+            }
+        }
+        if (arr_enemyPools[enemy_index].is_serched == false)
+        {
+            Pub_EnemyPooling(enemy_index);
+            Pub_SpawnEnemy(sp_index, enemy_index);
         }
     }
 
@@ -398,6 +435,15 @@ public class StageManager : MonoBehaviour
         arr_enemyPools[spawnEnemyIndex[sp_index]].listPool.Add(enemy);
     }
 
+    private void Pub_EnemyPooling(int enemyIndex)
+    {
+        GameObject enemy = Instantiate(enemies[enemyIndex], t_objectPool_Enemy);
+        arr_enemyPools[enemyIndex].cnt++;
+        enemy.name = "Enemy_" + enemyIndex.ToString("00") + "_" + arr_enemyPools[enemyIndex].cnt.ToString("000");
+        enemy.SetActive(false);
+        arr_enemyPools[enemyIndex].listPool.Add(enemy);
+    }
+
     private void SpawnEffectPooling()
     {
         GameObject effect = Instantiate(spawn_Effect, t_objectPool_SpawnEf);
@@ -543,6 +589,12 @@ public class StageManager : MonoBehaviour
     public void EventEnd()
     {
         event_isDone = true;
+        Time.timeScale = 1.0f;
+    }
+
+    public bool GetEventIsDone()
+    {
+        return event_isDone;
     }
 
     public float GetWallMoveSpeed()

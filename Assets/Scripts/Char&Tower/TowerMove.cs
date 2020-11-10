@@ -14,33 +14,37 @@ public class TowerMove : MonoBehaviour
     //private Touch[] m_touches;
     public float rotateSensitive = 1;
     private float rotYValue;
-    
 
-
+    private StageManager m_stageM;
 
     // Start is called before the first frame update
     void Start()
     {
         tr = GetComponent<Transform>();
+
+        m_stageM = GameObject.FindGameObjectWithTag("StageMObject").GetComponent<StageManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Time.timeScale != 0.0f)
+        if(m_stageM.GetEventIsDone() && m_stageM.GetDlgIsDone())
         {
-            //마우스 기반
-            if (Input.GetMouseButtonDown(0))
+            if (Time.timeScale != 0.0f)
             {
-                SwipeEvent();
-            }
-            else if (Input.GetMouseButton(0))
-            {
-                SwipeEvent();
-            }
-            else if (Input.GetMouseButtonUp(0))
-            {
-                onDrag = false;
+                //마우스 기반
+                if (Input.GetMouseButtonDown(0))
+                {
+                    SwipeEvent();
+                }
+                else if (Input.GetMouseButton(0))
+                {
+                    SwipeEvent();
+                }
+                else if (Input.GetMouseButtonUp(0))
+                {
+                    onDrag = false;
+                }
             }
         }
 
