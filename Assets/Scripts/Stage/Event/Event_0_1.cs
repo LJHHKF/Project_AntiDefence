@@ -1,14 +1,10 @@
 ﻿using System.Collections;
-using System.Runtime.InteropServices.WindowsRuntime;
-using TMPro;
-using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Event_0_1 : MonoBehaviour
 {
     [Header("Object Set")]
-
     public StageManager m_stageManager;
     public GameObject ui_Panel_EventDlg;
     public GameObject ui_EventObjects;

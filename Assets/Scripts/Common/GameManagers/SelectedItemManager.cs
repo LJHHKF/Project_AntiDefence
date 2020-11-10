@@ -75,6 +75,10 @@ public class SelectedItemManager : MonoBehaviour
     public Sprite spr_Extend_P;
     public Sprite spr_Recovery;
 
+    [HideInInspector]
+    public bool i_event_AiBarrier = false;
+    public bool i_event_ProtectWall = false;
+
     private void Awake()
     {
         if (PlayerPrefs.GetInt("MulS_B") <= 0)
@@ -192,6 +196,9 @@ public class SelectedItemManager : MonoBehaviour
         i_extend_sn = false;
         i_extend_p = false;
         i_recovery = false;
+
+        i_event_AiBarrier = false;
+        i_event_ProtectWall = false;
 
         PlayerPrefs.SetInt("Moeny", own_money);
     }
@@ -364,5 +371,11 @@ public class SelectedItemManager : MonoBehaviour
         i_aiBarrier = false;
         PlayerPrefs.SetInt("used_AiBarrier", 0);
         PlayerPrefs.SetInt("where_Barrier", 0);
+    }
+
+    public void SetEvent0_2()
+    {
+        i_event_AiBarrier = true;
+        i_event_ProtectWall = true;
     }
 }

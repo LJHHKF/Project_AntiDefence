@@ -154,6 +154,12 @@ public class StageManager : MonoBehaviour
             alive_Barricade = 4;
             isSet_Barriacde = true;
         }
+        else if(itemM.i_event_ProtectWall)
+        {
+            b_spawnPoints.SetActive(true);
+            alive_Barricade = 4;
+            isSet_Barriacde = true;
+        }
         else
         {
             b_spawnPoints.SetActive(false);

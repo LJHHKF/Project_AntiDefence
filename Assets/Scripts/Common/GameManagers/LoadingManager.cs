@@ -17,6 +17,7 @@ public class LoadingManager : MonoBehaviour
     private string prev_Scene;
     private string selectedStage;
     private string selectedChapter;
+    private string loadingSceneName;
     private int chapter_num = -1;
 
     private bool had_prev = false;
@@ -53,6 +54,16 @@ public class LoadingManager : MonoBehaviour
     public void SetEventDone()
     {
         is_event_done = true;
+    }
+
+    public string GetSelectedStage()
+    {
+        return selectedStage;
+    }
+
+    public string GetLoadingSceneName()
+    {
+        return loadingSceneName;
     }
 
     public void LoadSceneGMCallLoading()
@@ -123,6 +134,7 @@ public class LoadingManager : MonoBehaviour
             loadingString = "Now Loading...";
         }
         is_stageEnd = false;
+        loadingSceneName = name;
         CallLoadingScene(name);
     }
 
@@ -140,6 +152,7 @@ public class LoadingManager : MonoBehaviour
         //}
         prev_Scene = prev;
         had_prev = true;
+        loadingSceneName = name;
         CallLoadingScene(name);
     }
 
