@@ -24,17 +24,20 @@ public class WallMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (trigger)
+        if (Time.timeScale != 0.0f)
         {
-            m_transform.Translate(new Vector3(0, moveSpeed, 0));
-            if (m_transform.localPosition.y >= stageM.GetWallMoveMax())
-                trigger = false;
-        }
-        else
-        {
-            m_transform.Translate(new Vector3(0, -moveSpeed, 0));
-            if (m_transform.localPosition.y <= stageM.GetWallMoveMin())
-                trigger = true;
+            if (trigger)
+            {
+                m_transform.Translate(new Vector3(0, moveSpeed, 0));
+                if (m_transform.localPosition.y >= stageM.GetWallMoveMax())
+                    trigger = false;
+            }
+            else
+            {
+                m_transform.Translate(new Vector3(0, -moveSpeed, 0));
+                if (m_transform.localPosition.y <= stageM.GetWallMoveMin())
+                    trigger = true;
+            }
         }
     }
 

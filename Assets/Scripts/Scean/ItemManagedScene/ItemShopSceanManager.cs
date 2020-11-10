@@ -390,7 +390,7 @@ public class ItemShopSceanManager : MonoBehaviour
                 m_rect.position = mousePosition;
                 listPool_touchEf[i].SetActive(true);
                 m_animator.SetTrigger("IsTouched_Trigger");
-                StartCoroutine(StopEffect(listPool_touchEf[i], 0.5f));
+                StartCoroutine(StopEffect(listPool_touchEf[i], touchEfM.GetPlayTime()));
                 is_serched_touchEf = true;
                 break;
             }

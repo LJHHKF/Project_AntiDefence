@@ -42,7 +42,7 @@ TagManager:
   - TowerLayer
   - SubUI
   - Tile
-  - 
+  - ScreenFence
   - 
   - 
   - 
@@ -75,6 +75,9 @@ TagManager:
     locked: 0
   - name: TowerLayer
     uniqueID: 3154313125
+    locked: 0
+  - name: ScreemFence
+    uniqueID: 4210002033
     locked: 0
   - name: UI
     uniqueID: 1138034877
