@@ -45,7 +45,7 @@ public class StageManager : MonoBehaviour
     private Pools pools_DropMoney;
 
     [Header ("Chp,Stage info")]
-    public int chpter_num = 0;
+    public int chapter_num = 0;
     public int stage_num = 1;  // 추후 리스타트용. 당장 유니티 인스펙터뷰에서 체크용이기도 함.
 
     [Header ("Fever Setting")]
@@ -116,9 +116,13 @@ public class StageManager : MonoBehaviour
         t_cur = remainPanel.transform.Find("T_Current").GetComponent<Text>();
         t_full = remainPanel.transform.Find("T_Full").GetComponent<Text>();
 
-        if (chpter_num == 0 && stage_num == 1)
+        if (chapter_num == 0 && stage_num == 1)
         {
             t_full.text = (spawnPointIndex.Length + 3).ToString();
+        }
+        else if(chapter_num == 0 && stage_num == 2)
+        {
+            t_full.text = (spawnPointIndex.Length + 1).ToString();
         }
         else
         {
@@ -559,7 +563,7 @@ public class StageManager : MonoBehaviour
 
     private void StageEnd()
     {
-        loadingM.StageEnd(chpter_num);
+        loadingM.StageEnd(chapter_num);
     }
 
     public void StageFailed()
@@ -620,7 +624,7 @@ public class StageManager : MonoBehaviour
 
     private void PlayBGM()
     {
-        if (chpter_num == 0)
+        if (chapter_num == 0)
         {
             if (stage_num == 1)
             {
