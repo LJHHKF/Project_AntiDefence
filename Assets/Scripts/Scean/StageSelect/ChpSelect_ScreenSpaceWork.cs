@@ -2,56 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Chp0_StageSelect : MonoBehaviour
+public class ChpSelect_ScreenSpaceWork : MonoBehaviour
 {
     private GameObject gm;
-    private LoadingManager loadingM;
-    private BGM_Manager bgmM;
-    private AudioManager audioM;
     private TouchEfManager touchEfM;
 
     private Transform t_touchEfPool;
     private List<GameObject> listPool_touchEf = new List<GameObject>();
     private bool is_serched_touchEf;
+    // Start is called before the first frame update
     void Start()
     {
         gm = GameObject.FindGameObjectWithTag("GameManager");
-        loadingM = gm.GetComponent<LoadingManager>();
-        bgmM = gm.GetComponent<BGM_Manager>();
-        audioM = gm.GetComponent<AudioManager>();
         touchEfM = gm.GetComponent<TouchEfManager>();
 
         t_touchEfPool = gameObject.transform.Find("TouchEffect_Pool");
-
-        bgmM.Play_LobbyAndShop();
     }
 
-    private void Update()
+    // Update is called once per frame
+    void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
             SpawnTouchEf(Input.mousePosition);
         }
-    }
-
-    public void BTN_Stage1()
-    {
-        audioM.SFX_BTN_Click();
-        loadingM.SetSelectedStage("0-1", 0);
-        loadingM.LoadScene("ItemEquip");
-    }
-
-    public void BTN_Stage2()
-    {
-        audioM.SFX_BTN_Click();
-        loadingM.SetSelectedStage("0-2", 0);
-        loadingM.LoadScene("ItemEquip");
-    }
-
-    public void BTN_Return()
-    {
-        audioM.SFX_BTN_Click();
-        loadingM.LoadScene("ChapterSelect");
     }
 
     private void SpawnTouchEf(Vector3 mousePosition)

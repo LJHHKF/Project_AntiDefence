@@ -419,7 +419,7 @@ public class StageManager : MonoBehaviour
                 m_rect.position = mousePosition;
                 pools_TouchEffect.listPool[i].SetActive(true);
                 m_animator.SetTrigger("IsTouched_Trigger");
-                StartCoroutine(StopEffect(pools_TouchEffect.listPool[i], 0.5f));
+                StartCoroutine(StopEffect(pools_TouchEffect.listPool[i], touchEfM.GetPlayTime()));
                 pools_TouchEffect.is_serched = true;
                 break;
             }
