@@ -7,10 +7,7 @@ using UnityEngine.UI;
 
 public class LoadingManager : MonoBehaviour
 {
-    //public GameObject loadingBar_prefab;
-
-    //[HideInInspector]
-    private Image img_loadingbar;
+    //private Image img_loadingbar;
     private string loadingString;
     private bool is_stageEnd = false;
 
@@ -26,10 +23,10 @@ public class LoadingManager : MonoBehaviour
     private bool is_event_done = false;
     private bool is_looped = true;
 
-    public void SetLoadingImage(Image img)
-    {
-        img_loadingbar = img;
-    }
+    //public void SetLoadingImage(Image img)
+    //{
+    //    img_loadingbar = img;
+    //}
 
     public void SetLoadingString(string str)
     {
@@ -134,7 +131,6 @@ public class LoadingManager : MonoBehaviour
             loadingString = "Now Loading...";
         }
         is_stageEnd = false;
-        loadingSceneName = name;
         CallLoadingScene(name);
     }
 
@@ -152,7 +148,6 @@ public class LoadingManager : MonoBehaviour
         //}
         prev_Scene = prev;
         had_prev = true;
-        loadingSceneName = name;
         CallLoadingScene(name);
     }
 
@@ -178,41 +173,42 @@ public class LoadingManager : MonoBehaviour
 
     private void CallLoadingScene(string target)
     {
+        loadingSceneName = target;
         SceneManager.LoadScene("Loading");
         
-        StartCoroutine(LoadAsyncScene(target));
+        //StartCoroutine(LoadAsyncScene(target));
     }
 
 
-    IEnumerator LoadAsyncScene(string target)
-    {
-        yield return null;
-        AsyncOperation asyncScene = SceneManager.LoadSceneAsync(target);
-        asyncScene.allowSceneActivation = false;
-        float timeCnt = 0;
-        while (!asyncScene.isDone)
-        {
-            yield return null;
-            timeCnt += Time.deltaTime;
-            if (asyncScene.progress >= 0.9f)
-            {
-                img_loadingbar.fillAmount = Mathf.Lerp(img_loadingbar.fillAmount, 1, timeCnt);
-                if (img_loadingbar.fillAmount >= 1.0f)
-                {
-                    asyncScene.allowSceneActivation = true;
-                }
-            }
-            else
-            {
-                img_loadingbar.fillAmount = Mathf.Lerp(img_loadingbar.fillAmount, asyncScene.progress, timeCnt);
-                if (img_loadingbar.fillAmount >= asyncScene.progress)
-                {
-                    timeCnt = 0f;
-                }
-            }
-        }
-        StopCoroutine(LoadAsyncScene(target));
-    }
+    //IEnumerator LoadAsyncScene(string target)
+    //{
+    //    yield return null;
+    //    AsyncOperation asyncScene = SceneManager.LoadSceneAsync(target);
+    //    asyncScene.allowSceneActivation = false;
+    //    float timeCnt = 0;
+    //    while (!asyncScene.isDone)
+    //    {
+    //        yield return null;
+    //        timeCnt += Time.deltaTime;
+    //        if (asyncScene.progress >= 0.9f)
+    //        {
+    //            img_loadingbar.fillAmount = Mathf.Lerp(img_loadingbar.fillAmount, 1, timeCnt);
+    //            if (img_loadingbar.fillAmount >= 1.0f)
+    //            {
+    //                asyncScene.allowSceneActivation = true;
+    //            }
+    //        }
+    //        else
+    //        {
+    //            img_loadingbar.fillAmount = Mathf.Lerp(img_loadingbar.fillAmount, asyncScene.progress, timeCnt);
+    //            if (img_loadingbar.fillAmount >= asyncScene.progress)
+    //            {
+    //                timeCnt = 0f;
+    //            }
+    //        }
+    //    }
+    //    StopCoroutine(LoadAsyncScene(target));
+    //}
 
     IEnumerator LoadAsyncScene_First(string target)
     {
@@ -233,10 +229,10 @@ public class LoadingManager : MonoBehaviour
                 }
             }
         }
-        img_loadingbar = null;
+        //img_loadingbar = null;
         is_loaded = false;
         is_event_done = false;
         is_looped = true;
-        StopCoroutine(LoadAsyncScene(target));
+        StopCoroutine(LoadAsyncScene_First(target));
     }
 }
