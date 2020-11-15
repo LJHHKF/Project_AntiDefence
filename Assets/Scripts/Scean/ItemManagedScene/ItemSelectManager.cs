@@ -84,6 +84,8 @@ public class ItemSelectManager : MonoBehaviour
 
     public Sprite img_nonPart;
 
+    private bool event_0_2 = false;
+
 
     void Start()
     {
@@ -158,6 +160,15 @@ public class ItemSelectManager : MonoBehaviour
         sub_panel_warning = gameObject.transform.Find("Panel_Warning").gameObject;
         sub_txt_warning = sub_panel_warning.transform.Find("Panel_Text").Find("Text").GetComponent<Text>();
         sub_panel_warning.SetActive(false);
+
+        if(loadingM.GetSelectedStage() == "Stage0-2")
+        {
+            event_0_2 = true;
+            selectIManager.SetEvent0_2();
+
+            img_p1.sprite = i_imgs[3].sprite;
+            img_p2.sprite = i_imgs[4].sprite;
+        }
     }
 
     private void Update()
@@ -171,89 +182,105 @@ public class ItemSelectManager : MonoBehaviour
     public void Click_B_P1()
     {
         audioM.SFX_BTN_Click();
-        if (p1_on == false && p2_on == false)
+        if (event_0_2)
         {
-            p1_on = true;
-            n_pSelected = 1;
-            togl_p1.isOn = true;
+            On_Warning("듀토리얼 이벤트로 인하여 변경할 수 없습니다.");
         }
-        else if (p1_on && img_selected)
+        else
         {
-            if (p1_select < 0)
+            
+            if (p1_on == false && p2_on == false)
             {
-                img_p1.sprite = i_imgs[index_imgs].sprite;
-                p1_select = index_imgs;
+                p1_on = true;
+                n_pSelected = 1;
+                togl_p1.isOn = true;
             }
-            else
+            else if (p1_on && img_selected)
             {
-                if (p1_select == 3)
+                if (p1_select < 0)
                 {
-                    selectIManager.BarrierBreak();
+                    img_p1.sprite = i_imgs[index_imgs].sprite;
+                    p1_select = index_imgs;
                 }
-                selectIManager.Item_Get(p1_select);
-                UpdateText(p1_select);
+                else
+                {
+                    if (p1_select == 3)
+                    {
+                        selectIManager.BarrierBreak();
+                    }
+                    selectIManager.Item_Get(p1_select);
+                    UpdateText(p1_select);
 
-                img_p1.sprite = i_imgs[index_imgs].sprite;
-                p1_select = index_imgs;
-            }
-            img_selected = false;
-            p1_on = false;
-            togl_p1.isOn = false;
-            n_pSelected = 0;
-        }
-        else if (p1_on)
-        {
-            p1_on = false;
-            togl_p1.isOn = false;
-            n_pSelected = 0;
-            if (p1_select >= 0)
-            {
-                if (p1_select == 3)
-                {
-                    selectIManager.BarrierBreak();
+                    img_p1.sprite = i_imgs[index_imgs].sprite;
+                    p1_select = index_imgs;
                 }
-                selectIManager.Item_Get(p1_select);
-                img_p1.sprite = img_nonPart;
-                UpdateText(p1_select);
+                img_selected = false;
+                p1_on = false;
+                togl_p1.isOn = false;
+                n_pSelected = 0;
             }
-            p1_select = -1;
+            else if (p1_on)
+            {
+                p1_on = false;
+                togl_p1.isOn = false;
+                n_pSelected = 0;
+                if (p1_select >= 0)
+                {
+                    if (p1_select == 3)
+                    {
+                        selectIManager.BarrierBreak();
+                    }
+                    selectIManager.Item_Get(p1_select);
+                    img_p1.sprite = img_nonPart;
+                    UpdateText(p1_select);
+                }
+                p1_select = -1;
+            }
         }
     }
 
     public void Click_B_P2()
     {
         audioM.SFX_BTN_Click();
-        if (p1_on == false && p2_on == false)
+        if (event_0_2)
         {
-            p2_on = true;
-            n_pSelected = 2;
-            togl_p2.isOn = true;
+            On_Warning("듀토리얼 이벤트로 인하여 변경할 수 없습니다.");
         }
-        else if (p2_on && img_selected)
+        else
         {
-            img_p2.sprite = i_imgs[index_imgs].sprite;
-            p2_select = index_imgs;
-            img_selected = false;
-            p2_on = false;
-            togl_p2.isOn = false;
-            n_pSelected = 0;
-        }
-        else if (p2_on)
-        {
-            p2_on = false;
-            togl_p2.isOn = false;
-            n_pSelected = 0;
-            if (p2_select >= 0)
+            
+            if (p1_on == false && p2_on == false)
             {
-                if (p2_select == 3)
-                {
-                    selectIManager.BarrierBreak();
-                }
-                selectIManager.Item_Get(p2_select);
-                img_p2.sprite = img_nonPart;
-                UpdateText(p2_select);
+                p2_on = true;
+                n_pSelected = 2;
+                togl_p2.isOn = true;
             }
-            p2_select = -1;
+            else if (p2_on && img_selected)
+            {
+                img_p2.sprite = i_imgs[index_imgs].sprite;
+                p2_select = index_imgs;
+                img_selected = false;
+                p2_on = false;
+                togl_p2.isOn = false;
+                n_pSelected = 0;
+            }
+            else if (p2_on)
+            {
+                p2_on = false;
+                togl_p2.isOn = false;
+                n_pSelected = 0;
+                if (p2_select >= 0)
+                {
+                    if (p2_select == 3)
+                    {
+                        selectIManager.BarrierBreak();
+                    }
+                    selectIManager.Item_Get(p2_select);
+                    img_p2.sprite = img_nonPart;
+                    UpdateText(p2_select);
+                }
+                p2_select = -1;
+            }
         }
     }
 
@@ -634,7 +661,7 @@ public class ItemSelectManager : MonoBehaviour
                 m_rect.position = mousePosition;
                 listPool_touchEf[i].SetActive(true);
                 m_animator.SetTrigger("IsTouched_Trigger");
-                StartCoroutine(StopEffect(listPool_touchEf[i], 0.5f));
+                StartCoroutine(StopEffect(listPool_touchEf[i], touchEfM.GetPlayTime()));
                 is_serched_touchEf = true;
                 break;
             }

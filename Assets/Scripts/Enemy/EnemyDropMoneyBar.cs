@@ -18,6 +18,8 @@ public class EnemyDropMoneyBar : MonoBehaviour
     private bool is_text_Updated;
     private float time_liv = 1.0f;
 
+    private StageManager stageM;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +29,8 @@ public class EnemyDropMoneyBar : MonoBehaviour
         rectMoney = this.gameObject.GetComponent<RectTransform>();
 
         txt_money = gameObject.transform.Find("Text").GetComponent<Text>();
+
+        stageM = GameObject.FindGameObjectWithTag("StageMObject").GetComponent<StageManager>();
         
     }
 
@@ -52,7 +56,10 @@ public class EnemyDropMoneyBar : MonoBehaviour
         RectTransformUtility.ScreenPointToLocalPointInRectangle(rectParent, screenPos, uiCamera, out Vector2 localPos);
         rectMoney.localPosition = localPos;
 
-        TargetTr.y += 0.01f;
+        if (stageM.GetEventIsDone())
+        {
+            TargetTr.y += 0.01f;
+        }
     }
 
     public void SetDropMoney(int value)

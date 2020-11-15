@@ -97,6 +97,11 @@ public class PlayerManager : MonoBehaviour
             effect_AI_Barrier.SetActive(false);
             StartCoroutine(OnSoundBarrierBreak());
         }
+        else if(selectedItemManager.i_event_AiBarrier)
+        {
+            effect_AI_Barrier.SetActive(false);
+            StartCoroutine(OnSoundBarrierBreak());
+        }
         else if (state != State.DIE)
         {
             player_HP -= dmg;
@@ -135,10 +140,16 @@ public class PlayerManager : MonoBehaviour
         {
             effect_AI_Barrier.SetActive(true);
         }
+        else if (selectedItemManager.i_event_AiBarrier)
+        {
+            effect_AI_Barrier.SetActive(true);
+        }
         else
         {
             effect_AI_Barrier.SetActive(false);
         }
+
+
     }
 
     private IEnumerator OnSoundBarrierBreak()
