@@ -358,36 +358,37 @@ public class Event_0_1 : MonoBehaviour
 
     IEnumerator Event05()
     {
-        Color[] m_colors = new Color[2];
-        for (int i = 0; i < 2; i++)
-        {
-            m_colors[i] = arr_tutorialRanges[0][i].GetComponent<MeshRenderer>().material.color;
-        }
-        float oriAlphaValue = m_colors[0].a;
-        bool reverse = false;
+        //Color[] m_colors = new Color[2];
+        ////for (int i = 0; i < 2; i++)
+        ////{
+        ////    m_colors[i] = arr_tutorialRanges[0][i].GetComponent<MeshRenderer>().material.color;
+        ////}
+        //float oriAlphaValue = m_colors[0].a;
+        //bool reverse = false;
 
-        while (prevEventIsDone == false)
-        {
-            if (reverse == false)
-            {
-                for(int i = 0; i < 2; i++)
-                    m_colors[i] = new Color(m_colors[i].r , m_colors[i].g , m_colors[i].b , m_colors[i].a - (oriAlphaValue * 0.005f));
-                if(m_colors[0].a <= oriAlphaValue * 0.5f)
-                {
-                    reverse = true;
-                }
-            }
-            else
-            {
-                for(int i = 0; i < 2; i++)
-                    m_colors[i] = new Color(m_colors[i].r, m_colors[i].g, m_colors[i].b, m_colors[i].a + (oriAlphaValue * 0.005f));
-                if(m_colors[0].a >= oriAlphaValue)
-                {
-                    prevEventIsDone = true;
-                }
-            }
-            yield return new WaitForSecondsRealtime(0.01f);
-        }
+        //while (prevEventIsDone == false)
+        //{
+        //    if (reverse == false)
+        //    {
+        //        for(int i = 0; i < 2; i++)
+        //            m_colors[i] = new Color(m_colors[i].r , m_colors[i].g , m_colors[i].b , m_colors[i].a - (oriAlphaValue * 0.005f));
+        //        if(m_colors[0].a <= oriAlphaValue * 0.5f)
+        //        {
+        //            reverse = true;
+        //        }
+        //    }
+        //    else
+        //    {
+        //        for(int i = 0; i < 2; i++)
+        //            m_colors[i] = new Color(m_colors[i].r, m_colors[i].g, m_colors[i].b, m_colors[i].a + (oriAlphaValue * 0.005f));
+        //        if(m_colors[0].a >= oriAlphaValue)
+        //        {
+        //            prevEventIsDone = true;
+        //        }
+        //    }
+        //    yield return new WaitForSecondsRealtime(0.01f);
+        //}
+        prevEventIsDone = true;
         yield break;
     }
 
@@ -516,6 +517,7 @@ public class Event_0_1 : MonoBehaviour
                 if (m_color.a <= oriAlpha * 0.5f)
                 {
                     reverse = true;
+                    Time.timeScale = 0.0f;
                 }
             }
             else
@@ -524,7 +526,6 @@ public class Event_0_1 : MonoBehaviour
                 if (m_color.a >= oriAlpha)
                 {
                     prevEventIsDone = true;
-                    Time.timeScale = 0.0f;
                 }
             }
             yield return new WaitForSecondsRealtime(0.01f);
@@ -556,6 +557,7 @@ public class Event_0_1 : MonoBehaviour
                 if (m_color.a <= oriAlpha * 0.5f)
                 {
                     reverse = true;
+                    Time.timeScale = 0.0f;
                 }
             }
             else
@@ -564,7 +566,6 @@ public class Event_0_1 : MonoBehaviour
                 if (m_color.a >= oriAlpha)
                 {
                     prevEventIsDone = true;
-                    Time.timeScale = 0.0f;
                 }
             }
             yield return new WaitForSecondsRealtime(0.01f);

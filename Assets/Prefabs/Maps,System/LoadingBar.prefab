@@ -89,7 +89,6 @@ GameObject:
   - component: {fileID: 1929190306749877303}
   - component: {fileID: 1929190306749877289}
   - component: {fileID: 1929190306749877288}
-  - component: {fileID: 9156338033326099390}
   m_Layer: 5
   m_Name: LoadingBar
   m_TagString: LoadingBar
@@ -154,15 +153,3 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &9156338033326099390
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1929190306749877302}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 938940b0b6efee94a8a271a5885bae67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
