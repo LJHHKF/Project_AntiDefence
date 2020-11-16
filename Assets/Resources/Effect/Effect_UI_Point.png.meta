@@ -1,0 +1,1040 @@
+fileFormatVersion: 2
+guid: f8ebd45fc72a2c84b8316c11f7f3c583
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5165816967651658292
+    second: Effect_UI_Tile_0
+  - first:
+      213: -3436803460684863318
+    second: Effect_UI_Tile_1
+  - first:
+      213: -1539728727628116982
+    second: Effect_UI_Tile_2
+  - first:
+      213: 7129908574858798343
+    second: Effect_UI_Tile_3
+  - first:
+      213: 5749909533080060623
+    second: Effect_UI_Tile_4
+  - first:
+      213: 373921477138879751
+    second: Effect_UI_Tile_5
+  - first:
+      213: 5048415319485103902
+    second: Effect_UI_Tile_6
+  - first:
+      213: -7748682193940215900
+    second: Effect_UI_Tile_7
+  - first:
+      213: 4483182755459765378
+    second: Effect_UI_Tile_8
+  - first:
+      213: -1116372269070920874
+    second: Effect_UI_Tile_9
+  - first:
+      213: -7301592904234276608
+    second: Effect_UI_Tile_10
+  - first:
+      213: -6640496575840441452
+    second: Effect_UI_Tile_11
+  - first:
+      213: 8900833859188153130
+    second: Effect_UI_Tile_12
+  - first:
+      213: -35811754993940595
+    second: Effect_UI_Tile_13
+  - first:
+      213: -5904325629771314526
+    second: Effect_UI_Tile_14
+  - first:
+      213: -380493856659578200
+    second: Effect_UI_Tile_15
+  - first:
+      213: 5333481084577583502
+    second: Effect_UI_Tile_16
+  - first:
+      213: 3582557774837214520
+    second: Effect_UI_Tile_17
+  - first:
+      213: 1194064109471371572
+    second: Effect_UI_Tile_18
+  - first:
+      213: -8882095645396604035
+    second: Effect_UI_Tile_19
+  - first:
+      213: -3061936016699811727
+    second: Effect_UI_Tile_20
+  - first:
+      213: 2612250993327107466
+    second: Effect_UI_Tile_21
+  - first:
+      213: 4129564769621550022
+    second: Effect_UI_Tile_22
+  - first:
+      213: -9031191179083600591
+    second: Effect_UI_Tile_23
+  - first:
+      213: -3093732344778746686
+    second: Effect_UI_Tile_24
+  - first:
+      213: -7587379212586344527
+    second: Effect_UI_Tile_25
+  - first:
+      213: 5537586164882542460
+    second: Effect_UI_Tile_26
+  - first:
+      213: 7137245288559738696
+    second: Effect_UI_Tile_27
+  - first:
+      213: -2455118005589462343
+    second: Effect_UI_Tile_28
+  - first:
+      213: 2979304593631776074
+    second: Effect_UI_Tile_29
+  - first:
+      213: 7753178556898237761
+    second: Effect_UI_Tile_30
+  - first:
+      213: 6653308630130768304
+    second: Effect_UI_Tile_31
+  - first:
+      213: -812998872409933732
+    second: Effect_UI_Tile_32
+  - first:
+      213: -4005335626947781558
+    second: Effect_UI_Tile_33
+  - first:
+      213: 8231779950959322350
+    second: Effect_UI_Tile_34
+  - first:
+      213: 4167471610989952850
+    second: Effect_UI_Tile_35
+  - first:
+      213: 3220811146577193955
+    second: Effect_UI_Tile_36
+  - first:
+      213: 8221743873373868847
+    second: Effect_UI_Tile_37
+  - first:
+      213: -7718299800304531888
+    second: Effect_UI_Tile_38
+  - first:
+      213: -903122876113906902
+    second: Effect_UI_Tile_39
+  - first:
+      213: -4734728872500238300
+    second: Effect_UI_Tile_40
+  - first:
+      213: -349194283348345258
+    second: Effect_UI_Tile_41
+  - first:
+      213: 1504922942212934987
+    second: Effect_UI_Tile_42
+  - first:
+      213: 3150033612368600897
+    second: Effect_UI_Tile_43
+  - first:
+      213: -9023443108997322532
+    second: Effect_UI_Tile_44
+  - first:
+      213: 2313725656744520674
+    second: Effect_UI_Tile_45
+  - first:
+      213: -5953195474647566951
+    second: Effect_UI_Tile_46
+  - first:
+      213: -3612093411621172487
+    second: Effect_UI_Tile_47
+  - first:
+      213: 8309517096696866075
+    second: Effect_UI_Tile_48
+  - first:
+      213: 3837055787355458175
+    second: Effect_UI_Tile_49
+  - first:
+      213: 7361217460799291289
+    second: Effect_UI_Tile_50
+  - first:
+      213: 685339031832643145
+    second: Effect_UI_Tile_51
+  - first:
+      213: 272851687671042482
+    second: Effect_UI_Tile_52
+  - first:
+      213: -477048628502592779
+    second: Effect_UI_Tile_53
+  - first:
+      213: -8461720028695585205
+    second: Effect_UI_Tile_54
+  - first:
+      213: 6966193101311054915
+    second: Effect_UI_Tile_55
+  - first:
+      213: -6527950566833492651
+    second: Effect_UI_Tile_56
+  - first:
+      213: -1145552527278474162
+    second: Effect_UI_Tile_57
+  - first:
+      213: 4790478898547283449
+    second: Effect_UI_Tile_58
+  - first:
+      213: -8428538680631586207
+    second: Effect_UI_Tile_59
+  - first:
+      213: -311271594284539113
+    second: Effect_UI_Tile_60
+  - first:
+      213: -7109117109763675092
+    second: Effect_UI_Tile_61
+  - first:
+      213: -3415207522125820933
+    second: Effect_UI_Tile_62
+  - first:
+      213: -7980424299844257949
+    second: Effect_UI_Tile_63
+  - first:
+      213: -8611432707416222699
+    second: Effect_UI_Tile_64
+  - first:
+      213: 5517069231919291375
+    second: Effect_UI_Tile_65
+  - first:
+      213: -3649025695923655388
+    second: Effect_UI_Tile_66
+  - first:
+      213: 5291930853879315548
+    second: Effect_UI_Tile_67
+  - first:
+      213: 7625208945395645220
+    second: Effect_UI_Tile_68
+  - first:
+      213: -5428378713845226583
+    second: Effect_UI_Tile_69
+  - first:
+      213: 3344145760761281260
+    second: Effect_UI_Tile_70
+  - first:
+      213: -9114740975029793911
+    second: Effect_UI_Tile_71
+  - first:
+      213: 1010379793445950150
+    second: Effect_UI_Tile_72
+  - first:
+      213: -3339325470456203976
+    second: Effect_UI_Tile_73
+  - first:
+      213: 3717190618758348599
+    second: Effect_UI_Tile_74
+  - first:
+      213: -2608151181245025568
+    second: Effect_UI_Tile_75
+  - first:
+      213: -1969263759853248081
+    second: Effect_UI_Tile_76
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Effect_UI_Tile_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1500
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43a0093992ba0b740800000000000000
+      internalID: 5165816967651658292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_UI_Tile_1
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1500
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa8ab0326750e40d0800000000000000
+      internalID: -3436803460684863318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_UI_Tile_2
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1500
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0c034b41e8c1aae0800000000000000
+      internalID: -1539728727628116982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_UI_Tile_3
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 1500
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 705687da21682f260800000000000000
+      internalID: 7129908574858798343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_UI_Tile_4
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1500
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc28ed98148cbcf40800000000000000
+      internalID: 5749909533080060623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_UI_Tile_5
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 1500
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70590c23a9f603500800000000000000
+      internalID: 373921477138879751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_UI_Tile_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1200
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1fbc844cf29f0640800000000000000
+      internalID: 5048415319485103902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_UI_Tile_7
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1200
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a78cc05996277490800000000000000
+      internalID: -7748682193940215900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_UI_Tile_8
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1200
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 284165296f6773e30800000000000000
+      internalID: 4483182755459765378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_UI_Tile_9
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 1200
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6535ee80659d180f0800000000000000
+      internalID: -1116372269070920874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_UI_Tile_10
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1200
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0096a9860f78baa90800000000000000
+      internalID: -7301592904234276608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_UI_Tile_11
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 1200
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49b25d01c8738d3a0800000000000000
+      internalID: -6640496575840441452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_UI_Tile_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 900
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2bddad7c3d168b70800000000000000
+      internalID: 8900833859188153130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_UI_Tile_13
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 900
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d878dc80665c08ff0800000000000000
+      internalID: -35811754993940595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_UI_Tile_14
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 900
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aa0f374f1f9f0ea0800000000000000
+      internalID: -5904325629771314526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_UI_Tile_15
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 900
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a266927ad638baf0800000000000000
+      internalID: -380493856659578200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_UI_Tile_16
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 900
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e811386d9c4540a40800000000000000
+      internalID: 5333481084577583502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_UI_Tile_17
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 900
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83d6c74a05dc7b130800000000000000
+      internalID: 3582557774837214520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_UI_Tile_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 600
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 431951c2bfa229010800000000000000
+      internalID: 1194064109471371572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_UI_Tile_19
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 600
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7b6713e1157cb480800000000000000
+      internalID: -8882095645396604035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_UI_Tile_20
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 600
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17812a76a61d185d0800000000000000
+      internalID: -3061936016699811727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_UI_Tile_21
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 600
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8d6c692074904420800000000000000
+      internalID: 2612250993327107466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_UI_Tile_22
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 600
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c3a24257492f4930800000000000000
+      internalID: 4129564769621550022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_UI_Tile_23
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 600
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13da410d873caa280800000000000000
+      internalID: -9031191179083600591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_UI_Tile_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 300
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c4935fd2dad015d0800000000000000
+      internalID: -3093732344778746686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_UI_Tile_25
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 300
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bf9b994ec634b690800000000000000
+      internalID: -7587379212586344527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_UI_Tile_26
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 300
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7f01fe074579dc40800000000000000
+      internalID: 5537586164882542460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_UI_Tile_27
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 300
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84ffe6376c69c0360800000000000000
+      internalID: 7137245288559738696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_UI_Tile_28
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 300
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b2bc238e2badedd0800000000000000
+      internalID: -2455118005589462343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_UI_Tile_29
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 300
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4d8c1d2ebd985920800000000000000
+      internalID: 2979304593631776074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_UI_Tile_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14d5814c1d2d89b60800000000000000
+      internalID: 7753178556898237761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_UI_Tile_31
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b93cf7c2fc455c50800000000000000
+      internalID: 6653308630130768304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_UI_Tile_32
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c58763f35d5a7b4f0800000000000000
+      internalID: -812998872409933732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 49010c63cf5c2b1409d998be717ee107
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
