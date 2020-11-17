@@ -5,24 +5,33 @@ using System.IO;
 
 public class DataSaveManager : MonoBehaviour
 {
+    //이하 코드는 서강 겜교의 '게임제작실습' 수업서 얻은 도관목 선배님의 코드를 그대로 적용했습니다.
+
     public static Dictionary<string, int> ownItemCount = new Dictionary<string, int>();
 
     List<string> readList;
 
     private void Awake()
     {
-        ReadData("DB_player.csv", ownItemCount);
+        ReadData("DB_Item.csv", ownItemCount);
     }
     public void ReadData(string _filename, Dictionary<string, int> _readDic)
     {
         string filepath = PathForDocumentsFile(_filename);
 
         if (File.Exists(filepath)) // 이 파일이 존재한다면
+        {
             readList = ReadData_oldFile(filepath);
+        }
         else // 파일이 존재하지 않다면(앱 설치 후 첫 실행 시에만 작동)
+        {
             readList = ReadData_newFile(_filename);
+        }
+
         for (int i = 0; i < readList.Count; i += 2)
+        {
             _readDic.Add(readList[i].ToString(), int.Parse(readList[i + 1]));
+        }
     }
 
     public static void WriteData(string _filename, Dictionary<string, int> _saveDic)
@@ -74,7 +83,10 @@ public class DataSaveManager : MonoBehaviour
         // SubString(index1, index2) : index1부터 index2의 직전 텍스트까지만 잘라서 반환한다.
         TextAsset data = Resources.Load("csvData/" + _filename.Substring(0, _filename.LastIndexOf('.')), typeof(TextAsset)) as TextAsset;
         if (data == null)
+        {
+            Debug.Log("3");
             return null;
+        }
         StringReader stringReader = new StringReader(data.text);
 
         string source = "";

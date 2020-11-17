@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class SkinSceneManager : MonoBehaviour
 {
 
-    private int max_skin = 4;
+    private int max_skin = 2;
 
     private GameObject gm;
     private LoadingManager loadingM;
@@ -171,7 +171,9 @@ public class SkinSceneManager : MonoBehaviour
             {
                 skins[cnt_skin].is_had = 1;
                 string key = "HadSkin" + cnt_skin.ToString();
-                PlayerPrefs.SetInt(key, skins[cnt_skin].is_had);
+                //PlayerPrefs.SetInt(key, skins[cnt_skin].is_had);
+                DataSaveManager.ownItemCount[key] = skins[cnt_skin].is_had;
+                DataSaveManager.WriteData("DB_Item.csv", DataSaveManager.ownItemCount);
                 UpdateScene();
             }
             else
@@ -258,13 +260,7 @@ public class SkinSceneManager : MonoBehaviour
         skins[0].is_had = 1;
 
         skins[1].price = 200;
-        skins[1].is_had = PlayerPrefs.GetInt("HadSkin1", 0);
-
-        skins[2].price = 300;
-        skins[2].is_had = PlayerPrefs.GetInt("HadSkin2", 0);
-
-        skins[3].price = 400;
-        skins[3].is_had = PlayerPrefs.GetInt("HadSkin3", 0);
+        skins[1].is_had = DataSaveManager.ownItemCount["HadSkin1"];
     }
 
     IEnumerator Anim_Ctrl(int index)

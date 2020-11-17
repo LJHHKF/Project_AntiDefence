@@ -123,47 +123,59 @@ public class SelectedItemManager : MonoBehaviour
 
     private void Awake()
     {
-        if (PlayerPrefs.GetInt("MulS_B") <= 0)
-            own_MulS_B = 0;
-        else
-            own_MulS_B = PlayerPrefs.GetInt("MulS_B");
-        if (PlayerPrefs.GetInt("MulS_SN") <= 0)
-            own_MulS_SN = 0;
-        else
-            own_MulS_SN = PlayerPrefs.GetInt("MulS_SN");
-        if (PlayerPrefs.GetInt("MulS_P") <= 0)
-            own_MulS_P = 0;
-        else
-            own_MulS_P = PlayerPrefs.GetInt("MulS_P");
-        if (PlayerPrefs.GetInt("AiBarrier") <= 0)
-            own_AiBarrier = 0;
-        else
-            own_AiBarrier = PlayerPrefs.GetInt("AiBarrier");
-        if (PlayerPrefs.GetInt("ProtectWall") <= 0)
-            own_ProtectWall = 0;
-        else
-            own_ProtectWall = PlayerPrefs.GetInt("ProtectWall");
-        if (PlayerPrefs.GetInt("Extend_B") <= 0)
-            own_Extend_B = 0;
-        else
-            own_Extend_B = PlayerPrefs.GetInt("Extend_B");
-        if (PlayerPrefs.GetInt("Extend_SN") <= 0)
-            own_Extend_SN = 0;
-        else
-            own_Extend_SN = PlayerPrefs.GetInt("Extend_SN");
-        if (PlayerPrefs.GetInt("Extend_P") <= 0)
-            own_Extend_P = 0;
-        else
-            own_Extend_P = PlayerPrefs.GetInt("Extend_P");
-        if (PlayerPrefs.GetInt("Recovery") <= 0)
-            own_Recovery = 0;
-        else
-            own_Recovery = PlayerPrefs.GetInt("Recovery");
+        //if (PlayerPrefs.GetInt("MulS_B") <= 0)
+        //    own_MulS_B = 0;
+        //else
+        //    own_MulS_B = PlayerPrefs.GetInt("MulS_B");
+        //if (PlayerPrefs.GetInt("MulS_SN") <= 0)
+        //    own_MulS_SN = 0;
+        //else
+        //    own_MulS_SN = PlayerPrefs.GetInt("MulS_SN");
+        //if (PlayerPrefs.GetInt("MulS_P") <= 0)
+        //    own_MulS_P = 0;
+        //else
+        //    own_MulS_P = PlayerPrefs.GetInt("MulS_P");
+        //if (PlayerPrefs.GetInt("AiBarrier") <= 0)
+        //    own_AiBarrier = 0;
+        //else
+        //    own_AiBarrier = PlayerPrefs.GetInt("AiBarrier");
+        //if (PlayerPrefs.GetInt("ProtectWall") <= 0)
+        //    own_ProtectWall = 0;
+        //else
+        //    own_ProtectWall = PlayerPrefs.GetInt("ProtectWall");
+        //if (PlayerPrefs.GetInt("Extend_B") <= 0)
+        //    own_Extend_B = 0;
+        //else
+        //    own_Extend_B = PlayerPrefs.GetInt("Extend_B");
+        //if (PlayerPrefs.GetInt("Extend_SN") <= 0)
+        //    own_Extend_SN = 0;
+        //else
+        //    own_Extend_SN = PlayerPrefs.GetInt("Extend_SN");
+        //if (PlayerPrefs.GetInt("Extend_P") <= 0)
+        //    own_Extend_P = 0;
+        //else
+        //    own_Extend_P = PlayerPrefs.GetInt("Extend_P");
+        //if (PlayerPrefs.GetInt("Recovery") <= 0)
+        //    own_Recovery = 0;
+        //else
+        //    own_Recovery = PlayerPrefs.GetInt("Recovery");
 
-        if (PlayerPrefs.GetInt("Money") <= 0)
-            own_money = 0;
-        else
-            own_money = PlayerPrefs.GetInt("Money");
+        //if (PlayerPrefs.GetInt("Money") <= 0)
+        //    own_money = 0;
+        //else
+        //    own_money = PlayerPrefs.GetInt("Money");
+
+        own_MulS_B = DataSaveManager.ownItemCount["Muls_B"];
+        own_MulS_SN = DataSaveManager.ownItemCount["Muls_SN"];
+        own_MulS_P = DataSaveManager.ownItemCount["Muls_P"];
+        own_AiBarrier = DataSaveManager.ownItemCount["AiBarrier"];
+        own_ProtectWall = DataSaveManager.ownItemCount["ProtectWall"];
+        own_Extend_B = DataSaveManager.ownItemCount["Extend_B"];
+        own_Extend_SN = DataSaveManager.ownItemCount["Extend_SN"];
+        own_Extend_P = DataSaveManager.ownItemCount["Extend_P"];
+        own_Recovery = DataSaveManager.ownItemCount["Recovery"];
+
+        own_money = DataSaveManager.ownItemCount["Money"];
 
         SetItemInfo();
     }
@@ -172,21 +184,25 @@ public class SelectedItemManager : MonoBehaviour
     {
         if (use_confirm)
         {
-            PlayerPrefs.SetInt("MulS_B", own_MulS_B);
-            PlayerPrefs.SetInt("MulS_SN", own_MulS_SN);
-            PlayerPrefs.SetInt("MulS_P", own_MulS_P);
-            PlayerPrefs.SetInt("AiBarrier", own_AiBarrier);
-            PlayerPrefs.SetInt("ProtectWall", own_ProtectWall);
-            PlayerPrefs.SetInt("Extend_B", own_Extend_B);
-            PlayerPrefs.SetInt("Extend_SN", own_Extend_SN);
-            PlayerPrefs.SetInt("Extend_P", own_Extend_P);
-            PlayerPrefs.SetInt("Recovery", own_Recovery);
-            PlayerPrefs.SetInt("Money", own_money);
+            //PlayerPrefs.SetInt("MulS_B", own_MulS_B);
+            //PlayerPrefs.SetInt("MulS_SN", own_MulS_SN);
+            //PlayerPrefs.SetInt("MulS_P", own_MulS_P);
+            //PlayerPrefs.SetInt("AiBarrier", own_AiBarrier);
+            //PlayerPrefs.SetInt("ProtectWall", own_ProtectWall);
+            //PlayerPrefs.SetInt("Extend_B", own_Extend_B);
+            //PlayerPrefs.SetInt("Extend_SN", own_Extend_SN);
+            //PlayerPrefs.SetInt("Extend_P", own_Extend_P);
+            //PlayerPrefs.SetInt("Recovery", own_Recovery);
+            //PlayerPrefs.SetInt("Money", own_money);
+            DataSaveManager.WriteData("DB_Item.csv", DataSaveManager.ownItemCount);
         }
-        else if(get_money)
+        else if (get_money)
         {
-            PlayerPrefs.SetInt("Money", own_money);
+            //PlayerPrefs.SetInt("Money", own_money);
+            DataSaveManager.WriteData("DB_Item.csv", DataSaveManager.ownItemCount);
         }
+
+        
     }
 
     private void SetItemInfo()
@@ -242,53 +258,66 @@ public class SelectedItemManager : MonoBehaviour
         i_event_AiBarrier = false;
         i_event_ProtectWall = false;
 
-        PlayerPrefs.SetInt("Moeny", own_money);
+        //PlayerPrefs.SetInt("Moeny", own_money);
+        DataSaveManager.WriteData("DB_Item.csv", DataSaveManager.ownItemCount);
     }
     public void Item_Use_Confirm(int i_num)
     {
         use_confirm = true;
         get_money = false;
-        PlayerPrefs.SetInt("Money", own_money);
+        //PlayerPrefs.SetInt("Money", own_money);
+        DataSaveManager.ownItemCount["Money"] = own_money;
         switch (i_num)
         {
             case 0:
                 i_muls_b = true;
-                PlayerPrefs.SetInt("MulS_B", own_MulS_B);
+                //PlayerPrefs.SetInt("MulS_B", own_MulS_B);
+                DataSaveManager.ownItemCount["Muls_B"] = own_MulS_B;
                 break;
             case 1:
                 i_muls_sn = true;
-                PlayerPrefs.SetInt("MulS_SN", own_MulS_SN);
+                //PlayerPrefs.SetInt("MulS_SN", own_MulS_SN);
+                DataSaveManager.ownItemCount["Muls_SN"] = own_MulS_SN;
                 break;
             case 2:
                 i_muls_p = true;
-                PlayerPrefs.SetInt("MulS_P", own_MulS_P);
+                //PlayerPrefs.SetInt("MulS_P", own_MulS_P);
+                DataSaveManager.ownItemCount["Muls_P"] = own_MulS_P;
                 break;
             case 3:
                 i_aiBarrier = true;
-                PlayerPrefs.SetInt("AiBarrier", own_AiBarrier);
-                PlayerPrefs.SetInt("used_AiBarrier", 1);
+                //PlayerPrefs.SetInt("AiBarrier", own_AiBarrier);
+                //PlayerPrefs.SetInt("used_AiBarrier", 1);
+                DataSaveManager.ownItemCount["AiBarrier"] = own_AiBarrier;
+                DataSaveManager.ownItemCount["used_AiBarrier"] = 1;
                 break;
             case 4:
                 i_protectWall = true;
-                PlayerPrefs.SetInt("ProtectWall", own_ProtectWall);
+                //PlayerPrefs.SetInt("ProtectWall", own_ProtectWall);
+                DataSaveManager.ownItemCount["ProtectWall"] = own_ProtectWall;
                 break;
             case 5:
                 i_extend_b = true;
-                PlayerPrefs.SetInt("Extend_B", own_Extend_B);
+                //PlayerPrefs.SetInt("Extend_B", own_Extend_B);
+                DataSaveManager.ownItemCount["Extend_B"] = own_Extend_B;
                 break;
             case 6:
                 i_extend_sn = true;
-                PlayerPrefs.SetInt("Extend_SN", own_Extend_SN);
+                //PlayerPrefs.SetInt("Extend_SN", own_Extend_SN);
+                DataSaveManager.ownItemCount["Extend_SN"] = own_Extend_SN;
                 break;
             case 7:
                 i_extend_p = true;
-                PlayerPrefs.SetInt("Extend_B", own_Extend_P);
+                //PlayerPrefs.SetInt("Extend_P", own_Extend_P);
+                DataSaveManager.ownItemCount["Extend_P"] = own_Extend_P;
                 break;
             case 8:
-                PlayerPrefs.SetInt("Recovery", own_Recovery);
+                //PlayerPrefs.SetInt("Recovery", own_Recovery);
+                DataSaveManager.ownItemCount["Recovery"] = own_Recovery;
                 i_recovery = true;
                 break;
         }
+        DataSaveManager.WriteData("DB_Item.csv", DataSaveManager.ownItemCount);
     }
 
     public void Item_PreUse(int i_num)
@@ -366,39 +395,51 @@ public class SelectedItemManager : MonoBehaviour
         switch (i_num)
         {
             case 0:
-                PlayerPrefs.SetInt("MulS_B", own_MulS_B);
+                //PlayerPrefs.SetInt("MulS_B", own_MulS_B);
+                DataSaveManager.ownItemCount["Muls_B"] = own_MulS_B;
                 break;
             case 1:
-                PlayerPrefs.SetInt("MulS_SN", own_MulS_SN);
+                //PlayerPrefs.SetInt("MulS_SN", own_MulS_SN);
+                DataSaveManager.ownItemCount["Muls_SN"] = own_MulS_SN;
                 break;
             case 2:
-                PlayerPrefs.SetInt("MulS_P", own_MulS_P);
+                //PlayerPrefs.SetInt("MulS_P", own_MulS_P);
+                DataSaveManager.ownItemCount["Muls_P"] = own_MulS_P;
                 break;
             case 3:
-                PlayerPrefs.SetInt("AiBarrier", own_AiBarrier);
+                //PlayerPrefs.SetInt("AiBarrier", own_AiBarrier);
+                DataSaveManager.ownItemCount["AiBarrier"] = own_AiBarrier;
                 break;
             case 4:
-                PlayerPrefs.SetInt("ProtectWall", own_ProtectWall);
+                //PlayerPrefs.SetInt("ProtectWall", own_ProtectWall);
+                DataSaveManager.ownItemCount["ProtectWall"] = own_ProtectWall;
                 break;
             case 5:
-                PlayerPrefs.SetInt("Extend_B", own_Extend_B);
+                //PlayerPrefs.SetInt("Extend_B", own_Extend_B);
+                DataSaveManager.ownItemCount["Extend_B"] = own_Extend_B;
                 break;
             case 6:
-                PlayerPrefs.SetInt("Extend_SN", own_Extend_SN);
+                //PlayerPrefs.SetInt("Extend_SN", own_Extend_SN);
+                DataSaveManager.ownItemCount["Extend_SN"] = own_Extend_SN;
                 break;
             case 7:
-                PlayerPrefs.SetInt("Extend_P", own_Extend_P);
+                //PlayerPrefs.SetInt("Extend_P", own_Extend_P);
+                DataSaveManager.ownItemCount["Extend_P"] = own_Extend_P;
                 break;
             case 8:
-                PlayerPrefs.SetInt("Recovery", own_Recovery);
+                //PlayerPrefs.SetInt("Recovery", own_Recovery);
+                DataSaveManager.ownItemCount["Recovery"] = own_Recovery;
                 break;
         }
+        DataSaveManager.WriteData("DB_Item.csv", DataSaveManager.ownItemCount);
     }
 
     public void Use_Money(int used)
     {
         own_money -= used;
-        PlayerPrefs.SetInt("Money", own_money);
+        //PlayerPrefs.SetInt("Money", own_money);
+        DataSaveManager.ownItemCount["Money"] = own_money;
+        DataSaveManager.WriteData("DB_Item.csv", DataSaveManager.ownItemCount);
     }
 
     public void Get_Money(int get)
@@ -411,8 +452,11 @@ public class SelectedItemManager : MonoBehaviour
     public void BarrierBreak()
     {
         i_aiBarrier = false;
-        PlayerPrefs.SetInt("used_AiBarrier", 0);
-        PlayerPrefs.SetInt("where_Barrier", 0);
+        //PlayerPrefs.SetInt("used_AiBarrier", 0);
+        //PlayerPrefs.SetInt("where_Barrier", 0);
+        DataSaveManager.ownItemCount["used_AiBarrier"] = 0;
+        DataSaveManager.ownItemCount["where_Barrier"] = 0;
+        DataSaveManager.WriteData("DB_Item.csv", DataSaveManager.ownItemCount);
     }
 
     public void SetEvent0_2()

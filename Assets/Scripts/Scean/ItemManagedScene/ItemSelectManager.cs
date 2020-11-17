@@ -21,8 +21,6 @@ public class ItemSelectManager : MonoBehaviour
     private Image img_p2;
     private Toggle togl_p1;
     private Toggle togl_p2;
-    private static int n_p1 = 1;
-    private static int n_p2 = 2;
     private int w_pn;
 
     private GameObject sub_panel_item;
@@ -134,7 +132,8 @@ public class ItemSelectManager : MonoBehaviour
                                 aIBarrier.price, protectWall.price, extend_B.price,
                                 extend_SN.price, extend_P.price, recovery.price};
 
-        w_pn = PlayerPrefs.GetInt("where_Barrier");
+        w_pn = DataSaveManager.ownItemCount["where_Barrier"];
+            //PlayerPrefs.GetInt("where_Barrier");
         if (w_pn > 0)
         {
             if (w_pn == 1)
@@ -434,7 +433,9 @@ public class ItemSelectManager : MonoBehaviour
             selectIManager.Item_Use_Confirm(p1_select);
             if (p1_select == 3)
             {
-                PlayerPrefs.SetInt("where_Barrier", n_p1);
+                //PlayerPrefs.SetInt("where_Barrier", n_p1);
+                DataSaveManager.ownItemCount["where_Barrier"] = 1;
+                DataSaveManager.WriteData("DB_Item.csv", DataSaveManager.ownItemCount);
             }
         }
         if (p2_select >= 0)
@@ -442,7 +443,9 @@ public class ItemSelectManager : MonoBehaviour
             selectIManager.Item_Use_Confirm(p2_select);
             if (p2_select == 3)
             {
-                PlayerPrefs.SetInt("where_Barrier", n_p2);
+                //PlayerPrefs.SetInt("where_Barrier", n_p2);
+                DataSaveManager.ownItemCount["where_Barrier"] = 2;
+                DataSaveManager.WriteData("DB_Item.csv", DataSaveManager.ownItemCount);
             }
         }
 
