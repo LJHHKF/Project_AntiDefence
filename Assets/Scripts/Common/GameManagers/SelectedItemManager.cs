@@ -6,63 +6,104 @@ public class SelectedItemManager : MonoBehaviour
 {
     [HideInInspector]
     public bool i_muls_b = false;
+    [HideInInspector]
     public bool i_muls_sn = false;
+    [HideInInspector]
     public bool i_muls_p = false;
+    [HideInInspector]
     public bool i_aiBarrier = false;
+    [HideInInspector]
     public bool i_protectWall = false;
+    [HideInInspector]
     public bool i_extend_b = false;
+    [HideInInspector]
     public bool i_extend_sn = false;
+    [HideInInspector]
     public bool i_extend_p = false;
+    [HideInInspector]
     public bool i_recovery = false;
 
     [HideInInspector]
     public int own_MulS_B;
+    [HideInInspector]
     public int own_MulS_SN;
+    [HideInInspector]
     public int own_MulS_P;
+    [HideInInspector]
     public int own_AiBarrier;
+    [HideInInspector]
     public int own_ProtectWall;
+    [HideInInspector]
     public int own_Extend_B;
+    [HideInInspector]
     public int own_Extend_SN;
+    [HideInInspector]
     public int own_Extend_P;
+    [HideInInspector]
     public int own_Recovery;
 
     private bool use_confirm = false;
 
     [HideInInspector]
     public int own_money;
+    [HideInInspector]
     public bool get_money = false;
 
     [HideInInspector]
     public string name_Muls_B;
+    [HideInInspector]
     public string name_Muls_SN;
+    [HideInInspector]
     public string name_Muls_P;
+    [HideInInspector]
     public string name_AiBarrire;
+    [HideInInspector]
     public string name_ProtectWall;
+    [HideInInspector]
     public string name_Extend_B;
+    [HideInInspector]
     public string name_Extend_SN;
+    [HideInInspector]
     public string name_Extend_P;
+    [HideInInspector]
     public string name_Recovery;
 
     [HideInInspector]
     public string txt_Muls_B;
+    [HideInInspector]
     public string txt_Muls_SN;
+    [HideInInspector]
     public string txt_Muls_P;
+    [HideInInspector]
     public string txt_AiBarrier;
+    [HideInInspector]
     public string txt_ProtectWall;
+    [HideInInspector]
     public string txt_Extend_B;
+    [HideInInspector]
     public string txt_Extend_SN;
+    [HideInInspector]
     public string txt_Extend_P;
+    [HideInInspector]
     public string txt_Recovery;
 
     [HideInInspector]
     public int price_Muls_B;
+    [HideInInspector]
     public int price_Muls_SN;
+    [HideInInspector]
     public int price_Muls_P;
+    [HideInInspector]
     public int price_AiBarrier;
+    [HideInInspector]
     public int price_ProtectWall;
+    [HideInInspector]
     public int price_Extend_B;
+    [HideInInspector]
     public int price_Extend_SN;
+    [HideInInspector]
     public int price_Extend_P;
+    [HideInInspector]
     public int price_Recovery;
 
     public Sprite spr_Muls_B;
@@ -77,6 +118,7 @@ public class SelectedItemManager : MonoBehaviour
 
     [HideInInspector]
     public bool i_event_AiBarrier = false;
+    [HideInInspector]
     public bool i_event_ProtectWall = false;
 
     private void Awake()

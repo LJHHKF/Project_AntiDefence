@@ -17,7 +17,7 @@ public class TowerAttack_Basic : MonoBehaviour
     private Image cTimeImg;
     private Collider m_Coll;
 
-    private MeshRenderer m_meshR;
+    private SpriteRenderer m_sprR;
     private Color m_color;
 
     private GameObject gm;
@@ -41,8 +41,8 @@ public class TowerAttack_Basic : MonoBehaviour
         m_Coll = gameObject.GetComponent<Collider>();
         m_Coll.enabled = false;
 
-        m_meshR = gameObject.GetComponent<MeshRenderer>();
-        m_color = m_meshR.material.color;
+        m_sprR = gameObject.GetComponent<SpriteRenderer>();
+        m_color = m_sprR.material.color;
 
         t_objectPool_AtkEf = GameObject.FindGameObjectWithTag("ObjectPools").transform.Find("AtkEffects");
 
@@ -123,9 +123,9 @@ public class TowerAttack_Basic : MonoBehaviour
 
     IEnumerator On_Clear()
     {
-        m_meshR.material.color = new Color(m_color.r, m_color.g, m_color.b, 0.0f);
+        m_sprR.color = new Color(m_color.r, m_color.g, m_color.b, 0.0f);
         yield return new WaitForSeconds(0.3f);
-        m_meshR.material.color = new Color(m_color.r, m_color.g, m_color.b, m_color.a);
+        m_sprR.color = new Color(m_color.r, m_color.g, m_color.b, m_color.a);
         
         StopCoroutine(On_Clear());
     }
@@ -181,7 +181,7 @@ public class TowerAttack_Basic : MonoBehaviour
     IEnumerator DelayEnable(float sec)
     {
         yield return new WaitForSeconds(sec);
-        m_meshR.material.color = new Color(m_color.r, m_color.g, m_color.b, m_color.a);
+        m_sprR.color = new Color(m_color.r, m_color.g, m_color.b, m_color.a);
         yield break;
     }
 }
