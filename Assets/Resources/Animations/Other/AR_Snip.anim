@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TutoAR_Snip
+  m_Name: AR_Snip
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0

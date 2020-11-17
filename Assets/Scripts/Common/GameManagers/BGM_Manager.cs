@@ -48,7 +48,7 @@ public class BGM_Manager : MonoBehaviour
         }
     }
 
-    public void Play_Stage0_1()
+    public void Play_Stage()
     {
         if (cur_index != 1)
         {

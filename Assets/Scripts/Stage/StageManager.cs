@@ -624,13 +624,18 @@ public class StageManager : MonoBehaviour
 
     private void PlayBGM()
     {
-        if (chapter_num == 0)
-        {
-            if (stage_num == 1)
-            {
-                bgmM.Play_Stage0_1();
-            }
-        }
+        bgmM.Play_Stage();
+        //if (chapter_num == 0)
+        //{
+        //    if (stage_num == 1)
+        //    {
+        //        bgmM.Play_Stage();
+        //    }
+        //    if(stage_num == 2)
+        //    {
+        //        bgmM.Play_Stage();
+        //    }
+        //}
     }
 
     public void BarricadeBreak()

@@ -13,8 +13,8 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        bg_volume = PlayerPrefs.GetFloat("BG_Volumn", 0.5f);
-        se_volume = PlayerPrefs.GetFloat("SE_Volumn", 0.5f);
+        bg_volume = PlayerPrefs.GetFloat("BG_Volume", 0.5f);
+        se_volume = PlayerPrefs.GetFloat("SE_Volume", 0.5f);
         bgm_manager = gameObject.GetComponent<BGM_Manager>();
 
         sfx_BTN_Click = gameObject.transform.Find("SFX_NonStage").Find("S_BTN_Click").GetComponent<AudioSource>();
@@ -22,8 +22,8 @@ public class AudioManager : MonoBehaviour
 
     private void OnApplicationQuit()
     {
-        PlayerPrefs.SetFloat("BG_Volumn", bg_volume);
-        PlayerPrefs.SetFloat("SE_Volumn", se_volume);
+        PlayerPrefs.SetFloat("BG_Volume", bg_volume);
+        PlayerPrefs.SetFloat("SE_Volume", se_volume);
     }
 
     private void SetSFXsVolume()
