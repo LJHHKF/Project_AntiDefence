@@ -12,7 +12,8 @@ public class SkinManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        skin_index = PlayerPrefs.GetInt("EquipedSkin", 0);
+        skin_index = DataSaveManager.ownItemCount["EquipedSkin"];
+            //PlayerPrefs.GetInt("EquipedSkin", 0);
     }
 
     public void SetSkinIndex(int index)
@@ -27,6 +28,8 @@ public class SkinManager : MonoBehaviour
 
     private void OnApplicationQuit()
     {
-        PlayerPrefs.SetInt("EquipedSkin", skin_index);
+        //PlayerPrefs.SetInt("EquipedSkin", skin_index);
+        DataSaveManager.ownItemCount["EquipedSkin"] = skin_index;
+        DataSaveManager.WriteData("DB_Item.csv", DataSaveManager.ownItemCount);
     }
 }
