@@ -1,0 +1,656 @@
+fileFormatVersion: 2
+guid: 92cc36bd94cd8404a94d30af55e72279
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5989507633029202516
+    second: Sinper_Effect_0
+  - first:
+      213: 8642154337210894721
+    second: Sinper_Effect_1
+  - first:
+      213: 2415821580350071520
+    second: Sinper_Effect_2
+  - first:
+      213: -5335901348527643678
+    second: Sinper_Effect_3
+  - first:
+      213: 1769140558187525172
+    second: Sinper_Effect_4
+  - first:
+      213: -5435557194870273851
+    second: Sinper_Effect_5
+  - first:
+      213: -1061983504492999614
+    second: Sinper_Effect_6
+  - first:
+      213: 1673659974382571519
+    second: Sinper_Effect_7
+  - first:
+      213: -2254703987845269245
+    second: Sinper_Effect_8
+  - first:
+      213: 8667440436171583897
+    second: Sinper_Effect_9
+  - first:
+      213: -8388512664897878448
+    second: Sinper_Effect_10
+  - first:
+      213: -4317504844932494679
+    second: Sinper_Effect_11
+  - first:
+      213: -7325580371774882687
+    second: Sinper_Effect_12
+  - first:
+      213: -5605886927690073881
+    second: Sinper_Effect_13
+  - first:
+      213: -188541897998918085
+    second: Sinper_Effect_14
+  - first:
+      213: -2428051511326701524
+    second: Sinper_Effect_15
+  - first:
+      213: 3977553727389873523
+    second: Sinper_Effect_16
+  - first:
+      213: -2651749211162832371
+    second: Sinper_Effect_17
+  - first:
+      213: -648242688932372784
+    second: Sinper_Effect_18
+  - first:
+      213: -7307740341018166820
+    second: Sinper_Effect_19
+  - first:
+      213: -5527712394881881794
+    second: Sinper_Effect_20
+  - first:
+      213: -2831790906396231223
+    second: Sinper_Effect_21
+  - first:
+      213: 4869391692135615244
+    second: Sinper_Effect_22
+  - first:
+      213: -8195661362255184101
+    second: Sinper_Effect_23
+  - first:
+      213: -4662966507785684394
+    second: Sinper_Effect_24
+  - first:
+      213: 2794010091750729320
+    second: Sinper_Effect_25
+  - first:
+      213: 8680110910234739687
+    second: Sinper_Effect_26
+  - first:
+      213: 7005123695519464893
+    second: Sinper_Effect_27
+  - first:
+      213: 7132541090238141946
+    second: Sinper_Effect_28
+  - first:
+      213: 1260422770497740289
+    second: Sinper_Effect_29
+  - first:
+      213: -7743762473825449827
+    second: Sinper_Effect_30
+  - first:
+      213: 8875104645515199407
+    second: Sinper_Effect_31
+  - first:
+      213: 7045205532801276592
+    second: Sinper_Effect_32
+  - first:
+      213: 3893725039173943724
+    second: Sinper_Effect_33
+  - first:
+      213: -6069404592794257192
+    second: Sinper_Effect_34
+  - first:
+      213: 4396300676028155026
+    second: Sinper_Effect_35
+  - first:
+      213: -9152032318717402778
+    second: Sinper_Effect_36
+  - first:
+      213: 843498068628465694
+    second: Sinper_Effect_37
+  - first:
+      213: -8050906434148383188
+    second: Sinper_Effect_38
+  - first:
+      213: 2667306706790310742
+    second: Sinper_Effect_39
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sinper_Effect_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3300
+        width: 400
+        height: 1100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cadbdc1aa8ef0eca0800000000000000
+      internalID: -5989507633029202516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sinper_Effect_1
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 3300
+        width: 400
+        height: 1100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1898e83e4991fe770800000000000000
+      internalID: 8642154337210894721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sinper_Effect_2
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 3300
+        width: 400
+        height: 1100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e22d718de8b68120800000000000000
+      internalID: 2415821580350071520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sinper_Effect_3
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 3300
+        width: 400
+        height: 1100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e36b7c8ef113f5b0800000000000000
+      internalID: -5335901348527643678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sinper_Effect_4
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 3300
+        width: 400
+        height: 1100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 434f080e6ff3d8810800000000000000
+      internalID: 1769140558187525172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sinper_Effect_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2200
+        width: 400
+        height: 1100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c84073b7850194b0800000000000000
+      internalID: -5435557194870273851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sinper_Effect_6
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 2200
+        width: 400
+        height: 1100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24cce5911a31341f0800000000000000
+      internalID: -1061983504492999614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sinper_Effect_7
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 2200
+        width: 400
+        height: 1100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fffccd711e80a3710800000000000000
+      internalID: 1673659974382571519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sinper_Effect_8
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 2200
+        width: 400
+        height: 1100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30973d24baea5b0e0800000000000000
+      internalID: -2254703987845269245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sinper_Effect_9
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 2200
+        width: 400
+        height: 1100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9913dd5972fe84870800000000000000
+      internalID: 8667440436171583897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sinper_Effect_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1100
+        width: 400
+        height: 1100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05685eeec24069b80800000000000000
+      internalID: -8388512664897878448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sinper_Effect_11
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1100
+        width: 400
+        height: 1100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aa45c9f7342514c0800000000000000
+      internalID: -4317504844932494679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sinper_Effect_12
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1100
+        width: 400
+        height: 1100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18cb8c6e67f465a90800000000000000
+      internalID: -7325580371774882687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sinper_Effect_13
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1100
+        width: 400
+        height: 1100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e8f6006a83e332b0800000000000000
+      internalID: -5605886927690073881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sinper_Effect_14
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 1100
+        width: 400
+        height: 1100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3e1f78842a226df0800000000000000
+      internalID: -188541897998918085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sinper_Effect_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 400
+        height: 1100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c28850bc304dd4ed0800000000000000
+      internalID: -2428051511326701524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sinper_Effect_16
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 400
+        height: 1100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 375ba148a0c133730800000000000000
+      internalID: 3977553727389873523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sinper_Effect_17
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 0
+        width: 400
+        height: 1100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d02973b5428133bd0800000000000000
+      internalID: -2651749211162832371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sinper_Effect_18
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 0
+        width: 400
+        height: 1100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0de11fd75baf007f0800000000000000
+      internalID: -648242688932372784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sinper_Effect_19
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 0
+        width: 400
+        height: 1100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd9f1deb0e0b59a90800000000000000
+      internalID: -7307740341018166820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: fd8118183e80d6f429460f20c5bb4584
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
