@@ -165,19 +165,37 @@ public class EnemyCtrl : MonoBehaviour
                 enemyInfo.ShowEnemyInfo(enemyIndex);
             }
         }
-
-        if (other.CompareTag("BT_AtkR"))
+        if (stgManager.GetEventIsDone() == false)
         {
-            enemyHP -= ta_manager.b_AtDmg;
+            if (other.CompareTag("BT_AtkR"))
+            {
+                enemyHP = 0;
+            }
+            else if (other.CompareTag("SNT_AtkR"))
+            {
+                enemyHP = 0;
+            }
+            else if (other.CompareTag("PT_AtkR") & state != State.PUSHED)
+            {
+                StartCoroutine(Pushed_delay());
+                enemyHP = 0;
+            }
         }
-        else if (other.CompareTag("SNT_AtkR"))
+        else
         {
-            enemyHP -= ta_manager.sn_AtDmg;
-        }
-        else if (other.CompareTag("PT_AtkR") & state != State.PUSHED)
-        {
-            StartCoroutine(Pushed_delay());
-            enemyHP -= ta_manager.p_AtDmg;
+            if (other.CompareTag("BT_AtkR"))
+            {
+                enemyHP -= ta_manager.b_AtDmg;
+            }
+            else if (other.CompareTag("SNT_AtkR"))
+            {
+                enemyHP -= ta_manager.sn_AtDmg;
+            }
+            else if (other.CompareTag("PT_AtkR") & state != State.PUSHED)
+            {
+                StartCoroutine(Pushed_delay());
+                enemyHP -= ta_manager.p_AtDmg;
+            }
         }
 
         hpBarImage.fillAmount = enemyHP / initHP;

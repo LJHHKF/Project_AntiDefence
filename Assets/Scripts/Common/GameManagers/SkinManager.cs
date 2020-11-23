@@ -10,7 +10,7 @@ public class SkinManager : MonoBehaviour
     private int skin_index;
 
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         skin_index = DataSaveManager.ownItemCount["EquipedSkin"];
             //PlayerPrefs.GetInt("EquipedSkin", 0);

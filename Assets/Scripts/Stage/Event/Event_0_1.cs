@@ -31,7 +31,9 @@ public class Event_0_1 : MonoBehaviour
     private GameObject point_Character;
     private GameObject[] points_Towers = new GameObject[2];
     private Transform t_towerBoard;
-    private GameObject[][] arr_tutorialRanges = new GameObject[3][];
+    private GameObject[] tutorialRanges = new GameObject[2];
+    private SpriteRenderer[] spr_attackRanges = new SpriteRenderer[2];
+    private float ori_alpha;
     private ChangeTower changeTower;
 
     private int cnt_event = -1;
@@ -50,27 +52,12 @@ public class Event_0_1 : MonoBehaviour
         points_Towers[1] = ui_EventObjects.transform.Find("Img_Point_Tower_2").gameObject;
         t_towerBoard = GameObject.FindGameObjectWithTag("TowerBoard").transform;
         changeTower = t_towerBoard.GetComponent<ChangeTower>();
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 2; i++)
         {
-            arr_tutorialRanges[i] = new GameObject[2];
-            for (int j = 0; j < 2; j++)
-            {
-                switch (i)
-                {
-                    case 0:
-                        arr_tutorialRanges[i][j] = towers_Basic[j].transform.Find("AttackRange_Rect_pivot").Find("TutorialRange").gameObject;
-                        arr_tutorialRanges[i][j].SetActive(false);
-                        break;
-                    case 1:
-                        arr_tutorialRanges[i][j] = towers_Snip[j].transform.Find("AttackRange_Rect_pivot").Find("TutorialRange").gameObject;
-                        arr_tutorialRanges[i][j].SetActive(false);
-                        break;
-                    case 2:
-                        arr_tutorialRanges[i][j] = towers_Push[j].transform.Find("AttackRanges").Find("TutorialRange").gameObject;
-                        arr_tutorialRanges[i][j].SetActive(false);
-                        break;
-                }
-            }
+            tutorialRanges[i] = towers_Basic[i].transform.Find("AttackRange_Rect_pivot").Find("TutorialRange").gameObject;
+            tutorialRanges[i].SetActive(false);
+
+            spr_attackRanges[i] = towers_Basic[i].transform.Find("AttackRange_Rect_pivot").Find("AttackRange").GetComponent<SpriteRenderer>();
         }
         //Colliders_Push_Child1 = Colliders_Push[0].GetComponentsInChildren<BoxCollider>();
         //Colliders_Push_Child2 = Colliders_Push[1].GetComponentsInChildren<BoxCollider>();
@@ -149,9 +136,11 @@ public class Event_0_1 : MonoBehaviour
                 case 9:
                     ui_Panel_EventDlg.SetActive(true);
                     ProgressDlg(); //4
-                    for(int i = 0; i < 2; i++)
+                    ori_alpha = spr_attackRanges[0].color.a;
+                    for (int i = 0; i < 2; i++)
                     {
-                        arr_tutorialRanges[0][i].SetActive(true);
+                        tutorialRanges[i].SetActive(true);
+                        spr_attackRanges[i].color = new Color(spr_attackRanges[i].color.r, spr_attackRanges[i].color.g, spr_attackRanges[i].color.b, 0);
                     }
                     SubEvent(); //4
                     break;
@@ -159,7 +148,8 @@ public class Event_0_1 : MonoBehaviour
                     ProgressDlg(); //5
                     for (int i = 0; i < 2; i++)
                     {
-                        arr_tutorialRanges[0][i].SetActive(false);
+                        tutorialRanges[i].SetActive(false);
+                        spr_attackRanges[i].color = new Color(spr_attackRanges[i].color.r, spr_attackRanges[i].color.g, spr_attackRanges[i].color.b, ori_alpha);
                     }
                     StartCoroutine(DelayedActiveFalse(ui_Panel_EventDlg, 1.0f));
                     SubEvent(); //5
