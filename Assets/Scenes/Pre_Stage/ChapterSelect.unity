@@ -824,9 +824,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35186a400ab3a96439cdfe2252463378, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay_Scene_Change: 1
-  cameraMoveSpeed: 0.2
-  fadeSpeed: 0.005
+  delay_Scene_Change: 0.1
+  cameraMoveSpeed: 1
+  fadeSpeed: 0.1
 --- !u!1 &647555883
 GameObject:
   m_ObjectHideFlags: 0
