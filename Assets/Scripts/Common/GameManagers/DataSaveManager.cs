@@ -5,7 +5,7 @@ using System.IO;
 
 public class DataSaveManager : MonoBehaviour
 {
-    //이하 코드는 서강 겜교의 '게임제작실습' 수업서 얻은 도관목 선배님의 코드를 그대로 적용했습니다.
+    //이하 코드는 서강 겜교의 '게임제작실습' 수업서 얻은 도관목 선배님의 코드를 그대로 적용 후 일부 수정했습니다.
 
     public static Dictionary<string, int> ownItemCount = new Dictionary<string, int>();
 

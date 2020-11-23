@@ -39,7 +39,8 @@ SpriteRenderer:
   m_SortingLayerID: -666823007
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 890894350671571163, guid: 0e18ab5c0c6332743aefd1f1ae60f70c, type: 3}
+  m_Sprite: {fileID: -2582838760231167521, guid: ac9e4b4c279faa24abeb441c40196055,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.3137255}
   m_FlipX: 0
   m_FlipY: 0
@@ -256,7 +257,7 @@ Transform:
   m_GameObject: {fileID: 3719092226148566218}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0.1, z: 5}
-  m_LocalScale: {x: 0.46, y: 0.52, z: 1}
+  m_LocalScale: {x: 0.8, y: 1.24, z: 1}
   m_Children: []
   m_Father: {fileID: 7033600705813609021}
   m_RootOrder: 2
@@ -300,7 +301,8 @@ SpriteRenderer:
   m_SortingLayerID: -666823007
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 890894350671571163, guid: 0e18ab5c0c6332743aefd1f1ae60f70c, type: 3}
+  m_Sprite: {fileID: -2582838760231167521, guid: ac9e4b4c279faa24abeb441c40196055,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.3137255}
   m_FlipX: 0
   m_FlipY: 0
@@ -472,12 +474,12 @@ PrefabInstance:
     - target: {fileID: 1502604861101986916, guid: be02c90d9e4f2944dbec8e52b488d783,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.46
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 1502604861101986916, guid: be02c90d9e4f2944dbec8e52b488d783,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.52
+      value: 1.24
       objectReference: {fileID: 0}
     - target: {fileID: 2996366610622404925, guid: be02c90d9e4f2944dbec8e52b488d783,
         type: 3}
@@ -602,7 +604,7 @@ PrefabInstance:
     - target: {fileID: 8437537712463506242, guid: be02c90d9e4f2944dbec8e52b488d783,
         type: 3}
       propertyPath: m_Size.y
-      value: 19.3
+      value: 8.3
       objectReference: {fileID: 0}
     - target: {fileID: 8437537712463506242, guid: be02c90d9e4f2944dbec8e52b488d783,
         type: 3}
@@ -612,7 +614,7 @@ PrefabInstance:
     - target: {fileID: 8437537712463506242, guid: be02c90d9e4f2944dbec8e52b488d783,
         type: 3}
       propertyPath: m_Size.x
-      value: 11
+      value: 6.4
       objectReference: {fileID: 0}
     - target: {fileID: 8437537712463506242, guid: be02c90d9e4f2944dbec8e52b488d783,
         type: 3}

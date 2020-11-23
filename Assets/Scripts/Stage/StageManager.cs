@@ -101,6 +101,7 @@ public class StageManager : MonoBehaviour
     private bool isSet_Barriacde = false;
     private AudioSource sfx_Barricade_Idle;
     private AudioSource sfx_Barricade_Destruction;
+    private AudioSource sfx_StageStart;
 
     private Transform t_touchEfPool;
     private Pools pools_TouchEffect;
@@ -151,6 +152,7 @@ public class StageManager : MonoBehaviour
         sfx_manager = GameObject.FindGameObjectWithTag("SFX_Manager");
         sfx_Barricade_Idle = sfx_manager.transform.Find("S_Barricade_Idle").GetComponent<AudioSource>();
         sfx_Barricade_Destruction = sfx_manager.transform.Find("S_Barricade_Destruction").GetComponent<AudioSource>();
+        sfx_StageStart = sfx_manager.transform.Find("S_StageStart").GetComponent<AudioSource>();
 
         if(itemM.i_protectWall)
         {
@@ -223,6 +225,7 @@ public class StageManager : MonoBehaviour
                 GameObject effect2 = Instantiate(startEffect2, gameObject.transform);
                 Destroy(effect, 1.0f);
                 Destroy(effect2, 5.0f);
+                StartCoroutine(PlaySfxStageStart());
                 is_started = true;
             }
         }
@@ -649,6 +652,14 @@ public class StageManager : MonoBehaviour
         sfx_Barricade_Destruction.Play();
         yield return new WaitForSeconds(0.3f);
         sfx_Barricade_Destruction.Stop();
+        yield break;
+    }
+
+    IEnumerator PlaySfxStageStart()
+    {
+        sfx_StageStart.Play();
+        yield return new WaitForSeconds(1.0f);
+        sfx_StageStart.Stop();
         yield break;
     }
 

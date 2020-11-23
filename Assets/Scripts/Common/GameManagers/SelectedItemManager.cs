@@ -121,7 +121,7 @@ public class SelectedItemManager : MonoBehaviour
     [HideInInspector]
     public bool i_event_ProtectWall = false;
 
-    private void Awake()
+    private void Start()
     {
         //if (PlayerPrefs.GetInt("MulS_B") <= 0)
         //    own_MulS_B = 0;
