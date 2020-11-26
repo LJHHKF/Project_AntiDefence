@@ -1,91 +1,55 @@
 fileFormatVersion: 2
-guid: ac9e4b4c279faa24abeb441c40196055
+guid: e1647600709dede46817811e8b26ab82
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2582838760231167521
-    second: Nomal_Effect_0
+      213: 2302170256184018400
+    second: proj_p_chr_skin_sp_lose_0
   - first:
-      213: -5060298131162659
-    second: Nomal_Effect_1
+      213: 4373861063702009391
+    second: proj_p_chr_skin_sp_lose_1
   - first:
-      213: -5247339932297920364
-    second: Nomal_Effect_2
+      213: 4609787065780497237
+    second: proj_p_chr_skin_sp_lose_2
   - first:
-      213: 8844858656537659849
-    second: Nomal_Effect_3
+      213: -2291765450314440206
+    second: proj_p_chr_skin_sp_lose_3
   - first:
-      213: 7830991711368410868
-    second: Nomal_Effect_4
+      213: -5672948747597270706
+    second: proj_p_chr_skin_sp_lose_4
   - first:
-      213: -6189309948862207135
-    second: Nomal_Effect_5
+      213: 1265198103394842908
+    second: proj_p_chr_skin_sp_lose_5
   - first:
-      213: 2894123741731206442
-    second: Nomal_Effect_6
+      213: -7487546276209069657
+    second: proj_p_chr_skin_sp_lose_6
   - first:
-      213: -3806208507455158200
-    second: Nomal_Effect_7
+      213: 999518697370812269
+    second: proj_p_chr_skin_sp_lose_7
   - first:
-      213: -7071264722929904080
-    second: Nomal_Effect_8
+      213: 2796168653021376041
+    second: proj_p_chr_skin_sp_lose_8
   - first:
-      213: 7359125952265042908
-    second: Nomal_Effect_9
+      213: 3623457901176438844
+    second: proj_p_chr_skin_sp_lose_9
   - first:
-      213: -3628703802922883701
-    second: Nomal_Effect_10
+      213: -6441688629096173322
+    second: proj_p_chr_skin_sp_lose_10
   - first:
-      213: 8923307207158497194
-    second: Nomal_Effect_11
+      213: -4439911745207340520
+    second: proj_p_chr_skin_sp_lose_11
   - first:
-      213: 4096651506473010897
-    second: Nomal_Effect_12
+      213: 1562749475290566672
+    second: proj_p_chr_skin_sp_lose_12
   - first:
-      213: 6458927607296330517
-    second: Nomal_Effect_13
+      213: -4319249638783420245
+    second: proj_p_chr_skin_sp_lose_13
   - first:
-      213: 3605746729021176315
-    second: Nomal_Effect_14
+      213: -520520286655135653
+    second: proj_p_chr_skin_sp_lose_14
   - first:
-      213: -3495589431026361399
-    second: Nomal_Effect_15
-  - first:
-      213: 8894020752004928264
-    second: Nomal_Effect_16
-  - first:
-      213: -6404247491072738669
-    second: Nomal_Effect_17
-  - first:
-      213: 8744630521552772618
-    second: Nomal_Effect_18
-  - first:
-      213: 3070946469014021656
-    second: Nomal_Effect_19
-  - first:
-      213: -5332255557216229674
-    second: Nomal_Effect_20
-  - first:
-      213: -4997885940943838815
-    second: Nomal_Effect_21
-  - first:
-      213: -4835393842327099857
-    second: Nomal_Effect_22
-  - first:
-      213: -5553748035561339499
-    second: Nomal_Effect_23
-  - first:
-      213: -4066000943396626025
-    second: Nomal_Effect_24
-  - first:
-      213: -8049409330527696851
-    second: Nomal_Effect_25
-  - first:
-      213: 4003402164678699172
-    second: Nomal_Effect_26
-  - first:
-      213: -1730023734992382462
-    second: Nomal_Effect_27
+      213: -2602528653844004172
+    second: proj_p_chr_skin_sp_lose_15
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -131,7 +95,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 0
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -179,29 +143,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Nomal_Effect_0
+      name: proj_p_chr_skin_sp_lose_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 2940
-        width: 900
-        height: 980
+        y: 900
+        width: 440
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -209,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd99f4005d9e72cd0800000000000000
-      internalID: -2582838760231167521
+      spriteID: 0e5815c86a3f2ff10800000000000000
+      internalID: 2302170256184018400
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nomal_Effect_1
+      name: proj_p_chr_skin_sp_lose_1
       rect:
         serializedVersion: 2
-        x: 900
-        y: 2940
-        width: 900
-        height: 980
+        x: 440
+        y: 900
+        width: 440
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -230,20 +182,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd93f678fa50eeff0800000000000000
-      internalID: -5060298131162659
+      spriteID: f26ded6b67313bc30800000000000000
+      internalID: 4373861063702009391
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nomal_Effect_2
+      name: proj_p_chr_skin_sp_lose_2
       rect:
         serializedVersion: 2
-        x: 1800
-        y: 2940
-        width: 900
-        height: 980
+        x: 880
+        y: 900
+        width: 440
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -251,20 +203,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49009a71224bd27b0800000000000000
-      internalID: -5247339932297920364
+      spriteID: 55b6902a9e049ff30800000000000000
+      internalID: 4609787065780497237
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nomal_Effect_3
+      name: proj_p_chr_skin_sp_lose_3
       rect:
         serializedVersion: 2
-        x: 2700
-        y: 2940
-        width: 900
-        height: 980
+        x: 1320
+        y: 900
+        width: 440
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -272,20 +224,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c9477706104fba70800000000000000
-      internalID: 8844858656537659849
+      spriteID: 2f1ae7917730230e0800000000000000
+      internalID: -2291765450314440206
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nomal_Effect_4
+      name: proj_p_chr_skin_sp_lose_4
       rect:
         serializedVersion: 2
-        x: 3600
-        y: 2940
-        width: 900
-        height: 980
+        x: 1760
+        y: 900
+        width: 440
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -293,20 +245,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f6742b98754dac60800000000000000
-      internalID: 7830991711368410868
+      spriteID: e41b77eab23a541b0800000000000000
+      internalID: -5672948747597270706
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nomal_Effect_5
+      name: proj_p_chr_skin_sp_lose_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1960
-        width: 900
-        height: 980
+        x: 2200
+        y: 900
+        width: 440
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -314,104 +266,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 16be645d4672b1aa0800000000000000
-      internalID: -6189309948862207135
+      spriteID: c19f853c8f2ee8110800000000000000
+      internalID: 1265198103394842908
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nomal_Effect_6
-      rect:
-        serializedVersion: 2
-        x: 900
-        y: 1960
-        width: 900
-        height: 980
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a25b9e9953ef92820800000000000000
-      internalID: 2894123741731206442
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Nomal_Effect_7
-      rect:
-        serializedVersion: 2
-        x: 1800
-        y: 1960
-        width: 900
-        height: 980
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 848c0145781ad2bc0800000000000000
-      internalID: -3806208507455158200
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Nomal_Effect_8
-      rect:
-        serializedVersion: 2
-        x: 2700
-        y: 1960
-        width: 900
-        height: 980
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 036130d1332dddd90800000000000000
-      internalID: -7071264722929904080
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Nomal_Effect_9
-      rect:
-        serializedVersion: 2
-        x: 3600
-        y: 1960
-        width: 900
-        height: 980
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cdbbd12301ed02660800000000000000
-      internalID: 7359125952265042908
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Nomal_Effect_10
+      name: proj_p_chr_skin_sp_lose_6
       rect:
         serializedVersion: 2
         x: 0
-        y: 980
-        width: 900
-        height: 980
+        y: 450
+        width: 440
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -419,20 +287,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b852cafed1144adc0800000000000000
-      internalID: -3628703802922883701
+      spriteID: 7a1724f1554e61890800000000000000
+      internalID: -7487546276209069657
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nomal_Effect_11
+      name: proj_p_chr_skin_sp_lose_7
       rect:
         serializedVersion: 2
-        x: 900
-        y: 980
-        width: 900
-        height: 980
+        x: 440
+        y: 450
+        width: 440
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -440,20 +308,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aaf7d5090a4f5db70800000000000000
-      internalID: 8923307207158497194
+      spriteID: d6ff527a5f00fdd00800000000000000
+      internalID: 999518697370812269
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nomal_Effect_12
+      name: proj_p_chr_skin_sp_lose_8
       rect:
         serializedVersion: 2
-        x: 1800
-        y: 980
-        width: 900
-        height: 980
+        x: 880
+        y: 450
+        width: 440
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -461,20 +329,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d684e317da3ad830800000000000000
-      internalID: 4096651506473010897
+      spriteID: 92eeb6f339cfdc620800000000000000
+      internalID: 2796168653021376041
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nomal_Effect_13
+      name: proj_p_chr_skin_sp_lose_9
       rect:
         serializedVersion: 2
-        x: 2700
-        y: 980
-        width: 900
-        height: 980
+        x: 1320
+        y: 450
+        width: 440
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -482,20 +350,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51b8cde1078b2a950800000000000000
-      internalID: 6458927607296330517
+      spriteID: c30443263cb194230800000000000000
+      internalID: 3623457901176438844
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nomal_Effect_14
+      name: proj_p_chr_skin_sp_lose_10
       rect:
         serializedVersion: 2
-        x: 3600
-        y: 980
-        width: 900
-        height: 980
+        x: 1760
+        y: 450
+        width: 440
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -503,20 +371,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf97555cb8f2a0230800000000000000
-      internalID: 3605746729021176315
+      spriteID: 6f0bc0542568a96a0800000000000000
+      internalID: -6441688629096173322
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nomal_Effect_15
+      name: proj_p_chr_skin_sp_lose_11
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 450
+        width: 440
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 812f4d89ac34262c0800000000000000
+      internalID: -4439911745207340520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proj_p_chr_skin_sp_lose_12
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 900
-        height: 980
+        width: 440
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -524,20 +413,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9cb5013deeb2d7fc0800000000000000
-      internalID: -3495589431026361399
+      spriteID: 0105f933e5000b510800000000000000
+      internalID: 1562749475290566672
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nomal_Effect_16
+      name: proj_p_chr_skin_sp_lose_13
       rect:
         serializedVersion: 2
-        x: 900
+        x: 440
         y: 0
-        width: 900
-        height: 980
+        width: 440
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -545,20 +434,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 803d43c50c8ed6b70800000000000000
-      internalID: 8894020752004928264
+      spriteID: ba874108651fe04c0800000000000000
+      internalID: -4319249638783420245
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nomal_Effect_17
+      name: proj_p_chr_skin_sp_lose_14
       rect:
         serializedVersion: 2
-        x: 1800
+        x: 880
         y: 0
-        width: 900
-        height: 980
+        width: 440
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -566,20 +455,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39a3ce886da8f17a0800000000000000
-      internalID: -6404247491072738669
+      spriteID: b50498f9e8db6c8f0800000000000000
+      internalID: -520520286655135653
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nomal_Effect_18
+      name: proj_p_chr_skin_sp_lose_15
       rect:
         serializedVersion: 2
-        x: 2700
+        x: 1320
         y: 0
-        width: 900
-        height: 980
+        width: 440
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -587,29 +476,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0e1139d02b2b5970800000000000000
-      internalID: 8744630521552772618
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Nomal_Effect_19
-      rect:
-        serializedVersion: 2
-        x: 3600
-        y: 0
-        width: 900
-        height: 980
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 81622d10b813e9a20800000000000000
-      internalID: 3070946469014021656
+      spriteID: 4b24ad56af5f1ebd0800000000000000
+      internalID: -2602528653844004172
       vertices: []
       indices: 
       edges: []
@@ -617,7 +485,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 2078bf5380aa33749996a28c43c424d3
+    spriteID: 98de6f05d29c1ba4090c0f6cfe0f0453
     internalID: 0
     vertices: []
     indices: 
