@@ -192,8 +192,28 @@ public class SelectedItemManager : MonoBehaviour
             //PlayerPrefs.SetInt("Extend_P", own_Extend_P);
             //PlayerPrefs.SetInt("Recovery", own_Recovery);
             //PlayerPrefs.SetInt("Money", own_money);
+            DataSaveManager.ownItemCount["Muls_B"] = own_MulS_B;
+            DataSaveManager.ownItemCount["Muls_SN"] = own_MulS_SN;
+            DataSaveManager.ownItemCount["Muls_P"] = own_MulS_P;
+            DataSaveManager.ownItemCount["AiBarrier"] = own_AiBarrier;
+            DataSaveManager.ownItemCount["Protectwall"] = own_ProtectWall;
+            DataSaveManager.ownItemCount["Extend_B"] = own_Extend_B;
+            DataSaveManager.ownItemCount["Extend_SN"] = own_Extend_SN;
+            DataSaveManager.ownItemCount["Extend_P"] = own_Extend_P;
+            DataSaveManager.ownItemCount["Recovery"] = own_Recovery;
+            DataSaveManager.ownItemCount["Money"] = own_money;
             DataSaveManager.WriteData("DB_Item.csv", DataSaveManager.ownItemCount);
         }
+        DataSaveManager.ownItemCount["Muls_B"] = own_MulS_B;
+        DataSaveManager.ownItemCount["Muls_SN"] = own_MulS_SN;
+        DataSaveManager.ownItemCount["Muls_P"] = own_MulS_P;
+        DataSaveManager.ownItemCount["AiBarrier"] = own_AiBarrier;
+        DataSaveManager.ownItemCount["Protectwall"] = own_ProtectWall;
+        DataSaveManager.ownItemCount["Extend_B"] = own_Extend_B;
+        DataSaveManager.ownItemCount["Extend_SN"] = own_Extend_SN;
+        DataSaveManager.ownItemCount["Extend_P"] = own_Extend_P;
+        DataSaveManager.ownItemCount["Recovery"] = own_Recovery;
+        DataSaveManager.ownItemCount["Money"] = own_money;
         DataSaveManager.WriteData("DB_Item.csv", DataSaveManager.ownItemCount);
 
     }

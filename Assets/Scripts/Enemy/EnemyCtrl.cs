@@ -64,7 +64,7 @@ public class EnemyCtrl : MonoBehaviour
     private GameObject o_stgM;
     private StageManager stgManager;
     private EnemyInfoUI enemyInfo;
-
+    private Collider m_coll;
 
     void Start()
     {
@@ -81,6 +81,7 @@ public class EnemyCtrl : MonoBehaviour
 
         t_imgPanel = gameObject.transform.Find("Clear_Panel").GetComponent<Transform>();
         t_img = t_imgPanel.Find("Image").GetComponent<Transform>();
+        m_coll = gameObject.GetComponent<Collider>();
 
         SetHPBar();
         initHP = enemyHP;
@@ -96,6 +97,7 @@ public class EnemyCtrl : MonoBehaviour
             StartCoroutine(CheckState());
             ResetHPBar();
             isDie = false;
+            m_coll.enabled = true;
         }
     }
 
@@ -109,9 +111,9 @@ public class EnemyCtrl : MonoBehaviour
             if (isDie == false)
             {
                 isDie = true;
+                m_coll.enabled = false;
                 stgManager.EnemyDied(dropMoneyValue);
                 stgManager.PullingDropMoneyBar(gameObject.transform.position, dropMoneyValue, 1.0f);
-
 
                 stgManager.PullingEnemyDieEffect(gameObject.transform.localPosition, 1.0f);
 
