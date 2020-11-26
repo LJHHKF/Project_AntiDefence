@@ -46,8 +46,6 @@ public class SelectedItemManager : MonoBehaviour
 
     [HideInInspector]
     public int own_money;
-    [HideInInspector]
-    public bool get_money = false;
 
     [HideInInspector]
     public string name_Muls_B;
@@ -196,13 +194,8 @@ public class SelectedItemManager : MonoBehaviour
             //PlayerPrefs.SetInt("Money", own_money);
             DataSaveManager.WriteData("DB_Item.csv", DataSaveManager.ownItemCount);
         }
-        else if (get_money)
-        {
-            //PlayerPrefs.SetInt("Money", own_money);
-            DataSaveManager.WriteData("DB_Item.csv", DataSaveManager.ownItemCount);
-        }
+        DataSaveManager.WriteData("DB_Item.csv", DataSaveManager.ownItemCount);
 
-        
     }
 
     private void SetItemInfo()
@@ -264,7 +257,6 @@ public class SelectedItemManager : MonoBehaviour
     public void Item_Use_Confirm(int i_num)
     {
         use_confirm = true;
-        get_money = false;
         //PlayerPrefs.SetInt("Money", own_money);
         DataSaveManager.ownItemCount["Money"] = own_money;
         switch (i_num)
@@ -445,7 +437,6 @@ public class SelectedItemManager : MonoBehaviour
     public void Get_Money(int get)
     {
         own_money += get;
-        get_money = true;
     }
 
 

@@ -95,6 +95,11 @@ public class SkinSceneManager : MonoBehaviour
             SpawnTouchEf(Input.mousePosition);
         }
     }
+    private void OnDisable()
+    {
+        if(anim_skin.GetBool("IsSkinShop"))
+            anim_skin.SetBool("IsSkinShop", false);
+    }
 
     private void UpdateScene()
     {
@@ -102,7 +107,10 @@ public class SkinSceneManager : MonoBehaviour
         img_skin.sprite = skinM.skins[cnt_skin];
         if (skinM.anims[cnt_skin] != null)
         {
+            if(anim_skin.runtimeAnimatorController != null)
+                anim_skin.SetBool("IsSkinShop", false);
             anim_skin.runtimeAnimatorController = skinM.anims[cnt_skin];
+            anim_skin.SetBool("IsSkinShop", true);
             StartCoroutine(Anim_Ctrl(cnt_skin));
         }
         else
@@ -266,18 +274,17 @@ public class SkinSceneManager : MonoBehaviour
     IEnumerator Anim_Ctrl(int index)
     {
         int anim_num = 0;
-        anim_skin.SetBool("IsSkinShop", true);
         while (true)
         {
             if (index != cnt_skin)
             {
-                anim_skin.SetBool("IsSkinShop", false);
                 yield break;
             }
             switch(anim_num)
             {
                 case 0:
                     //Idle 애님
+                    anim_skin.SetBool("IsLose", false);
                     yield return new WaitForSeconds(1.0f);
                     anim_num = 1;
                     break;
@@ -287,12 +294,13 @@ public class SkinSceneManager : MonoBehaviour
                     anim_num = 2;
                     break;
                 case 2:
-                    anim_skin.SetTrigger("IsWin_Trigger");
+                    anim_skin.SetBool("IsWin", true);
                     yield return new WaitForSeconds(1.0f);
                     anim_num = 3;
                     break;
                 case 3:
-                    anim_skin.SetTrigger("IsLose_Trigger");
+                    anim_skin.SetBool("IsLose", true);
+                    anim_skin.SetBool("IsWin", false);
                     yield return new WaitForSeconds(1.0f);
                     anim_num = 0;
                     break;

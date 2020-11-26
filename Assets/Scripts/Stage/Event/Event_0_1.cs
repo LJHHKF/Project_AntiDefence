@@ -169,7 +169,7 @@ public class Event_0_1 : MonoBehaviour
                     SubEvent(); // 8
                     break;
                 case 14:
-                    ui_Panel_EventDlg.SetActive(false);
+                    //ui_Panel_EventDlg.SetActive(false);
                     SubEvent(); // 9
                     break;
                 case 15:
@@ -184,7 +184,7 @@ public class Event_0_1 : MonoBehaviour
                     break;
                 case 18:
                     ui_Buttons_Highlight[2].SetActive(false);
-                    ui_Panel_EventDlg.SetActive(true);
+                    //ui_Panel_EventDlg.SetActive(true);
                     ProgressDlg();
                     break;
                 case 19:
