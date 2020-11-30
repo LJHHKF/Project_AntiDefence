@@ -14,8 +14,8 @@ public class TowerAttack_Push : MonoBehaviour
 
     private bool pt_attacked = false;
 
-    private MeshRenderer[] m_meshRs;
-    private Color[] m_colors;
+    private SpriteRenderer m_sprR;
+    private Color m_color;
 
     private GameObject gm;
     private SelectedItemManager si_manager;
@@ -30,12 +30,8 @@ public class TowerAttack_Push : MonoBehaviour
         towerBoard = GameObject.FindGameObjectWithTag("TowerBoard");
         ta_manager = towerBoard.GetComponent<TA_Manager>();
 
-        m_meshRs = gameObject.GetComponentsInChildren<MeshRenderer>();
-        m_colors = new Color[m_meshRs.Length];
-        for (int i = 0; i < m_meshRs.Length; i++)
-        {
-            m_colors[i] = m_meshRs[i].material.color;
-        }
+        m_sprR = gameObject.transform.Find("SpriteAnim").GetComponent<SpriteRenderer>();
+        m_color = m_sprR.color;
 
         gm = GameObject.FindGameObjectWithTag("GameManager");
         si_manager = gm.GetComponent<SelectedItemManager>();
@@ -89,15 +85,9 @@ public class TowerAttack_Push : MonoBehaviour
 
     IEnumerator On_Clear()
     {
-        for (int i = 0; i < m_meshRs.Length; i++)
-        {
-            m_meshRs[i].material.color = new Color(m_colors[i].r, m_colors[i].g, m_colors[i].b, 0.0f);
-        }
+        m_sprR.color = new Color(m_color.r, m_color.g, m_color.b, 0.0f);
         yield return new WaitForSeconds(1.0f);
-        for (int i = 0; i < m_meshRs.Length; i++)
-        {
-            m_meshRs[i].material.color = new Color(m_colors[i].r, m_colors[i].g, m_colors[i].b, m_colors[i].a);
-        }
+        m_sprR.color = new Color(m_color.r, m_color.g, m_color.b, m_color.a);
         StopCoroutine(On_Clear());
     }
 
@@ -152,10 +142,7 @@ public class TowerAttack_Push : MonoBehaviour
     IEnumerator DelayEnable(float sec)
     {
         yield return new WaitForSeconds(sec);
-        for (int i = 0; i < m_meshRs.Length; i++)
-        {
-            m_meshRs[i].material.color = new Color(m_colors[i].r, m_colors[i].g, m_colors[i].b, m_colors[i].a);
-        }
+        m_sprR.color = new Color(m_color.r, m_color.g, m_color.b, m_color.a);
         yield break;
     }
 }

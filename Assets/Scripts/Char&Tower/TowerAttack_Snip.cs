@@ -45,7 +45,7 @@ public class TowerAttack_Snip : MonoBehaviour
         ta_manager = towerBoard.GetComponent<TA_Manager>();
 
         m_sprR = gameObject.GetComponent<SpriteRenderer>();
-        m_color = m_sprR.material.color;
+        m_color = m_sprR.color;
 
         stageM = GameObject.FindGameObjectWithTag("StageMObject").GetComponent<StageManager>();
 

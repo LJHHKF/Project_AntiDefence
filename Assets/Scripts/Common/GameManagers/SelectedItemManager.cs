@@ -46,8 +46,6 @@ public class SelectedItemManager : MonoBehaviour
 
     [HideInInspector]
     public int own_money;
-    [HideInInspector]
-    public bool get_money = false;
 
     [HideInInspector]
     public string name_Muls_B;
@@ -194,15 +192,30 @@ public class SelectedItemManager : MonoBehaviour
             //PlayerPrefs.SetInt("Extend_P", own_Extend_P);
             //PlayerPrefs.SetInt("Recovery", own_Recovery);
             //PlayerPrefs.SetInt("Money", own_money);
+            DataSaveManager.ownItemCount["Muls_B"] = own_MulS_B;
+            DataSaveManager.ownItemCount["Muls_SN"] = own_MulS_SN;
+            DataSaveManager.ownItemCount["Muls_P"] = own_MulS_P;
+            DataSaveManager.ownItemCount["AiBarrier"] = own_AiBarrier;
+            DataSaveManager.ownItemCount["Protectwall"] = own_ProtectWall;
+            DataSaveManager.ownItemCount["Extend_B"] = own_Extend_B;
+            DataSaveManager.ownItemCount["Extend_SN"] = own_Extend_SN;
+            DataSaveManager.ownItemCount["Extend_P"] = own_Extend_P;
+            DataSaveManager.ownItemCount["Recovery"] = own_Recovery;
+            DataSaveManager.ownItemCount["Money"] = own_money;
             DataSaveManager.WriteData("DB_Item.csv", DataSaveManager.ownItemCount);
         }
-        else if (get_money)
-        {
-            //PlayerPrefs.SetInt("Money", own_money);
-            DataSaveManager.WriteData("DB_Item.csv", DataSaveManager.ownItemCount);
-        }
+        DataSaveManager.ownItemCount["Muls_B"] = own_MulS_B;
+        DataSaveManager.ownItemCount["Muls_SN"] = own_MulS_SN;
+        DataSaveManager.ownItemCount["Muls_P"] = own_MulS_P;
+        DataSaveManager.ownItemCount["AiBarrier"] = own_AiBarrier;
+        DataSaveManager.ownItemCount["Protectwall"] = own_ProtectWall;
+        DataSaveManager.ownItemCount["Extend_B"] = own_Extend_B;
+        DataSaveManager.ownItemCount["Extend_SN"] = own_Extend_SN;
+        DataSaveManager.ownItemCount["Extend_P"] = own_Extend_P;
+        DataSaveManager.ownItemCount["Recovery"] = own_Recovery;
+        DataSaveManager.ownItemCount["Money"] = own_money;
+        DataSaveManager.WriteData("DB_Item.csv", DataSaveManager.ownItemCount);
 
-        
     }
 
     private void SetItemInfo()
@@ -264,7 +277,6 @@ public class SelectedItemManager : MonoBehaviour
     public void Item_Use_Confirm(int i_num)
     {
         use_confirm = true;
-        get_money = false;
         //PlayerPrefs.SetInt("Money", own_money);
         DataSaveManager.ownItemCount["Money"] = own_money;
         switch (i_num)
@@ -445,7 +457,6 @@ public class SelectedItemManager : MonoBehaviour
     public void Get_Money(int get)
     {
         own_money += get;
-        get_money = true;
     }
 
 

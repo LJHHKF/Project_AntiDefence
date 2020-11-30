@@ -42,7 +42,7 @@ public class TowerAttack_Basic : MonoBehaviour
         m_Coll.enabled = false;
 
         m_sprR = gameObject.GetComponent<SpriteRenderer>();
-        m_color = m_sprR.material.color;
+        m_color = m_sprR.color;
 
         t_objectPool_AtkEf = GameObject.FindGameObjectWithTag("ObjectPools").transform.Find("AtkEffects");
 

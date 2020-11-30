@@ -117,7 +117,7 @@ public class PlayerManager : MonoBehaviour
             if (player_HP <= 0)
             {
                 state = State.DIE;
-                m_animator.SetTrigger("IsLose_Trigger");
+                m_animator.SetBool("IsLose", true);
             }
         }
     }
@@ -131,7 +131,7 @@ public class PlayerManager : MonoBehaviour
     public void OnWinAnim()
     {
         t_Character.position = new Vector3(0, 1.0f, 0);
-        m_animator.SetTrigger("IsWin_Trigger");
+        m_animator.SetBool("IsWin", true);
     }
 
     public void SetAiBarrier()

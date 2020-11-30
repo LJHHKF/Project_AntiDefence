@@ -178,6 +178,12 @@ public class ItemSelectManager : MonoBehaviour
         }
     }
 
+    private void OnDestroy()
+    {
+        DataSaveManager.ownItemCount["where_Barrier"] = w_pn;
+        DataSaveManager.WriteData("DB_Item.csv", DataSaveManager.ownItemCount);
+    }
+
     public void Click_B_P1()
     {
         audioM.SFX_BTN_Click();

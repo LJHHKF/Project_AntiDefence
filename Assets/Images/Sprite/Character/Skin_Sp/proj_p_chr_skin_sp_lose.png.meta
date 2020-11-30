@@ -1,0 +1,500 @@
+fileFormatVersion: 2
+guid: 10453f6be476d0b45a72ae3c6be2762a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2302170256184018400
+    second: proj_p_chr_skin_sp_lose_0
+  - first:
+      213: 4373861063702009391
+    second: proj_p_chr_skin_sp_lose_1
+  - first:
+      213: 4609787065780497237
+    second: proj_p_chr_skin_sp_lose_2
+  - first:
+      213: -2291765450314440206
+    second: proj_p_chr_skin_sp_lose_3
+  - first:
+      213: -5672948747597270706
+    second: proj_p_chr_skin_sp_lose_4
+  - first:
+      213: 1265198103394842908
+    second: proj_p_chr_skin_sp_lose_5
+  - first:
+      213: -7487546276209069657
+    second: proj_p_chr_skin_sp_lose_6
+  - first:
+      213: 999518697370812269
+    second: proj_p_chr_skin_sp_lose_7
+  - first:
+      213: 2796168653021376041
+    second: proj_p_chr_skin_sp_lose_8
+  - first:
+      213: 3623457901176438844
+    second: proj_p_chr_skin_sp_lose_9
+  - first:
+      213: -6441688629096173322
+    second: proj_p_chr_skin_sp_lose_10
+  - first:
+      213: -4439911745207340520
+    second: proj_p_chr_skin_sp_lose_11
+  - first:
+      213: 1562749475290566672
+    second: proj_p_chr_skin_sp_lose_12
+  - first:
+      213: -4319249638783420245
+    second: proj_p_chr_skin_sp_lose_13
+  - first:
+      213: -520520286655135653
+    second: proj_p_chr_skin_sp_lose_14
+  - first:
+      213: -2602528653844004172
+    second: proj_p_chr_skin_sp_lose_15
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: proj_p_chr_skin_sp_lose_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 900
+        width: 440
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e5815c86a3f2ff10800000000000000
+      internalID: 2302170256184018400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proj_p_chr_skin_sp_lose_1
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 900
+        width: 440
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f26ded6b67313bc30800000000000000
+      internalID: 4373861063702009391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proj_p_chr_skin_sp_lose_2
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 900
+        width: 440
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55b6902a9e049ff30800000000000000
+      internalID: 4609787065780497237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proj_p_chr_skin_sp_lose_3
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 900
+        width: 440
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f1ae7917730230e0800000000000000
+      internalID: -2291765450314440206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proj_p_chr_skin_sp_lose_4
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 900
+        width: 440
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e41b77eab23a541b0800000000000000
+      internalID: -5672948747597270706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proj_p_chr_skin_sp_lose_5
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 900
+        width: 440
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c19f853c8f2ee8110800000000000000
+      internalID: 1265198103394842908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proj_p_chr_skin_sp_lose_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 450
+        width: 440
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a1724f1554e61890800000000000000
+      internalID: -7487546276209069657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proj_p_chr_skin_sp_lose_7
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 450
+        width: 440
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6ff527a5f00fdd00800000000000000
+      internalID: 999518697370812269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proj_p_chr_skin_sp_lose_8
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 450
+        width: 440
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92eeb6f339cfdc620800000000000000
+      internalID: 2796168653021376041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proj_p_chr_skin_sp_lose_9
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 450
+        width: 440
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c30443263cb194230800000000000000
+      internalID: 3623457901176438844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proj_p_chr_skin_sp_lose_10
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 450
+        width: 440
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f0bc0542568a96a0800000000000000
+      internalID: -6441688629096173322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proj_p_chr_skin_sp_lose_11
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 450
+        width: 440
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 812f4d89ac34262c0800000000000000
+      internalID: -4439911745207340520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proj_p_chr_skin_sp_lose_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 440
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0105f933e5000b510800000000000000
+      internalID: 1562749475290566672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proj_p_chr_skin_sp_lose_13
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 0
+        width: 440
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba874108651fe04c0800000000000000
+      internalID: -4319249638783420245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proj_p_chr_skin_sp_lose_14
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 0
+        width: 440
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b50498f9e8db6c8f0800000000000000
+      internalID: -520520286655135653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: proj_p_chr_skin_sp_lose_15
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 0
+        width: 440
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b24ad56af5f1ebd0800000000000000
+      internalID: -2602528653844004172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 98de6f05d29c1ba4090c0f6cfe0f0453
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
