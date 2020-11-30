@@ -45,7 +45,6 @@ public class EnemyCtrl : MonoBehaviour
 
     private GameObject towerboard;
     private TA_Manager ta_manager;
-    private GameObject player;
     private PlayerManager pl_manager;
 
     [Header("EnemyStatus Setting")]
@@ -69,13 +68,13 @@ public class EnemyCtrl : MonoBehaviour
     private EnemyInfoUI enemyInfo;
     private Collider m_coll;
     private Rigidbody m_rigid;
+    private EnemyTargetCtrl m_targetCtrl;
 
     void Start()
     {
         towerboard = GameObject.FindGameObjectWithTag("TowerBoard");
         ta_manager = towerboard.GetComponent<TA_Manager>();
         pl_manager = towerboard.GetComponent<PlayerManager>();
-        player = GameObject.FindGameObjectWithTag("Player");
 
         ws = new WaitForSeconds(0.3f);
 
@@ -88,6 +87,7 @@ public class EnemyCtrl : MonoBehaviour
         t_img = t_imgPanel.Find("Image").GetComponent<Transform>();
         m_coll = gameObject.GetComponent<Collider>();
         m_rigid = gameObject.GetComponent<Rigidbody>();
+        m_targetCtrl = gameObject.transform.Find("SearchRange").GetComponent<EnemyTargetCtrl>();
 
         m_coll.enabled = true;
         m_rigid.useGravity = true;
@@ -330,6 +330,7 @@ public class EnemyCtrl : MonoBehaviour
                         {
                             m_BugTarget.SetBuged();
                             m_anim.SetTrigger("IsAttack");
+                            m_targetCtrl.SetFindOther(false);
                             yield return new WaitForSeconds(attack_delay);
                         }
                     }
