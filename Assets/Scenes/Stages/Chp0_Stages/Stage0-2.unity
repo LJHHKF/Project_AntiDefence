@@ -1850,6 +1850,13 @@ MonoBehaviour:
   - {fileID: 482737219}
   - {fileID: 32427077}
   - {fileID: 1126934182}
+  t_Chracter: {fileID: 7134292926168422419}
+  t_Barraicades:
+  - {fileID: 1099101591046178355}
+  - {fileID: 1099101591046178354}
+  - {fileID: 1099101591046178353}
+  - {fileID: 1099101591046178352}
+  highlightEffect: {fileID: 0}
   spawnEnemyIndex: 01000000
   spawnPointIndex: 01000000
   eventDelay_AboutSpawn:
@@ -4130,7 +4137,7 @@ MonoBehaviour:
   - 2
   - 5
   spawnPointIndex: 030000000c000000040000000a0000000f00000006000000020000000b0000000e00000008000000050000000d000000080000000e00000003000000090000000f00000001000000080000000b0000000f000000070000000b0000000300000009000000010000000f000000
-  spawnEnemyIndex: 000000000200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000001000000010000000000000001000000000000000100000000000000010000000000000001000000
+  spawnEnemyIndex: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000001000000010000000000000001000000000000000100000000000000010000000000000001000000
   chapter_num: 0
   stage_num: 2
   fever_had: 0
@@ -4140,6 +4147,10 @@ MonoBehaviour:
     type: 3}
   startEffect2: {fileID: 7717023698762640779, guid: 43489713a0ddff744b3a36edbaa148a0,
     type: 3}
+  enemyDamgedEffect:
+  - {fileID: 8975739643591294959, guid: 182db8cdb7b771d419432b4d7505b07d, type: 3}
+  - {fileID: 7234303965036396577, guid: d1447439fc16ede46b525a0cb14c3edc, type: 3}
+  - {fileID: 4812933206669265253, guid: a4f7dc962710676448262cf5683f5929, type: 3}
   tile_far_material:
   - {fileID: 2100000, guid: 0b781e32af77ed14db4c06348d91501d, type: 2}
   tile_close_sprite:
@@ -7480,7 +7491,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1282465685
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11553,6 +11564,30 @@ PrefabInstance:
     - {fileID: 6547760520514249366, guid: 17879eb93812c26488f97e30aa1a881c, type: 3}
     - {fileID: 6547760520514249367, guid: 17879eb93812c26488f97e30aa1a881c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 17879eb93812c26488f97e30aa1a881c, type: 3}
+--- !u!4 &1099101591046178352 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 531954923328021278, guid: 17879eb93812c26488f97e30aa1a881c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1099101591046178351}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1099101591046178353 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6547760520514249369, guid: 17879eb93812c26488f97e30aa1a881c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1099101591046178351}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1099101591046178354 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1628638800621026413, guid: 17879eb93812c26488f97e30aa1a881c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1099101591046178351}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1099101591046178355 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1099101591384270729, guid: 17879eb93812c26488f97e30aa1a881c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1099101591046178351}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6275269600467335879
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11921,3 +11956,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ca6edb9adf346549bfa49f42211b422, type: 3}
+--- !u!4 &7134292926168422419 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7134292926899655714, guid: 5ca6edb9adf346549bfa49f42211b422,
+    type: 3}
+  m_PrefabInstance: {fileID: 7134292926168422418}
+  m_PrefabAsset: {fileID: 0}

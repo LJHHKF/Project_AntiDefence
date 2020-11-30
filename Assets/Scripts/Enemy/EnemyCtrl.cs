@@ -184,15 +184,18 @@ public class EnemyCtrl : MonoBehaviour
             if (other.CompareTag("BT_AtkR"))
             {
                 enemyHP = 0;
+                stgManager.PullingEnemyDamagedEf(0, gameObject.transform.position);
             }
             else if (other.CompareTag("SNT_AtkR"))
             {
                 enemyHP = 0;
+                stgManager.PullingEnemyDamagedEf(1, gameObject.transform.position);
             }
             else if (other.CompareTag("PT_AtkR") & state != State.PUSHED)
             {
                 StartCoroutine(Pushed_delay());
                 enemyHP = 0;
+                stgManager.PullingEnemyDamagedEf(2, gameObject.transform.position);
             }
         }
         else
@@ -200,13 +203,16 @@ public class EnemyCtrl : MonoBehaviour
             if (other.CompareTag("BT_AtkR"))
             {
                 enemyHP -= ta_manager.b_AtDmg;
+                stgManager.PullingEnemyDamagedEf(0, gameObject.transform.position);
             }
             else if (other.CompareTag("SNT_AtkR"))
             {
                 enemyHP -= ta_manager.sn_AtDmg;
+                stgManager.PullingEnemyDamagedEf(1, gameObject.transform.position);
             }
             else if (other.CompareTag("PT_AtkR") & state != State.PUSHED)
             {
+                stgManager.PullingEnemyDamagedEf(2, gameObject.transform.position);
                 StartCoroutine(Pushed_delay());
                 enemyHP -= ta_manager.p_AtDmg;
             }

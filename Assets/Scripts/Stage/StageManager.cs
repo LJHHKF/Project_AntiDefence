@@ -44,6 +44,8 @@ public class StageManager : MonoBehaviour
     private Pools pools_DieEf;
     private Transform t_DropMoneyPool;
     private Pools pools_DropMoney;
+    private Transform t_objectPool_AtkEffect;
+    private Pools[] arr_pools_EnemyDamaged;
 
     [Header ("Chp,Stage info")]
     public int chapter_num = 0;
@@ -59,6 +61,7 @@ public class StageManager : MonoBehaviour
     public GameObject startEffect;
     public GameObject startEffect2;
     private bool is_started = false;
+    public GameObject[] enemyDamgedEffect;
 
     [Header("Wall&Tile Image Setting")]
     public Material[] tile_far_material;
@@ -146,6 +149,7 @@ public class StageManager : MonoBehaviour
         t_objectPool_DieEffect = t_objPools.Find("EnemyDieEffect");
         t_DropMoneyPool = ui_Canvas.transform.Find("EnemyDropMoney").transform;
         t_touchEfPool = ui_Canvas.transform.Find("TouchEffect_Pool").transform;
+        t_objectPool_AtkEffect = t_objPools.Find("AtkEffects");
 
 
         towerBoard = GameObject.FindGameObjectWithTag("TowerBoard");
@@ -478,6 +482,31 @@ public class StageManager : MonoBehaviour
         }
     }
 
+    public void PullingEnemyDamagedEf(int towerIndex, Vector3 t_enemy)
+    {
+        if (arr_pools_EnemyDamaged[towerIndex].cnt == 0)
+        {
+            PoolingMonsterDamagedEf(towerIndex);
+        }
+        arr_pools_EnemyDamaged[towerIndex].is_serched = false;
+        for(int i = 0; i < arr_pools_EnemyDamaged[towerIndex].cnt; i++)
+        {
+            if(arr_pools_EnemyDamaged[towerIndex].listPool[i].activeSelf == false)
+            {
+                arr_pools_EnemyDamaged[towerIndex].listPool[i].transform.position = new Vector3(t_enemy.x, t_enemy.y, t_enemy.z);
+                arr_pools_EnemyDamaged[towerIndex].listPool[i].SetActive(true);
+                StartCoroutine(StopEffect(arr_pools_EnemyDamaged[towerIndex].listPool[i], 1.0f));
+                arr_pools_EnemyDamaged[towerIndex].is_serched = true;
+                break;
+            }
+        }
+        if(arr_pools_EnemyDamaged[towerIndex].is_serched == false)
+        {
+            PoolingMonsterDamagedEf(towerIndex);
+            PullingEnemyDamagedEf(towerIndex, t_enemy);
+        }
+    }
+
     private void EnemyPooling(int sp_index)
     {
         GameObject enemy = Instantiate(enemies[spawnEnemyIndex[sp_index]], t_objectPool_Enemy);
@@ -548,6 +577,15 @@ public class StageManager : MonoBehaviour
         effect.name = "TouchEffect_" + pools_TouchEffect.cnt.ToString("00");
         effect.SetActive(false);
         pools_TouchEffect.listPool.Add(effect);
+    }
+
+    private void PoolingMonsterDamagedEf(int towerIndex)
+    {
+        GameObject effect = Instantiate(enemyDamgedEffect[towerIndex], t_objectPool_AtkEffect);
+        arr_pools_EnemyDamaged[towerIndex].cnt++;
+        effect.name = "DamagedEffect_" + towerIndex.ToString("0") + "_" + arr_pools_EnemyDamaged[towerIndex].cnt.ToString("000");
+        effect.SetActive(false);
+        arr_pools_EnemyDamaged[towerIndex].listPool.Add(effect);
     }
 
     IEnumerator StopEffect(GameObject effect, float time)
@@ -734,6 +772,15 @@ public class StageManager : MonoBehaviour
         pools_TouchEffect.listPool = new List<GameObject>();
         pools_TouchEffect.cnt = 0;
         pools_TouchEffect.is_serched = false;
+
+
+        arr_pools_EnemyDamaged = new Pools[3];
+        for (int i = 0; i < 3; i++)
+        {
+            arr_pools_EnemyDamaged[i].listPool = new List<GameObject>();
+            arr_pools_EnemyDamaged[i].cnt = 0;
+            arr_pools_EnemyDamaged[i].is_serched = false;
+        }
 
         arr_enemyPools = new Pools[enemies.Length];
         for (int i = 0; i < enemies.Length; i++)

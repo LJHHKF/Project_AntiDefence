@@ -3749,6 +3749,10 @@ MonoBehaviour:
     type: 3}
   startEffect2: {fileID: 7717023698762640779, guid: 43489713a0ddff744b3a36edbaa148a0,
     type: 3}
+  enemyDamgedEffect:
+  - {fileID: 8975739643591294959, guid: 182db8cdb7b771d419432b4d7505b07d, type: 3}
+  - {fileID: 7234303965036396577, guid: d1447439fc16ede46b525a0cb14c3edc, type: 3}
+  - {fileID: 4812933206669265253, guid: a4f7dc962710676448262cf5683f5929, type: 3}
   tile_far_material:
   - {fileID: 2100000, guid: 0b781e32af77ed14db4c06348d91501d, type: 2}
   tile_close_sprite:

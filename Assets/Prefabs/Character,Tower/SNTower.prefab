@@ -39,13 +39,13 @@ SpriteRenderer:
   m_SortingLayerID: -666823007
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5989507633029202516, guid: 92cc36bd94cd8404a94d30af55e72279,
+  m_Sprite: {fileID: 8642154337210894721, guid: 171061777c173884e84a3020db41c5a1,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.19607843}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 5, y: 19.199999}
+  m_Size: {x: 4.0003905, y: 11}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -128,6 +128,7 @@ GameObject:
   - component: {fileID: 5421274322985905849}
   - component: {fileID: 245516952285234358}
   - component: {fileID: 8201521960057265851}
+  - component: {fileID: 1680325921241489509}
   m_Layer: 0
   m_Name: Tower_Snip_Sprite
   m_TagString: Untagged
@@ -219,6 +220,24 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1680325921241489509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3600384210692811937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eecdcff13a89e0c45ab799634be704e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skins:
+  - {fileID: -7338529895614528896, guid: c8c7485dfec08124fb3b6a106b1ad028, type: 3}
+  - {fileID: 8987722613847138597, guid: d9c124fbd478a8f44beea5bf2215079e, type: 3}
+  anims:
+  - {fileID: 9100000, guid: 69986a40c1d924947ba295edea33bad1, type: 2}
+  - {fileID: 9100000, guid: 95877cfc2854e8846a7213e3bb04d69b, type: 2}
 --- !u!1 &6482069131864085443
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,13 +389,13 @@ SpriteRenderer:
   m_SortingLayerID: -666823007
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5989507633029202516, guid: 92cc36bd94cd8404a94d30af55e72279,
+  m_Sprite: {fileID: 8642154337210894721, guid: 171061777c173884e84a3020db41c5a1,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.19607843}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 5, y: 19.199999}
+  m_Size: {x: 4.0003905, y: 11}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
