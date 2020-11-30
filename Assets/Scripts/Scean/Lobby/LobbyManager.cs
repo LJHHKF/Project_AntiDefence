@@ -23,7 +23,6 @@ public class LobbyManager : MonoBehaviour
     private Transform t_subButtons;
     private Text txt_money;
     private Text txt_level;
-    private Image img_skin;
     private SpriteRenderer spr_skin;
     private Animator m_animator;
     private GameObject panel_exit;
