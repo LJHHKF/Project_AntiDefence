@@ -23,7 +23,7 @@ public class TitleSceanManager : MonoBehaviour
         if(loadingM.GetIsLoaded())
         {
             loadingTxt.text = "Touch Screen";
-            if(Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0))
             {
                 loadingM.SetEventDone();
             }
@@ -32,6 +32,12 @@ public class TitleSceanManager : MonoBehaviour
         {
             loadingTxt.text = "Now Loading...";
         }
-        
+
+
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            loadingM.LoadTestScene();
+        }
     }
 }

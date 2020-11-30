@@ -23,6 +23,7 @@ public class StageManager : MonoBehaviour
     public GameObject e_Die_Effect;
     public GameObject dropMoneyBarPrefab;
     public GameObject[] enemies;
+    public GameObject enemy_BugHuman;
     private GameObject ui_Canvas;
     private GameObject remainPanel;
     
@@ -84,6 +85,8 @@ public class StageManager : MonoBehaviour
     private bool dlg_isDone = false;
     private bool event_isDone = true;
     private bool now_Spawn = false;
+    private int bugHumanIndex;
+    private int stgGetMoney = 0;
 
 
     private GameObject gm;
@@ -169,6 +172,14 @@ public class StageManager : MonoBehaviour
         else
         {
             b_spawnPoints.SetActive(false);
+        }
+
+        for(int i = 0; i < enemies.Length; i++)
+        {
+            if(enemies[i] == enemy_BugHuman)
+            {
+                bugHumanIndex = i;
+            }
         }
 
         PoolsInit();
@@ -269,6 +280,34 @@ public class StageManager : MonoBehaviour
         {
             Pub_EnemyPooling(enemy_index);
             Pub_SpawnEnemy(sp_index, enemy_index);
+        }
+    }
+
+    public void SpawnBugEnemy(Transform spawnT)
+    {
+        if(arr_enemyPools[bugHumanIndex].cnt <= 0)
+        {
+            BugEnemyPooling();
+        }
+
+        arr_enemyPools[bugHumanIndex].is_serched = false;
+        
+        for(int i = 0; i < arr_enemyPools[bugHumanIndex].cnt; i++)
+        {
+            if(arr_enemyPools[bugHumanIndex].listPool[i].activeSelf == false)
+            {
+                GameObject enemy = arr_enemyPools[bugHumanIndex].listPool[i];
+                enemy.transform.position = spawnT.position;
+                enemy.transform.rotation = spawnT.rotation;
+                enemy.SetActive(true);
+                arr_enemyPools[bugHumanIndex].is_serched = true;
+                break;
+            }
+        }
+        if(arr_enemyPools[bugHumanIndex].is_serched == false)
+        {
+            BugEnemyPooling();
+            SpawnBugEnemy(spawnT);
         }
     }
 
@@ -457,6 +496,15 @@ public class StageManager : MonoBehaviour
         arr_enemyPools[enemyIndex].listPool.Add(enemy);
     }
 
+    private void BugEnemyPooling()
+    {
+        GameObject enemy = Instantiate(enemy_BugHuman, t_objectPool_Enemy);
+        arr_enemyPools[bugHumanIndex].cnt++;
+        enemy.name = "Enemy_" + bugHumanIndex.ToString("00") + "_" + arr_enemyPools[bugHumanIndex].cnt.ToString("000");
+        enemy.SetActive(false);
+        arr_enemyPools[bugHumanIndex].listPool.Add(enemy);
+    }
+
     private void SpawnEffectPooling()
     {
         GameObject effect = Instantiate(spawn_Effect, t_objectPool_SpawnEf);
@@ -535,7 +583,7 @@ public class StageManager : MonoBehaviour
     public void EnemyDied(int dropM)
     {
         cnt_EnemyDie += 1;
-        itemM.Get_Money(dropM);
+        stgGetMoney = dropM;
     }
 
 
@@ -573,6 +621,7 @@ public class StageManager : MonoBehaviour
     {
         loadingM.SetLoadingString("SYSTEM OVERLOAD");
         StartCoroutine(DelayedStageEnd(1.0f));
+        itemM.Get_Money(stgGetMoney / 2);
     }
 
     private void StageClear()
@@ -581,6 +630,7 @@ public class StageManager : MonoBehaviour
         playerM.OnWinAnim();
         loadingM.SetLoadingString("SYSTEM STABILIZATION");
         StartCoroutine(DelayedStageEnd(1.0f));
+        itemM.Get_Money(stgGetMoney);
     }
 
     public void DlgDone()

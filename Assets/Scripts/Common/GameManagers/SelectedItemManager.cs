@@ -470,6 +470,11 @@ public class SelectedItemManager : MonoBehaviour
         DataSaveManager.WriteData("DB_Item.csv", DataSaveManager.ownItemCount);
     }
 
+    public void EventBarrierBreak()
+    {
+        i_event_AiBarrier = false;
+    }
+
     public void SetEvent0_2()
     {
         i_event_AiBarrier = true;

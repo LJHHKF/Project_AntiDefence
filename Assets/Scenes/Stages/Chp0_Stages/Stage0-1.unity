@@ -4031,6 +4031,8 @@ MonoBehaviour:
   enemies:
   - {fileID: 6594383046016651844, guid: 0a9f429330c94a443a5332d50890d231, type: 3}
   - {fileID: 4004246026254903031, guid: 28fda2406e93597498f795d673bb426f, type: 3}
+  enemy_BugHuman: {fileID: 6050013342532987395, guid: 70ab0fabd8fde6b4e8c23923079f145e,
+    type: 3}
   startDelay: 3
   delayTimesIndex:
   - 1
@@ -11868,7 +11870,7 @@ PrefabInstance:
     - target: {fileID: 7235488846058975046, guid: aa7f76259a960b5439870dfdfa6c483a,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8931203759760710936, guid: aa7f76259a960b5439870dfdfa6c483a,
         type: 3}
