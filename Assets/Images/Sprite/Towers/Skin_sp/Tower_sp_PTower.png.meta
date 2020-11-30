@@ -1,0 +1,1034 @@
+fileFormatVersion: 2
+guid: 05ea5467e1f2cf844bde79d26737851c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3767832221320696103
+    second: Tower_sp_PTower_0
+  - first:
+      213: 8000584094582703817
+    second: Tower_sp_PTower_1
+  - first:
+      213: -698221041886997316
+    second: Tower_sp_PTower_2
+  - first:
+      213: 9031519639586343778
+    second: Tower_sp_PTower_3
+  - first:
+      213: 264941111665607928
+    second: Tower_sp_PTower_4
+  - first:
+      213: 4322941119527106271
+    second: Tower_sp_PTower_5
+  - first:
+      213: -6004875733866850732
+    second: Tower_sp_PTower_6
+  - first:
+      213: -1466106406281119828
+    second: Tower_sp_PTower_7
+  - first:
+      213: 6023750305184968775
+    second: Tower_sp_PTower_8
+  - first:
+      213: -5246002530017130959
+    second: Tower_sp_PTower_9
+  - first:
+      213: -4060742180560875794
+    second: Tower_sp_PTower_10
+  - first:
+      213: 2079410900821530726
+    second: Tower_sp_PTower_11
+  - first:
+      213: 2010947935437480688
+    second: Tower_sp_PTower_12
+  - first:
+      213: 1312195182584162680
+    second: Tower_sp_PTower_13
+  - first:
+      213: -8650303016628538862
+    second: Tower_sp_PTower_14
+  - first:
+      213: 6548022322347028473
+    second: Tower_sp_PTower_15
+  - first:
+      213: 7253888420635653728
+    second: Tower_sp_PTower_16
+  - first:
+      213: 6742271119863192969
+    second: Tower_sp_PTower_17
+  - first:
+      213: -2505273029053396903
+    second: Tower_sp_PTower_18
+  - first:
+      213: -9038896508853817824
+    second: Tower_sp_PTower_19
+  - first:
+      213: -3540923606030998184
+    second: Tower_sp_PTower_20
+  - first:
+      213: 850293917360838776
+    second: Tower_sp_PTower_21
+  - first:
+      213: -6679740023361217081
+    second: Tower_sp_PTower_22
+  - first:
+      213: 6636348163406685783
+    second: Tower_sp_PTower_23
+  - first:
+      213: 772577819988422603
+    second: Tower_sp_PTower_24
+  - first:
+      213: 5864588217210827109
+    second: Tower_sp_PTower_25
+  - first:
+      213: -3442257628740075168
+    second: Tower_sp_PTower_26
+  - first:
+      213: 1364644954844036016
+    second: Tower_sp_PTower_27
+  - first:
+      213: -4019781246377950961
+    second: Tower_sp_PTower_28
+  - first:
+      213: -3933960442202920636
+    second: Tower_sp_PTower_29
+  - first:
+      213: -5186440210966878097
+    second: Tower_sp_PTower_30
+  - first:
+      213: -7111353610867037590
+    second: Tower_sp_PTower_31
+  - first:
+      213: -968106358442848678
+    second: Tower_sp_PTower_32
+  - first:
+      213: -8851627829018429835
+    second: Tower_sp_PTower_33
+  - first:
+      213: -667333380104840464
+    second: Tower_sp_PTower_0
+  - first:
+      213: -2680769784535045029
+    second: Tower_sp_PTower_1
+  - first:
+      213: -8790228307214133817
+    second: Tower_sp_PTower_2
+  - first:
+      213: 6955703142758232788
+    second: Tower_sp_PTower_3
+  - first:
+      213: 3422622141824199511
+    second: Tower_sp_PTower_4
+  - first:
+      213: -6916295738271737807
+    second: Tower_sp_PTower_5
+  - first:
+      213: -8664617547084025946
+    second: Tower_sp_PTower_6
+  - first:
+      213: -4914770224439111556
+    second: Tower_sp_PTower_7
+  - first:
+      213: 6773441665215893823
+    second: Tower_sp_PTower_8
+  - first:
+      213: 8299876635897685280
+    second: Tower_sp_PTower_9
+  - first:
+      213: 2792423921318880857
+    second: Tower_sp_PTower_10
+  - first:
+      213: 2866750221645915650
+    second: Tower_sp_PTower_11
+  - first:
+      213: 2254983240736462033
+    second: Tower_sp_PTower_12
+  - first:
+      213: 8946858721518913530
+    second: Tower_sp_PTower_13
+  - first:
+      213: -6970116554669551373
+    second: Tower_sp_PTower_14
+  - first:
+      213: 2122295011788781835
+    second: Tower_sp_PTower_15
+  - first:
+      213: -3193610317879401422
+    second: Tower_sp_PTower_16
+  - first:
+      213: -3969849234782729468
+    second: Tower_sp_PTower_17
+  - first:
+      213: 7230770063460830987
+    second: Tower_sp_PTower_18
+  - first:
+      213: -5254744080548021015
+    second: Tower_sp_PTower_19
+  - first:
+      213: -2349270243353877488
+    second: Tower_sp_PTower_20
+  - first:
+      213: -9037145849586731507
+    second: Tower_sp_PTower_21
+  - first:
+      213: 5331939034026819275
+    second: Tower_sp_PTower_22
+  - first:
+      213: -8176383890027107694
+    second: Tower_sp_PTower_23
+  - first:
+      213: -5244561239769834593
+    second: Tower_sp_PTower_24
+  - first:
+      213: -1526763780011482998
+    second: Tower_sp_PTower_25
+  - first:
+      213: -9211406863298228776
+    second: Tower_sp_PTower_26
+  - first:
+      213: 5895054530143164340
+    second: Tower_sp_PTower_27
+  - first:
+      213: -2385958924168199941
+    second: Tower_sp_PTower_28
+  - first:
+      213: 477573891445522795
+    second: Tower_sp_PTower_29
+  - first:
+      213: -4726674447076085457
+    second: Tower_sp_PTower_30
+  - first:
+      213: -8205033703841763715
+    second: Tower_sp_PTower_31
+  - first:
+      213: -7541281791060360562
+    second: Tower_sp_PTower_32
+  - first:
+      213: -1074935543506953850
+    second: Tower_sp_PTower_33
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tower_sp_PTower_0
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 1013
+        width: 387
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fa171493d72db6f0800000000000000
+      internalID: -667333380104840464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower_sp_PTower_1
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 1013
+        width: 391
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5c2034951efbcad0800000000000000
+      internalID: -2680769784535045029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower_sp_PTower_2
+      rect:
+        serializedVersion: 2
+        x: 1102
+        y: 1009
+        width: 391
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c51bed5de5d20680800000000000000
+      internalID: -8790228307214133817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower_sp_PTower_3
+      rect:
+        serializedVersion: 2
+        x: 1597
+        y: 1154
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d23c2bc72f978060800000000000000
+      internalID: 6955703142758232788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower_sp_PTower_4
+      rect:
+        serializedVersion: 2
+        x: 1643
+        y: 1013
+        width: 363
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75b61d344b89f7f20800000000000000
+      internalID: 3422622141824199511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower_sp_PTower_5
+      rect:
+        serializedVersion: 2
+        x: 2118
+        y: 1013
+        width: 417
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 138d3ce8ba16400a0800000000000000
+      internalID: -6916295738271737807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower_sp_PTower_6
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 1092
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6afa07f7f3811c780800000000000000
+      internalID: -8664617547084025946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower_sp_PTower_7
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 1092
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c70d3ab358a3bcbb0800000000000000
+      internalID: -4914770224439111556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower_sp_PTower_8
+      rect:
+        serializedVersion: 2
+        x: 1143
+        y: 1092
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f31160aae49100e50800000000000000
+      internalID: 6773441665215893823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower_sp_PTower_9
+      rect:
+        serializedVersion: 2
+        x: 1639
+        y: 1092
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 025ee3263d51f2370800000000000000
+      internalID: 8299876635897685280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower_sp_PTower_10
+      rect:
+        serializedVersion: 2
+        x: 2158
+        y: 1092
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 956e384f2cea0c620800000000000000
+      internalID: 2792423921318880857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower_sp_PTower_11
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 1009
+        width: 14
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2062afc432eb8c720800000000000000
+      internalID: 2866750221645915650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower_sp_PTower_12
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 1009
+        width: 13
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d45e8e5f4f4b4f10800000000000000
+      internalID: 2254983240736462033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower_sp_PTower_13
+      rect:
+        serializedVersion: 2
+        x: 1916
+        y: 1009
+        width: 14
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af78dbfca90a92c70800000000000000
+      internalID: 8946858721518913530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower_sp_PTower_14
+      rect:
+        serializedVersion: 2
+        x: 2436
+        y: 1009
+        width: 14
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f01adb3ceb254f90800000000000000
+      internalID: -6970116554669551373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower_sp_PTower_15
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 560
+        width: 408
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b09f04e9118e37d10800000000000000
+      internalID: 2122295011788781835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower_sp_PTower_16
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 641
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 234a6cb16540ea3d0800000000000000
+      internalID: -3193610317879401422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower_sp_PTower_17
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 560
+        width: 366
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40b4be4772348e8c0800000000000000
+      internalID: -3969849234782729468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower_sp_PTower_18
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 641
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0f8c1dff0bd85460800000000000000
+      internalID: 7230770063460830987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower_sp_PTower_19
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 560
+        width: 357
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ec395d79166317b0800000000000000
+      internalID: -5254744080548021015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower_sp_PTower_20
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 641
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0142f7f1927b56fd0800000000000000
+      internalID: -2349270243353877488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower_sp_PTower_21
+      rect:
+        serializedVersion: 2
+        x: 1656
+        y: 560
+        width: 362
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d06bcfb0bbb959280800000000000000
+      internalID: -9037145849586731507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower_sp_PTower_22
+      rect:
+        serializedVersion: 2
+        x: 1697
+        y: 641
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bce35373d4adef940800000000000000
+      internalID: 5331939034026819275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower_sp_PTower_23
+      rect:
+        serializedVersion: 2
+        x: 2176
+        y: 560
+        width: 362
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29a25bf1c26a78e80800000000000000
+      internalID: -8176383890027107694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower_sp_PTower_24
+      rect:
+        serializedVersion: 2
+        x: 2217
+        y: 641
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9b9cbcd6539737b0800000000000000
+      internalID: -5244561239769834593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower_sp_PTower_25
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 113
+        width: 375
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a80ab746e68dfcae0800000000000000
+      internalID: -1526763780011482998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower_sp_PTower_26
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 113
+        width: 375
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dd838f03428a2080800000000000000
+      internalID: -9211406863298228776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower_sp_PTower_27
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 113
+        width: 393
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b79db0acd07fc150800000000000000
+      internalID: 5895054530143164340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower_sp_PTower_28
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 192
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf00844fffe53eed0800000000000000
+      internalID: -2385958924168199941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower_sp_PTower_29
+      rect:
+        serializedVersion: 2
+        x: 1629
+        y: 113
+        width: 392
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b618c998ceea0a600800000000000000
+      internalID: 477573891445522795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower_sp_PTower_30
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 109
+        width: 11
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f213d1522aa776eb0800000000000000
+      internalID: -4726674447076085457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower_sp_PTower_31
+      rect:
+        serializedVersion: 2
+        x: 886
+        y: 109
+        width: 12
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7e6768815dd12e80800000000000000
+      internalID: -8205033703841763715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower_sp_PTower_32
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 109
+        width: 12
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e82c9bc9a2cf75790800000000000000
+      internalID: -7541281791060360562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower_sp_PTower_33
+      rect:
+        serializedVersion: 2
+        x: 1925
+        y: 109
+        width: 11
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68993d481df0511f0800000000000000
+      internalID: -1074935543506953850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 3cb714fe5baf0f6498e1c1136a27b490
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

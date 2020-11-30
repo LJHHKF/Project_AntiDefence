@@ -10,6 +10,7 @@ public class EnemyTargetCtrl : MonoBehaviour
     private EnemyCtrl enemyCtrl;
 
     private bool findOther = false;
+    private int m_enemyIndex;
 
     private void Awake()
     {
@@ -18,6 +19,7 @@ public class EnemyTargetCtrl : MonoBehaviour
         enemyCtrl = gameObject.GetComponentInParent<EnemyCtrl>();
 
         enemyCtrl.SetTarget(player);
+        m_enemyIndex = enemyCtrl.GetEnemyIndex();
     }
 
 
@@ -27,6 +29,10 @@ public class EnemyTargetCtrl : MonoBehaviour
         if (findOther)
         {
             if (another.gameObject == null)
+            {
+                findOther = false;
+            }
+            else if(another.gameObject.activeSelf == false)
             {
                 findOther = false;
             }
@@ -43,10 +49,26 @@ public class EnemyTargetCtrl : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Barricade"))
+        if (!findOther)
         {
-            findOther = true;
-            another = other.gameObject;
+            if (m_enemyIndex == 2)
+            {
+                if (other.CompareTag("BugTarget"))
+                {
+                    findOther = true;
+                    another = other.gameObject;
+                }
+            }
+            if (other.CompareTag("Barricade"))
+            {
+                findOther = true;
+                another = other.gameObject;
+            }
         }
+    }
+
+    public void SetFindOther(bool value)
+    {
+        findOther = value;
     }
 }

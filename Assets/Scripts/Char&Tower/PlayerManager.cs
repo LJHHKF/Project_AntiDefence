@@ -99,6 +99,7 @@ public class PlayerManager : MonoBehaviour
         }
         else if(selectedItemManager.i_event_AiBarrier)
         {
+            selectedItemManager.EventBarrierBreak();
             effect_AI_Barrier.SetActive(false);
             StartCoroutine(OnSoundBarrierBreak());
         }

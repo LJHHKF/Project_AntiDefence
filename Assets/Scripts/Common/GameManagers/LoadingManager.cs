@@ -179,6 +179,11 @@ public class LoadingManager : MonoBehaviour
         //StartCoroutine(LoadAsyncScene(target));
     }
 
+    public void LoadTestScene()
+    {
+        SceneManager.LoadScene("StageBase");
+    }
+
 
     //IEnumerator LoadAsyncScene(string target)
     //{

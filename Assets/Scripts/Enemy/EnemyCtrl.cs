@@ -17,8 +17,10 @@ public class EnemyCtrl : MonoBehaviour
 
     private State state = State.MOVE;
     private GameObject target;
+    private GameObject attackTarget;
 
     private Barricade barricade;
+    private EnemyBugTarget m_BugTarget;
     private Transform t_imgPanel;
     private Transform t_img;
     private float slope;
@@ -59,12 +61,14 @@ public class EnemyCtrl : MonoBehaviour
 
     private WaitForSeconds ws;
     private bool attack_now;
-
+    
     private Vector3 direction;
     private GameObject o_stgM;
     private StageManager stgManager;
     private EnemyInfoUI enemyInfo;
     private Collider m_coll;
+    private Rigidbody m_rigid;
+    private EnemyTargetCtrl m_targetCtrl;
 
     void Start()
     {
@@ -82,6 +86,11 @@ public class EnemyCtrl : MonoBehaviour
         t_imgPanel = gameObject.transform.Find("Clear_Panel").GetComponent<Transform>();
         t_img = t_imgPanel.Find("Image").GetComponent<Transform>();
         m_coll = gameObject.GetComponent<Collider>();
+        m_rigid = gameObject.GetComponent<Rigidbody>();
+        m_targetCtrl = gameObject.transform.Find("SearchRange").GetComponent<EnemyTargetCtrl>();
+
+        m_coll.enabled = true;
+        m_rigid.useGravity = true;
 
         SetHPBar();
         initHP = enemyHP;
@@ -98,6 +107,7 @@ public class EnemyCtrl : MonoBehaviour
             ResetHPBar();
             isDie = false;
             m_coll.enabled = true;
+            m_rigid.useGravity = true;
         }
     }
 
@@ -105,13 +115,13 @@ public class EnemyCtrl : MonoBehaviour
     void Update()
     {
         ImageSlopeRotate();
-
         if (state == State.DIE)
         {
             if (isDie == false)
             {
                 isDie = true;
                 m_coll.enabled = false;
+                m_rigid.useGravity = false;
                 stgManager.EnemyDied(dropMoneyValue);
                 stgManager.PullingDropMoneyBar(gameObject.transform.position, dropMoneyValue, 1.0f);
 
@@ -133,20 +143,22 @@ public class EnemyCtrl : MonoBehaviour
         }
         else if (state == State.MOVE)
         {
-            transform.position = Vector3.MoveTowards(transform.position, target.transform.position, moveSpeed * Time.deltaTime);
-
-            direction = target.transform.position - transform.position;
-            transform.rotation = Quaternion.Slerp(transform.rotation, target.transform.rotation, rotSpeed * Time.deltaTime);
-
-            if (direction.x > 0)
+            if (target != null)
             {
-                t_img.localEulerAngles = new Vector3(0, 180, 0);
-            }
-            else
-            {
-                t_img.localEulerAngles = new Vector3(0, 0, 0);
-            }
+                transform.position = Vector3.MoveTowards(transform.position, target.transform.position, moveSpeed * Time.deltaTime);
 
+                direction = target.transform.position - transform.position;
+                transform.rotation = Quaternion.Slerp(transform.rotation, target.transform.rotation, rotSpeed * Time.deltaTime);
+
+                if (direction.x > 0)
+                {
+                    t_img.localEulerAngles = new Vector3(0, 180, 0);
+                }
+                else
+                {
+                    t_img.localEulerAngles = new Vector3(0, 0, 0);
+                }
+            }
         }
         else if (state == State.PUSHED)
         {
@@ -172,15 +184,18 @@ public class EnemyCtrl : MonoBehaviour
             if (other.CompareTag("BT_AtkR"))
             {
                 enemyHP = 0;
+                stgManager.PullingEnemyDamagedEf(0, gameObject.transform.position);
             }
             else if (other.CompareTag("SNT_AtkR"))
             {
                 enemyHP = 0;
+                stgManager.PullingEnemyDamagedEf(1, gameObject.transform.position);
             }
             else if (other.CompareTag("PT_AtkR") & state != State.PUSHED)
             {
                 StartCoroutine(Pushed_delay());
                 enemyHP = 0;
+                stgManager.PullingEnemyDamagedEf(2, gameObject.transform.position);
             }
         }
         else
@@ -188,13 +203,16 @@ public class EnemyCtrl : MonoBehaviour
             if (other.CompareTag("BT_AtkR"))
             {
                 enemyHP -= ta_manager.b_AtDmg;
+                stgManager.PullingEnemyDamagedEf(0, gameObject.transform.position);
             }
             else if (other.CompareTag("SNT_AtkR"))
             {
                 enemyHP -= ta_manager.sn_AtDmg;
+                stgManager.PullingEnemyDamagedEf(1, gameObject.transform.position);
             }
             else if (other.CompareTag("PT_AtkR") & state != State.PUSHED)
             {
+                stgManager.PullingEnemyDamagedEf(2, gameObject.transform.position);
                 StartCoroutine(Pushed_delay());
                 enemyHP -= ta_manager.p_AtDmg;
             }
@@ -234,6 +252,10 @@ public class EnemyCtrl : MonoBehaviour
         {
             barricade = t.GetComponentInParent<Barricade>();
         }
+        if (t.CompareTag("BugTarget"))
+        {
+            m_BugTarget = t.GetComponent<EnemyBugTarget>();
+        }
     }
 
     private void ImageSlopeRotate()
@@ -251,11 +273,13 @@ public class EnemyCtrl : MonoBehaviour
 
     IEnumerator CheckState()
     {
+        float dist = 0;
         while (state != State.DIE)
         {
             if (state == State.DIE) yield break;
 
-            float dist = Vector3.Distance(target.transform.position, transform.position);
+            if(target != null)
+                dist = Vector3.Distance(target.transform.position, transform.position);
 
             if (dist <= attackDist)
             {
@@ -271,34 +295,60 @@ public class EnemyCtrl : MonoBehaviour
 
     IEnumerator Attacking()
     {
-        attack_now = true;
-        while (state == State.ATTACK)
+        attackTarget = target;
+        if (enemyIndex != 0)
         {
-            if (target.CompareTag("Player"))
+            attack_now = true;
+            while (state == State.ATTACK)
             {
-                pl_manager.Player_Damaged(attackDamage);
-                m_anim.SetTrigger("IsAttack");
-                if (isSuiBomber)
+
+                if (attackTarget != target)
                 {
-                    state = State.DIE;
-                    StopCoroutine(Attacking());
+                    state = State.MOVE;
                 }
-                yield return new WaitForSeconds(attack_delay);
-            }
-            else if (target.CompareTag("Barricade"))
-            {
-                barricade.Barricade_damaged(attackDamage);
-                m_anim.SetTrigger("IsAttack");
-                if (isSuiBomber)
+                else
                 {
-                    state = State.DIE;
-                    StopCoroutine(Attacking());
+                    if (target.CompareTag("Player"))
+                    {
+                        pl_manager.Player_Damaged(attackDamage);
+                        m_anim.SetTrigger("IsAttack");
+                        if (isSuiBomber)
+                        {
+                            state = State.DIE;
+                            StopCoroutine(Attacking());
+                        }
+                        yield return new WaitForSeconds(attack_delay);
+                    }
+                    else if (target.CompareTag("Barricade"))
+                    {
+                        barricade.Barricade_damaged(attackDamage);
+                        m_anim.SetTrigger("IsAttack");
+                        if (isSuiBomber)
+                        {
+                            state = State.DIE;
+                            StopCoroutine(Attacking());
+                        }
+                        yield return new WaitForSeconds(attack_delay);
+                    }
+                    else if (enemyIndex == 2)
+                    {
+                        if (target.CompareTag("BugTarget"))
+                        {
+                            m_BugTarget.SetBuged();
+                            m_anim.SetTrigger("IsAttack");
+                            m_targetCtrl.SetFindOther(false);
+                            yield return new WaitForSeconds(attack_delay);
+                        }
+                    }
                 }
-                yield return new WaitForSeconds(attack_delay);
             }
+            attack_now = false;
         }
-        attack_now = false;
-        StopCoroutine(Attacking());
+        else
+        {
+            attack_now = true;
+        }
+        yield break;
     }
 
 
@@ -315,5 +365,15 @@ public class EnemyCtrl : MonoBehaviour
         yield return new WaitForSeconds(sec);
         gameObject.SetActive(false);
         yield break;
+    }
+
+    public int GetEnemyIndex()
+    {
+        return enemyIndex;
+    }
+
+    public void SetIsDie(bool setV)
+    {
+        isDie = setV;
     }
 }

@@ -19,7 +19,7 @@ public class LoadingSceneManager : MonoBehaviour
         gm = GameObject.FindGameObjectWithTag("GameManager");
         loadingM = gm.GetComponent<LoadingManager>();
 
-        t_LoadingBar = gameObject.transform.Find("LoadingPanel").Find("LoadingBar");
+        t_LoadingBar = gameObject.transform.Find("LoadingPanel").Find("LoadingBarBG").Find("LoadingBar");
         img_loadingbar = t_LoadingBar.gameObject.GetComponent<Image>();
         txt_loadingTxt = t_LoadingBar.Find("Text").GetComponent<Text>();
 

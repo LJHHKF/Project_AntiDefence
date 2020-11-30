@@ -12,6 +12,11 @@ public class Event_0_2 : MonoBehaviour
     public ChangeTower changeTower;
     public Collider[] Colliders_snip;
     public Button[] buttons;
+    public Transform t_Chracter;
+    public Transform[] t_Barraicades;
+
+    [Header("Effect Setting")]
+    public GameObject highlightEffect;
 
     [Header("SetSpawnEnemy")]
     public int[] spawnEnemyIndex;
@@ -23,7 +28,7 @@ public class Event_0_2 : MonoBehaviour
     public string[] txt_dialogue;
 
     private Text txt_EventDlg;
-    private GameObject[] point_Item = new GameObject[5];
+    //private GameObject[] point_Item = new GameObject[5];
 
     private int cnt_event = -1;
     private int cnt_subEvent = -1;
@@ -35,17 +40,17 @@ public class Event_0_2 : MonoBehaviour
     {
         txt_EventDlg = ui_Panel_EventDlg.transform.Find("Text").GetComponent<Text>();
 
-        point_Item[0] = ui_EventObjects.transform.Find("Point_Character").gameObject;
-        point_Item[1] = ui_EventObjects.transform.Find("Point_Barricade_1").gameObject;
-        point_Item[2] = ui_EventObjects.transform.Find("Point_Barricade_2").gameObject;
-        point_Item[3] = ui_EventObjects.transform.Find("Point_Barricade_3").gameObject;
-        point_Item[4] = ui_EventObjects.transform.Find("Point_Barricade_4").gameObject;
+        //point_Item[0] = ui_EventObjects.transform.Find("Point_Character").gameObject;
+        //point_Item[1] = ui_EventObjects.transform.Find("Point_Barricade_1").gameObject;
+        //point_Item[2] = ui_EventObjects.transform.Find("Point_Barricade_2").gameObject;
+        //point_Item[3] = ui_EventObjects.transform.Find("Point_Barricade_3").gameObject;
+        //point_Item[4] = ui_EventObjects.transform.Find("Point_Barricade_4").gameObject;
 
         ui_Panel_EventDlg.SetActive(false);
-        for(int i = 0; i < 5; i++)
-        {
-            point_Item[i].SetActive(false);
-        }
+        //for(int i = 0; i < 5; i++)
+        //{
+        //    point_Item[i].SetActive(false);
+        //}
 
         m_stageManager.HadEvent();
     }
@@ -86,18 +91,18 @@ public class Event_0_2 : MonoBehaviour
                     ProgressDlg(); //2
                     break;
                 case 4:
-                    for (int i = 1; i < 5; i++)
-                        point_Item[i].SetActive(true);
+                    //for (int i = 1; i < 5; i++)
+                    //    point_Item[i].SetActive(true);
                     SubEvent(); // 0
                     break;
                 case 5:
-                    for (int i = 1; i < 5; i++)
-                        point_Item[i].SetActive(false);
-                    point_Item[0].SetActive(true);
+                    //for (int i = 1; i < 5; i++)
+                    //    point_Item[i].SetActive(false);
+                    //point_Item[0].SetActive(true);
                     SubEvent(); // 1
                     break;
                 case 6:
-                    point_Item[0].SetActive(false);
+                    //point_Item[0].SetActive(false);
                     ProgressDlg(); // 3
                     break;
                 case 7:
@@ -174,7 +179,7 @@ public class Event_0_2 : MonoBehaviour
         float[] oriAlpha = new float[4];
         for (int i = 1; i < 5; i++)
         {
-            m_colors[i - 1] = point_Item[i].GetComponent<Image>().color;
+            //m_colors[i - 1] = point_Item[i].GetComponent<Image>().color;
             oriAlpha[i-1] = m_colors[i-1].a;
         }
         bool reverse = false;
@@ -206,30 +211,30 @@ public class Event_0_2 : MonoBehaviour
 
     IEnumerator Event02()
     {
-        Color m_color = point_Item[0].GetComponent<Image>().color;
-        float oriAlpha = m_color.a;
-        bool reverse = false;
+        //Color m_color = point_Item[0].GetComponent<Image>().color;
+        //float oriAlpha = m_color.a;
+        //bool reverse = false;
 
-        while(prevEventIsDone == false)
-        {
-            if (reverse == false)
-            {
-                m_color = new Color(m_color.r, m_color.g, m_color.b, m_color.a - (oriAlpha * 0.005f));
-                if (m_color.a <= oriAlpha * 0.5f)
-                {
-                    reverse = true;
-                }
-            }
-            else
-            {
-                m_color = new Color(m_color.r, m_color.g, m_color.b, m_color.a + (oriAlpha * 0.005f));
-                if(m_color.a >= oriAlpha)
-                {
-                    prevEventIsDone = true;
-                }
-            }
-            yield return new WaitForSecondsRealtime(0.01f);
-        }
+        //while(prevEventIsDone == false)
+        //{
+        //    if (reverse == false)
+        //    {
+        //        m_color = new Color(m_color.r, m_color.g, m_color.b, m_color.a - (oriAlpha * 0.005f));
+        //        if (m_color.a <= oriAlpha * 0.5f)
+        //        {
+        //            reverse = true;
+        //        }
+        //    }
+        //    else
+        //    {
+        //        m_color = new Color(m_color.r, m_color.g, m_color.b, m_color.a + (oriAlpha * 0.005f));
+        //        if(m_color.a >= oriAlpha)
+        //        {
+        //            prevEventIsDone = true;
+        //        }
+        //    }
+        //    yield return new WaitForSecondsRealtime(0.01f);
+        //}
         yield break;
     }
 
