@@ -129,7 +129,7 @@ public class StageManager : MonoBehaviour
         }
         else if(chapter_num == 0 && stage_num == 2)
         {
-            t_full.text = (spawnPointIndex.Length + 1).ToString();
+            t_full.text = (spawnPointIndex.Length + 3).ToString();
         }
         else
         {
@@ -603,17 +603,24 @@ public class StageManager : MonoBehaviour
 
         while (true)
         {
-            if (spawnPointIndex.Length > count)
+            if(event_isDone)
             {
-                SpawnEnemy(spawnPointIndex[count], count);
-                count++;
+                if (spawnPointIndex.Length > count)
+                {
+                    SpawnEnemy(spawnPointIndex[count], count);
+                    count++;
+                }
+                else
+                {
+                    StopCoroutine(CountTimeForSpawn());
+                }
+
+                yield return new WaitForSeconds(delayTimesIndex[count - 1]);
             }
             else
             {
-                StopCoroutine(CountTimeForSpawn());
+                yield return new WaitForSeconds(1.0f);
             }
-
-            yield return new WaitForSeconds(delayTimesIndex[count - 1]);
         }
     }
 
@@ -796,5 +803,17 @@ public class StageManager : MonoBehaviour
         yield return new WaitForSeconds(time);
         StageEnd();
         yield break;
+    }
+
+    public float GetSpawnTimeSum(int max)
+    {
+        float res = 0.0f;
+        for (int i = 0; i < max; i++)
+        {
+            res += delayTimesIndex[i];
+        }
+        res += startDelay;
+
+        return res;
     }
 }
