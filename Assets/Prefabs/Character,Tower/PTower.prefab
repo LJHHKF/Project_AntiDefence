@@ -156,6 +156,7 @@ GameObject:
   - component: {fileID: 507058505553983082}
   - component: {fileID: 7565211013945353338}
   - component: {fileID: 984267421120160824}
+  - component: {fileID: 7161298060284637642}
   m_Layer: 0
   m_Name: Tower_Push_0
   m_TagString: Untagged
@@ -247,6 +248,24 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7161298060284637642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1583392625988032415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eecdcff13a89e0c45ab799634be704e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skins:
+  - {fileID: -2522759126816421569, guid: ddbe4cf7c9428484ba26dacfc1e927b4, type: 3}
+  - {fileID: -3767832221320696103, guid: 05ea5467e1f2cf844bde79d26737851c, type: 3}
+  anims:
+  - {fileID: 9100000, guid: 91d93498c1b12c242a6b4859d5b78f8a, type: 2}
+  - {fileID: 9100000, guid: 0c03c2f92dd15014885c357f71ba9a9f, type: 2}
 --- !u!1 &2070462000839725306
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,7 +381,7 @@ SpriteRenderer:
   m_SortingLayerID: -666823007
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3941757866915458144, guid: da426ae0990ded94f8720304d55d01ba,
+  m_Sprite: {fileID: 6445341826902584630, guid: 21ebaddcc7591534980047f2b86f707e,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.19607843}
   m_FlipX: 0
@@ -371,7 +390,7 @@ SpriteRenderer:
   m_Size: {x: 10.802153, y: 9.799999}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &3125227167338274236
@@ -648,7 +667,6 @@ GameObject:
   - component: {fileID: 487604776004087990}
   - component: {fileID: 696290525177792535}
   - component: {fileID: 5372937036740392318}
-  - component: {fileID: 2635042348123976079}
   m_Layer: 9
   m_Name: SpriteAnim
   m_TagString: Untagged
@@ -709,7 +727,7 @@ SpriteRenderer:
   m_SortingLayerID: -666823007
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3941757866915458144, guid: da426ae0990ded94f8720304d55d01ba,
+  m_Sprite: {fileID: 6445341826902584630, guid: 21ebaddcc7591534980047f2b86f707e,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.19607843}
   m_FlipX: 0
@@ -718,7 +736,7 @@ SpriteRenderer:
   m_Size: {x: 10.802153, y: 9.799999}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &5372937036740392318
@@ -740,24 +758,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2635042348123976079
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5254196661945098419}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eecdcff13a89e0c45ab799634be704e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skins:
-  - {fileID: -2522759126816421569, guid: ddbe4cf7c9428484ba26dacfc1e927b4, type: 3}
-  - {fileID: -3767832221320696103, guid: 05ea5467e1f2cf844bde79d26737851c, type: 3}
-  anims:
-  - {fileID: 9100000, guid: 91d93498c1b12c242a6b4859d5b78f8a, type: 2}
-  - {fileID: 9100000, guid: 0c03c2f92dd15014885c357f71ba9a9f, type: 2}
 --- !u!1 &5282791846112432888
 GameObject:
   m_ObjectHideFlags: 0

@@ -221,39 +221,39 @@ public class SelectedItemManager : MonoBehaviour
     private void SetItemInfo()
     {
         name_Muls_B = "연발장치(일반)";
-        txt_Muls_B = "일반 타워의 공격력을 1.5배 증가시켜줍니다.";
+        txt_Muls_B = "일반 포탑의 공격력 1.5배 상승.";
         price_Muls_B = 300;
 
         name_Muls_SN = "연발장치(저격)";
-        txt_Muls_SN = "저격 타워의 공격력을 1.5배 증가시켜줍니다.";
+        txt_Muls_SN = "저격 포탑의 공격력 1.5배 상승.";
         price_Muls_SN = 500;
 
         name_Muls_P = "연발장치(충격)";
-        txt_Muls_P = "충격 타워의 공격력을 1.5배 증가시켜줍니다.";
+        txt_Muls_P = "충격 포탑의 공격력 1.5배 상승.";
         price_Muls_P = 750;
 
         name_AiBarrire = "A.I배리어";
-        txt_AiBarrier = "적의 공격을 1회 막아줍니다. 장착 후 맞지 않으면 소모되지 않고 장착 상태를 유지합니다.";
+        txt_AiBarrier = "공격 1회 무효화. 피격 당하지 않을 시, 아이템 유지";
         price_AiBarrier = 200;
 
         name_ProtectWall = "방호벽";
-        txt_ProtectWall = "캐릭터 주변에 4개의 방호벽을 세웁니다. 방호벽의 체력은 5입니다.";
+        txt_ProtectWall = "캐릭터 주변에 4개의 바리케이트 생성. 바리케이트 체력은 '5' 고정";
         price_ProtectWall = 500;
 
         name_Extend_B = "확장장치(일반)";
-        txt_Extend_B = "일반 타워의 공격 범위를 1.5배 길게 만듭니다.";
+        txt_Extend_B = "일반 포탑의 공격 범위 1.5배 상승.";
         price_Extend_B = 450;
 
         name_Extend_SN = "확장장치(저격)";
-        txt_Extend_SN = "저격 타워의 공격 범위를 1.5배 길게 만듭니다.";
+        txt_Extend_SN = "저격 포탑의 공격 범위 1.5배 상승";
         price_Extend_SN = 650;
 
         name_Extend_P = "확장장치(충격)";
-        txt_Extend_P = "충격 타워의 공격 범위를 1.5배 길게 만듭니다.";
+        txt_Extend_P = "충격 포탑의 공격 범위 1.5배 상승";
         price_Extend_P = 900;
 
         name_Recovery = "수복자재";
-        txt_Recovery = "플레이어의 최대 체력을 1 증가시킵니다.";
+        txt_Recovery = "플레이어의 최대 HP 1칸 상승";
         price_Recovery = 1000;
     }
 
