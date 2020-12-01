@@ -268,7 +268,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &39396031
 RectTransform:
   m_ObjectHideFlags: 0
@@ -570,7 +570,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &70186600
 RectTransform:
   m_ObjectHideFlags: 0
@@ -664,7 +664,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 87a5beee150e71248b5cfe447252fe71, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9efca47b5b0ec57488a52d3ffbf947a3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -824,7 +824,7 @@ PrefabInstance:
     - target: {fileID: 6716747100170145963, guid: ada351b85934cfa41891ec3fce0ba372,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: 0.06104851
       objectReference: {fileID: 0}
     - target: {fileID: 6716747100170145963, guid: ada351b85934cfa41891ec3fce0ba372,
         type: 3}
@@ -839,7 +839,7 @@ PrefabInstance:
     - target: {fileID: 6716747100170145963, guid: ada351b85934cfa41891ec3fce0ba372,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.99813485
       objectReference: {fileID: 0}
     - target: {fileID: 6716747100170145963, guid: ada351b85934cfa41891ec3fce0ba372,
         type: 3}
@@ -849,7 +849,7 @@ PrefabInstance:
     - target: {fileID: 6716747100170145963, guid: ada351b85934cfa41891ec3fce0ba372,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6716747100170145963, guid: ada351b85934cfa41891ec3fce0ba372,
         type: 3}
@@ -919,13 +919,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0, g: 0.5372549, b: 1, a: 0.392}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2eeef65f311d6894c97b23da0375cc3a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a12b7d81482c7b94a8ed28423b2c0a56, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1792,7 +1792,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2eeef65f311d6894c97b23da0375cc3a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 610254c995f020a4b939e96b5cbcdc94, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1856,10 +1856,12 @@ MonoBehaviour:
   - {fileID: 1099101591046178354}
   - {fileID: 1099101591046178353}
   - {fileID: 1099101591046178352}
-  highlightEffect: {fileID: 1282465684}
-  spawnEnemyIndex: 01000000
-  spawnPointIndex: 01000000
+  highlightEffect: {fileID: 0}
+  spawnEnemyIndex: 010000000000000002000000
+  spawnPointIndex: 010000000100000002000000
   eventDelay_AboutSpawn:
+  - 3
+  - 0.5
   - 3
   txt_dialogue:
   - "\uAD00\uB9AC\uC790\uB2D8. \uC774\uBC88\uC5D0\uB294 \uC544\uC774\uD15C\uACFC
@@ -1882,6 +1884,20 @@ MonoBehaviour:
   - "\uB2E8,  \uC2A4\uD14C\uC774\uC9C0 \uC2E4\uD328 \uC2DC \uD68D\uB4DD\uD558\uB294
     \uC7AC\uD654\uB7C9\uC774 \uAC10\uC18C\uD569\uB2C8\uB2E4."
   - "\uADF8\uB7FC \uAD00\uB9AC\uC790\uB2D8\n\uCD5C\uC120\uC744 \uB2E4\uD574\uC8FC\uC2ED\uC2DC\uC624."
+  spr_Ruru: {fileID: 21300000, guid: 64c38430634e8f0408785060cc937cd0, type: 3}
+  spr_Dialogue_Left: {fileID: 21300000, guid: 3b8cfb93b945de34cafe3af4f6c136c7, type: 3}
+  spr_Dialogue_Right: {fileID: 21300000, guid: 788fde7b46c15d3419fcc64bcaf7d7e7, type: 3}
+  txt_dialogue_sub:
+  - "\uBC29\uAE08 \uBCF4\uC168\uC5B4\uC694 \uAD00\uB9AC\uC790\uB2D8?"
+  - ....
+  - "\uAD00\uB9AC\uC790\uB2D8..?"
+  - "\uB9D0\uB3C4 \uC548\uB3FC..5\uB4F1\uAE09 \uB514\uD14D\uD130 \uD14C\uC2A4\uD2B8
+    \uACF5\uAC04\uC5D0 \uC5B4\uB5BB\uAC8C \uBC14\uC774\uB7EC\uC2A4\uAC00.."
+  - "\uAD00\uB9AC\uC790\uB2D8!! \uC9C0\uAE08 \uC6C5\uC5BC\uAC70\uB9B4 \uB54C \uC5D0\uC694?"
+  - "..\uB8E8\uB8E8, \uC800 \uAC10\uC5FC\uCCB4\uB97C \uC6B0\uC120 \uC81C\uAC70\uD574\uB77C.
+    \uB354\uC774\uC0C1 \uD655\uC0B0\uD558\uC9C0 \uBABB\uD558\uAC8C"
+  - "\uC544\uB2C8 \uB300\uCCB4! \uC544\uC774\uC528! \uC54C\uACA0\uC5B4\uC694 \uAD00\uB9AC\uC790\uB2D8!"
+  is_Ruru_Talk: 01000100010001
 --- !u!4 &302780854
 Transform:
   m_ObjectHideFlags: 0
@@ -3852,7 +3868,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5732c6a5efef9bf4b9a0a48d01aab627, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0de0617ace6e39d4dac99dcc96bf0ef5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4675,7 +4691,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1e736910b48121b4db212f2b0450aa92, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f14e8bf372457de45aeddc29153c7ffe, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5393,7 +5409,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &911964387
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5683,7 +5699,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &947954936
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8216,7 +8232,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1457196992
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8680,7 +8696,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: cfebe2a9b0920114eaa4a2361691e747, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9449,22 +9465,22 @@ PrefabInstance:
     - target: {fileID: 6716747100170145963, guid: ada351b85934cfa41891ec3fce0ba372,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.04316788
       objectReference: {fileID: 0}
     - target: {fileID: 6716747100170145963, guid: ada351b85934cfa41891ec3fce0ba372,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7071068
+      value: 0.7057879
       objectReference: {fileID: 0}
     - target: {fileID: 6716747100170145963, guid: ada351b85934cfa41891ec3fce0ba372,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.04316788
       objectReference: {fileID: 0}
     - target: {fileID: 6716747100170145963, guid: ada351b85934cfa41891ec3fce0ba372,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 0.7057879
       objectReference: {fileID: 0}
     - target: {fileID: 6716747100170145963, guid: ada351b85934cfa41891ec3fce0ba372,
         type: 3}
@@ -9474,7 +9490,7 @@ PrefabInstance:
     - target: {fileID: 6716747100170145963, guid: ada351b85934cfa41891ec3fce0ba372,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -7
       objectReference: {fileID: 0}
     - target: {fileID: 6716747100170145963, guid: ada351b85934cfa41891ec3fce0ba372,
         type: 3}
@@ -10981,7 +10997,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1923633907
 RectTransform:
   m_ObjectHideFlags: 0
