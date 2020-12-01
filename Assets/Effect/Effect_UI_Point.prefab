@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2412788371617478958}
   - component: {fileID: 7172523294479381214}
   - component: {fileID: 4088294486399626908}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Effect_UI_Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5388339003714574801}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 4.17, z: 3.58}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -49,7 +49,7 @@ ParticleSystem:
   looping: 0
   prewarm: 0
   playOnAwake: 1
-  useUnscaledTime: 0
+  useUnscaledTime: 1
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
   startDelay:
@@ -4767,8 +4767,8 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6f61834b3b3b7494fabc32422d9fd08c, type: 2}
-  - {fileID: 2100000, guid: 6f61834b3b3b7494fabc32422d9fd08c, type: 2}
+  - {fileID: 2100000, guid: b8427da98f9464f449a48bbcc9b57187, type: 2}
+  - {fileID: 2100000, guid: b8427da98f9464f449a48bbcc9b57187, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
