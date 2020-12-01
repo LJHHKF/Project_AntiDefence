@@ -130,7 +130,14 @@ public class EnemyCtrl : MonoBehaviour
                 hpBar.SetActive(false);
                 if (m_anim != null)
                 {
-                    if (!attack_now)
+                    if (isSuiBomber)
+                    {
+                        if (!attack_now)
+                        {
+                            m_anim.SetTrigger("IsDie");
+                        }
+                    }
+                    else
                     {
                         m_anim.SetTrigger("IsDie");
                     }
