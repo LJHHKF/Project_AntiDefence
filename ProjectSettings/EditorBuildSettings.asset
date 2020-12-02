@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/OtherScene/Logo.unity
+    guid: f567efef0e86d1a4eac42c86c7473e93
+  - enabled: 1
     path: Assets/Scenes/LoadingScene/GMCallLoading.unity
     guid: bac6957e934ce034a8290dce98b16eae
   - enabled: 1
@@ -41,7 +44,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Stages/Chp0_Stages/Stage0-2.unity
     guid: d31884e752ebb4345b1163653dfb4a89
-  - enabled: 1
-    path: Assets/Scenes/Stages/Stage_base/StageBase.unity
-    guid: 85e6f89d2b1fd5d4db642364ae7da34c
   m_configObjects: {}
