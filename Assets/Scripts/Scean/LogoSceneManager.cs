@@ -15,5 +15,6 @@ public class LogoSceneManager : MonoBehaviour
     {
         yield return new WaitForSeconds(2.0f);
         SceneManager.LoadScene("GMCallLoading");
+        yield break;
     }
 }
