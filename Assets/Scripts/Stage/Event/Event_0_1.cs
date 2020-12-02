@@ -275,55 +275,57 @@ public class Event_0_1 : MonoBehaviour
     }
     IEnumerator Event01()
     {
-        Image m_Img = point_Character.GetComponent<Image>();
-        bool reverse = false;
-        while (prevEventIsDone == false)
-        {
-            if (reverse == false)
-            {
-                m_Img.color = new Color(m_Img.color.r, m_Img.color.g, m_Img.color.b, m_Img.color.a - 0.005f);
-                if (m_Img.color.a <= 0.5f)
-                {
-                    reverse = true;
-                }
-            }
-            else
-            {
-                m_Img.color = new Color(m_Img.color.r, m_Img.color.g, m_Img.color.b, m_Img.color.a + 0.005f);
-                if (m_Img.color.a >= 1.0f)
-                {
-                    prevEventIsDone = true;
-                }
-            }
-            yield return new WaitForSecondsRealtime(0.01f);
-        }
+        //Image m_Img = point_Character.GetComponent<Image>();
+        //bool reverse = false;
+        //while (prevEventIsDone == false)
+        //{
+        //    if (reverse == false)
+        //    {
+        //        m_Img.color = new Color(m_Img.color.r, m_Img.color.g, m_Img.color.b, m_Img.color.a - 0.005f);
+        //        if (m_Img.color.a <= 0.5f)
+        //        {
+        //            reverse = true;
+        //        }
+        //    }
+        //    else
+        //    {
+        //        m_Img.color = new Color(m_Img.color.r, m_Img.color.g, m_Img.color.b, m_Img.color.a + 0.005f);
+        //        if (m_Img.color.a >= 1.0f)
+        //        {
+        //            prevEventIsDone = true;
+        //        }
+        //    }
+        //    yield return new WaitForSecondsRealtime(0.01f);
+        //}
+        prevEventIsDone = true;
         yield break;
     }
 
     IEnumerator Event02and03(int index)
     {
-        Image m_Img = points_Towers[index].GetComponent<Image>();
-        bool reverse = false;
-        while (prevEventIsDone == false)
-        {
-            if (reverse == false)
-            {
-                m_Img.color = new Color(m_Img.color.r, m_Img.color.g, m_Img.color.b, m_Img.color.a - 0.005f);
-                if (m_Img.color.a <= 0.5f)
-                {
-                    reverse = true;
-                }
-            }
-            else
-            {
-                m_Img.color = new Color(m_Img.color.r, m_Img.color.g, m_Img.color.b, m_Img.color.a + 0.005f);
-                if (m_Img.color.a >= 1.0f)
-                {
-                    prevEventIsDone = true;
-                }
-            }
-            yield return new WaitForSecondsRealtime(0.01f);
-        }
+        //Image m_Img = points_Towers[index].GetComponent<Image>();
+        //bool reverse = false;
+        //while (prevEventIsDone == false)
+        //{
+        //    if (reverse == false)
+        //    {
+        //        m_Img.color = new Color(m_Img.color.r, m_Img.color.g, m_Img.color.b, m_Img.color.a - 0.005f);
+        //        if (m_Img.color.a <= 0.5f)
+        //        {
+        //            reverse = true;
+        //        }
+        //    }
+        //    else
+        //    {
+        //        m_Img.color = new Color(m_Img.color.r, m_Img.color.g, m_Img.color.b, m_Img.color.a + 0.005f);
+        //        if (m_Img.color.a >= 1.0f)
+        //        {
+        //            prevEventIsDone = true;
+        //        }
+        //    }
+        //    yield return new WaitForSecondsRealtime(0.01f);
+        //}
+        prevEventIsDone = true;
         yield break;
     }
     
