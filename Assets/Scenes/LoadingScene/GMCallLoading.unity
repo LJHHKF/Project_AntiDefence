@@ -235,6 +235,95 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &852357417
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 852357418}
+  - component: {fileID: 852357421}
+  - component: {fileID: 852357420}
+  - component: {fileID: 852357419}
+  m_Layer: 5
+  m_Name: TitleLogo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &852357418
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852357417}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1085702569}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &852357419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852357417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3a6b7deb847944ba06410e72b58d0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  min_Alpha: 0.2
+--- !u!114 &852357420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852357417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 22c2969155679754fb35a29ce81d8958, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &852357421
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852357417}
+  m_CullTransparentMesh: 0
 --- !u!1 &1058541166
 GameObject:
   m_ObjectHideFlags: 0
@@ -581,6 +670,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 2023976028}
+  - {fileID: 852357418}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -866,15 +956,15 @@ MonoBehaviour:
   price_Extend_SN: 0
   price_Extend_P: 0
   price_Recovery: 0
-  spr_Muls_B: {fileID: 21300000, guid: 8d8d440b34e94e1468823f58fc0028a2, type: 3}
+  spr_Muls_B: {fileID: 21300000, guid: d3e6a0363b906fc4bbc325943f5e75cb, type: 3}
   spr_Muls_SN: {fileID: 21300000, guid: 6e1e05db88113374a8d99785903f0986, type: 3}
   spr_Muls_P: {fileID: 21300000, guid: 9c4c42ca7b1407142a52a214563aa7e8, type: 3}
-  spr_AiBarrier: {fileID: 21300000, guid: 9216b34e2038ad94b8cd5eee419b4c9d, type: 3}
-  spr_ProtectWall: {fileID: 21300000, guid: a76ab18dcdaf7154983caff973eff3d7, type: 3}
-  spr_Extend_B: {fileID: 21300000, guid: f4dedecbb4d7c024d812801754946d95, type: 3}
-  spr_Extend_SN: {fileID: 21300000, guid: c04017f73a2dc7d4b91878b5094ef77a, type: 3}
-  spr_Extend_P: {fileID: 21300000, guid: b251d14e431789f428d37c6dcf0287ef, type: 3}
-  spr_Recovery: {fileID: 21300000, guid: 5770434f1791f25459dd06f835c4d7ed, type: 3}
+  spr_AiBarrier: {fileID: 21300000, guid: f533b384223b27a4b8264b73dec6f3fd, type: 3}
+  spr_ProtectWall: {fileID: 21300000, guid: 941317d30ddca21448c0ea33ea4babf7, type: 3}
+  spr_Extend_B: {fileID: 0}
+  spr_Extend_SN: {fileID: 0}
+  spr_Extend_P: {fileID: 0}
+  spr_Recovery: {fileID: 0}
   i_event_AiBarrier: 0
   i_event_ProtectWall: 0
 --- !u!4 &1559065139
