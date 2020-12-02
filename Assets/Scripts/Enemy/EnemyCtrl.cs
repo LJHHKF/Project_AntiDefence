@@ -36,9 +36,10 @@ public class EnemyCtrl : MonoBehaviour
     private Image hpBarImage;
     private GameObject hpBar;
 
-    [Header("EnemyDieEffect Setting")]
+    [Header("EnemyEffect Setting")]
     public GameObject dieEffectPrefab;
     private bool isDie;
+    public GameObject m_AttackEffect;
 
     [Header("EnemyAnimator")]
     public Animator m_anim;
@@ -70,6 +71,11 @@ public class EnemyCtrl : MonoBehaviour
     private Rigidbody m_rigid;
     private EnemyTargetCtrl m_targetCtrl;
 
+    private Transform sfx_M;
+    private AudioSource sfx_Hit_BT;
+    private AudioSource sfx_Hit_SNT;
+    private AudioSource sfx_Hit_PT;
+
     void Start()
     {
         towerboard = GameObject.FindGameObjectWithTag("TowerBoard");
@@ -91,6 +97,11 @@ public class EnemyCtrl : MonoBehaviour
 
         m_coll.enabled = true;
         m_rigid.useGravity = true;
+
+        sfx_M = GameObject.FindGameObjectWithTag("SFX_Manager").transform;
+        sfx_Hit_BT = sfx_M.Find("S_Hit_BT").GetComponent<AudioSource>();
+        sfx_Hit_SNT = sfx_M.Find("S_Hit_SNT").GetComponent<AudioSource>();
+        sfx_Hit_PT = sfx_M.Find("S_Hit_PT").GetComponent<AudioSource>();
 
         SetHPBar();
         initHP = enemyHP;
@@ -191,17 +202,20 @@ public class EnemyCtrl : MonoBehaviour
             if (other.CompareTag("BT_AtkR"))
             {
                 enemyHP = 0;
+                StartCoroutine(HitSoundPlay(0));
                 stgManager.PullingEnemyDamagedEf(0, gameObject.transform.position);
             }
             else if (other.CompareTag("SNT_AtkR"))
             {
                 enemyHP = 0;
+                StartCoroutine(HitSoundPlay(1));
                 stgManager.PullingEnemyDamagedEf(1, gameObject.transform.position);
             }
             else if (other.CompareTag("PT_AtkR") & state != State.PUSHED)
             {
                 StartCoroutine(Pushed_delay());
                 enemyHP = 0;
+                StartCoroutine(HitSoundPlay(2));
                 stgManager.PullingEnemyDamagedEf(2, gameObject.transform.position);
             }
         }
@@ -210,17 +224,20 @@ public class EnemyCtrl : MonoBehaviour
             if (other.CompareTag("BT_AtkR"))
             {
                 enemyHP -= ta_manager.b_AtDmg;
+                StartCoroutine(HitSoundPlay(0));
                 stgManager.PullingEnemyDamagedEf(0, gameObject.transform.position);
             }
             else if (other.CompareTag("SNT_AtkR"))
             {
                 enemyHP -= ta_manager.sn_AtDmg;
+                StartCoroutine(HitSoundPlay(1));
                 stgManager.PullingEnemyDamagedEf(1, gameObject.transform.position);
             }
             else if (other.CompareTag("PT_AtkR") & state != State.PUSHED)
             {
                 stgManager.PullingEnemyDamagedEf(2, gameObject.transform.position);
                 StartCoroutine(Pushed_delay());
+                StartCoroutine(HitSoundPlay(2));
                 enemyHP -= ta_manager.p_AtDmg;
             }
         }
@@ -319,6 +336,7 @@ public class EnemyCtrl : MonoBehaviour
                     {
                         pl_manager.Player_Damaged(attackDamage);
                         m_anim.SetTrigger("IsAttack");
+                        stgManager.PullingEnemyAtkEf(enemyIndex, m_AttackEffect, target.transform.position);
                         if (isSuiBomber)
                         {
                             state = State.DIE;
@@ -330,6 +348,7 @@ public class EnemyCtrl : MonoBehaviour
                     {
                         barricade.Barricade_damaged(attackDamage);
                         m_anim.SetTrigger("IsAttack");
+                        stgManager.PullingEnemyAtkEf(enemyIndex, m_AttackEffect, target.transform.position);
                         if (isSuiBomber)
                         {
                             state = State.DIE;
@@ -343,6 +362,7 @@ public class EnemyCtrl : MonoBehaviour
                         {
                             m_BugTarget.SetBuged();
                             m_anim.SetTrigger("IsAttack");
+                            stgManager.PullingEnemyAtkEf(enemyIndex, m_AttackEffect, target.transform.position);
                             m_targetCtrl.SetFindOther(false);
                             yield return new WaitForSeconds(attack_delay);
                         }
@@ -372,6 +392,35 @@ public class EnemyCtrl : MonoBehaviour
         yield return new WaitForSeconds(sec);
         gameObject.SetActive(false);
         yield break;
+    }
+
+    IEnumerator HitSoundPlay(int index)
+    {
+        switch(index)
+        {
+            case 0:
+                sfx_Hit_BT.Play();
+                break;
+            case 1:
+                sfx_Hit_SNT.Play();
+                break;
+            case 2:
+                sfx_Hit_PT.Play();
+                break;
+        }
+        yield return new WaitForSeconds(1.0f);
+        switch(index)
+        {
+            case 0:
+                sfx_Hit_BT.Stop();
+                break;
+            case 1:
+                sfx_Hit_SNT.Stop();
+                break;
+            case 2:
+                sfx_Hit_PT.Stop();
+                break;
+        }
     }
 
     public int GetEnemyIndex()
