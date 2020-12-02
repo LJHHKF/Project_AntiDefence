@@ -32,12 +32,5 @@ public class TitleSceanManager : MonoBehaviour
         {
             loadingTxt.text = "Now Loading...";
         }
-
-
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            loadingM.LoadTestScene();
-        }
     }
 }
