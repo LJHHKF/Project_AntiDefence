@@ -1072,10 +1072,11 @@ MonoBehaviour:
   - {fileID: -7308445340890850486, guid: ab49ff602d423bf4d9d5885c30c449b8, type: 3}
   - {fileID: 5910412930216754107, guid: 8458b4c13f65e1542a5cccfc5b56df14, type: 3}
   monsterInfoTxt:
-  - "(\uB354\uBBF8 \uD14D\uC2A4\uD2B8)"
+  - "\uC5F0\uC2B5\uC6A9 \uB354\uBBF8\n\uB531\uD788 \uC704\uD611\uC801\uC774\uC9C0
+    \uC54A\uB2E4"
   - "\uD3ED\uD0C4\uD615 \uBC14\uC774\uB7EC\uC2A4\n\uC790\uD3ED\uC744 \uD558\uBA70,
     \uCCB4\uB825\uC774 \uB9CE\uC9C0\uB9CC, \uB9E4\uC6B0 \uB290\uB9AC\uB2E4."
-  - "(\uB354\uBBF8\uD14D\uC2A4\uD2B8)"
+  - "\uAC10\uC5FC\uB41C \uB354\uBBF8\n\uC8FC\uC704\uC5D0 \uB354\uBBF8\uB97C \uAC10\uC5FC\uC2DC\uD0A8\uB2E4."
 --- !u!114 &1559065146
 MonoBehaviour:
   m_ObjectHideFlags: 0

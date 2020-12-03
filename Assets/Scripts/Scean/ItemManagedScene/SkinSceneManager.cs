@@ -122,32 +122,32 @@ public class SkinSceneManager : MonoBehaviour
         {
             txt_priceTag.text = "가격:" + skins[cnt_skin].price.ToString();
             txt_priceTag.alignment = TextAnchor.MiddleLeft;
-            txt_activeBTN.text = "구매"; 
+            txt_activeBTN.text = "Pot on"; 
         }
         else
         {
-            txt_priceTag.text = "구매 완료";
+            txt_priceTag.text = "Cyberpunk";
             txt_priceTag.alignment = TextAnchor.MiddleCenter;
             if(skinM.GetSkinIndex() == cnt_skin && cnt_skin != 0)
             {
-                txt_activeBTN.text = "장착해제";
+                txt_activeBTN.text = "release";
             }
             else if (cnt_skin == 0)
             {
                 if (skinM.GetSkinIndex() != 0)
                 {
-                    txt_activeBTN.text = "장착";
-                    txt_priceTag.text = "기본 스킨입니다.";
+                    txt_activeBTN.text = "Pot on";
+                    txt_priceTag.text = "Nomal Skin";
                 }
                 else
                 {
-                    txt_activeBTN.text = "X";
-                    txt_priceTag.text = "기본 스킨입니다.";
+                    txt_activeBTN.text = "release";
+                    txt_priceTag.text = "Nomal Skin";
                 }
             }
             else
             {
-                txt_activeBTN.text = "장착";
+                txt_activeBTN.text = "Pot on";
             }
         }
 
