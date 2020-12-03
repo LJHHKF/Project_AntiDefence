@@ -139,6 +139,8 @@ MonoBehaviour:
   hpBarOffset: {x: 0, y: 2.2, z: 0}
   dieEffectPrefab: {fileID: 1222048909045955687, guid: 94af62a6c199fd1469b7ff6560617c81,
     type: 3}
+  m_AttackEffect: {fileID: 7274858903122381411, guid: 33cc8075cf4703f429516bbe594d29c6,
+    type: 3}
   m_anim: {fileID: 6569591972767299711}
   attackDist: 3
   attackDamage: 1
