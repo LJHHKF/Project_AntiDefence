@@ -12,11 +12,6 @@ public class Event_0_2 : MonoBehaviour
     public ChangeTower changeTower;
     public Collider[] Colliders_snip;
     public Button[] buttons;
-    public Transform t_Chracter;
-    public Transform[] t_Barraicades;
-
-    [Header("Effect Setting")]
-    public GameObject highlightEffect;
 
     [Header("SetSpawnEnemy")]
     public int[] spawnEnemyIndex;
@@ -310,66 +305,68 @@ public class Event_0_2 : MonoBehaviour
 
     IEnumerator Event01()
     {
-        Color[] m_colors = new Color[4];
-        float[] oriAlpha = new float[4];
-        for (int i = 1; i < 5; i++)
-        {
-            m_colors[i - 1] = point_Item[i].GetComponent<Image>().color;
-            oriAlpha[i-1] = m_colors[i-1].a;
-        }
-        bool reverse = false;
+        //Color[] m_colors = new Color[4];
+        //float[] oriAlpha = new float[4];
+        //for (int i = 1; i < 5; i++)
+        //{
+        //    m_colors[i - 1] = point_Item[i].GetComponent<Image>().color;
+        //    oriAlpha[i-1] = m_colors[i-1].a;
+        //}
+        //bool reverse = false;
 
-        while(prevEventIsDone == false)
-        {
-            if(reverse == false)
-            {
-                for(int i = 0; i < 4; i++)
-                    m_colors[i] = new Color(m_colors[i].r, m_colors[i].g, m_colors[i].b, m_colors[i].a - (oriAlpha[i] * 0.005f));
-                if(m_colors[0].a <= oriAlpha[0] * 0.5)
-                {
-                    reverse = true;
-                }
-            }
-            else
-            {
-                for (int i = 0; i < 4; i++)
-                    m_colors[i] = new Color(m_colors[i].r, m_colors[i].g, m_colors[i].b, m_colors[i].a + (oriAlpha[i] * 0.005f));
-                if(m_colors[0].a >= oriAlpha[0])
-                {
-                    prevEventIsDone = true;
-                }
-            }
-            yield return new WaitForSecondsRealtime(0.01f);
-        }
+        //while(prevEventIsDone == false)
+        //{
+        //    if(reverse == false)
+        //    {
+        //        for(int i = 0; i < 4; i++)
+        //            m_colors[i] = new Color(m_colors[i].r, m_colors[i].g, m_colors[i].b, m_colors[i].a - (oriAlpha[i] * 0.005f));
+        //        if(m_colors[0].a <= oriAlpha[0] * 0.5)
+        //        {
+        //            reverse = true;
+        //        }
+        //    }
+        //    else
+        //    {
+        //        for (int i = 0; i < 4; i++)
+        //            m_colors[i] = new Color(m_colors[i].r, m_colors[i].g, m_colors[i].b, m_colors[i].a + (oriAlpha[i] * 0.005f));
+        //        if(m_colors[0].a >= oriAlpha[0])
+        //        {
+        //            prevEventIsDone = true;
+        //        }
+        //    }
+        //    yield return new WaitForSecondsRealtime(0.01f);
+        //}
+        prevEventIsDone = true;
         yield break;
     }
 
     IEnumerator Event02()
     {
-        Color m_color = point_Item[0].GetComponent<Image>().color;
-        float oriAlpha = m_color.a;
-        bool reverse = false;
+        //Color m_color = point_Item[0].GetComponent<Image>().color;
+        //float oriAlpha = m_color.a;
+        //bool reverse = false;
 
-        while (prevEventIsDone == false)
-        {
-            if (reverse == false)
-            {
-                m_color = new Color(m_color.r, m_color.g, m_color.b, m_color.a - (oriAlpha * 0.005f));
-                if (m_color.a <= oriAlpha * 0.5f)
-                {
-                    reverse = true;
-                }
-            }
-            else
-            {
-                m_color = new Color(m_color.r, m_color.g, m_color.b, m_color.a + (oriAlpha * 0.005f));
-                if (m_color.a >= oriAlpha)
-                {
-                    prevEventIsDone = true;
-                }
-            }
-            yield return new WaitForSecondsRealtime(0.01f);
-        }
+        //while (prevEventIsDone == false)
+        //{
+        //    if (reverse == false)
+        //    {
+        //        m_color = new Color(m_color.r, m_color.g, m_color.b, m_color.a - (oriAlpha * 0.005f));
+        //        if (m_color.a <= oriAlpha * 0.5f)
+        //        {
+        //            reverse = true;
+        //        }
+        //    }
+        //    else
+        //    {
+        //        m_color = new Color(m_color.r, m_color.g, m_color.b, m_color.a + (oriAlpha * 0.005f));
+        //        if (m_color.a >= oriAlpha)
+        //        {
+        //            prevEventIsDone = true;
+        //        }
+        //    }
+        //    yield return new WaitForSecondsRealtime(0.01f);
+        //}
+        prevEventIsDone = true;
         yield break;
     }
 
