@@ -108,11 +108,11 @@ public class PlayerManager : MonoBehaviour
             player_HP -= dmg;
             if (selectedItemManager.i_recovery && player_HP >= 3)
             {
-                bonus_hearts.sprite = heart_sprites[2];
+                bonus_hearts.sprite = heart_sprites[1];
             }
             else
             {
-                hearts[(int)Mathf.Floor(player_HP) + 1].sprite = heart_sprites[2];
+                hearts[(int)Mathf.Floor(player_HP) + 1].sprite = heart_sprites[1];
             }
 
             if (player_HP <= 0)

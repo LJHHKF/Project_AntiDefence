@@ -49,7 +49,7 @@ ParticleSystem:
   looping: 1
   prewarm: 0
   playOnAwake: 1
-  useUnscaledTime: 0
+  useUnscaledTime: 1
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
   startDelay:
@@ -4756,7 +4756,7 @@ ParticleSystemRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2019340483297567864}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -4884,5 +4884,4 @@ MonoBehaviour:
   m_AnimatableProperties: []
   m_Particles:
   - {fileID: 5145422438054968643}
-  - {fileID: 0}
   m_ShrinkByMaterial: 0
