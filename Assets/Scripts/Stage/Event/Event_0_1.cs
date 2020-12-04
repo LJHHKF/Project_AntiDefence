@@ -56,7 +56,6 @@ public class Event_0_1 : MonoBehaviour
         {
             tutorialRanges[i] = towers_Basic[i].transform.Find("AttackRange_Rect_pivot").Find("TutorialRange").gameObject;
             tutorialRanges[i].SetActive(false);
-
             spr_attackRanges[i] = towers_Basic[i].transform.Find("AttackRange_Rect_pivot").Find("AttackRange").GetComponent<SpriteRenderer>();
         }
         //Colliders_Push_Child1 = Colliders_Push[0].GetComponentsInChildren<BoxCollider>();
@@ -117,23 +116,22 @@ public class Event_0_1 : MonoBehaviour
                 case 4:
                     ui_Panel_EventDlg.SetActive(false);
                     for (int i = 0; i < points_Towers.Length; i++)
+                    {
                         points_Towers[i].SetActive(true);
+                    }
                     break;
                 case 5:
                     SubEvent(); // 1
                     break;
                 case 6:
-                    SubEvent(); //2
-                    break;
-                case 7:
                     ui_Panel_EventDlg.SetActive(true);
                     ProgressDlg(); //3
                     break;
-                case 8:
+                case 7:
                     ui_Panel_EventDlg.SetActive(false);
                     SubEvent(); //3
                     break;
-                case 9:
+                case 8:
                     ui_Panel_EventDlg.SetActive(true);
                     ProgressDlg(); //4
                     ori_alpha = spr_attackRanges[0].color.a;
@@ -144,7 +142,7 @@ public class Event_0_1 : MonoBehaviour
                     }
                     SubEvent(); //4
                     break;
-                case 10:
+                case 9:
                     ProgressDlg(); //5
                     for (int i = 0; i < 2; i++)
                     {
@@ -154,40 +152,40 @@ public class Event_0_1 : MonoBehaviour
                     StartCoroutine(DelayedActiveFalse(ui_Panel_EventDlg, 1.0f));
                     SubEvent(); //5
                     break;
-                case 11:
+                case 10:
                     ui_Panel_EventDlg.SetActive(true);
                     ProgressDlg(); // 6
                     SubEvent(); //6 & ProgressDlg() 7
                     break;
-                case 12:
+                case 11:
                     ui_Panel_EventDlg.SetActive(false);
                     SubEvent(); // 7
                     break;
-                case 13:
+                case 12:
                     ui_Panel_EventDlg.SetActive(true);
                     ProgressDlg(); //8
                     SubEvent(); // 8
                     break;
-                case 14:
+                case 13:
                     //ui_Panel_EventDlg.SetActive(false);
                     SubEvent(); // 9
                     break;
-                case 15:
+                case 14:
                     ui_Buttons_Highlight[1].SetActive(false);
                     SubEvent(); // 10
                     break;
-                case 16:
+                case 15:
                     SubEvent(); // 11
                     break;
-                case 17:
+                case 16:
                     SubEvent(); // 12
                     break;
-                case 18:
+                case 17:
                     ui_Buttons_Highlight[2].SetActive(false);
                     //ui_Panel_EventDlg.SetActive(true);
                     ProgressDlg();
                     break;
-                case 19:
+                case 18:
                     ui_Panel_EventDlg.SetActive(false);
                     ui_EventObjects.SetActive(false);
                     m_stageManager.EventEnd();
@@ -215,41 +213,40 @@ public class Event_0_1 : MonoBehaviour
                 StartCoroutine(Event01());
                 break;
             case 1:
-                StartCoroutine(Event02and03(0));
+                StartCoroutine(Event02());
                 break;
             case 2:
-                StartCoroutine(Event02and03(1));
-                break;
-            case 3:
                 for (int i = 0; i < 2; i++)
+                {
                     points_Towers[i].SetActive(false);
+                }
                 StartCoroutine(Event04());
                 break;
-            case 4:
+            case 3:
                 StartCoroutine(Event05());
                 break;
-            case 5:
+            case 4:
                 StartCoroutine(Event06());
                 break;
-            case 6:
+            case 5:
                 StartCoroutine(Event07());
                 break;
-            case 7:
+            case 6:
                 StartCoroutine(Event08());
                 break;
-            case 8:
+            case 7:
                 StartCoroutine(Event09());
                 break;
-            case 9:
+            case 8:
                 StartCoroutine(Event10());
                 break;
-            case 10:
+            case 9:
                 StartCoroutine(Event11());
                 break;
-            case 11:
+            case 10:
                 StartCoroutine(Event12());
                 break;
-            case 12:
+            case 11:
                 StartCoroutine(Event13());
                 break;
         }
@@ -275,59 +272,17 @@ public class Event_0_1 : MonoBehaviour
     }
     IEnumerator Event01()
     {
-        //Image m_Img = point_Character.GetComponent<Image>();
-        //bool reverse = false;
-        //while (prevEventIsDone == false)
-        //{
-        //    if (reverse == false)
-        //    {
-        //        m_Img.color = new Color(m_Img.color.r, m_Img.color.g, m_Img.color.b, m_Img.color.a - 0.005f);
-        //        if (m_Img.color.a <= 0.5f)
-        //        {
-        //            reverse = true;
-        //        }
-        //    }
-        //    else
-        //    {
-        //        m_Img.color = new Color(m_Img.color.r, m_Img.color.g, m_Img.color.b, m_Img.color.a + 0.005f);
-        //        if (m_Img.color.a >= 1.0f)
-        //        {
-        //            prevEventIsDone = true;
-        //        }
-        //    }
-        //    yield return new WaitForSecondsRealtime(0.01f);
-        //}
         prevEventIsDone = true;
         yield break;
     }
 
-    IEnumerator Event02and03(int index)
+    IEnumerator Event02()
     {
-        //Image m_Img = points_Towers[index].GetComponent<Image>();
-        //bool reverse = false;
-        //while (prevEventIsDone == false)
-        //{
-        //    if (reverse == false)
-        //    {
-        //        m_Img.color = new Color(m_Img.color.r, m_Img.color.g, m_Img.color.b, m_Img.color.a - 0.005f);
-        //        if (m_Img.color.a <= 0.5f)
-        //        {
-        //            reverse = true;
-        //        }
-        //    }
-        //    else
-        //    {
-        //        m_Img.color = new Color(m_Img.color.r, m_Img.color.g, m_Img.color.b, m_Img.color.a + 0.005f);
-        //        if (m_Img.color.a >= 1.0f)
-        //        {
-        //            prevEventIsDone = true;
-        //        }
-        //    }
-        //    yield return new WaitForSecondsRealtime(0.01f);
-        //}
         prevEventIsDone = true;
         yield break;
     }
+
+    //03은 수정하며 삭제
     
     IEnumerator Event04()
     {
@@ -350,36 +305,6 @@ public class Event_0_1 : MonoBehaviour
 
     IEnumerator Event05()
     {
-        //Color[] m_colors = new Color[2];
-        ////for (int i = 0; i < 2; i++)
-        ////{
-        ////    m_colors[i] = arr_tutorialRanges[0][i].GetComponent<MeshRenderer>().material.color;
-        ////}
-        //float oriAlphaValue = m_colors[0].a;
-        //bool reverse = false;
-
-        //while (prevEventIsDone == false)
-        //{
-        //    if (reverse == false)
-        //    {
-        //        for(int i = 0; i < 2; i++)
-        //            m_colors[i] = new Color(m_colors[i].r , m_colors[i].g , m_colors[i].b , m_colors[i].a - (oriAlphaValue * 0.005f));
-        //        if(m_colors[0].a <= oriAlphaValue * 0.5f)
-        //        {
-        //            reverse = true;
-        //        }
-        //    }
-        //    else
-        //    {
-        //        for(int i = 0; i < 2; i++)
-        //            m_colors[i] = new Color(m_colors[i].r, m_colors[i].g, m_colors[i].b, m_colors[i].a + (oriAlphaValue * 0.005f));
-        //        if(m_colors[0].a >= oriAlphaValue)
-        //        {
-        //            prevEventIsDone = true;
-        //        }
-        //    }
-        //    yield return new WaitForSecondsRealtime(0.01f);
-        //}
         prevEventIsDone = true;
         yield break;
     }
@@ -418,30 +343,17 @@ public class Event_0_1 : MonoBehaviour
     IEnumerator Event09()
     {
         ui_Buttons_Highlight[1].SetActive(true);
-        Color m_color = ui_Buttons_Highlight[1].GetComponent<Image>().color;
-        float oriAlpha = m_color.a;
-        bool reverse = false;
+        int cnt = 0;
 
         Time.timeScale = 1.0f;
         changeTower.InstSNT();
         while (prevEventIsDone == false)
         {
-            if (reverse == false)
+            cnt++;  // 기존에 그림 알파값을 조정해서 반짝이면서, 한번 반짝이는 동안 시간 흐름으로 제어했던 부분을, 방식 변경하면서 시간 흐름만 남겨두기 위한 코드
+            if(cnt >= 200)
             {
-                m_color = new Color(m_color.r, m_color.g, m_color.b, m_color.a - (oriAlpha * 0.005f));
-                if (m_color.a <= oriAlpha * 0.5f)
-                {
-                    reverse = true;
-                }
-            }
-            else
-            {
-                m_color = new Color(m_color.r, m_color.g, m_color.b, m_color.a + (oriAlpha * 0.005f));
-                if (m_color.a >= oriAlpha)
-                {
-                    prevEventIsDone = true;
-                    Time.timeScale = 0.0f;
-                }
+                Time.timeScale = 0.0f;
+                prevEventIsDone = true;
             }
             yield return new WaitForSecondsRealtime(0.01f);
         }
@@ -451,31 +363,18 @@ public class Event_0_1 : MonoBehaviour
     IEnumerator Event10()
     {
         ui_Buttons_Highlight[1].SetActive(true);
-        Color m_color = ui_Buttons_Highlight[1].GetComponent<Image>().color;
-        float oriAlpha = m_color.a;
-        bool reverse = false;
+        int cnt = 0;
 
         Time.timeScale = 1.0f;
         for (int i = 2; i < 4; i++)
             Colliders_NonPush[i].enabled = true;
         while (prevEventIsDone == false)
         {
-            if (reverse == false)
+            cnt++;
+            if (cnt >= 200)
             {
-                m_color = new Color(m_color.r, m_color.g, m_color.b, m_color.a - (oriAlpha * 0.005f));
-                if (m_color.a <= oriAlpha * 0.5f)
-                {
-                    reverse = true;
-                }
-            }
-            else
-            {
-                m_color = new Color(m_color.r, m_color.g, m_color.b, m_color.a + (oriAlpha * 0.005f));
-                if (m_color.a >= oriAlpha)
-                {
-                    prevEventIsDone = true;
-                    Time.timeScale = 0.0f;
-                }
+                Time.timeScale = 0.0f;
+                prevEventIsDone = true;
             }
             yield return new WaitForSecondsRealtime(0.01f);
         }
@@ -495,44 +394,29 @@ public class Event_0_1 : MonoBehaviour
     IEnumerator Event12()
     {
         ui_Buttons_Highlight[2].SetActive(true);
-        Color m_color = ui_Buttons_Highlight[2].GetComponent<Image>().color;
-        float oriAlpha = m_color.a;
-        bool reverse = false;
+        int cnt = 0;
 
         Time.timeScale = 1.0f;
         changeTower.InstPT();
         while (prevEventIsDone == false)
         {
-            if (reverse == false)
+            cnt++;
+            if (cnt >= 200)
             {
-                m_color = new Color(m_color.r, m_color.g, m_color.b, m_color.a - (oriAlpha * 0.005f));
-                if (m_color.a <= oriAlpha * 0.5f)
-                {
-                    reverse = true;
-                    Time.timeScale = 0.0f;
-                }
-            }
-            else
-            {
-                m_color = new Color(m_color.r, m_color.g, m_color.b, m_color.a + (oriAlpha * 0.005f));
-                if (m_color.a >= oriAlpha)
-                {
-                    prevEventIsDone = true;
-                }
+                Time.timeScale = 0.0f;
+                prevEventIsDone = true;
             }
             yield return new WaitForSecondsRealtime(0.01f);
         }
-        
-       
+
+
         yield break;
     }
 
     IEnumerator Event13()
     {
         ui_Buttons_Highlight[2].SetActive(true);
-        Color m_color = ui_Buttons_Highlight[2].GetComponent<Image>().color;
-        float oriAlpha = m_color.a;
-        bool reverse = false;
+        int cnt = 0;
 
         Time.timeScale = 1.0f;
 
@@ -543,22 +427,11 @@ public class Event_0_1 : MonoBehaviour
 
         while (prevEventIsDone == false)
         {
-            if (reverse == false)
+            cnt++;
+            if (cnt >= 100)
             {
-                m_color = new Color(m_color.r, m_color.g, m_color.b, m_color.a - (oriAlpha * 0.005f));
-                if (m_color.a <= oriAlpha * 0.5f)
-                {
-                    reverse = true;
-                    Time.timeScale = 0.0f;
-                }
-            }
-            else
-            {
-                m_color = new Color(m_color.r, m_color.g, m_color.b, m_color.a + (oriAlpha * 0.005f));
-                if (m_color.a >= oriAlpha)
-                {
-                    prevEventIsDone = true;
-                }
+                Time.timeScale = 0.0f;
+                prevEventIsDone = true;
             }
             yield return new WaitForSecondsRealtime(0.01f);
         }
