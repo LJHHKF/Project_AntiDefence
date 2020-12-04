@@ -56,6 +56,7 @@ public class EnemyCtrl : MonoBehaviour
     public float enemyHP = 2f;
     public float attack_delay = 1.0f;
     public bool isSuiBomber = false;
+    public bool isNonAttack = false;
     public int dropMoneyValue = 10;
     public float pushed_power = 10.0f;
     private float initHP;
@@ -320,7 +321,7 @@ public class EnemyCtrl : MonoBehaviour
     IEnumerator Attacking()
     {
         attackTarget = target;
-        if (enemyIndex != 0)
+        if (!isNonAttack)
         {
             attack_now = true;
             while (state == State.ATTACK)
