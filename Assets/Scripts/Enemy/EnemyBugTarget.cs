@@ -28,6 +28,7 @@ public class EnemyBugTarget : MonoBehaviour
             m_EnemyCtrl.SetIsDie(true);
             m_Enemy.SetActive(false);
             isFirst = false;
+            gameObject.SetActive(false);
         }
     }
 }

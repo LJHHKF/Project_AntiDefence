@@ -8,6 +8,7 @@ public class TowerAttack_Push : MonoBehaviour
     public Transform firePos;
     public GameObject fireRange;
     public Animator animator;
+    public Collider[] m_Colls;
 
     private GameObject towerBoard;
     private TA_Manager ta_manager;
@@ -60,6 +61,10 @@ public class TowerAttack_Push : MonoBehaviour
         if (pt_attacked == false)
         {
             pt_attacked = true;
+            for(int i = 0; i < m_Colls.Length; i++)
+            {
+                m_Colls[i].enabled = false;
+            }
             fireRange.SetActive(true);
             animator.SetBool("IsAttack", true);
             StartCoroutine(FR_Stay());

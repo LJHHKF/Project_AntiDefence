@@ -417,7 +417,7 @@ public class Event_0_2 : MonoBehaviour
             Dialogues[i].g_Text_1.SetActive(false);
             Dialogues[i].g_Text_2.SetActive(false);
         }
-        btn_skip.SetActive(true);
+        btn_skip.SetActive(false);
         for (int i = 0; i < buttons.Length; i++)
             buttons[i].interactable = false;
 
