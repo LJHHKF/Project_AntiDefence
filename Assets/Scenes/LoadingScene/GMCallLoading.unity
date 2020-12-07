@@ -956,9 +956,9 @@ MonoBehaviour:
   price_Extend_SN: 0
   price_Extend_P: 0
   price_Recovery: 0
-  spr_Muls_B: {fileID: 21300000, guid: d3e6a0363b906fc4bbc325943f5e75cb, type: 3}
-  spr_Muls_SN: {fileID: 21300000, guid: 6e1e05db88113374a8d99785903f0986, type: 3}
-  spr_Muls_P: {fileID: 21300000, guid: 9c4c42ca7b1407142a52a214563aa7e8, type: 3}
+  spr_Muls_B: {fileID: 21300000, guid: 85b8bc76a667fe041810ce88d3901df6, type: 3}
+  spr_Muls_SN: {fileID: 21300000, guid: 581184e8b4bf9d543b134e8400527cc9, type: 3}
+  spr_Muls_P: {fileID: 21300000, guid: cc465f9d31d54174da03a69dfe792581, type: 3}
   spr_AiBarrier: {fileID: 21300000, guid: f533b384223b27a4b8264b73dec6f3fd, type: 3}
   spr_ProtectWall: {fileID: 21300000, guid: 941317d30ddca21448c0ea33ea4babf7, type: 3}
   spr_Extend_B: {fileID: 0}
