@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8980764601591434740}
   - component: {fileID: 5379132595437413915}
   - component: {fileID: 1343515886940398105}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: somke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4823,7 +4823,7 @@ GameObject:
   - component: {fileID: 2444700493730976235}
   - component: {fileID: 4109583966608934686}
   - component: {fileID: 6046859076411887637}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: smoke2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9635,7 +9635,7 @@ GameObject:
   - component: {fileID: 7274858902695547803}
   - component: {fileID: 7274858902695547801}
   - component: {fileID: 7274858902695547802}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Particle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14447,7 +14447,7 @@ GameObject:
   - component: {fileID: 7274858902730952610}
   - component: {fileID: 7274858902730952608}
   - component: {fileID: 7274858902730952609}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19262,7 +19262,7 @@ GameObject:
   - component: {fileID: 7274858903122381408}
   - component: {fileID: 7274858903122381409}
   - component: {fileID: 7274858903122381410}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Effect_Attack_monster_Boom
   m_TagString: Untagged
   m_Icon: {fileID: 0}

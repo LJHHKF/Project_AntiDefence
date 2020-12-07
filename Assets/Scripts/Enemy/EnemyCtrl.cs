@@ -120,6 +120,11 @@ public class EnemyCtrl : MonoBehaviour
             isDie = false;
             m_coll.enabled = true;
             m_rigid.useGravity = true;
+
+            if(enemyIndex == 0)
+            {
+                gameObject.transform.Find("BugTarget").gameObject.SetActive(true);
+            }
         }
     }
 

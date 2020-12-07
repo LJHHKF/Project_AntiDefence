@@ -498,6 +498,11 @@ MonoBehaviour:
   firePos: {fileID: 6061916178976104643}
   fireRange: {fileID: 5446344347892656115}
   animator: {fileID: 984267421120160824}
+  m_Colls:
+  - {fileID: 7502567505830734105}
+  - {fileID: 8309458080747509210}
+  - {fileID: 3222190135336167027}
+  - {fileID: 6895041994761824464}
 --- !u!1 &3765233506777208602
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 50334655692388218}
   - component: {fileID: 3341056496578997269}
   - component: {fileID: 226894874682045654}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BugHuman_Hit_effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4823,7 +4823,7 @@ GameObject:
   - component: {fileID: 548709030154243056}
   - component: {fileID: 992627772887634262}
   - component: {fileID: 2984194134620625175}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Effect_Attact_monster_bughuman
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9579,7 +9579,7 @@ GameObject:
   - component: {fileID: 127742734259691709}
   - component: {fileID: 7108951419572496718}
   - component: {fileID: 1648524517040839801}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BugHuman_Hit_effect (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

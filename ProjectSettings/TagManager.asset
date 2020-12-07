@@ -44,7 +44,7 @@ TagManager:
   - SubUI
   - Tile
   - ScreenFence
-  - 
+  - Effect
   - 
   - 
   - 
@@ -76,6 +76,9 @@ TagManager:
     locked: 0
   - name: TowerLayer
     uniqueID: 3154313125
+    locked: 0
+  - name: Effect
+    uniqueID: 391158885
     locked: 0
   - name: ScreemFence
     uniqueID: 4210002033
