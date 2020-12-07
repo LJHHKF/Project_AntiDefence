@@ -500,7 +500,7 @@ public class StageManager : MonoBehaviour
         {
             if(arr_pools_EnemyDamaged[towerIndex].listPool[i].activeSelf == false)
             {
-                arr_pools_EnemyDamaged[towerIndex].listPool[i].transform.position = new Vector3(t_enemy.x, t_enemy.y, t_enemy.z);
+                arr_pools_EnemyDamaged[towerIndex].listPool[i].transform.position = new Vector3(t_enemy.x, t_enemy.y+0.2f, t_enemy.z);
                 arr_pools_EnemyDamaged[towerIndex].listPool[i].SetActive(true);
                 StartCoroutine(StopEffect(arr_pools_EnemyDamaged[towerIndex].listPool[i], 1.0f));
                 arr_pools_EnemyDamaged[towerIndex].is_serched = true;
