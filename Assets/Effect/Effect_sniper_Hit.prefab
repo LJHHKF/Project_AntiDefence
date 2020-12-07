@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7234303964951889445}
   - component: {fileID: 7234303964951889443}
   - component: {fileID: 7234303964951889444}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4823,7 +4823,7 @@ GameObject:
   - component: {fileID: 7234303965036396606}
   - component: {fileID: 7234303965036396607}
   - component: {fileID: 7234303965036396576}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Effect_sniper_Hit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9579,7 +9579,7 @@ GameObject:
   - component: {fileID: 7234303965503882226}
   - component: {fileID: 7234303965503882224}
   - component: {fileID: 7234303965503882225}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Speark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
