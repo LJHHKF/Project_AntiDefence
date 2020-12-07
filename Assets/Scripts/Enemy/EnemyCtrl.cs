@@ -111,6 +111,11 @@ public class EnemyCtrl : MonoBehaviour
         SetHPBar();
         initHP = enemyHP;
         StartCoroutine(CheckState());
+
+        if(enemyIndex == 0)
+        {
+            bugTarget.GetComponent<EnemyBugTarget>().SetIsFirstTrue();
+        }
     }
 
     private void OnEnable()
