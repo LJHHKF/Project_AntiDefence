@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8975739641909912318}
   - component: {fileID: 8975739641909912316}
   - component: {fileID: 8975739641909912317}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Hit_
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4823,7 +4823,7 @@ GameObject:
   - component: {fileID: 8975739643068498318}
   - component: {fileID: 8975739643068498316}
   - component: {fileID: 8975739643068498317}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Hit_spreak
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9635,7 +9635,7 @@ GameObject:
   - component: {fileID: 8975739643591294956}
   - component: {fileID: 8975739643591294957}
   - component: {fileID: 8975739643591294958}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Effect_nomai_Hit
   m_TagString: Untagged
   m_Icon: {fileID: 0}

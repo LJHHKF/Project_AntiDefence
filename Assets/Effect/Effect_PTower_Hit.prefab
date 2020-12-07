@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4812933205680030567}
   - component: {fileID: 4812933205680030565}
   - component: {fileID: 4812933205680030564}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Hit_PTower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4823,7 +4823,7 @@ GameObject:
   - component: {fileID: 4812933206628792294}
   - component: {fileID: 4812933206628792292}
   - component: {fileID: 4812933206628792295}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9635,7 +9635,7 @@ GameObject:
   - component: {fileID: 4812933206669265248}
   - component: {fileID: 4812933206669265251}
   - component: {fileID: 4812933206669265250}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Effect_PTower_Hit
   m_TagString: Untagged
   m_Icon: {fileID: 0}

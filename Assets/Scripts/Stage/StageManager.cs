@@ -526,7 +526,7 @@ public class StageManager : MonoBehaviour
         {
             if(arr_pools_EnemyAtkEf[m_index-1].listPool[i].activeSelf == false)
             {
-                arr_pools_EnemyAtkEf[m_index - 1].listPool[i].transform.position = new Vector3(atkTargetPos.x, atkTargetPos.y, atkTargetPos.z);
+                arr_pools_EnemyAtkEf[m_index - 1].listPool[i].transform.position = new Vector3(atkTargetPos.x, atkTargetPos.y+0.2f, atkTargetPos.z);
                 arr_pools_EnemyAtkEf[m_index - 1].listPool[i].SetActive(true);
                 StartCoroutine(StopEffect(arr_pools_EnemyAtkEf[m_index - 1].listPool[i], 1.0f));
                 arr_pools_EnemyAtkEf[m_index - 1].is_serched = true;
