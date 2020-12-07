@@ -251,6 +251,7 @@ MonoBehaviour:
   enemyHP: 2
   attack_delay: 1
   isSuiBomber: 0
+  isNonAttack: 0
   dropMoneyValue: 10
   pushed_power: 10
 --- !u!1 &8653563686283000691
