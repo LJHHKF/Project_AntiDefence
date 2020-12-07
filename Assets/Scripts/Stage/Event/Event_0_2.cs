@@ -182,6 +182,15 @@ public class Event_0_2 : MonoBehaviour
                     ProgressDlg(); // 9
                     break;
                 case 14:
+                    ProgressDlg(); // 10
+                    break;
+                case 15:
+                    ProgressDlg(); //11
+                    break;
+                case 16:
+                    ProgressDlg(); //12
+                    break;
+                case 17:
                     ui_Panel_EventDlg.SetActive(false);
                     ui_EventObjects.SetActive(false);
                     m_stageManager.EventEnd();
@@ -189,28 +198,28 @@ public class Event_0_2 : MonoBehaviour
                         buttons[i].interactable = true;
                     StartCoroutine(Event04());
                     break;
-                case 15:
+                case 18:
                     DlgProgress(); // 0
                     break;
-                case 16:
+                case 19:
                     DlgProgress(); // 1
                     break;
-                case 17:
+                case 20:
                     DlgProgress(); // 2
                     break;
-                case 18:
+                case 21:
                     DlgProgress(); // 3;
                     break;
-                case 19:
+                case 22:
                     DlgProgress(); // 4;
                     break;
-                case 20:
+                case 23:
                     DlgProgress(); // 5;
                     break;
-                case 21:
+                case 24:
                     DlgProgress(); // 6;
                     break;
-                case 22:
+                case 25:
                     Time.timeScale = 1.0f;
                     panel_Dialog.SetActive(false);
 
