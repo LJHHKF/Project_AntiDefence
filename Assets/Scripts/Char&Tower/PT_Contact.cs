@@ -59,7 +59,6 @@ public class PT_Contact : MonoBehaviour
     {
         if (other.CompareTag("Enemy") && (cTimeImg.fillAmount >= 1.0f || cTimeImg.fillAmount <= 0.01f))
         {
-            m_Coll.enabled = false;
             ta_push.P_Contact();
         }
     }

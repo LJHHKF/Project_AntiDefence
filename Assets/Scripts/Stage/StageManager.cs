@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions.Must;
 using UnityEngine.UI;
+using System;
 
 public class StageManager : MonoBehaviour
 {
@@ -87,6 +88,7 @@ public class StageManager : MonoBehaviour
     private Text t_cur;
     private Text t_full;
     private int cnt_EnemyDie = 0;
+    private int int_EnemyDieMax = 0;
     private bool dlg_isDone = false;
     private bool event_isDone = true;
     private bool now_Spawn = false;
@@ -137,6 +139,7 @@ public class StageManager : MonoBehaviour
         {
             t_full.text = spawnPointIndex.Length.ToString();
         }
+        int_EnemyDieMax = Int32.Parse(t_full.text);
 
         gm = GameObject.FindGameObjectWithTag("GameManager");
         loadingM = gm.GetComponent<LoadingManager>();
@@ -254,7 +257,7 @@ public class StageManager : MonoBehaviour
     {
         t_cur.text = cnt_EnemyDie.ToString();
 
-        if (t_cur.text == t_full.text)
+        if (cnt_EnemyDie >= int_EnemyDieMax)
         {
             StageClear();
         }
