@@ -15,7 +15,7 @@ public class EnemyBugTarget : MonoBehaviour
         m_stgM = GameObject.FindGameObjectWithTag("StageMObject").GetComponent<StageManager>();
     }
 
-    private void OnEnable()
+    public void SetIsFirstTrue()
     {
         isFirst = true;
     }
@@ -24,11 +24,11 @@ public class EnemyBugTarget : MonoBehaviour
     {
         if (isFirst)
         {
-            m_stgM.SpawnBugEnemy(m_Enemy.transform);
-            m_EnemyCtrl.SetIsDie(true);
-            m_Enemy.SetActive(false);
             isFirst = false;
+            m_stgM.SpawnBugEnemy(m_Enemy.transform);
             gameObject.SetActive(false);
+            m_Enemy.SetActive(false);
+            m_EnemyCtrl.SetIsDie(true);
         }
     }
 }

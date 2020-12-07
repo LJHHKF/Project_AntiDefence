@@ -94,6 +94,7 @@ public class StageManager : MonoBehaviour
     private bool now_Spawn = false;
     private int bugHumanIndex;
     private int stgGetMoney = 0;
+    private bool stageEnded = false;
 
 
     private GameObject gm;
@@ -669,7 +670,7 @@ public class StageManager : MonoBehaviour
     public void EnemyDied(int dropM)
     {
         cnt_EnemyDie += 1;
-        stgGetMoney = dropM;
+        stgGetMoney += dropM;
     }
 
 
@@ -705,18 +706,26 @@ public class StageManager : MonoBehaviour
 
     public void StageFailed()
     {
-        loadingM.SetLoadingString("SYSTEM OVERLOAD");
-        StartCoroutine(DelayedStageEnd(1.0f));
-        itemM.Get_Money(stgGetMoney / 2);
+        if (stageEnded == false)
+        {
+            stageEnded = true;
+            loadingM.SetLoadingString("SYSTEM OVERLOAD");
+            StartCoroutine(DelayedStageEnd(1.0f));
+            itemM.Get_Money(stgGetMoney / 2);
+        }
     }
 
     private void StageClear()
     {
-        itemM.End_Stage();
-        playerM.OnWinAnim();
-        loadingM.SetLoadingString("SYSTEM STABILIZATION");
-        StartCoroutine(DelayedStageEnd(1.0f));
-        itemM.Get_Money(stgGetMoney);
+        if (stageEnded == false)
+        {
+            stageEnded = true;
+            itemM.End_Stage();
+            playerM.OnWinAnim();
+            loadingM.SetLoadingString("SYSTEM STABILIZATION");
+            StartCoroutine(DelayedStageEnd(1.0f));
+            itemM.Get_Money(stgGetMoney);
+        }
     }
 
     public void DlgDone()

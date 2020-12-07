@@ -47,7 +47,7 @@ public class EnemyTargetCtrl : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (!findOther)
         {
