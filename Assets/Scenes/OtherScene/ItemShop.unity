@@ -6881,16 +6881,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.85248536, b: 0.13679248, a: 1}
+  m_Color: {r: 1, g: 0.69411767, b: 0, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 0886accecf203e044b10c775bd6fa887, type: 3}
+    m_Font: {fileID: 12800000, guid: 956277c209c1da243a24a05c1cd7e82c, type: 3}
     m_FontSize: 40
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 4
     m_MaxSize: 40
@@ -6900,8 +6900,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uCD5C\uACE0\uC758 \uD6A8\uC728\uC740\n\uCD5C\uACE0\uC758 \uD22C\uC790\uC785\uB2C8\uB2E4.\nA.I\uC758
-    \uC131\uB2A5 \uC5C5\uADF8\uB808\uC774\uB4DC\uB97C\n\uBCF4\uC7A5\uD569\uB2C8\uB2E4."
+  m_Text: "\uCD5C\uACE0\uC758 \uD6A8\uC728\uC740 \uCD5C\uACE0\uC758 \uD22C\uC790\uC785\uB2C8\uB2E4.\nA.I\uC758
+    \uC131\uB2A5 \uC5C5\uADF8\uB808\uC774\uB4DC\uB97C \uBCF4\uC7A5\uD569\uB2C8\uB2E4."
 --- !u!222 &1960703167
 CanvasRenderer:
   m_ObjectHideFlags: 0
