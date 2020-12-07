@@ -39,6 +39,7 @@ public class EnemyCtrl : MonoBehaviour
     [Header("EnemyEffect Setting")]
     public GameObject dieEffectPrefab;
     private bool isDie;
+    private bool isEffectiveDie = true;
     public GameObject m_AttackEffect;
 
     [Header("EnemyAnimator")]
@@ -60,6 +61,9 @@ public class EnemyCtrl : MonoBehaviour
     public int dropMoneyValue = 10;
     public float pushed_power = 10.0f;
     private float initHP;
+
+    [Header("Other Setting")]
+    public GameObject bugTarget;
 
     private WaitForSeconds ws;
     private bool attack_now;
@@ -107,6 +111,11 @@ public class EnemyCtrl : MonoBehaviour
         SetHPBar();
         initHP = enemyHP;
         StartCoroutine(CheckState());
+
+        if(enemyIndex == 0)
+        {
+            bugTarget.GetComponent<EnemyBugTarget>().SetIsFirstTrue();
+        }
     }
 
     private void OnEnable()
@@ -120,10 +129,12 @@ public class EnemyCtrl : MonoBehaviour
             isDie = false;
             m_coll.enabled = true;
             m_rigid.useGravity = true;
+            isEffectiveDie = true;
 
             if(enemyIndex == 0)
             {
-                gameObject.transform.Find("BugTarget").gameObject.SetActive(true);
+                bugTarget.SetActive(true);
+                bugTarget.GetComponent<EnemyBugTarget>().SetIsFirstTrue();
             }
         }
     }
@@ -136,33 +147,36 @@ public class EnemyCtrl : MonoBehaviour
         {
             if (isDie == false)
             {
-                isDie = true;
-                m_coll.enabled = false;
-                m_rigid.useGravity = false;
-                stgManager.EnemyDied(dropMoneyValue);
-                stgManager.PullingDropMoneyBar(gameObject.transform.position, dropMoneyValue, 1.0f);
-
-                stgManager.PullingEnemyDieEffect(gameObject.transform.localPosition, 1.0f);
-
-                hpBar.SetActive(false);
-                if (m_anim != null)
+                if (isEffectiveDie)
                 {
-                    if (isSuiBomber)
+                    isDie = true;
+                    m_coll.enabled = false;
+                    m_rigid.useGravity = false;
+                    stgManager.EnemyDied(dropMoneyValue);
+                    stgManager.PullingDropMoneyBar(gameObject.transform.position, dropMoneyValue, 1.0f);
+
+                    stgManager.PullingEnemyDieEffect(gameObject.transform.localPosition, 1.0f);
+
+                    hpBar.SetActive(false);
+                    if (m_anim != null)
                     {
-                        if (!attack_now)
+                        if (isSuiBomber)
+                        {
+                            if (!attack_now)
+                            {
+                                m_anim.SetTrigger("IsDie");
+                            }
+                        }
+                        else
                         {
                             m_anim.SetTrigger("IsDie");
                         }
                     }
+                    if (attack_now)
+                        StartCoroutine(DieDelay(1.5f));
                     else
-                    {
-                        m_anim.SetTrigger("IsDie");
-                    }
+                        StartCoroutine(DieDelay(1.0f));
                 }
-                if (attack_now)
-                    StartCoroutine(DieDelay(1.5f));
-                else
-                    StartCoroutine(DieDelay(1.0f));
             }
         }
         else if (state == State.MOVE)
@@ -437,5 +451,6 @@ public class EnemyCtrl : MonoBehaviour
     public void SetIsDie(bool setV)
     {
         isDie = setV;
+        isEffectiveDie = false;
     }
 }

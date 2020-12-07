@@ -255,6 +255,7 @@ MonoBehaviour:
   isNonAttack: 1
   dropMoneyValue: 10
   pushed_power: 10
+  bugTarget: {fileID: 6176118045393082570}
 --- !u!1 &7254396596017160726
 GameObject:
   m_ObjectHideFlags: 0
