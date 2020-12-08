@@ -43,7 +43,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 3
+  m_Radius: 5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8109822924648900583
 MonoBehaviour:
@@ -149,8 +149,10 @@ MonoBehaviour:
   enemyHP: 3
   attack_delay: 1
   isSuiBomber: 1
+  isNonAttack: 0
   dropMoneyValue: 15
   pushed_power: 10
+  bugTarget: {fileID: 0}
 --- !u!1 &5284272422715084773
 GameObject:
   m_ObjectHideFlags: 0

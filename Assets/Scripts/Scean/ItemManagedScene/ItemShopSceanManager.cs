@@ -205,6 +205,7 @@ public class ItemShopSceanManager : MonoBehaviour
     {
         txt_Money.text = selectIManager.own_money.ToString();
     }
+
     private void UpdateText(int i_num)
     {
         switch (i_num)

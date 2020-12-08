@@ -180,6 +180,7 @@ public class SkinSceneManager : MonoBehaviour
                 skins[cnt_skin].is_had = 1;
                 string key = "HadSkin" + cnt_skin.ToString();
                 //PlayerPrefs.SetInt(key, skins[cnt_skin].is_had);
+                itemM.own_money -= skins[cnt_skin].price;
                 DataSaveManager.ownItemCount[key] = skins[cnt_skin].is_had;
                 DataSaveManager.WriteData("DB_Item.csv", DataSaveManager.ownItemCount);
                 UpdateScene();

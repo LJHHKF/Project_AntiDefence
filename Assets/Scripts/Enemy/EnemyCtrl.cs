@@ -172,6 +172,12 @@ public class EnemyCtrl : MonoBehaviour
                             m_anim.SetTrigger("IsDie");
                         }
                     }
+
+                    if(enemyIndex ==0)
+                    {
+                        bugTarget.SetActive(false);
+                    }
+
                     if (attack_now)
                         StartCoroutine(DieDelay(1.5f));
                     else
