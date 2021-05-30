@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
+using myTarget;
 
 public class EnemyCtrl : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class EnemyCtrl : MonoBehaviour
     private State state = State.MOVE;
     private GameObject target;
     private GameObject attackTarget;
+    private targetType t_Type;
 
     private Barricade barricade;
     private EnemyBugTarget m_BugTarget;
@@ -65,6 +67,8 @@ public class EnemyCtrl : MonoBehaviour
     [Header("Other Setting")]
     public GameObject bugTarget;
 
+    private bool isBugAttacked = false;
+
     private WaitForSeconds ws;
     private bool attack_now;
     
@@ -75,6 +79,7 @@ public class EnemyCtrl : MonoBehaviour
     private Collider m_coll;
     private Rigidbody m_rigid;
     private EnemyTargetCtrl m_targetCtrl;
+    //어차피 세트로 오는 TargetCtrl 서 targetList 등록 관리
 
     private Transform sfx_M;
     private AudioSource sfx_Hit_BT;
@@ -98,7 +103,7 @@ public class EnemyCtrl : MonoBehaviour
         t_img = t_imgPanel.Find("Image").GetComponent<Transform>();
         m_coll = gameObject.GetComponent<Collider>();
         m_rigid = gameObject.GetComponent<Rigidbody>();
-        m_targetCtrl = gameObject.transform.Find("SearchRange").GetComponent<EnemyTargetCtrl>();
+        m_targetCtrl = gameObject.GetComponent<EnemyTargetCtrl>();
 
         m_coll.enabled = true;
         m_rigid.useGravity = true;
@@ -136,6 +141,8 @@ public class EnemyCtrl : MonoBehaviour
                 bugTarget.SetActive(true);
                 bugTarget.GetComponent<EnemyBugTarget>().SetIsFirstTrue();
             }
+
+            ImageSlopeRotate();
         }
     }
 
@@ -189,7 +196,10 @@ public class EnemyCtrl : MonoBehaviour
         {
             if (target != null)
             {
-                transform.position = Vector3.MoveTowards(transform.position, target.transform.position, moveSpeed * Time.deltaTime);
+                transform.position = Vector3.MoveTowards(transform.position, target.transform.position, moveSpeed * Time.deltaTime); 
+
+                //Vector3 dir = (target.transform.position - transform.position).normalized;
+                //transform.Translate(dir * moveSpeed * Time.deltaTime);
 
                 direction = target.transform.position - transform.position;
                 transform.rotation = Quaternion.Slerp(transform.rotation, target.transform.rotation, rotSpeed * Time.deltaTime);
@@ -295,17 +305,24 @@ public class EnemyCtrl : MonoBehaviour
         _hpBar.offset = hpBarOffset;
     }
 
-    public void SetTarget(GameObject t)
+    public void SetTarget(GameObject t, targetType _type)
     {
         target = t;
-        if (t.CompareTag("Barricade"))
-        {
-            barricade = t.GetComponentInParent<Barricade>();
-        }
-        if (t.CompareTag("BugTarget"))
-        {
+        t_Type = _type;
+
+        if (t_Type == targetType.barricade)
+            barricade = target.GetComponent<Barricade>();
+        if (t_Type == targetType.bug_Target)
             m_BugTarget = t.GetComponent<EnemyBugTarget>();
-        }
+
+        //if (t.CompareTag("Barricade"))
+        //{
+        //    barricade = t.GetComponentInParent<Barricade>();
+        //}
+        //if (t.CompareTag("BugTarget"))
+        //{
+        //    m_BugTarget = t.GetComponent<EnemyBugTarget>();
+        //}
     }
 
     private void ImageSlopeRotate()
@@ -358,7 +375,50 @@ public class EnemyCtrl : MonoBehaviour
                 }
                 else
                 {
-                    if (target.CompareTag("Player"))
+                    //if(t_Type == targetType.player)
+                    //{
+                    //    pl_manager.Player_Damaged(attackDamage);
+                    //    m_anim.SetTrigger("IsAttack");
+                    //    stgManager.PullingEnemyAtkEf(enemyIndex, m_AttackEffect, target.transform.position);
+                    //    if (isSuiBomber)
+                    //    {
+                    //        state = State.DIE;
+                    //        StopCoroutine(Attacking());
+                    //    }
+                    //    yield return new WaitForSeconds(attack_delay);
+                    //}
+                    //else if(t_Type == targetType.barricade)
+                    //{
+                    //    barricade.Barricade_damaged(attackDamage);
+                    //    m_anim.SetTrigger("IsAttack");
+                    //    stgManager.PullingEnemyAtkEf(enemyIndex, m_AttackEffect, target.transform.position);
+                    //    if (isSuiBomber)
+                    //    {
+                    //        state = State.DIE;
+                    //        StopCoroutine(Attacking());
+                    //        m_targetCtrl.SetFindOther();
+                    //    }
+                    //    yield return new WaitForSeconds(attack_delay);
+                    //}
+                    //else if(enemyIndex == 2)
+                    //{
+                    //    if (t_Type == targetType.bug_Target)
+                    //    {
+                    //        m_BugTarget.SetBuged();
+                    //        m_anim.SetTrigger("IsAttack");
+                    //        stgManager.PullingEnemyAtkEf(enemyIndex, m_AttackEffect, target.transform.position);
+                    //        m_targetCtrl.SetFindOther();
+                    //        yield return new WaitForSeconds(attack_delay);
+                    //    }
+                    //}
+
+                    if (target == null || !target.activeSelf)
+                    {
+                        m_targetCtrl.SetFindOther();
+                        state = State.MOVE;
+                        break;
+                    }
+                    else if (target.CompareTag("Player"))
                     {
                         pl_manager.Player_Damaged(attackDamage);
                         m_anim.SetTrigger("IsAttack");
@@ -379,17 +439,18 @@ public class EnemyCtrl : MonoBehaviour
                         {
                             state = State.DIE;
                             StopCoroutine(Attacking());
+                            m_targetCtrl.SetFindOther();
                         }
                         yield return new WaitForSeconds(attack_delay);
                     }
                     else if (enemyIndex == 2)
                     {
-                        if (target.CompareTag("BugTarget"))
+                        if (target.CompareTag("BugTarget") && !isBugAttacked)
                         {
+                            m_targetCtrl.SetFindOther();
                             m_BugTarget.SetBuged();
                             m_anim.SetTrigger("IsAttack");
                             stgManager.PullingEnemyAtkEf(enemyIndex, m_AttackEffect, target.transform.position);
-                            m_targetCtrl.SetFindOther(false);
                             yield return new WaitForSeconds(attack_delay);
                         }
                     }

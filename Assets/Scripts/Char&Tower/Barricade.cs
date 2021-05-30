@@ -16,11 +16,30 @@ public class Barricade : MonoBehaviour
     [HideInInspector]
     public bool isDie = false;
 
+    private int m_target_index;
+
     private StageManager stageM;
 
     private void Start()
     {
         stageM = GameObject.FindGameObjectWithTag("StageMObject").GetComponent<StageManager>();
+    }
+
+    private void OnEnable()
+    {
+        m_target_index = TargetListManager.instance.AddList(gameObject, myTarget.targetType.barricade);
+        TargetListManager.instance.ev_RemoveAt += RemoveAtEvent;
+    }
+
+    private void OnDisable()
+    {
+        TargetListManager.instance.RemoveAtList(m_target_index);
+    }
+
+    private void RemoveAtEvent(int a)
+    {
+        if (m_target_index > a)
+            m_target_index -= 1;
     }
 
     public void Barricade_damaged(float dmg)
@@ -37,6 +56,5 @@ public class Barricade : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-
     }
 }
