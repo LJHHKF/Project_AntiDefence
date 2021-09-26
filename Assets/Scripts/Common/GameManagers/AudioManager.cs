@@ -18,6 +18,7 @@ public class AudioManager : MonoBehaviour
         bgm_manager = gameObject.GetComponent<BGM_Manager>();
 
         sfx_BTN_Click = gameObject.transform.Find("SFX_NonStage").Find("S_BTN_Click").GetComponent<AudioSource>();
+        SetBTNsfxVolume();
     }
 
     private void OnApplicationQuit()
@@ -26,7 +27,7 @@ public class AudioManager : MonoBehaviour
         PlayerPrefs.SetFloat("SE_Volume", se_volume);
     }
 
-    private void SetSFXsVolume()
+    private void SetBTNsfxVolume()
     {
         sfx_BTN_Click.volume = se_volume;
     }
@@ -53,6 +54,7 @@ public class AudioManager : MonoBehaviour
     public void SetSeVolume(float value)
     {
         se_volume = value;
+        SetBTNsfxVolume();
     }
 
     //public void SetBgmManager(GameObject bgm)

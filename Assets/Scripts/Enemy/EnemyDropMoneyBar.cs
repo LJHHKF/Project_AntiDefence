@@ -48,7 +48,7 @@ public class EnemyDropMoneyBar : MonoBehaviour
             is_text_Updated = true;
         }
 
-        var screenPos = Camera.main.WorldToScreenPoint(TargetTr + offset);
+        var screenPos = uiCamera.WorldToScreenPoint(TargetTr + offset);
         if (screenPos.z < 0.0f)
         {
             screenPos *= -1.0f;

@@ -18,14 +18,12 @@ public class EnemyCtrl : MonoBehaviour
 
     private State state = State.MOVE;
     private GameObject target;
-    private GameObject attackTarget;
     private targetType t_Type;
 
     private Barricade barricade;
     private EnemyBugTarget m_BugTarget;
     private Transform t_imgPanel;
     private Transform t_img;
-    private float slope;
 
     [Header("EnemyIndex")]
     public int enemyIndex;
@@ -67,13 +65,8 @@ public class EnemyCtrl : MonoBehaviour
     [Header("Other Setting")]
     public GameObject bugTarget;
 
-    private bool isBugAttacked = false;
-
-    private WaitForSeconds ws;
     private bool attack_now;
     
-    private Vector3 direction;
-    private GameObject o_stgM;
     private StageManager stgManager;
     private EnemyInfoUI enemyInfo;
     private Collider m_coll;
@@ -92,10 +85,7 @@ public class EnemyCtrl : MonoBehaviour
         ta_manager = towerboard.GetComponent<TA_Manager>();
         pl_manager = towerboard.GetComponent<PlayerManager>();
 
-        ws = new WaitForSeconds(0.3f);
-
-        o_stgM = GameObject.FindGameObjectWithTag("StageMObject");
-        stgManager = o_stgM.GetComponent<StageManager>();
+        stgManager = GameObject.FindGameObjectWithTag("StageMObject").GetComponent<StageManager>();
 
         enemyInfo = GameObject.FindGameObjectWithTag("UI_Canvas").transform.Find("Panel_EnemyInfo").GetComponent<EnemyInfoUI>();
 
@@ -201,7 +191,7 @@ public class EnemyCtrl : MonoBehaviour
                 //Vector3 dir = (target.transform.position - transform.position).normalized;
                 //transform.Translate(dir * moveSpeed * Time.deltaTime);
 
-                direction = target.transform.position - transform.position;
+                Vector3 direction = target.transform.position - transform.position;
                 transform.rotation = Quaternion.Slerp(transform.rotation, target.transform.rotation, rotSpeed * Time.deltaTime);
 
                 if (direction.x > 0)
@@ -327,6 +317,7 @@ public class EnemyCtrl : MonoBehaviour
 
     private void ImageSlopeRotate()
     {
+        float slope = 0;
         if (gameObject.transform.localEulerAngles.y >= 0 && gameObject.transform.localEulerAngles.y <= 180)
         {
             slope = (60.0f + (gameObject.transform.localEulerAngles.y / 3));
@@ -356,13 +347,13 @@ public class EnemyCtrl : MonoBehaviour
             {
                 state = State.MOVE;
             }
-            yield return ws;
+            yield return new WaitForSeconds(0.3f);
         }
     }
 
     IEnumerator Attacking()
     {
-        attackTarget = target;
+        GameObject attackTarget = target;
         if (!isNonAttack)
         {
             attack_now = true;
@@ -418,7 +409,7 @@ public class EnemyCtrl : MonoBehaviour
                         state = State.MOVE;
                         break;
                     }
-                    else if (target.CompareTag("Player"))
+                    else if (t_Type == targetType.player)
                     {
                         pl_manager.Player_Damaged(attackDamage);
                         m_anim.SetTrigger("IsAttack");
@@ -430,7 +421,7 @@ public class EnemyCtrl : MonoBehaviour
                         }
                         yield return new WaitForSeconds(attack_delay);
                     }
-                    else if (target.CompareTag("Barricade"))
+                    else if (t_Type == targetType.barricade)
                     {
                         barricade.Barricade_damaged(attackDamage);
                         m_anim.SetTrigger("IsAttack");
@@ -445,7 +436,7 @@ public class EnemyCtrl : MonoBehaviour
                     }
                     else if (enemyIndex == 2)
                     {
-                        if (target.CompareTag("BugTarget") && !isBugAttacked)
+                        if (t_Type == targetType.bug_Target)
                         {
                             m_targetCtrl.SetFindOther();
                             m_BugTarget.SetBuged();
@@ -508,6 +499,7 @@ public class EnemyCtrl : MonoBehaviour
                 sfx_Hit_PT.Stop();
                 break;
         }
+        yield break;
     }
 
     public int GetEnemyIndex()

@@ -6,13 +6,12 @@ public class SFX_Volume : MonoBehaviour
 {
     private AudioSource[] m_sfxs;
     private AudioManager audioM;
-    private float sfx_volume;
     void Start()
     {
         audioM = GameObject.FindGameObjectWithTag("GameManager").GetComponent<AudioManager>();
         m_sfxs = gameObject.GetComponentsInChildren<AudioSource>();
 
-        sfx_volume = audioM.GetSeVolume();
+        float sfx_volume = audioM.GetSeVolume();
 
         for (int i = 0; i < m_sfxs.Length; i++)
         {

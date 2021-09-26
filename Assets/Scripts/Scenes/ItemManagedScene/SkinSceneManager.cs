@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class SkinSceneManager : MonoBehaviour
 {
 
-    private int max_skin = 2;
+    private readonly int max_skin = 2;
 
     private GameObject gm;
     private LoadingManager loadingM;
@@ -43,7 +43,7 @@ public class SkinSceneManager : MonoBehaviour
     {
         //public int index;
         public int price;
-        public int is_had;
+        public bool is_had;
     }
 
     private int cnt_skin = 0;
@@ -118,7 +118,7 @@ public class SkinSceneManager : MonoBehaviour
             anim_skin.runtimeAnimatorController = null;
         }
 
-        if (skins[cnt_skin].is_had == 0)
+        if (skins[cnt_skin].is_had == false)
         {
             txt_priceTag.text = "가격:" + skins[cnt_skin].price.ToString();
             txt_priceTag.alignment = TextAnchor.MiddleLeft;
@@ -173,15 +173,15 @@ public class SkinSceneManager : MonoBehaviour
     public void BTN_Activate()
     {
         audioM.SFX_BTN_Click();
-        if (skins[cnt_skin].is_had == 0)
+        if (skins[cnt_skin].is_had == false)
         {
             if(itemM.own_money >= skins[cnt_skin].price)
             {
-                skins[cnt_skin].is_had = 1;
+                skins[cnt_skin].is_had = true;
                 string key = "HadSkin" + cnt_skin.ToString();
                 //PlayerPrefs.SetInt(key, skins[cnt_skin].is_had);
                 itemM.own_money -= skins[cnt_skin].price;
-                DataSaveManager.ownItemCount[key] = skins[cnt_skin].is_had;
+                DataSaveManager.ownItemCount[key] = skins[cnt_skin].is_had?1:0;
                 DataSaveManager.WriteData("DB_Item.csv", DataSaveManager.ownItemCount);
                 UpdateScene();
             }
@@ -266,10 +266,13 @@ public class SkinSceneManager : MonoBehaviour
     private void UpdateItemInfo()
     {
         skins[0].price = 100;
-        skins[0].is_had = 1;
+        skins[0].is_had = true;
 
         skins[1].price = 200;
-        skins[1].is_had = DataSaveManager.ownItemCount["HadSkin1"];
+        if (DataSaveManager.ownItemCount["HadSkin1"] > 0)
+            skins[1].is_had = true;
+        else
+            skins[1].is_had = false;
     }
 
     IEnumerator Anim_Ctrl(int index)

@@ -163,14 +163,6 @@ public class LoadingManager : MonoBehaviour
         CallLoadingScene(selectedStage);
     }
 
-    public void ReturnScene()
-    {
-        if (prev_Scene != null)
-        {
-            CallLoadingScene(prev_Scene);
-        }
-    }
-
     private void CallLoadingScene(string target)
     {
         loadingSceneName = target;

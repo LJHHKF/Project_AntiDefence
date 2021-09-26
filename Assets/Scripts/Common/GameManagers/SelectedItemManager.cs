@@ -272,7 +272,7 @@ public class SelectedItemManager : MonoBehaviour
         i_event_ProtectWall = false;
 
         //PlayerPrefs.SetInt("Moeny", own_money);
-        DataSaveManager.WriteData("DB_Item.csv", DataSaveManager.ownItemCount);
+        //DataSaveManager.WriteData("DB_Item.csv", DataSaveManager.ownItemCount);
     }
     public void Item_Use_Confirm(int i_num)
     {

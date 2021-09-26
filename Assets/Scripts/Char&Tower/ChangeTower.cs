@@ -155,7 +155,7 @@ public class ChangeTower : MonoBehaviour
 
 
 
-    public void AttackActivated(int type_num) // 0 = basic, 1 = snip, 2 = push
+    public void AttackActivated(int type_num) /// 0 = basic, 1 = snip, 2 = push
     {
         switch (type_num)
         {

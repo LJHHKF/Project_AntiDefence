@@ -7,8 +7,6 @@ public class BGM_Manager : MonoBehaviour
     private GameObject gm;
     private AudioManager audioM;
 
-    private float bgVolume;
-
     private AudioSource m_bgm;
 
     public AudioClip[] bgm_list;
@@ -20,23 +18,21 @@ public class BGM_Manager : MonoBehaviour
         audioM = gm.GetComponent<AudioManager>();
 
         //audioM.SetBgmManager(gameObject);
-        bgVolume = audioM.GetBgVolume();
-
         
         m_bgm = gameObject.transform.Find("BGM").GetComponent<AudioSource>();
-        m_bgm.volume = 1.0f * bgVolume;
+        m_bgm.volume = audioM.GetBgVolume();
     }
 
     private void SetBgm(int index)
     {
         m_bgm.clip = bgm_list[index];
         m_bgm.Play();
+        //cur_index = index;
     }
 
     public void ValueChange()
     {
-        bgVolume = audioM.GetBgVolume();
-        m_bgm.volume = 1.0f * bgVolume;
+        m_bgm.volume = audioM.GetBgVolume();
     }
 
     public void Play_LobbyAndShop()

@@ -15,14 +15,12 @@ public class EnemyTargetCtrl : MonoBehaviour
 
     [Header("Custom Setting")]
     [SerializeField] private EnemyCtrl m_enemyCtrl;
-    [SerializeField] private targetType myType;
     [SerializeField] private bool isHadBonusLength;
     [SerializeField] private TargetSetting[] m_targets;
 
     private readonly float delay = 1.0f;
     private float delayTime = 0.0f;
 
-    private GameObject curTarget;
     private float curLength;
     private int targetIndex;
     private int prevTargetIndex; // 대각선 등으로 인해 바리게이트 등 있을 때, 어느 타겟을 공격해야할까 고민하면서 속도 느려지는 놈이 생겨서 만듦.
@@ -30,7 +28,6 @@ public class EnemyTargetCtrl : MonoBehaviour
 
     private void OnEnable()
     {
-        curTarget = null;
         curLength = 1000f;
         targetIndex = -1;
         prevTargetIndex = -1;
@@ -47,7 +44,8 @@ public class EnemyTargetCtrl : MonoBehaviour
 
     private void FindTarget()
     {
-        for(int i = 0; i < TargetListManager.instance.GetListMax(); i++)
+        delayTime = delay;
+        for (int i = 0; i < TargetListManager.instance.GetListMax(); i++)
         {
             if (targetIndex != i)
             {
@@ -63,11 +61,10 @@ public class EnemyTargetCtrl : MonoBehaviour
                                     delayTime = 1+ ++prevSum * delay;
                                 else
                                     prevSum = 0;
-                                curTarget = TargetListManager.instance.GetIndex_GameObject(i);
                                 curLength = TargetListManager.instance.GetDistance_normal(transform, i) - m_targets[j].BonusLength;
                                 prevTargetIndex = targetIndex;
                                 targetIndex = i;
-                                m_enemyCtrl.SetTarget(curTarget, TargetListManager.instance.GetIndex_Type(i));
+                                m_enemyCtrl.SetTarget(TargetListManager.instance.GetIndex_GameObject(i), TargetListManager.instance.GetIndex_Type(i));
                             }
                         }
                         else
@@ -78,11 +75,10 @@ public class EnemyTargetCtrl : MonoBehaviour
                                     delayTime = 1 + ++prevSum * delay;
                                 else
                                     prevSum = 0;
-                                curTarget = TargetListManager.instance.GetIndex_GameObject(i);
                                 curLength = TargetListManager.instance.GetDistance_sqr(transform, i);
                                 prevTargetIndex = targetIndex;
                                 targetIndex = i;
-                                m_enemyCtrl.SetTarget(curTarget, TargetListManager.instance.GetIndex_Type(i));
+                                m_enemyCtrl.SetTarget(TargetListManager.instance.GetIndex_GameObject(i), TargetListManager.instance.GetIndex_Type(i));
                             }
                         }
                         break;
@@ -90,12 +86,10 @@ public class EnemyTargetCtrl : MonoBehaviour
                 }
             }
         }
-        delayTime = delay;
     }
 
     public void SetFindOther()
     {
-        curTarget = null;
         curLength = 1000f;
         targetIndex = -1;
         FindTarget();

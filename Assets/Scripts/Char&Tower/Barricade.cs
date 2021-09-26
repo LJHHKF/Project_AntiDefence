@@ -13,9 +13,6 @@ public class Barricade : MonoBehaviour
     private State state = State.ALLIVE;
     public float hp = 5.0f;
 
-    [HideInInspector]
-    public bool isDie = false;
-
     private int m_target_index;
 
     private StageManager stageM;
@@ -34,6 +31,7 @@ public class Barricade : MonoBehaviour
     private void OnDisable()
     {
         TargetListManager.instance.RemoveAtList(m_target_index);
+        TargetListManager.instance.ev_RemoveAt -= RemoveAtEvent;
     }
 
     private void RemoveAtEvent(int a)
@@ -51,7 +49,6 @@ public class Barricade : MonoBehaviour
             if (hp <= 0)
             {
                 state = State.DIE;
-                isDie = true;
                 stageM.BarricadeBreak();
                 Destroy(gameObject);
             }

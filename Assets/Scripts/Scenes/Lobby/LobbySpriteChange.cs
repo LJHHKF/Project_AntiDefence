@@ -5,7 +5,7 @@ using UnityEngine;
 public class LobbySpriteChange : MonoBehaviour
 {
     public Sprite[] sprites;
-    public SpriteRenderer m_sprR;
+    //public SpriteRenderer m_sprR;
 
     private GameObject gm;
     private SkinManager skinM;
