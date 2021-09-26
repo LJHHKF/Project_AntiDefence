@@ -16,7 +16,6 @@ public class EnemyInfoUI : MonoBehaviour
     private Color[] m_Colors = new Color[3];
     private float[] oriAlphas = new float[3];
 
-    private int maxSize;
     private bool[] is_showed;
 
     // Start is called before the first frame update
@@ -34,9 +33,8 @@ public class EnemyInfoUI : MonoBehaviour
         m_Colors[1] = img_monster.color;
         m_Colors[2] = txt_info.color;
 
-        maxSize = monsterInfo.Length;
-        is_showed = new bool[maxSize];
-        for (int i = 0; i < maxSize; i++)
+        is_showed = new bool[monsterInfo.Length];
+        for (int i = 0; i < is_showed.Length; i++)
         {
             is_showed[i] = false;
         }

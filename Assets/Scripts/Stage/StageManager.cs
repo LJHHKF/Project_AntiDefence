@@ -195,7 +195,7 @@ public class StageManager : MonoBehaviour
 
         PoolsInit();
 
-        PlayBGM();
+        bgmM.Play_Stage();
     }
 
     private void Update()
@@ -701,6 +701,7 @@ public class StageManager : MonoBehaviour
 
     private void StageEnd()
     {
+        itemM.End_Stage();
         loadingM.StageEnd(chapter_num);
     }
 
@@ -720,7 +721,6 @@ public class StageManager : MonoBehaviour
         if (stageEnded == false)
         {
             stageEnded = true;
-            itemM.End_Stage();
             playerM.OnWinAnim();
             loadingM.SetLoadingString("SYSTEM STABILIZATION");
             StartCoroutine(DelayedStageEnd(1.0f));
@@ -768,22 +768,6 @@ public class StageManager : MonoBehaviour
     public float GetWallMoveMax()
     {
         return wallMaxY;
-    }
-
-    private void PlayBGM()
-    {
-        bgmM.Play_Stage();
-        //if (chapter_num == 0)
-        //{
-        //    if (stage_num == 1)
-        //    {
-        //        bgmM.Play_Stage();
-        //    }
-        //    if(stage_num == 2)
-        //    {
-        //        bgmM.Play_Stage();
-        //    }
-        //}
     }
 
     public void BarricadeBreak()
